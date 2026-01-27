@@ -1,0 +1,80 @@
+
+import React from 'react';
+
+const Hero: React.FC = () => {
+  const benefits = [
+    { title: "Full Roof Cleaning", subtitle: "Starting From $899" },
+    { title: "Mould Prevention", subtitle: "Roof Treatment" }
+  ];
+
+  return (
+    <section className="relative bg-brand-dark pt-12 pb-32 md:pt-20 md:pb-48 overflow-hidden">
+      {/* Background Images Split */}
+      <div className="absolute inset-0 z-0">
+        <div className="flex h-full w-full">
+          <div className="w-1/2 h-full relative">
+            <img 
+              alt="Dirty roof before cleaning" 
+              className="object-cover h-full w-full opacity-40 md:opacity-50" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj5QwT_iaVcAqRkk6cARbWLI_m-BTKiS9PzW4mG6q76Yq2OqUQ5gttCCR6Tr9I7MQ64sEvbJr9CbjW1ceXnW4IGaEydzfNA3yaeq8LSD_MQZSR442dBQOswbau_L26Q-PYzfegjetwzb6HpZHQ4nxL-jABSh6NKALtyR1pDvO9K6Zdrgo5LmtcUAgDfuqSFiMJCX65SfT-zfoBtXoCU0JV9TPjwB656e_sPCCIXCQjZSp2EnBLjcRDfCRC3Cx1WiAcoOIm7LoqBN1p" 
+            />
+          </div>
+          <div className="w-1/2 h-full relative">
+            <img 
+              alt="Clean red tile roof" 
+              className="object-cover h-full w-full opacity-60 md:opacity-70" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL6Pv0rvHtnoGUIVdrQ9-niSemwKNMaCboj-FsnhWmE_sEfSUSy5HGNTDjuuIN8r1vPhaAl8B5evrMGhKIm81okypcP7Y2SBdxZ8TOtVKFPUhw-FZDV1-CvO-52t3PVd-nRFlR92HrN1APRDm15xCGyBnI-t1F_uWpxYf6tgAIwewcb4KEfWw73sYL62RadbvgiO3TojSGTWdwlFiKfYD9un0PzHVzmCXHxsExm75Ppb6c50YZ5pbAp2n-RnH2WtvTIpjG69161H_6" 
+            />
+          </div>
+        </div>
+        <div className="absolute inset-0 roof-gradient-overlay"></div>
+      </div>
+
+      <div className="relative z-10 px-6 text-white text-center max-w-4xl mx-auto">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl uppercase font-bold leading-[0.95] mb-8 drop-shadow-xl">
+          Secure This Month's<br/>
+          <span className="text-brand-sky">Exclusive Deal</span>
+        </h1>
+
+        <div className="space-y-4 max-w-sm mx-auto mb-10">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="flex items-start text-left space-x-4">
+              <div className="bg-brand-sky rounded-md p-1 mt-1 shadow-lg flex-shrink-0">
+                <span className="material-icons text-white font-bold text-xl md:text-2xl">check</span>
+              </div>
+              <div>
+                <p className="text-xl md:text-2xl font-bold leading-tight">{benefit.title}</p>
+                <p className="text-xl md:text-2xl font-bold text-brand-sky">{benefit.subtitle}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Social Proof */}
+        <div className="flex flex-col items-center justify-center space-y-2">
+          <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-md py-2 px-4 rounded-full border border-white/20">
+            <div className="bg-white p-1 rounded-full w-7 h-7 flex items-center justify-center shadow-inner">
+              <svg className="w-4 h-4" viewBox="0 0 24 24">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+              </svg>
+            </div>
+            <span className="text-2xl font-bold text-amber-400">5.0</span>
+            <div className="flex text-amber-400">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="material-icons text-xl">star</span>
+              ))}
+            </div>
+          </div>
+          <p className="text-[12px] font-bold uppercase tracking-widest text-gray-300">
+            Google 5-Stars Rated
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

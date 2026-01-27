@@ -1,0 +1,28 @@
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
+  content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './App.tsx'],
+  theme: {
+    extend: {
+      colors: {
+        'everbright-blue': '#003249',
+        'everbright-red': '#e60000',
+        'brand-sky': '#38bdf8',
+        'brand-dark': '#0f172a',
+        'dark-navy': '#0D2533',
+        'banner-dark': '#0B1D27',
+        'navy-dark': '#0B1E2B',
+        'navy-custom': '#002B5B',
+        gold: '#D4AF37',
+      },
+      fontFamily: {
+        display: ['Oswald', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;
