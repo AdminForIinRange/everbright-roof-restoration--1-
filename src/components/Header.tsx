@@ -5,11 +5,11 @@ const Header: React.FC = () => {
   return (
     <header className="bg-black text-white px-4 py-4 md:px-8 flex justify-between items-center border-b border-gray-800">
       <div className="flex flex-col items-center">
-        <div className="flex items-center space-x-1">
-          <span className="material-icons text-2xl md:text-3xl text-brand-sky">home_repair_service</span>
-          <span className="font-display text-xl md:text-2xl tracking-tight uppercase leading-none">EverBright</span>
-        </div>
-        <span className="text-[10px] md:text-[12px] uppercase tracking-[0.2em] text-gray-400 font-medium">Pressure Washing</span>
+        <img
+          src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
+          alt="EverBright Pressure Washing logo"
+          className="h-10 md:h-12 w-auto object-contain"
+        />
       </div>
       
       <div className="text-right">

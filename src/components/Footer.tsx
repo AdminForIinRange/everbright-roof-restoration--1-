@@ -7,10 +7,11 @@ const Footer: React.FC = () => {
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         {/* Logo */}
         <div className="mb-10 text-center">
-          <span className="text-3xl font-black text-white italic tracking-tighter uppercase">
-            EVER<span className="text-brand-sky">BRIGHT</span>
-          </span>
-          <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-slate-500 mt-1">Pressure Washing</p>
+          <img
+            src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
+            alt="EverBright Pressure Washing logo"
+            className="h-14 md:h-16 w-auto object-contain mx-auto"
+          />
         </div>
 
         {/* Links */}

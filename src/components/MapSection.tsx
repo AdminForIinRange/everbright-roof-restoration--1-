@@ -14,10 +14,13 @@ const MapSection: React.FC = () => {
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row gap-10 items-center">
           <div className="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-2xl border border-slate-200">
-            <img 
-              alt="Map of Adelaide showing service area" 
-              className="w-full h-72 md:h-[400px] object-cover" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlC0qgKKSy3PyBTj6N7I9ttNzn-TsWQF64hpEpLYVM71GCrSvFlDQg8v3ZALbAVJq0KIsO5LxX5ot7l7lWrdyFolZdZYInew91LVy17emaYt1aHAtQH9KTCtweBnd-3VHE2d7P-79zIXepOaNS0X2UaVC6slG9qMkJJizx9iAG8hspWVsC_Ywx3mSyt_8ZtqOn82hMakiGVz-8Xxt-wfvX-r12YVA4oIYohHMNV9wBL9cByPGaHGsAND30kSLlf4FrhLVpnrsPB8En" 
+            <iframe
+              title="Google Maps - Adelaide SA"
+              className="w-full h-72 md:h-[400px] border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+              src="https://www.google.com/maps?q=Adelaide%20SA&output=embed"
             />
           </div>
           

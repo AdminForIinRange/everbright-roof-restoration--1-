@@ -8,7 +8,8 @@ const LeadForm: React.FC = () => {
     name: '',
     email: '',
     message: '',
-    roofType: 'Tile'
+    roofType: 'Not sure',
+    roofCondition: 'Not sure - needs inspection',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -83,7 +84,7 @@ const LeadForm: React.FC = () => {
               What type of roof do you have?
             </label>
             <div className="grid grid-cols-2 gap-2">
-              {['Tile', 'Metal', 'Slate', 'Other'].map((type) => (
+              {['Concrete tile', 'Terracotta tile', 'Colorbond / metal', 'Not sure'].map((type) => (
                 <button
                   key={type}
                   type="button"
@@ -95,6 +96,33 @@ const LeadForm: React.FC = () => {
                   }`}
                 >
                   {type}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-bold text-slate-700 mb-1.5">
+              How would you describe your roof's current condition?
+            </label>
+            <div className="grid grid-cols-2 gap-2">
+              {[
+                'Light surface staining',
+                'Moderate mould / lichen',
+                'Heavy mould & build-up',
+                'Not sure - needs inspection',
+              ].map((condition) => (
+                <button
+                  key={condition}
+                  type="button"
+                  onClick={() => setFormData({...formData, roofCondition: condition})}
+                  className={`py-2 px-3 rounded-md text-sm font-semibold border transition-all ${
+                    formData.roofCondition === condition
+                      ? 'bg-brand-sky border-brand-sky text-white shadow-md'
+                      : 'bg-white border-gray-200 text-slate-600 hover:border-brand-sky/50'
+                  }`}
+                >
+                  {condition}
                 </button>
               ))}
             </div>

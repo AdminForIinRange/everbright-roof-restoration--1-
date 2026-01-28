@@ -20,6 +20,15 @@ const config: Config = {
         body: ['Inter', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
       },
+      keyframes: {
+        'offer-fade': {
+          '0%, 100%': { opacity: '0.25' },
+          '50%': { opacity: '1' },
+        },
+      },
+      animation: {
+        'offer-fade': 'offer-fade 2.6s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
