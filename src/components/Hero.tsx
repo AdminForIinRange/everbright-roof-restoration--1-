@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
         <div className="space-y-2 max-w-sm mx-auto mb-5">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex items-start justify-center text-center space-x-3">
-              <div className="bg-brand-sky rounded-md p-1 mt-1 shadow-lg flex-shrink-0">
+              <div className="bg-brand-sky rounded-md  mt-1 shadow-lg flex-shrink-0">
                 <span className="material-icons text-white font-bold text-base md:text-lg">check</span>
               </div>
               <div>

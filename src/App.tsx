@@ -35,7 +35,9 @@ const App: React.FC = () => {
         
         <section className="bg-banner-dark py-8 px-6 text-center border-t border-white/10">
           <h2 className="font-display text-brand-sky text-4xl md:text-5xl font-bold uppercase tracking-tight">
-            A Service You Can Rely On
+            A Service You 
+            
+            <br />Can Rely On
           </h2>
         </section>
 
