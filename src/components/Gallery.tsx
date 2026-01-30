@@ -37,26 +37,21 @@ const Gallery: React.FC = () => {
   ];
 
   return (
-    <section className="bg-black border-y border-black">
-      <div className="flex flex-nowrap gap-0.5 overflow-x-auto md:overflow-x-hidden hide-scrollbar py-2">
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className="relative overflow-hidden aspect-[3/4] w-32 sm:w-36 md:w-0 md:flex-1 md:basis-0 shrink-0 md:shrink"
-          >
-            <Image 
-              alt={img.alt} 
-              src={img.src} 
-              fill
-              sizes="(min-width: 768px) 16.6vw, 40vw"
-              className={`object-cover ${img.label === 'Before' ? 'opacity-80' : 'opacity-100'}`} 
-            />
-            <span className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/70 text-white text-[9px] md:text-[10px] px-2.5 py-0.5 rounded-sm font-bold uppercase tracking-widest">
-              {img.label}
-            </span>
-          </div>
-        ))}
-      </div>
+    <section className="grid grid-cols-2 md:grid-cols-3 gap-0.5 bg-black border-y border-black">
+      {images.map((img, index) => (
+        <div key={index} className="relative overflow-hidden aspect-[3/4]">
+          <Image 
+            alt={img.alt} 
+            src={img.src} 
+            fill
+            sizes="(min-width: 768px) 33vw, 50vw"
+            className={`object-cover ${img.label === 'Before' ? 'opacity-80' : 'opacity-100'}`} 
+          />
+          <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/70 text-white text-[10px] md:text-xs px-3 py-1 rounded-sm font-bold uppercase tracking-widest">
+            {img.label}
+          </span>
+        </div>
+      ))}
     </section>
   );
 };
