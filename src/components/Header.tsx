@@ -1,14 +1,19 @@
 
 import React from 'react';
+import Image from 'next/image';
 
 const Header: React.FC = () => {
   return (
     <header className="bg-black text-white px-4 py-4 md:px-8 flex justify-between items-center border-b border-gray-800">
       <div className="flex flex-col items-center">
-        <img
+        <Image
           src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
           alt="EverBright Pressure Washing logo"
+          width={600}
+          height={408}
+          sizes="(min-width: 768px) 12rem, 10rem"
           className="h-10 md:h-12 w-auto object-contain"
+          priority
         />
       </div>
       

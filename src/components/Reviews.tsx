@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Image from 'next/image';
 
 const Reviews: React.FC = () => {
   const reviews = [
@@ -37,10 +38,13 @@ const Reviews: React.FC = () => {
           {reviews.map((review, i) => (
             <div key={i} className="flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-xl snap-center border border-gray-100">
               <div className="flex items-center gap-4 mb-5">
-                <img 
+                <Image 
                   alt={review.name} 
-                  className="w-14 h-14 rounded-full bg-slate-200 border-2 border-brand-sky/20" 
                   src={review.img} 
+                  width={56}
+                  height={56}
+                  sizes="56px"
+                  className="w-14 h-14 rounded-full bg-slate-200 border-2 border-brand-sky/20" 
                 />
                 <div>
                   <div className="flex items-center">

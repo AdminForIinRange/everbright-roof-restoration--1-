@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Image from 'next/image';
 
 const Footer: React.FC = () => {
   return (
@@ -7,9 +8,12 @@ const Footer: React.FC = () => {
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         {/* Logo */}
         <div className="mb-10 text-center">
-          <img
+          <Image
             src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
             alt="EverBright Pressure Washing logo"
+            width={600}
+            height={408}
+            sizes="(min-width: 768px) 16rem, 12rem"
             className="h-14 md:h-16 w-auto object-contain mx-auto"
           />
         </div>

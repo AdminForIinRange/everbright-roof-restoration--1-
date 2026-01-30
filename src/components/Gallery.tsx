@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Image from 'next/image';
 
 const Gallery: React.FC = () => {
   const images = [
@@ -43,10 +44,12 @@ const Gallery: React.FC = () => {
             key={index}
             className="relative overflow-hidden aspect-[3/4] w-32 sm:w-36 md:w-0 md:flex-1 md:basis-0 shrink-0 md:shrink"
           >
-            <img 
+            <Image 
               alt={img.alt} 
-              className={`object-cover w-full h-full ${img.label === 'Before' ? 'opacity-80' : 'opacity-100'}`} 
               src={img.src} 
+              fill
+              sizes="(min-width: 768px) 16.6vw, 40vw"
+              className={`object-cover ${img.label === 'Before' ? 'opacity-80' : 'opacity-100'}`} 
             />
             <span className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/70 text-white text-[9px] md:text-[10px] px-2.5 py-0.5 rounded-sm font-bold uppercase tracking-widest">
               {img.label}

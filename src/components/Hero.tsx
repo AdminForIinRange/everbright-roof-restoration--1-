@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Image from 'next/image';
 import LeadForm from './LeadForm';
 
 const Hero: React.FC = () => {
@@ -14,17 +15,23 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <div className="flex h-full w-full">
           <div className="w-1/2 h-full relative">
-            <img 
-              alt="Dirty roof before cleaning" 
-              className="object-cover h-full w-full opacity-40 md:opacity-50" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj5QwT_iaVcAqRkk6cARbWLI_m-BTKiS9PzW4mG6q76Yq2OqUQ5gttCCR6Tr9I7MQ64sEvbJr9CbjW1ceXnW4IGaEydzfNA3yaeq8LSD_MQZSR442dBQOswbau_L26Q-PYzfegjetwzb6HpZHQ4nxL-jABSh6NKALtyR1pDvO9K6Zdrgo5LmtcUAgDfuqSFiMJCX65SfT-zfoBtXoCU0JV9TPjwB656e_sPCCIXCQjZSp2EnBLjcRDfCRC3Cx1WiAcoOIm7LoqBN1p" 
+            <Image
+              alt="Dirty roof before cleaning"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj5QwT_iaVcAqRkk6cARbWLI_m-BTKiS9PzW4mG6q76Yq2OqUQ5gttCCR6Tr9I7MQ64sEvbJr9CbjW1ceXnW4IGaEydzfNA3yaeq8LSD_MQZSR442dBQOswbau_L26Q-PYzfegjetwzb6HpZHQ4nxL-jABSh6NKALtyR1pDvO9K6Zdrgo5LmtcUAgDfuqSFiMJCX65SfT-zfoBtXoCU0JV9TPjwB656e_sPCCIXCQjZSp2EnBLjcRDfCRC3Cx1WiAcoOIm7LoqBN1p"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover opacity-40 md:opacity-50"
+              priority
             />
           </div>
           <div className="w-1/2 h-full relative">
-            <img 
-              alt="Clean red tile roof" 
-              className="object-cover h-full w-full opacity-60 md:opacity-70" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL6Pv0rvHtnoGUIVdrQ9-niSemwKNMaCboj-FsnhWmE_sEfSUSy5HGNTDjuuIN8r1vPhaAl8B5evrMGhKIm81okypcP7Y2SBdxZ8TOtVKFPUhw-FZDV1-CvO-52t3PVd-nRFlR92HrN1APRDm15xCGyBnI-t1F_uWpxYf6tgAIwewcb4KEfWw73sYL62RadbvgiO3TojSGTWdwlFiKfYD9un0PzHVzmCXHxsExm75Ppb6c50YZ5pbAp2n-RnH2WtvTIpjG69161H_6" 
+            <Image
+              alt="Clean red tile roof"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL6Pv0rvHtnoGUIVdrQ9-niSemwKNMaCboj-FsnhWmE_sEfSUSy5HGNTDjuuIN8r1vPhaAl8B5evrMGhKIm81okypcP7Y2SBdxZ8TOtVKFPUhw-FZDV1-CvO-52t3PVd-nRFlR92HrN1APRDm15xCGyBnI-t1F_uWpxYf6tgAIwewcb4KEfWw73sYL62RadbvgiO3TojSGTWdwlFiKfYD9un0PzHVzmCXHxsExm75Ppb6c50YZ5pbAp2n-RnH2WtvTIpjG69161H_6"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover opacity-60 md:opacity-70"
+              priority
             />
           </div>
         </div>
