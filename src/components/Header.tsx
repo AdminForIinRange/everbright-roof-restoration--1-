@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-brand-sky text-white px-4 py-4 md:px-8 flex justify-between items-center border-b border-brand-sky/70">
+    <header className="bg-navy-dark text-white px-4 py-4 md:px-8 flex justify-between items-center border-b border-navy-dark/80">
       <div className="flex flex-col items-center">
         <Image
           src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"

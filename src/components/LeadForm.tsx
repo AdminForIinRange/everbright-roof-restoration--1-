@@ -68,10 +68,10 @@ const LeadForm: React.FC = () => {
       <div className="bg-white rounded-xl p-6 md:p-7 form-shadow border border-slate-200 border-t-[6px] border-t-brand-sky">
         <div className="flex items-center justify-between text-[11px] uppercase tracking-widest text-slate-500 mb-3">
           <span>{step} of 2</span>
-          <span>~30 sec</span>
+         
         </div>
         <h3 className="text-center font-display text-xl md:text-2xl font-bold text-slate-900 leading-snug mb-5">
-          Quick Eligibility Check For <span className="text-everbright-red uppercase underline decoration-brand-sky underline-offset-4">ELIGIBLE</span> Roofs
+            ORGANISE A FREE 30 MINUTE QUOTE IN JUST 30 SECONDS!
         </h3>
         
         <form action={formAction} onSubmit={handleSubmit} className="space-y-4">

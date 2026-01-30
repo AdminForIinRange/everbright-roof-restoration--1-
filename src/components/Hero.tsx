@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
               src="/heroimg/7.png"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[100%_100%] opacity-40 md:opacity-50"
+              className="object-cover object-[100%_100%] opacity-30 md:opacity-40"
               priority
             />
           </div>
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
               src="/heroimg/8.png"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[0%_100%] opacity-60 md:opacity-70"
+              className="object-cover object-[0%_100%] opacity-40 md:opacity-50"
               priority
             />
           </div>
