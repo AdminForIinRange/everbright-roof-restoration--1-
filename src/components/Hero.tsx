@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-white text-center">
-        <h1 className="font-display text-3xl sm:text-4xl md:text-6xl uppercase font-bold leading-[0.95] mb-5 drop-shadow-xl">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl uppercase font-bold leading-[0.95] mb-5 drop-shadow-xl">
           Secure This Month's<br/>
           <span className="text-brand-sky">Exclusive Deal</span>
         </h1>
