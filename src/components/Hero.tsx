@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Social Proof */}
-        <div className="flex flex-col items-center justify-center space-y-2 mb-6">
+        <div className="flex flex-col items-center justify-center space-y-2">
           <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-md py-1.5 px-3 rounded-full border border-white/20">
             <div className="bg-white p-1 rounded-full w-6 h-6 flex items-center justify-center shadow-inner">
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24">
