@@ -65,9 +65,9 @@ const LeadForm: React.FC = () => {
 
   return (
     <div className="max-w-md mx-auto w-full">
-      <div className="bg-white rounded-xl p-6 md:p-7 form-shadow border-t-[6px] border-brand-sky">
+      <div className="bg-white rounded-xl p-6 md:p-7 form-shadow border border-slate-200 border-t-[6px] border-t-brand-sky">
         <div className="flex items-center justify-between text-[11px] uppercase tracking-widest text-slate-500 mb-3">
-          <span>Quiz {step} of 2</span>
+          <span>{step} of 2</span>
           <span>~30 sec</span>
         </div>
         <h3 className="text-center font-display text-xl md:text-2xl font-bold text-slate-900 leading-snug mb-5">

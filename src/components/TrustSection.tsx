@@ -17,14 +17,14 @@ const TrustSection: React.FC = () => {
         </p>
         
         <div className="flex justify-center mt-4">
-          <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 flex items-center justify-center bg-black rounded-full border-4 border-gold shadow-2xl overflow-hidden">
+          <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 flex items-center justify-center bg-black rounded-full border-4 border-gold shadow-2xl overflow-hidden">
             <div className="text-center text-gold px-2">
               <div className="text-[9px] sm:text-[10px] md:text-xs uppercase font-bold tracking-widest leading-none mb-1">Satisfaction</div>
               <div className="text-2xl sm:text-3xl md:text-4xl font-black leading-none my-0.5">100%</div>
               <div className="text-[9px] sm:text-[10px] md:text-xs uppercase font-bold tracking-widest leading-none mt-1">Guaranteed</div>
-              <div className="flex justify-center gap-0.5 mt-1.5">
+              <div className="flex justify-center gap-0.5 mt-1">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="material-symbols-outlined text-[10px] sm:text-xs md:text-sm fill-current" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span key={i} className="material-symbols-outlined text-xs sm:text-sm md:text-base fill-current" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                 ))}
               </div>
             </div>

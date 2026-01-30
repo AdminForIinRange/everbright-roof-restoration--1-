@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section id="quiz" className="relative bg-brand-dark pt-8 pb-12 md:pt-12 md:pb-16 overflow-hidden">
+    <section id="quiz" className="relative bg-brand-dark pt-6 pb-0 md:pt-10 md:pb-0 overflow-hidden">
       {/* Background Images Split */}
       <div className="absolute inset-0 z-0">
         <div className="flex h-full w-full">
@@ -39,15 +39,15 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-white text-center">
-        <h1 className="font-display text-3xl sm:text-4xl md:text-6xl uppercase font-bold leading-[0.95] mb-6 drop-shadow-xl">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-6xl uppercase font-bold leading-[0.95] mb-5 drop-shadow-xl">
           Secure This Month's<br/>
           <span className="text-brand-sky">Exclusive Deal</span>
         </h1>
 
-        <div className="space-y-2 max-w-sm mx-auto mb-5">
+        <div className="space-y-2 max-w-sm mx-auto mb-5 text-left">
           {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-start justify-center text-center space-x-3">
-              <div className="bg-brand-sky rounded-md  mt-1 shadow-lg flex-shrink-0">
+            <div key={index} className="flex items-start justify-start text-left space-x-3">
+              <div className="bg-brand-sky rounded-md w-6 h-6 md:w-7 md:h-7 flex items-center justify-center shadow-lg flex-shrink-0">
                 <span className="material-icons text-white font-bold text-base md:text-lg">check</span>
               </div>
               <div>
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
 
         {/* Social Proof */}
         <div className="flex flex-col items-center justify-center space-y-2">
-          <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-md py-1.5 px-3 rounded-full border border-white/20">
+          <div className="flex items-center space-x-2 py-1">
             <div className="bg-white p-1 rounded-full w-6 h-6 flex items-center justify-center shadow-inner">
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24">
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
@@ -80,8 +80,12 @@ const Hero: React.FC = () => {
             Google 5-Stars Rated
           </p>
         </div>
+      </div>
 
-        <LeadForm />
+      <div className="relative z-10 mt-6 bg-navy-dark py-6 md:py-8">
+        <div className="mx-auto w-full max-w-2xl px-4">
+          <LeadForm />
+        </div>
       </div>
     </section>
   );

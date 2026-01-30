@@ -24,7 +24,7 @@ const App: React.FC = () => {
         <Hero />
 
         {/* Gallery and Service Details */}
-        <section className="bg-banner-dark py-12 px-6 text-center">
+        <section className="bg-everbright-blue py-12 px-6 text-center">
           <h2 className="font-display text-brand-sky text-4xl md:text-5xl font-bold uppercase leading-tight tracking-tight max-w-2xl mx-auto">
             Ready to Clean &<br/>Protect Your Roof?
           </h2>
