@@ -5,34 +5,44 @@ import Image from 'next/image';
 const Gallery: React.FC = () => {
   const images = [
     {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAWSeoFEDkWuGLocoYgzcaFcFoskT_TsUE1KHusYDvxDMPIYU6s0IPU0ZdxVr4pUb-5cN9pJrl7vgVmU5Tj9ZIvXl5E5RJKDeanAP7dEOmntoLurYNZHstBtA4zDpaU_wDrZLvtyS8D6XGLNH9HkgJQ0gkuzGThgyA07XrvI0Q8kB0_VJl8RNyEaHdjfgVekjnCaGHw4NwQsa9JrY1CeOr9x7aMyZFlDgMAPHDKdnAs4zmgZh0a3SZGWbB2bS4xgl64hsZ1OTMDy8rs",
+      src: "/beforeAfter/3.png",
       label: "Before",
-      alt: "Roof before cleaning showing moss and stains"
+      alt: "Roof before cleaning 1"
     },
     {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuC3fDnfSwvvd4eQTc-jRXsMPx3oCdEBbH1imMCaWhcog3MNkZCVjgC3Ohie6N107pfue2DZ3qz35pzKWf8H96tq2c86l3GbKOtmFGyJ1r7IXJ3-4AXbb5an7C1s4kowRB8hkWeZcvZdVAGI4nkQ9eVtEJNMPBZgijT4buLl9SF1azXBbOn3ueKVmOFSgA8VaI1y5GBlkIqJP7rtKJXhl_1xHLqAI7LOvAMM9-7KMlBKfWBw0VnSLj7wMK8TG3JSjz-pdjflkdPe_DQz",
+      src: "/beforeAfter/4.png",
       label: "After",
-      alt: "Roof after professional cleaning"
+      alt: "Roof after cleaning 1"
     },
     {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDUdb0Jp0-F2N1nbJZcxNVW1NZrfiFQvgaMyT6roElYlbLIWyWnBsdAaI9ZMq28BHAjaMFjhNDIIzoPbGvs48SdpSW0axNf5qYAvIa039Y-ybOIBi2rcqpP5_DgKN5yT6PsF-l41umAguDFTlE4JACVjpIOx9KkQQ8ehfgHcEetxXC5xSaGMSZzYq5ZMwI5jfgcn9mKqktJUF8u4Vr_6nCNoqfjCNduhoY0qKw5gkSLFTC3cHLhGi-6l3intQBstc1s2UPvY2iF8HlT",
+      src: "/beforeAfter/5.png",
       label: "Before",
-      alt: "Damaged roof tiles before treatment"
+      alt: "Roof before cleaning 2"
     },
     {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBy-auc_cKX9nE_2Rj_42LYSF9Gu0CHM745SxMjpqnQpz7u5WPSy11MMLlTO3iisMWd-ibJJH5sgY-bVj3HthKh6LN5dTtOG1qnOpgXNUFuiilAqfUkHsg4GiDQV4Jpgv8LvQETQz3enyAA2a6Dm7ZzNq3Vm0NtIOMP14gMO6DvSFg2l75gq8ozUJ8X5b_Urt-OajFtkU1V-D8NqYlR18M8vYiB_jp2feHLCBcIdpEze3KqoiRqsPY-sln_f9H92BsV2v8oBFJhQV1Z",
+      src: "/beforeAfter/6.png",
       label: "After",
-      alt: "Clean red tiles after treatment"
+      alt: "Roof after cleaning 2"
     },
     {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuC6Qw4E22B-r4qlvfVRGweHV4GvZp6i9aeaEpBez9rQJu6gHqOjwA-Xy3UpeXNq1vgg2mH6P2wrUfXKTDERbLWL3nEHntOEPPTh5mPWWeL7g7qlB2DfUSJ-u-ex4BkKNqQZBzpY4gWWcs5A6KG1oh0hhDDWbWL760KuhQaMWbU-dPjjarNeUuA-_WoTks58bMLgNIj8OeTnn1ow2PZrbsdFuVZoHFDJbNcf9rrMl9qj2BstXAZELkqLzi_hUwdYJ3wpvVvmGR6quBQM",
+      src: "/beforeAfter/7.png",
       label: "Before",
-      alt: "Dirty roof before service"
+      alt: "Roof before cleaning 3"
     },
     {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBYGAuOdU-JPbeAE2W1NLidv1KVp96ChS19FE8hAUVR3Gn4aFWVpHoVpbExhWGkWyhVXMLHYzoinCXW9z1KQ793HV77YRcqtesYO3EnShcPL5g6Jr1HjHn-KbicfaJPkqspwOF7Ctb7jWn4E7Ke_EiFokwOsaxfFL82PaaMbdKVTgb3BZ8Q08BMnMTiFVSiYiDCKs--v5CANl5WuGsPYSl8YjQG-lkPp-c1XzaR6lYPhL1c3-0vs_nJBWXmIMWgjxdxuY9QFqUa_KSb",
+      src: "/beforeAfter/8.png",
       label: "After",
-      alt: "Restored roof after service"
+      alt: "Roof after cleaning 3"
+    },
+    {
+      src: "/beforeAfter/9.png",
+      label: "Before",
+      alt: "Roof before cleaning 4"
+    },
+    {
+      src: "/beforeAfter/10.png",
+      label: "After",
+      alt: "Roof after cleaning 4"
     }
   ];
 
@@ -47,9 +57,6 @@ const Gallery: React.FC = () => {
             sizes="(min-width: 768px) 33vw, 50vw"
             className={`object-cover ${img.label === 'Before' ? 'opacity-80' : 'opacity-100'}`} 
           />
-          <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/70 text-white text-[10px] md:text-xs px-3 py-1 rounded-sm font-bold uppercase tracking-widest">
-            {img.label}
-          </span>
         </div>
       ))}
     </section>
