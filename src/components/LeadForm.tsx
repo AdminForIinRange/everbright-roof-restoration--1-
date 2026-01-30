@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useActionState, useEffect, useState } from 'react';
+import React, { useActionState, useState } from 'react';
 import { submitLeadAction, type LeadState } from '@lib/actions/leadActions';
 
 const initialState: LeadState = { ok: false };
 
 const LeadForm: React.FC = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [hasReset, setHasReset] = useState(false);
   const [step, setStep] = useState<1 | 2>(1);
   const [formData, setFormData] = useState({
     fullName: '',
@@ -16,6 +16,7 @@ const LeadForm: React.FC = () => {
     roofCondition: 'Not sure - needs inspection',
   });
   const [state, formAction, pending] = useActionState(submitLeadAction, initialState);
+  const isSubmitted = state.ok && !hasReset;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     if (step === 1) {
@@ -28,13 +29,9 @@ const LeadForm: React.FC = () => {
       setStep(2);
       return;
     }
-  };
 
-  useEffect(() => {
-    if (state.ok) {
-      setIsSubmitted(true);
-    }
-  }, [state]);
+    setHasReset(false);
+  };
 
   if (isSubmitted) {
     return (
@@ -48,7 +45,7 @@ const LeadForm: React.FC = () => {
         </p>
         <button 
           onClick={() => {
-            setIsSubmitted(false);
+            setHasReset(true);
             setStep(1);
             setFormData({
               fullName: '',
@@ -87,7 +84,7 @@ const LeadForm: React.FC = () => {
             </>
           )}
 
-          {state.error && !isSubmitted && (
+          {state.error && !isSubmitted && !hasReset && (
             <div className="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-xs font-semibold text-red-700">
               {state.error}
             </div>
