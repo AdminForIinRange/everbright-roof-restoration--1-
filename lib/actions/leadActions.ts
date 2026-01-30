@@ -1,0 +1,69 @@
+// app/actions/leadActions.ts
+"use server";
+
+import { revalidatePath } from "next/cache";
+import { ID } from "node-appwrite";
+import { createAdminClient } from "@lib/appwrite";
+import { appwriteConfig } from "@lib/appwrite/config";
+import type { Lead } from "@lib/types/lead";
+
+export type LeadState = {
+  ok: boolean;
+  error?: string;
+  data?: Lead;
+};
+
+function sanitize(input: unknown) {
+  if (typeof input !== "string") return "";
+  return input.trim();
+}
+
+function isEmail(str: string) {
+  // simple validation
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str);
+}
+
+export async function submitLeadAction(
+  _prevState: LeadState,
+  formData: FormData
+): Promise<LeadState> {
+  try {
+    const fullName = sanitize(formData.get("fullName"));
+    const email = sanitize(formData.get("email"));
+    const roofType = sanitize(formData.get("roofType")) || "Not sure";
+    const roofCondition =
+      sanitize(formData.get("roofCondition")) || "Not sure - needs inspection";
+    const message = sanitize(formData.get("message"));
+
+    if (!fullName) return { ok: false, error: "Full name is required" };
+    if (!email || !isEmail(email)) return { ok: false, error: "Valid email is required" };
+    if (message.length > 255) {
+      return { ok: false, error: "Message must be 255 characters or less" };
+    }
+
+    const { databases } = await createAdminClient();
+
+    const doc = await databases.createDocument(
+      appwriteConfig.databaseId,
+      appwriteConfig.leadsCollectionId,
+      ID.unique(),
+      {
+        fullName,
+        email,
+        roofType,
+        roofCondition,
+        message,
+      }
+    );
+
+    // so the page shows the latest confirmation if you re-render
+    revalidatePath("/");
+
+    return { ok: true, data: doc as Lead };
+  } catch (err: unknown) {
+    console.error("submitLeadAction error:", err);
+    const message =
+      err instanceof Error ? err.message : "Failed to submit quote request";
+    return { ok: false, error: message };
+  }
+}

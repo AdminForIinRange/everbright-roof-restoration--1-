@@ -4,7 +4,6 @@ import Header from './components/Header';
 import AnnouncementBar from './components/AnnouncementBar';
 import OfferBanner from './components/OfferBanner';
 import Hero from './components/Hero';
-import LeadForm from './components/LeadForm';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import ValueProp from './components/ValueProp';
@@ -23,11 +22,6 @@ const App: React.FC = () => {
       
       <main className="flex-grow">
         <Hero />
-        
-        {/* Main Form Section */}
-        <section id="quiz" className="bg-everbright-blue px-4 pt-10 pb-20 -mt-16 md:-mt-24 relative z-20">
-          <LeadForm />
-        </section>
 
         {/* Gallery and Service Details */}
         <section className="bg-banner-dark py-12 px-6 text-center">
