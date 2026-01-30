@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
               src="/heroimg/7.png"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[100%_100%] opacity-30 md:opacity-40"
+              className="object-cover object-[100%_100%] opacity-35 md:opacity-45"
               priority
             />
           </div>
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
               src="/heroimg/8.png"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[0%_100%] opacity-40 md:opacity-50"
+              className="object-cover object-[0%_100%] opacity-45 md:opacity-55"
               priority
             />
           </div>
@@ -51,15 +51,15 @@ const Hero: React.FC = () => {
                 <span className="material-icons text-white font-bold text-base md:text-lg">check</span>
               </div>
               <div>
-                <p className="text-base md:text-lg font-bold leading-tight">{benefit.title}</p>
-                <p className="text-base md:text-lg font-bold text-brand-sky">{benefit.subtitle}</p>
+                <p className="text-lg md:text-xl font-bold leading-tight">{benefit.title}</p>
+                <p className="text-lg md:text-xl font-bold text-brand-sky">{benefit.subtitle}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Social Proof */}
-        <div className="flex flex-col items-center justify-center space-y-2">
+        <div className="flex flex-col items-center justify-center space-y-2 mt-3">
           <div className="flex items-center space-x-2 py-1">
             <div className="bg-white p-1 rounded-full w-6 h-6 flex items-center justify-center shadow-inner">
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24">

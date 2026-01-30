@@ -71,7 +71,7 @@ const LeadForm: React.FC = () => {
          
         </div>
         <h3 className="text-center font-display text-xl md:text-2xl font-bold text-slate-900 leading-snug mb-5">
-            ORGANISE A FREE 30 MINUTE QUOTE IN JUST 30 SECONDS!
+            ORGANISE A FREE QUOTE IN JUST 30 SECONDS!
         </h3>
         
         <form action={formAction} onSubmit={handleSubmit} className="space-y-4">

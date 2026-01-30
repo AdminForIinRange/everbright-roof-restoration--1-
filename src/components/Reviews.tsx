@@ -2,32 +2,64 @@
 import React from 'react';
 
 const Reviews: React.FC = () => {
-  const reviews = [
-    {
-      name: "carl pernito",
-      date: "3 months ago",
-      reviewText:
-        "Got my roof cleaned by these guys and honestly, I didn't think it'd make such a big difference but it really did. The roof was covered in crap from years of weather and now it looks fresh again. Shayal was easy to deal with, turned up on time.",
-      stars: 5,
-      platform: "google",
-    },
-    {
-      name: "Sudip Ramdam",
-      date: "3 months ago",
-      reviewText:
-        "We had our roof soft-washed by Shayal from EverBright. The results were honestly better than we expected. The roof had years of built-up grime, moss, and black streaks, now it looks clean and refreshed without any damage to the tiles.",
-      stars: 5,
-      platform: "google",
-    },
-    {
-      name: "Sita Khadka",
-      date: "3 months ago",
-      reviewText:
-        "We had our roof cleaned by Shayal. Excellent results and very professional service.",
-      stars: 5,
-      platform: "google",
-    }
-  ];
+const reviews = [
+  {
+    name: "Isabell Hann",
+    date: "a month ago",
+    reviewText:
+      "Shayal and his team were fantastic to deal with. He cleaned our terracotta roof and did an amazing job. Great communication the whole way through and we’re very happy with the results. Highly recommend his service.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Mairi Ivy",
+    date: "a month ago",
+    reviewText:
+      "Shayal and his team did a great job cleaning our roof. They came on time, cleaned our roof that was covered in mould, and cleaned up after the job. Highly recommend the team!",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Andy",
+    date: "3 months ago",
+    reviewText:
+      "From the moment I first dealt with Shayal he was polite and professional. Very easy to deal with upfront and honest. Did an amazing job on pressure washing my roof. I would highly recommend the boys as your first point of contact if you need pressure washing done. Extremely happy.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Yama Amiri",
+    date: "2 weeks ago",
+    reviewText:
+      "Shayal and his team did an amazing job cleaning our roof that was covered in mould. The roof now looks new and refreshed.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Yogesh Mandavkar",
+    date: "a month ago",
+    reviewText:
+      "Roof cleaning job was done very professionally and cleaned all the mess after work. Looking place nice and clean. Very polite and respectful.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Sudip Ramdam",
+    date: "8 months ago",
+    reviewText:
+      "We had our roof soft-washed by Shayal from EverBright. The results were honestly better than we expected. The roof had years of built-up grime, moss, and black streaks, now it looks clean and refreshed without any damage to the tiles.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "carl pernito",
+    date: "8 months ago",
+    reviewText:
+      "Got my roof cleaned by these guys and honestly, I didn’t think it’d make such a big difference but it really did. The roof was covered in crap from years of weather and now it looks fresh again. Shayal was easy to deal with.",
+    stars: 5,
+    platform: "google",
+  },
+];
 
   return (
     <section className="bg-navy-dark py-16 px-6 overflow-hidden">
