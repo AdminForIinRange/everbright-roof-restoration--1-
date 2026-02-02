@@ -11,6 +11,8 @@ const LeadForm: React.FC = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
+    phone: '',
+    address: '',
     message: '',
     roofType: 'Not sure',
     roofCondition: 'Not sure - needs inspection',
@@ -50,6 +52,8 @@ const LeadForm: React.FC = () => {
             setFormData({
               fullName: '',
               email: '',
+              phone: '',
+              address: '',
               message: '',
               roofType: 'Not sure',
               roofCondition: 'Not sure - needs inspection',
@@ -81,6 +85,8 @@ const LeadForm: React.FC = () => {
             <>
               <input type="hidden" name="fullName" value={formData.fullName} />
               <input type="hidden" name="email" value={formData.email} />
+              <input type="hidden" name="phone" value={formData.phone} />
+              <input type="hidden" name="address" value={formData.address} />
             </>
           )}
 
@@ -123,6 +129,40 @@ const LeadForm: React.FC = () => {
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="phone">
+                  Phone Number
+                </label>
+                <input 
+                  required
+                  maxLength={255}
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none" 
+                  id="phone" 
+                  name="phone" 
+                  placeholder="e.g. 0412 345 678" 
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="address">
+                  Address
+                </label>
+                <input 
+                  required
+                  maxLength={255}
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none" 
+                  id="address" 
+                  name="address" 
+                  placeholder="Street address, suburb, postcode" 
+                  type="text"
+                  value={formData.address}
+                  onChange={(e) => setFormData({...formData, address: e.target.value})}
                 />
               </div>
 

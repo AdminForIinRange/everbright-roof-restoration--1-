@@ -30,6 +30,8 @@ export async function submitLeadAction(
   try {
     const fullName = sanitize(formData.get("fullName"));
     const email = sanitize(formData.get("email"));
+    const phone = sanitize(formData.get("phone"));
+    const address = sanitize(formData.get("address"));
     const roofType = sanitize(formData.get("roofType")) || "Not sure";
     const roofCondition =
       sanitize(formData.get("roofCondition")) || "Not sure - needs inspection";
@@ -37,6 +39,8 @@ export async function submitLeadAction(
 
     if (!fullName) return { ok: false, error: "Full name is required" };
     if (!email || !isEmail(email)) return { ok: false, error: "Valid email is required" };
+    if (!phone) return { ok: false, error: "Phone number is required" };
+    if (!address) return { ok: false, error: "Address is required" };
     if (message.length > 255) {
       return { ok: false, error: "Message must be 255 characters or less" };
     }
@@ -50,6 +54,8 @@ export async function submitLeadAction(
       {
         fullName,
         email,
+        phone,
+        address,
         roofType,
         roofCondition,
         message,
