@@ -83,6 +83,9 @@ const reviews = [
                     .slice(0, 2)}
                 </div>
                 <div>
+                  <div className="text-slate-900 font-semibold text-base leading-tight">
+                    {review.name}
+                  </div>
                   <div className="flex items-center">
                     <span className="text-orange-500 font-bold text-lg mr-1.5">
                       {review.stars.toFixed(1)}
