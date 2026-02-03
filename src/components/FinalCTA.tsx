@@ -14,7 +14,7 @@ const FinalCTA: React.FC = () => {
         </p>
 
         <a
-          href="#quiz"
+          href="#form"
           className="mt-12 inline-block bg-brand-sky hover:bg-sky-400 active:scale-95 text-white font-bold py-5 px-14 rounded-full transition-all shadow-[0_15px_40px_-10px_rgba(56,189,248,0.5)] uppercase tracking-widest text-xl"
         >
           Get Your Free Quote

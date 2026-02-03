@@ -39,7 +39,7 @@ const MapSection: React.FC = () => {
             </ul>
             
             <a
-              href="#quiz"
+              href="#form"
               className="block w-full bg-brand-sky hover:bg-sky-400 active:scale-[0.98] transition-all text-white font-display font-bold text-3xl py-6 rounded-full shadow-[0_15px_30px_-5px_rgba(56,189,248,0.4)] tracking-wide uppercase text-center"
             >
               Book Your Free Quote

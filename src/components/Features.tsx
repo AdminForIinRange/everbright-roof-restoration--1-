@@ -44,7 +44,7 @@ const Features: React.FC = () => {
 
         <div className="text-center">
           <a
-            href="#quiz"
+            href="#form"
             className="inline-block w-full max-w-md bg-brand-sky hover:bg-brand-sky/90 active:scale-[0.98] transition-all py-6 rounded-full shadow-[0_10px_30px_-5px_rgba(56,189,248,0.4)]"
           >
             <span className="font-display text-white text-3xl font-bold uppercase tracking-wider">
