@@ -25,24 +25,14 @@ const Gallery: React.FC = () => {
       alt: "Roof after cleaning 2"
     },
     {
-      src: "/beforeAfter/7.png",
+      src: "/beforeAfter/9.png",
       label: "Before",
       alt: "Roof before cleaning 3"
     },
     {
-      src: "/beforeAfter/8.png",
-      label: "After",
-      alt: "Roof after cleaning 3"
-    },
-    {
-      src: "/beforeAfter/9.png",
-      label: "Before",
-      alt: "Roof before cleaning 4"
-    },
-    {
       src: "/beforeAfter/10.png",
       label: "After",
-      alt: "Roof after cleaning 4"
+      alt: "Roof after cleaning 3"
     }
   ];
 

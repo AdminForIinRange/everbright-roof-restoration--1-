@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section className="relative bg-brand-dark min-h-[70vh] md:min-h-[80vh] overflow-hidden flex items-center py-12 md:py-20">
+    <section className="relative bg-brand-dark min-h-[70vh] md:min-h-[80vh] overflow-hidden flex items-center md:py-20">
       {/* Background Images Split */}
       <div className="absolute inset-0 z-0">
         <div className="flex h-full w-full">
@@ -80,6 +80,13 @@ const Hero: React.FC = () => {
             Google 5-Stars Rated
           </p>
         </div>
+
+        <a
+          href="#form"
+          className="mt-7 inline-flex items-center justify-center bg-brand-sky hover:bg-sky-400 active:scale-95 text-white font-bold py-4 px-8 rounded-full transition-all shadow-[0_15px_40px_-10px_rgba(56,189,248,0.5)] uppercase tracking-widest text-base md:text-lg"
+        >
+          Get Your Free Quote
+        </a>
       </div>
 
  
