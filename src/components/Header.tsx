@@ -21,10 +21,10 @@ const Header: React.FC = () => {
         <p className="text-[10px] md:text-[12px] text-white/80 uppercase font-bold tracking-wider">Have A Question?</p>
         <a 
           className="text-sm md:text-base font-bold hover:text-brand-sky transition-colors flex items-center justify-end" 
-          href="tel:+61411017386"
+          href="tel:+61 411 017 366"
         >
           <span className="material-icons text-sm mr-1 md:hidden">phone</span>
-          +61 411 017 386
+          +61 411 017 366
         </a>
       </div>
     </header>
