@@ -22,6 +22,9 @@ const Header: React.FC = () => {
         <a 
           className="text-sm md:text-base font-bold hover:text-brand-sky transition-colors flex items-center justify-end" 
           href="tel:+61 411 017 366"
+          data-analytics-event="header_phone_click"
+          data-analytics-location="header"
+          data-analytics-type="phone"
         >
           <span className="material-icons text-sm mr-1 md:hidden">phone</span>
           +61 411 017 366
