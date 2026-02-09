@@ -1,6 +1,7 @@
 import './globals.css';
 
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import Script from 'next/script';
 import type { ReactNode } from 'react';
 
@@ -49,6 +50,7 @@ fbq('track', 'PageView');`}
           />
         </noscript>
         {children}
+        <Analytics />
       </body>
     </html>
   );
