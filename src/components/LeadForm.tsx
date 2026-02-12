@@ -23,10 +23,6 @@ const LeadForm: React.FC = () => {
   const isSubmitted = state.ok && !hasReset;
 
   useEffect(() => {
-    track('lead_step_view', { step });
-  }, [step]);
-
-  useEffect(() => {
     const previousResult = previousResultRef.current;
 
     if (state.ok && !previousResult.ok) {
@@ -35,11 +31,11 @@ const LeadForm: React.FC = () => {
         roofCondition: formData.roofCondition,
       });
     } else if (state.error && state.error !== previousResult.error) {
-      track('lead_submit_error', { step });
+      track('lead_submit_error');
     }
 
     previousResultRef.current = { ok: state.ok, error: state.error };
-  }, [formData.roofCondition, formData.roofType, state.error, state.ok, step]);
+  }, [formData.roofCondition, formData.roofType, state.error, state.ok]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     if (step === 1) {
@@ -47,10 +43,8 @@ const LeadForm: React.FC = () => {
       e.preventDefault();
       if (!form.checkValidity()) {
         form.reportValidity();
-        track('lead_step_validation_failed', { step: 1 });
         return;
       }
-      track('lead_step_completed', { step: 1, roofType: formData.roofType });
       setStep(2);
       return;
     }
@@ -75,7 +69,6 @@ const LeadForm: React.FC = () => {
         </p>
         <button 
           onClick={() => {
-            track('lead_form_restart');
             previousResultRef.current = { ok: false };
             setHasReset(true);
             setStep(1);
@@ -205,10 +198,7 @@ const LeadForm: React.FC = () => {
                     <button
                       key={type}
                       type="button"
-                      onClick={() => {
-                        track('lead_roof_type_selected', { roofType: type });
-                        setFormData({...formData, roofType: type});
-                      }}
+                      onClick={() => setFormData({...formData, roofType: type})}
                       className={`py-2 px-3 rounded-md text-xs font-semibold border transition-all ${
                         formData.roofType === type 
                           ? 'bg-brand-sky border-brand-sky text-white shadow-md' 
@@ -247,10 +237,7 @@ const LeadForm: React.FC = () => {
                     <button
                       key={condition}
                       type="button"
-                      onClick={() => {
-                        track('lead_roof_condition_selected', { roofCondition: condition });
-                        setFormData({...formData, roofCondition: condition});
-                      }}
+                      onClick={() => setFormData({...formData, roofCondition: condition})}
                       className={`py-2 px-3 rounded-md text-xs font-semibold border transition-all ${
                         formData.roofCondition === condition
                           ? 'bg-brand-sky border-brand-sky text-white shadow-md'
@@ -282,10 +269,7 @@ const LeadForm: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
                   type="button"
-                  onClick={() => {
-                    track('lead_back_to_step_1');
-                    setStep(1);
-                  }}
+                  onClick={() => setStep(1)}
                   className="w-full sm:w-auto sm:flex-1 border border-slate-300 text-slate-700 font-bold py-3 px-6 rounded-full transition-all text-sm uppercase tracking-widest hover:border-slate-400"
                 >
                   Back
