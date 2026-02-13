@@ -2,15 +2,23 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from './Footer';
 import Header from './Header';
+import LeadForm from './LeadForm';
 
 const heroBackgroundImage =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuDOfBTawo_I_2MWLLn0D9ktk8ZCBb437BQ3oHZJHtklKUzvXpAcT2FVmfZeSdNrxePBptrbcUw5pfnoRQKCfNCYSupZ_GzAxtHNLN_dme45o5Gf4mWXdQI_GZSDwqFuWuLt7SFnTUV3gbYSGyQNSVs1LqkK6NcrcouPosKQHI5mJqrVgpkn_FWq62HSBNWhs17IrEQqmLRi5f2crvGMCVCrJPXKH__1cTY2XrYuriqh4eerxa_Qr5KI5CttPO105LL_W-XPbQPJCt_I';
 
-const heroGoogleLogo =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuBVun3-DsKB7tV3s3y7UGdlLlVbaMEZlBmwHc63cd5b8iK3RX8itI5BGfiTWpnQljPEglZyJId1t1mwnNsy2ANvJpE7P6B4SdV4EMgEEmW2lsnWvjlLVvBk6zOv09ujId5dERuoF4VuhlgQwuZbM1nJmwTf_b4yEX0x0tHXS-40oz_T1or5f3B_AG9ofttk53MySBg2G9EZuemhfwbK52pYhMK4iUdRKkXZr5lQh61epLKepC70CCpcjzvkQ8JFiv8D6YPv6E_-j6Qm';
-
-const trustGoogleLogo =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuA8EUfj9zlypVZzhakDonQHniDS4dbW1Gq1J_3ZPI_XXwM0pv-frezCFrCD4Xn_ATqoBwXlaYq-2iA8_sh1lxlU5j0ax95jqewjh48WJpB5j1pIMPGACUvI-_dPBB1xw8naH1fxH6xDXcO-_X9pzX59zoE0AJIEt1pCNz9kQuWjQgrsUv8g38wH0MIa0tTEeCzwfVWWW8IywFAhvdzTflYfID4x-3_EfC0ADItGLIymrEgWql30ANSRF00bdkfMDzgs2-irTyH3y-9p';
+function GoogleIcon() {
+  return (
+    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white p-1 shadow-inner">
+      <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
+        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+      </svg>
+    </div>
+  );
+}
 
 const testimonials = [
   {
@@ -178,7 +186,7 @@ export default function LandingHero() {
 
         <div className="relative z-10 flex flex-grow flex-col justify-end px-6 pb-12 pt-8">
           <div className="mb-6">
-            <h1 className="font-display text-5xl uppercase leading-[0.9] tracking-[-0.05em] text-white sm:text-6xl">
+            <h1 className="font-display text-5xl uppercase leading-[0.95] tracking-tight text-white sm:text-6xl">
               Trusted
               <br />
               <span className="text-brand-sky">Exterior Cleaning</span>
@@ -220,7 +228,7 @@ export default function LandingHero() {
 
           <div className="mb-8 flex flex-col">
             <div className="flex items-center gap-3">
-              <Image src={heroGoogleLogo} alt="Google logo" width={24} height={24} className="h-6 w-6" />
+              <GoogleIcon />
               <span className="text-2xl font-bold text-[#FBBF24]">5.0</span>
               <div className="flex">
                 {Array.from({ length: 5 }).map((_, index) => (
@@ -233,16 +241,19 @@ export default function LandingHero() {
             <p className="mt-1 font-semibold text-white">Verified 5-Stars Reviews</p>
           </div>
 
-          <Link
-            href="/roof-restoration#form"
-            className="w-full rounded-2xl bg-brand-sky py-5 text-center font-display text-2xl uppercase tracking-wide text-white shadow-lg transition-transform hover:bg-brand-sky/90 active:scale-[0.98]"
-          >
+          <Link href="#form" className="w-full rounded-2xl bg-brand-sky py-5 text-center font-display text-2xl uppercase tracking-wide text-white shadow-lg transition-transform hover:bg-brand-sky/90 active:scale-[0.98]">
             Book Your Free Quote
           </Link>
         </div>
 
         <div className="relative z-10 flex justify-center pb-2">
           <div className="h-1.5 w-32 rounded-full bg-white/30" />
+        </div>
+      </section>
+
+      <section id="form" className="bg-everbright-blue py-6 md:py-8">
+        <div className="mx-auto w-full max-w-2xl px-4">
+          <LeadForm />
         </div>
       </section>
 
@@ -253,7 +264,7 @@ export default function LandingHero() {
 
         <div className="mb-8 mt-4 flex flex-col items-center">
           <div className="mb-1 flex items-center gap-2">
-            <Image src={trustGoogleLogo} alt="Google logo" width={24} height={24} className="h-6 w-6" />
+            <GoogleIcon />
             <span className="text-2xl font-bold text-slate-800">5.0</span>
             <div className="flex text-orange-500">
               {Array.from({ length: 5 }).map((_, index) => (
@@ -358,7 +369,7 @@ export default function LandingHero() {
                 <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-6xl">{service.title}</h3>
                 <p className="mb-8 max-w-xs text-lg leading-relaxed text-white">{service.description}</p>
                 <Link
-                  href="/roof-restoration#form"
+                  href="#form"
                   className="rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95"
                 >
                   Learn More
@@ -369,7 +380,7 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section className="bg-banner-dark px-6 pb-6 pt-12">
+      <section className="bg-white px-6  pt-12">
         <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight leading-tight text-brand-sky">A Service You Can Rely On</h2>
 
         <div className="mb-6 flex items-start gap-3">
@@ -380,14 +391,16 @@ export default function LandingHero() {
             check_circle
           </span>
           <div className="flex flex-col sm:flex-row sm:items-start sm:gap-4">
-            <h3 className="min-w-[160px] text-lg font-bold text-white">{reliabilityIntro.title}</h3>
-            <p className="mt-1 text-sm text-slate-300 sm:mt-0">{reliabilityIntro.description}</p>
+            <h3 className="min-w-[160px] text-lg font-bold text-slate-800">{reliabilityIntro.title}</h3>
+            <p className="mt-1 text-sm text-slate-500 sm:mt-0">{reliabilityIntro.description}</p>
           </div>
         </div>
       </section>
 
 
-      <section className="bg-dark-navy px-6 py-8">
+
+
+      <section className="bg-white px-6 py-8">
         {reliabilityPoints.map((point) => (
           <div key={point.title} className="mb-8 flex items-start gap-3 last:mb-0">
             <span
@@ -397,8 +410,8 @@ export default function LandingHero() {
               check_circle
             </span>
             <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2">
-              <h3 className="mb-1 text-lg font-bold leading-tight text-white">{point.title}</h3>
-              <p className="text-sm text-slate-300">{point.description}</p>
+              <h3 className="mb-1 text-lg font-bold leading-tight text-slate-800">{point.title}</h3>
+              <p className="text-sm text-slate-500">{point.description}</p>
             </div>
           </div>
         ))}
@@ -513,7 +526,7 @@ export default function LandingHero() {
             </div>
 
             <Link
-              href="/roof-restoration#form"
+              href="#form"
               className="flex-1 rounded-full bg-brand-sky px-2 py-4 text-center text-white shadow-lg transition-all duration-200 hover:scale-[1.02] hover:bg-brand-sky active:scale-[0.98]"
             >
               <span className="font-display text-lg uppercase tracking-wide">Book Your Free Quote</span>
@@ -531,4 +544,3 @@ export default function LandingHero() {
     </main>
   );
 }
-
