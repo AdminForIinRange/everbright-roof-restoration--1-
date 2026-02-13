@@ -16,6 +16,7 @@ const config: Config = {
         gold: '#D4AF37',
       },
       fontFamily: {
+        archivo: ['"Archivo Black"', 'sans-serif'],
         display: ['Oswald', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],

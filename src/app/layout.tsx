@@ -6,9 +6,11 @@ import Script from 'next/script';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'EverBright Roof Restoration | Adelaide',
-  description:
-    'A high-converting landing page for a roof cleaning and restoration service in Adelaide, featuring a multi-step eligibility quiz and professional design.',
+  title: {
+    default: 'EverBright',
+    template: '%s | EverBright',
+  },
+  description: 'EverBright exterior cleaning and restoration services in Adelaide.',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -18,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -55,3 +57,4 @@ fbq('track', 'PageView');`}
     </html>
   );
 }
+
