@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from './Footer';
+import Header from './Header';
 
 const heroBackgroundImage =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuDOfBTawo_I_2MWLLn0D9ktk8ZCBb437BQ3oHZJHtklKUzvXpAcT2FVmfZeSdNrxePBptrbcUw5pfnoRQKCfNCYSupZ_GzAxtHNLN_dme45o5Gf4mWXdQI_GZSDwqFuWuLt7SFnTUV3gbYSGyQNSVs1LqkK6NcrcouPosKQHI5mJqrVgpkn_FWq62HSBNWhs17IrEQqmLRi5f2crvGMCVCrJPXKH__1cTY2XrYuriqh4eerxa_Qr5KI5CttPO105LL_W-XPbQPJCt_I';
@@ -157,7 +159,7 @@ const reliabilityPoints = [
 export default function LandingHero() {
   return (
     <main id="top" className="bg-white text-slate-900">
-      <section className="relative flex min-h-screen w-full flex-col overflow-hidden bg-slate-900">
+      <section className="relative flex min-h-screen w-full flex-col overflow-hidden bg-brand-dark">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroBackgroundImage}
@@ -170,36 +172,16 @@ export default function LandingHero() {
           <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.4)_50%,rgba(0,0,0,0.7)_100%)]" />
         </div>
 
-        <header className="relative z-10 flex items-center justify-between px-6 pb-4 pt-10">
-          <div className="flex flex-col items-center">
-            <div className="flex flex-col items-start">
-              <div className="flex items-center">
-                <span className="material-icons text-3xl text-white">home_work</span>
-              </div>
-              <div className="font-archivo text-xl uppercase tracking-tighter text-white">EverBright</div>
-              <div className="-mt-1 text-[8px] uppercase tracking-widest text-white opacity-80">Pressure Washing</div>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <a
-              href="tel:+61411017366"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white"
-            >
-              <span className="material-icons text-xl">phone_in_talk</span>
-            </a>
-            <button type="button" aria-label="Open menu" className="text-white">
-              <span className="material-icons text-4xl">menu</span>
-            </button>
-          </div>
-        </header>
+        <div className="relative z-10">
+          <Header />
+        </div>
 
         <div className="relative z-10 flex flex-grow flex-col justify-end px-6 pb-12 pt-8">
           <div className="mb-6">
-            <h1 className="font-archivo text-5xl uppercase leading-[0.9] tracking-[-0.05em] text-white sm:text-6xl">
+            <h1 className="font-display text-5xl uppercase leading-[0.9] tracking-[-0.05em] text-white sm:text-6xl">
               Trusted
               <br />
-              <span className="text-[#00A3FF]">Exterior Cleaning</span>
+              <span className="text-brand-sky">Exterior Cleaning</span>
               <br />
               in Adelaide
             </h1>
@@ -211,7 +193,7 @@ export default function LandingHero() {
 
           <div className="mb-8 grid max-w-sm grid-cols-3 gap-2">
             <div className="flex flex-col items-center text-center">
-              <span className="material-icons mb-1 text-[#00A3FF]">schedule</span>
+              <span className="material-icons mb-1 text-brand-sky">schedule</span>
               <span className="text-[10px] font-bold uppercase leading-tight tracking-tight text-white">
                 On Time
                 <br />
@@ -219,7 +201,7 @@ export default function LandingHero() {
               </span>
             </div>
             <div className="flex flex-col items-center text-center">
-              <span className="material-icons mb-1 text-[#00A3FF]">groups</span>
+              <span className="material-icons mb-1 text-brand-sky">groups</span>
               <span className="text-[10px] font-bold uppercase leading-tight tracking-tight text-white">
                 100% Works
                 <br />
@@ -227,7 +209,7 @@ export default function LandingHero() {
               </span>
             </div>
             <div className="flex flex-col items-center text-center">
-              <span className="material-icons mb-1 text-[#00A3FF]">verified_user</span>
+              <span className="material-icons mb-1 text-brand-sky">verified_user</span>
               <span className="text-[10px] font-bold uppercase leading-tight tracking-tight text-white">
                 Insured for
                 <br />
@@ -253,7 +235,7 @@ export default function LandingHero() {
 
           <Link
             href="/roof-restoration#form"
-            className="w-full rounded-2xl bg-[#00A3FF] py-5 text-center font-archivo text-2xl uppercase tracking-wide text-white shadow-lg transition-transform hover:bg-sky-400 active:scale-[0.98]"
+            className="w-full rounded-2xl bg-brand-sky py-5 text-center font-display text-2xl uppercase tracking-wide text-white shadow-lg transition-transform hover:bg-brand-sky/90 active:scale-[0.98]"
           >
             Book Your Free Quote
           </Link>
@@ -265,8 +247,8 @@ export default function LandingHero() {
       </section>
 
       <section className="bg-white px-5 py-12 text-center">
-        <h1 className="font-display text-4xl uppercase leading-[1.1] text-[#0A2540]">
-          Local Exterior Cleaners You Can <span className="text-[#00AEEF]">Trust</span>
+        <h1 className="font-display text-4xl uppercase leading-[1.1] text-everbright-blue">
+          Local Exterior Cleaners You Can <span className="text-brand-sky">Trust</span>
         </h1>
 
         <div className="mb-8 mt-4 flex flex-col items-center">
@@ -281,19 +263,19 @@ export default function LandingHero() {
               ))}
             </div>
           </div>
-          <p className="text-lg font-semibold text-[#0A2540]">Verified 5-Stars Reviews</p>
+          <p className="text-lg font-semibold text-everbright-blue">Verified 5-Stars Reviews</p>
         </div>
 
         <div className="hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
           {testimonials.map((testimonial) => (
-            <article key={testimonial.avatar} className="w-[280px] flex-none snap-center rounded-2xl bg-[#0A2540] p-5 text-left">
+            <article key={testimonial.avatar} className="w-[280px] flex-none snap-center rounded-2xl bg-everbright-blue p-5 text-left">
               <div className="mb-3 flex items-center gap-3">
                 <Image
                   src={testimonial.avatar}
                   alt="Reviewer"
                   width={48}
                   height={48}
-                  className="h-12 w-12 rounded-full border-2 border-[#00AEEF] object-cover"
+                  className="h-12 w-12 rounded-full border-2 border-brand-sky object-cover"
                 />
                 <div className="flex items-center gap-1">
                   <span className="font-bold text-white">5.0</span>
@@ -312,8 +294,8 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section className="bg-[#0A2540] py-12">
-        <h2 className="mb-10 text-center font-display text-5xl uppercase tracking-tight text-[#00AEEF]">Dirty Exterior?</h2>
+      <section className="bg-everbright-blue py-12">
+        <h2 className="mb-10 text-center font-display text-5xl uppercase tracking-tight text-brand-sky">Dirty Exterior?</h2>
 
         <div className="hide-scrollbar flex snap-x snap-mandatory overflow-x-auto">
           {comparisons.map((comparison) => (
@@ -327,13 +309,13 @@ export default function LandingHero() {
                     height={256}
                     className="h-64 w-full object-cover"
                   />
-                  <span className="absolute bottom-2 right-2 rounded bg-[#0A2540]/70 px-2 py-0.5 text-[10px] font-bold text-white">
+                  <span className="absolute bottom-2 right-2 rounded bg-everbright-blue/70 px-2 py-0.5 text-[10px] font-bold text-white">
                     BEFORE
                   </span>
                 </div>
                 <div className="relative w-1/2">
                   <Image src={comparison.after} alt={comparison.afterAlt} width={400} height={256} className="h-64 w-full object-cover" />
-                  <span className="absolute bottom-2 right-2 rounded bg-[#0A2540]/70 px-2 py-0.5 text-[10px] font-bold text-white">
+                  <span className="absolute bottom-2 right-2 rounded bg-everbright-blue/70 px-2 py-0.5 text-[10px] font-bold text-white">
                     AFTER
                   </span>
                 </div>
@@ -344,24 +326,24 @@ export default function LandingHero() {
       </section>
 
       <section className="bg-white px-8 py-14 text-center">
-        <h2 className="mb-6 font-display text-3xl uppercase leading-tight text-[#0A2540]">We&apos;ll Bring Your Exterior Back To Life</h2>
+        <h2 className="mb-6 font-display text-3xl uppercase leading-tight text-everbright-blue">We&apos;ll Bring Your Exterior Back To Life</h2>
         <p className="mx-auto mb-10 max-w-lg text-sm leading-relaxed text-slate-500">
           Say goodbye to mould-stained tiles and hello to a professionally cleaned and treated roof that stays cleaner for longer.
           Our proven roof cleaning and treatment process restores your roof&apos;s appearance, protects against regrowth, and enhances
           your home&apos;s value.
         </p>
-        <p className="font-display text-lg uppercase text-[#0A2540]">Clean Today. Protected for Longer.</p>
+        <p className="font-display text-lg uppercase text-everbright-blue">Clean Today. Protected for Longer.</p>
       </section>
 
-      <section id="services" className="bg-slate-50 pb-16 pt-4">
-        <header className="sticky top-0 z-10 bg-slate-50/95 px-6 pb-8 pt-12 text-center backdrop-blur-md">
-          <h2 className="font-display text-3xl font-bold uppercase leading-none tracking-tight text-slate-900 md:text-4xl">
+      <section id="services" className="bg-banner-dark pb-16">
+        <header className="border-y border-white/10 bg-banner-dark px-6 py-8 text-center">
+          <h2 className="font-display text-3xl font-bold uppercase leading-none tracking-tight text-white md:text-4xl">
             Exterior Cleaning Services
-            <span className="mt-1 block text-[#0099FF]">in Adelaide</span>
+            <span className="mt-1 block text-brand-sky">in Adelaide</span>
           </h2>
         </header>
 
-        <div className="mx-auto max-w-md space-y-6 px-5 pb-24">
+        <div className="mx-auto max-w-md space-y-6 px-5 pb-24 pt-8">
           {services.map((service) => (
             <article key={service.title} className="group relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl">
               <Image
@@ -373,11 +355,11 @@ export default function LandingHero() {
               />
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,23,42,0.4),rgba(15,23,42,0.85))]" />
               <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-[#0099FF] md:text-6xl">{service.title}</h3>
+                <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-6xl">{service.title}</h3>
                 <p className="mb-8 max-w-xs text-lg leading-relaxed text-white">{service.description}</p>
                 <Link
                   href="/roof-restoration#form"
-                  className="rounded-full bg-[#38BDF8] px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-sky-400 active:scale-95"
+                  className="rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95"
                 >
                   Learn More
                 </Link>
@@ -387,44 +369,43 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section className="bg-white px-6 pb-6 pt-12">
-        <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight leading-tight text-[#00A8FF]">A Service You Can Rely On</h2>
+      <section className="bg-banner-dark px-6 pb-6 pt-12">
+        <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight leading-tight text-brand-sky">A Service You Can Rely On</h2>
 
         <div className="mb-6 flex items-start gap-3">
           <span
-            className="material-symbols-outlined shrink-0 text-3xl text-[#00A8FF]"
+            className="material-symbols-outlined shrink-0 text-3xl text-brand-sky"
             style={{ fontVariationSettings: "'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24" }}
           >
             check_circle
           </span>
           <div className="flex flex-col sm:flex-row sm:items-start sm:gap-4">
-            <h3 className="min-w-[160px] text-lg font-bold text-slate-800">{reliabilityIntro.title}</h3>
-            <p className="mt-1 text-sm text-slate-500 sm:mt-0">{reliabilityIntro.description}</p>
+            <h3 className="min-w-[160px] text-lg font-bold text-white">{reliabilityIntro.title}</h3>
+            <p className="mt-1 text-sm text-slate-300 sm:mt-0">{reliabilityIntro.description}</p>
           </div>
         </div>
       </section>
 
-      <div className="h-1 w-full bg-slate-800" />
 
-      <section className="bg-white px-6 py-8">
+      <section className="bg-dark-navy px-6 py-8">
         {reliabilityPoints.map((point) => (
           <div key={point.title} className="mb-8 flex items-start gap-3 last:mb-0">
             <span
-              className="material-symbols-outlined shrink-0 text-3xl text-[#00A8FF]"
+              className="material-symbols-outlined shrink-0 text-3xl text-brand-sky"
               style={{ fontVariationSettings: "'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24" }}
             >
               check_circle
             </span>
             <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2">
-              <h3 className="mb-1 text-lg font-bold leading-tight text-slate-800">{point.title}</h3>
-              <p className="text-sm text-slate-500">{point.description}</p>
+              <h3 className="mb-1 text-lg font-bold leading-tight text-white">{point.title}</h3>
+              <p className="text-sm text-slate-300">{point.description}</p>
             </div>
           </div>
         ))}
       </section>
 
-      <section id="services-quiz" className="flex min-h-screen items-center justify-center bg-[#0D2231] px-6 py-12">
-        <div className="w-full max-w-md rounded-2xl border-4 border-[#00A8FF] bg-white p-8 shadow-[0_6px_18px_-4px_rgba(0,0,0,0.35)]">
+      <section id="services-quiz" className="flex min-h-screen items-center justify-center bg-everbright-blue px-6 py-12">
+        <div className="w-full max-w-md rounded-2xl border-4 border-brand-sky bg-white p-8 shadow-[0_6px_18px_-4px_rgba(0,0,0,0.35)]">
           <h2 className="mb-8 text-2xl font-bold leading-tight text-slate-900">Take our 30 Seconds Quiz To See If You&apos;re ELIGIBLE</h2>
 
           <form className="space-y-6">
@@ -436,7 +417,7 @@ export default function LandingHero() {
                 id="quiz-name"
                 name="name"
                 type="text"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 transition-all focus:border-[#00A8FF] focus:ring-[#00A8FF]"
+                className="w-full rounded-lg border border-slate-300 px-3 py-2 transition-all focus:border-brand-sky focus:ring-brand-sky"
               />
             </div>
 
@@ -448,7 +429,7 @@ export default function LandingHero() {
                 id="quiz-email"
                 name="email"
                 type="email"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 transition-all focus:border-[#00A8FF] focus:ring-[#00A8FF]"
+                className="w-full rounded-lg border border-slate-300 px-3 py-2 transition-all focus:border-brand-sky focus:ring-brand-sky"
               />
             </div>
 
@@ -460,7 +441,7 @@ export default function LandingHero() {
                 id="quiz-message"
                 name="message"
                 rows={4}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 transition-all focus:border-[#00A8FF] focus:ring-[#00A8FF]"
+                className="w-full rounded-lg border border-slate-300 px-3 py-2 transition-all focus:border-brand-sky focus:ring-brand-sky"
               />
             </div>
 
@@ -475,10 +456,10 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section id="process-contact" className="bg-[#0B2430]">
-        <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-[#0B2430] shadow-2xl">
+      <section id="process-contact" className="bg-navy-dark">
+        <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-navy-dark shadow-2xl">
           <section className="px-6 pb-12 pt-16 text-center">
-            <h2 className="mb-6 font-display text-[44px] uppercase leading-[1.1] tracking-[-0.02em] text-[#0EA5E9]">
+            <h2 className="mb-6 font-display text-[44px] uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky">
               Easy, no
               <br />
               stress, just fresh
@@ -492,7 +473,7 @@ export default function LandingHero() {
             <div className="space-y-12">
               {processSteps.map((step) => (
                 <div key={step.number} className="flex flex-col items-center">
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#0099FF] shadow-lg shadow-[#0099FF]/20">
+                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-sky shadow-lg shadow-brand-sky/20">
                     <span className={`text-3xl font-black text-white ${step.italicNumber ? 'italic' : ''}`}>{step.number}</span>
                   </div>
                   <h3 className="mb-2 font-display text-2xl uppercase tracking-tight text-white">{step.title}</h3>
@@ -503,16 +484,16 @@ export default function LandingHero() {
           </section>
 
           <section className="mx-1 mb-1 rounded-t-3xl bg-white p-8">
-            <h3 className="mb-4 font-display text-5xl uppercase leading-none text-[#0B2430]">Contact Us Today</h3>
-            <p className="mb-8 text-sm font-medium leading-snug text-[#2C404E]">
+            <h3 className="mb-4 font-display text-5xl uppercase leading-none text-everbright-blue">Contact Us Today</h3>
+            <p className="mb-8 text-sm font-medium leading-snug text-slate-700">
               Limited availability - restore and protect the exterior of your home with Adelaide&apos;s trusted specialists.
             </p>
 
             <div className="space-y-3">
-              <h4 className="font-display text-lg uppercase text-[#0B2430]">Trusted Roof Cleaning Specialists</h4>
+              <h4 className="font-display text-lg uppercase text-everbright-blue">Trusted Roof Cleaning Specialists</h4>
               <ul className="space-y-1.5">
                 {contactChecklist.map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-[11px] font-semibold text-[#2C404E]">
+                  <li key={item} className="flex items-center gap-2 text-[11px] font-semibold text-slate-700">
                     <span className="material-icons text-sm">check</span>
                     {item}
                   </li>
@@ -521,11 +502,11 @@ export default function LandingHero() {
             </div>
           </section>
 
-          <footer className="mt-auto flex items-center justify-between gap-4 bg-[#0B2430] p-6">
+          <footer className="mt-auto flex items-center justify-between gap-4 bg-navy-dark p-6">
             <div className="group relative w-1/3 cursor-pointer overflow-hidden rounded-lg border border-white/10 aspect-[4/3]">
               <Image src={mapThumbnail} alt="Map of Adelaide service area" fill sizes="140px" className="h-full w-full object-cover opacity-60 grayscale" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-4 w-4 animate-pulse rounded-full border-2 border-white bg-[#0EA5E9]" />
+                <div className="h-4 w-4 animate-pulse rounded-full border-2 border-white bg-brand-sky" />
               </div>
               <div className="absolute right-6 top-4 h-1 w-1 rounded-full bg-white/50" />
               <div className="absolute bottom-6 left-8 h-1 w-1 rounded-full bg-white/50" />
@@ -533,32 +514,21 @@ export default function LandingHero() {
 
             <Link
               href="/roof-restoration#form"
-              className="flex-1 rounded-full bg-[#0099FF] px-2 py-4 text-center text-white shadow-lg transition-all duration-200 hover:scale-[1.02] hover:bg-[#0EA5E9] active:scale-[0.98]"
+              className="flex-1 rounded-full bg-brand-sky px-2 py-4 text-center text-white shadow-lg transition-all duration-200 hover:scale-[1.02] hover:bg-brand-sky active:scale-[0.98]"
             >
               <span className="font-display text-lg uppercase tracking-wide">Book Your Free Quote</span>
             </Link>
           </footer>
 
-          <div className="flex w-full justify-center bg-[#0B2430] pb-2 pt-4">
+          <div className="flex w-full justify-center bg-navy-dark pb-2 pt-4">
             <div className="h-1.5 w-32 rounded-full bg-white/20" />
           </div>
         </div>
       </section>
 
-      <nav className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-around border-t border-slate-200 bg-white/85 px-8 py-3 backdrop-blur-xl">
-        <a href="#top" className="flex flex-col items-center text-[#38BDF8]">
-          <span className="material-icons text-2xl">home</span>
-          <span className="mt-1 text-[10px] font-semibold">Home</span>
-        </a>
-        <a href="/roof-restoration#form" className="flex flex-col items-center text-slate-400">
-          <span className="material-icons text-2xl">event_available</span>
-          <span className="mt-1 text-[10px] font-semibold">Booking</span>
-        </a>
-        <a href="tel:+61411017366" className="flex flex-col items-center text-slate-400">
-          <span className="material-icons text-2xl">mail_outline</span>
-          <span className="mt-1 text-[10px] font-semibold">Contact</span>
-        </a>
-      </nav>
+      <Footer />
+
     </main>
   );
 }
+
