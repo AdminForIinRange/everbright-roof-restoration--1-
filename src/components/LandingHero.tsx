@@ -171,7 +171,10 @@ const reliabilityPoints = [
 
 export default function LandingHero() {
   return (
-    <main id="top" className="bg-white text-slate-900">
+    <main
+      id="top"
+      className="bg-white font-body text-slate-900 [&_h1]:font-bold [&_h2]:font-bold [&_h3]:font-bold [&_h4]:font-bold"
+    >
       <section className="relative flex min-h-screen w-full flex-col overflow-hidden bg-brand-dark">
         <div className="absolute inset-0 z-0">
           <Image
@@ -191,7 +194,7 @@ export default function LandingHero() {
 
         <div className="relative z-10 flex flex-grow flex-col justify-end px-6 pb-12 pt-8">
           <div className="mb-6">
-            <h1 className="font-display text-5xl uppercase leading-[0.95] tracking-tight text-white sm:text-6xl">
+            <h1 className="font-display text-5xl font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:text-8xl">
               Trusted
               <br />
               <span className="text-brand-sky">Exterior Cleaning</span>
@@ -263,7 +266,7 @@ export default function LandingHero() {
       </section>
 
       <section className="bg-white px-5 py-12 text-center">
-        <h1 className="font-display text-4xl uppercase leading-[1.1] text-everbright-blue">
+        <h1 className="font-display text-4xl uppercase leading-[1.1] text-everbright-blue md:text-5xl">
           Local Exterior Cleaners You Can <span className="text-brand-sky">Trust</span>
         </h1>
 
@@ -342,13 +345,13 @@ export default function LandingHero() {
       </section>
 
       <section className="bg-white px-8 py-14 text-center">
-        <h2 className="mb-6 font-display text-3xl uppercase leading-tight text-everbright-blue">We&apos;ll Bring Your Exterior Back To Life</h2>
-        <p className="mx-auto mb-10 max-w-lg text-sm leading-relaxed text-slate-500">
+        <h2 className="mb-6 font-display text-4xl uppercase leading-tight text-everbright-blue md:text-5xl">We&apos;ll Bring Your Exterior Back To Life</h2>
+        <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-slate-500 md:text-lg">
           Say goodbye to mould-stained tiles and hello to a professionally cleaned and treated roof that stays cleaner for longer.
           Our proven roof cleaning and treatment process restores your roof&apos;s appearance, protects against regrowth, and enhances
           your home&apos;s value.
         </p>
-        <p className="font-display text-lg uppercase text-everbright-blue">Clean Today. Protected for Longer.</p>
+        <p className="font-display text-xl font-bold uppercase text-everbright-blue md:text-2xl">Clean Today. Protected for Longer.</p>
       </section>
 
       <section id="services" className="bg-banner-dark pb-16">
@@ -397,7 +400,7 @@ export default function LandingHero() {
           </span>
           <div className="flex flex-col sm:flex-row sm:items-start sm:gap-4">
             <h3 className="min-w-[160px] text-lg font-bold text-slate-800">{reliabilityIntro.title}</h3>
-            <p className="mt-1 text-sm text-slate-500 sm:mt-0">{reliabilityIntro.description}</p>
+            <p className="mt-1 text-base text-slate-500 sm:mt-0 md:text-lg">{reliabilityIntro.description}</p>
           </div>
         </div>
       </section>
@@ -416,7 +419,7 @@ export default function LandingHero() {
             </span>
             <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2">
               <h3 className="mb-1 text-lg font-bold leading-tight text-slate-800">{point.title}</h3>
-              <p className="text-sm text-slate-500">{point.description}</p>
+              <p className="text-base text-slate-500 md:text-lg">{point.description}</p>
             </div>
           </div>
         ))}
@@ -424,7 +427,7 @@ export default function LandingHero() {
 
       <section id="services-quiz" className="flex min-h-screen items-center justify-center bg-everbright-blue px-6 py-12">
         <div className="w-full max-w-md rounded-2xl border-4 border-brand-sky bg-white p-8 shadow-[0_6px_18px_-4px_rgba(0,0,0,0.35)]">
-          <h2 className="mb-8 text-2xl font-bold leading-tight text-slate-900">Take our 30 Seconds Quiz To See If You&apos;re ELIGIBLE</h2>
+          <h2 className="mb-8 font-display text-3xl font-bold leading-tight text-slate-900">Take our 30 Seconds Quiz To See If You&apos;re ELIGIBLE</h2>
 
           <form className="space-y-6">
             <div>
@@ -463,7 +466,7 @@ export default function LandingHero() {
               />
             </div>
 
-            <button type="submit" className="w-full rounded-full bg-black py-4 text-lg font-semibold text-white transition-all hover:opacity-90 active:scale-[0.98]">
+            <button type="submit" className="w-full rounded-full bg-black py-4 text-lg font-bold text-white transition-all hover:opacity-90 active:scale-[0.98]">
               Submit
             </button>
 
@@ -477,12 +480,12 @@ export default function LandingHero() {
       <section id="process-contact" className="bg-navy-dark">
         <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-navy-dark shadow-2xl">
           <section className="px-6 pb-12 pt-16 text-center">
-            <h2 className="mb-6 font-display text-[44px] uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky">
+            <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky md:text-7xl">
               Easy, no
               <br />
               stress, just fresh
             </h2>
-            <p className="mx-auto mb-16 max-w-[320px] text-xs font-medium leading-relaxed text-white/80">
+            <p className="mx-auto mb-16 max-w-[320px] text-sm leading-relaxed text-white/80 md:text-base">
               Great results matter, but we also make the process simple and stress-free. From booking to completion, we keep everything
               clear and easy with our straightforward 3-step process, so you can relax while we handle the hard work and deliver a
               beautifully cleaned property.
@@ -495,7 +498,7 @@ export default function LandingHero() {
                     <span className={`text-3xl font-black text-white ${step.italicNumber ? 'italic' : ''}`}>{step.number}</span>
                   </div>
                   <h3 className="mb-2 font-display text-2xl uppercase tracking-tight text-white">{step.title}</h3>
-                  <p className="px-8 text-[11px] leading-snug text-white/70">{step.description}</p>
+                  <p className="px-8 text-sm leading-snug text-white/70 md:text-base">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -503,7 +506,7 @@ export default function LandingHero() {
 
           <section className="mx-1 mb-1 rounded-t-3xl bg-white p-8">
             <h3 className="mb-4 font-display text-5xl uppercase leading-none text-everbright-blue">Contact Us Today</h3>
-            <p className="mb-8 text-sm font-medium leading-snug text-slate-700">
+            <p className="mb-8 text-base leading-snug text-slate-700 md:text-lg">
               Limited availability - restore and protect the exterior of your home with Adelaide&apos;s trusted specialists.
             </p>
 
@@ -511,7 +514,7 @@ export default function LandingHero() {
               <h4 className="font-display text-lg uppercase text-everbright-blue">Trusted Roof Cleaning Specialists</h4>
               <ul className="space-y-1.5">
                 {contactChecklist.map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-[11px] font-semibold text-slate-700">
+                  <li key={item} className="flex items-center gap-2 text-sm font-semibold text-slate-700">
                     <span className="material-icons text-sm">check</span>
                     {item}
                   </li>
