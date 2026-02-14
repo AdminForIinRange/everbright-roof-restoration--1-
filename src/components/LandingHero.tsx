@@ -67,12 +67,12 @@ const comparisons = [
 
 const services = [
   {
-    title: 'Roof Cleaning',
+    title: 'Roof Restoration',
     description:
-      'Remove mould, moss, and dirt build-up, helping prevent damage, improve appearance, and extend the life of your roof.',
+      'Restore roof appearance and protect against mould and lichen regrowth with a proven roof-safe cleaning and treatment process.',
     image: '/genrealPhotos/RoofcleaingServiceCard.png',
     alt: 'Professional worker cleaning a tiled roof with a pressure washer',
-    href: '/roof-cleaning',
+    href: '/roof-restoration',
   },
   {
     title: 'Pressure Washing',
@@ -179,7 +179,7 @@ export default function LandingHero() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.4)_50%,rgba(0,0,0,0.7)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.5)_50%,rgba(0,0,0,0.78)_100%)]" />
         </div>
 
         <div className="relative z-10">
@@ -420,54 +420,8 @@ export default function LandingHero() {
       </section>
 
       <section id="services-quiz" className="flex min-h-screen items-center justify-center bg-everbright-blue px-6 py-12">
-        <div className="w-full max-w-md rounded-2xl border-4 border-brand-sky bg-white p-8 shadow-[0_6px_18px_-4px_rgba(0,0,0,0.35)]">
-          <h2 className="mb-8 font-display text-3xl font-bold leading-tight text-slate-900">Take our 30 Seconds Quiz To See If You&apos;re ELIGIBLE</h2>
-
-          <form className="space-y-6">
-            <div>
-              <label htmlFor="quiz-name" className="mb-1 block text-sm font-medium text-slate-700">
-                Name
-              </label>
-              <input
-                id="quiz-name"
-                name="name"
-                type="text"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 transition-all focus:border-brand-sky focus:ring-brand-sky"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="quiz-email" className="mb-1 block text-sm font-medium text-slate-700">
-                Email address
-              </label>
-              <input
-                id="quiz-email"
-                name="email"
-                type="email"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 transition-all focus:border-brand-sky focus:ring-brand-sky"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="quiz-message" className="mb-1 block text-sm font-medium text-slate-700">
-                Leave a message
-              </label>
-              <textarea
-                id="quiz-message"
-                name="message"
-                rows={4}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 transition-all focus:border-brand-sky focus:ring-brand-sky"
-              />
-            </div>
-
-            <button type="submit" className="w-full rounded-full bg-black py-4 text-lg font-bold text-white transition-all hover:opacity-90 active:scale-[0.98]">
-              Submit
-            </button>
-
-            <p className="mt-4 text-center text-[10px] leading-normal text-slate-500">
-              Your Canva profile name won&apos;t be shared. Never submit passwords.
-            </p>
-          </form>
+        <div className="w-full max-w-2xl">
+          <LeadForm />
         </div>
       </section>
 
