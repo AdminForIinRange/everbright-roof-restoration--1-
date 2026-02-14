@@ -248,9 +248,7 @@ export default function LandingHero() {
           </Link>
         </div>
 
-        <div className="relative z-10 flex justify-center pb-2">
-          <div className="h-1.5 w-32 rounded-full bg-white/30" />
-        </div>
+       
       </section>
 
       <section id="form" className="bg-everbright-blue py-6 md:py-8">
