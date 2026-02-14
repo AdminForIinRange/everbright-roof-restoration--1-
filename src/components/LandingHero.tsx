@@ -204,7 +204,7 @@ export default function LandingHero() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.5)_50%,rgba(0,0,0,0.78)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0.5)_50%,rgba(0,0,0,1)_100%)]" />
         </div>
 
         <div className="relative z-10">
