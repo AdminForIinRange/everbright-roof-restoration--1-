@@ -298,7 +298,7 @@ export default function LandingHero() {
           Dirty Exterior?
         </h2>
 
-        <DragScroll className="comparison-marquee hide-scrollbar">
+        <DragScroll className="comparison-marquee drag-scroll hide-scrollbar">
           <div className="comparison-marquee-track">
             {[...comparisonSlides, ...comparisonSlides].map((slide, index) => (
               <article key={`${slide.key}-${index}`} className="comparison-marquee-item">
@@ -306,10 +306,11 @@ export default function LandingHero() {
                   src={slide.image}
                   alt={slide.alt}
                   fill
+                  draggable={false}
                   sizes="(min-width: 1024px) 240px, (min-width: 768px) 220px, 180px"
-                  className="object-cover"
+                  className="pointer-events-none object-cover"
                 />
-                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#003249]/95 px-5 py-2 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#003249]/95 px-5 py-2 font-display text-2xl uppercase leading-none tracking-tight text-white">
                   {slide.label}
                 </span>
               </article>

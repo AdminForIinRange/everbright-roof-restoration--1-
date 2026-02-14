@@ -61,6 +61,7 @@ h3 {
 .drag-scroll {
   touch-action: pan-x;
   cursor: grab;
+  -webkit-overflow-scrolling: touch;
 }
 
 .comparison-marquee-track {
