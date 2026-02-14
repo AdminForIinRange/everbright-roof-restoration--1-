@@ -445,7 +445,7 @@ export default function LandingHero() {
         <h2 className="mb-6 font-display text-4xl uppercase leading-tight text-everbright-blue md:text-5xl lg:text-6xl">
           We&apos;ll Bring Your Exterior Back To Life
         </h2>
-        <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-slate-500 md:max-w-3xl md:text-lg lg:text-xl">
+        <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-black md:max-w-3xl md:text-lg lg:text-xl">
           Say goodbye to mould-stained tiles and hello to a professionally
           cleaned and treated roof that stays cleaner for longer. Our proven
           roof cleaning and treatment process restores your roof&apos;s
@@ -493,12 +493,20 @@ export default function LandingHero() {
                     {service.description}
                   </p>
                 </div>
-                <Link
-                  href={service.href}
-                  className="mx-auto rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95 md:mt-auto md:text-2xl"
-                >
-                  Learn More
-                </Link>
+                <div className="mt-auto flex flex-col items-center gap-3">
+                  <Link
+                    href={service.href}
+                    className="mx-auto rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95 md:text-2xl"
+                  >
+                    Learn More
+                  </Link>
+                  <Link
+                    href="#form"
+                    className="mx-auto rounded-full bg-white px-12 py-4 text-2xl font-bold uppercase text-everbright-blue shadow-lg transition-all hover:bg-white/90 active:scale-95 md:px-14 md:py-5 md:text-[1.65rem]"
+                  >
+                    Get a Quote
+                  </Link>
+                </div>
               </div>
             </article>
           ))}
