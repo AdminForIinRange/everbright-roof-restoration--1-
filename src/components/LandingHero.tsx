@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import LeadForm from "./LeadForm";
 import MapSection from "./MapSection";
+import Reviews from "./Reviews";
 
 const heroBackgroundImage = "/genrealPhotos/lanidngpageimg.jpeg";
 
@@ -33,24 +34,140 @@ function GoogleIcon() {
   );
 }
 
-const testimonials = [
+const testimonials: Array<{
+  name: string;
+  date: string;
+  reviewText: string;
+  stars: number;
+  platform: "google";
+}> = [
   {
-    avatar:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDKZ256eJ4TY-oTkPAxVxgoFCsyDH2FaN4YR28JDo6f0UBvxKA45eqC2FGFQ1s6aoV48Q5c8AX00eYrw92dhRpW2fBmlUyMi9RKGA6wfrDV2MqZiJ5QFaDzb7X66h2L1TEGARGQsHh0bXHA3suIyfHmZ-n3McQnAXPx-0XAKYXbiIzyvpKpqsMlfrDxmUYuSsUN8dh9mJTDNooQ58b8zF66Z1-fLWx593peoCaXK2VUm9hjGmxewIIdUqiCz0Vz9lvnQCpC87ywuBnR",
-    quote:
-      "Shayal did an amazing job cleaning my gutters, very happy with the clean up afterwards too. Would highly recommend.",
+    name: "Isabell Hann",
+    date: "a month ago",
+    reviewText:
+      "Shayal and his team were fantastic to deal with. He cleaned our terracotta roof and did an amazing job. Great communication the whole way through and we're very happy with the results. Highly recommend his service.",
+    stars: 5,
+    platform: "google",
   },
   {
-    avatar:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDpl0BfMyt8RCUTAOGwl_srvlhaNj1rqC58jdI-SbS4QJwMH1Ul0Mh4yRh7D1aZob22nl0iS3GzfOFG6EXg7aTFXLjfUe334Uv_tp_8Q6hEMPdDdoKf3rEdrNgSePf-08LZbOyQt_mbftJ9CUmSv93daS7mU7NGUTmb2EsrRiKjS_LbZp_MruNvFgHxwja6Bl87XTZCcLr1boaz2lmFJCaoyjhQVDnyrfbD8K1p4c7YRk_mAmLGhy3EK8yr4lp0az_tZx-NS0gM8bDy",
-    quote:
-      "The driveway looks brand new! Professional service and great communication throughout. Best in the area.",
+    name: "Mairi Ivy",
+    date: "2 months ago",
+    reviewText:
+      "Shayal and his team did a great job cleaning our roof. They came on time, cleaned our roof that was covered in mould, and cleaned up after the job. Highly recommend the team!",
+    stars: 5,
+    platform: "google",
   },
   {
-    avatar:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA1VOvn0UPVZWiis08gxAvCmXVkQPFuWaLry0i5WPeJljV-gIb3_X_nMoHr99lyfyzfuGSv7YvtebmFzNX1MO_vx32z6IWgBIAuSK1theijSXN-qihjm9k1jRj0RFB8R5Mjfz7wAnxsH2_mZg5cYWHXqUq0B8VXDo3GogKgq4pYJye2h9OJxbfq6lvQjz8PDxbBiBk6zZz5t3_KDRFOOhTG-iRdoTCIITAaH5EQ86DCsUaPtnOrirPQT8OgsPzC7bMgL6qSJ-4z5Bto",
-    quote:
-      "Excellent roof treatment. I was worried about the moss, but now it's completely gone. Thanks again!",
+    name: "Andy",
+    date: "3 months ago",
+    reviewText:
+      "From the moment I first dealt with Shayal he was polite and professional. Very easy to deal with, upfront and honest. Did an amazing job on pressure washing my roof.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "The Little Loaf",
+    date: "5 months ago",
+    reviewText:
+      "We had our gutters cleaned and couldn't be happier with the service. Communication was clear, friendly, and professional from start to finish.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Maxine Taylor",
+    date: "4 months ago",
+    reviewText:
+      "Shayal and David did an amazing job with our gutter cleaning. Friendly, professional, and the finish was excellent. I'd definitely call them again.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "David Wilson",
+    date: "5 months ago",
+    reviewText:
+      "Great gutter clean on a two storey house. They took safety seriously, were friendly and professional, and did quality work.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Yama Amiri",
+    date: "a month ago",
+    reviewText:
+      "Shayal and his team did an amazing job cleaning our roof that was covered in mould. The roof now looks new and refreshed.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "abbas habib",
+    date: "6 months ago",
+    reviewText:
+      "Shayal offered me a great quote to clean my solar panels. The job was done quickly and well, and panel performance improved.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Pasty Strange",
+    date: "5 months ago",
+    reviewText:
+      "These guys did the best job ever. My gutters are the cleanest they have ever been. Fantastic service and result.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Janice Croser",
+    date: "7 months ago",
+    reviewText:
+      "Had my gutters cleaned and solar panels done too. Shayal was polite, courteous, and did a great job. Highly recommend.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Yogesh Mandavkar",
+    date: "a month ago",
+    reviewText:
+      "Roof cleaning was done very professionally and all the mess was cleaned after work. Place looks clean and fresh.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Marie Mullins",
+    date: "6 months ago",
+    reviewText:
+      "Shayal did an amazing job cleaning my gutters, and the clean-up afterwards was excellent too. Would highly recommend.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Eye Dropper Academy",
+    date: "3 months ago",
+    reviewText:
+      "Highly recommend EverBright. They were polite, professional, and went above and beyond what we asked them to do.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Sudip Ramdam",
+    date: "8 months ago",
+    reviewText:
+      "We had our roof soft-washed and the results were better than expected. Years of grime and moss were gone without damage.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "Jane M",
+    date: "4 months ago",
+    reviewText:
+      "Great service, easy communication, cleaned our gutters and pressure washed driveway. Couldn't be happier.",
+    stars: 5,
+    platform: "google",
+  },
+  {
+    name: "RHYS and TERESA",
+    date: "3 months ago",
+    reviewText:
+      "First class job on our stained driveway. Great service from start to finish.",
+    stars: 5,
+    platform: "google",
   },
 ];
 
@@ -92,7 +209,7 @@ const comparisonSlides = comparisons.flatMap((comparison, index) => [
 
 const services = [
   {
-    title: "Roof Restoration",
+    title: "Roof Cleaing",
     description:
       "Restore roof appearance and protect against mould and lichen regrowth with a proven roof-safe cleaning and treatment process.",
     image: "/genrealPhotos/RoofcleaingServiceCard.png",
@@ -340,63 +457,10 @@ export default function LandingHero() {
         </p>
       </section>
 
-      <section className="bg-banner-dark px-5 py-12 text-center md:py-16">
-        <div className="mx-auto max-w-6xl">
-          <h1 className="font-display text-4xl uppercase leading-[1.1] text-white md:text-5xl lg:text-6xl">
-            Local Exterior Cleaners You Can{" "}
-            <span className="text-brand-sky">Trust</span>
-          </h1>
-
-          <div className="mb-8 mt-4 flex flex-col items-center">
-            <div className="mb-1 flex items-center gap-2">
-              <GoogleIcon />
-              <span className="text-2xl font-bold text-orange-500">5.0</span>
-              <div className="flex text-orange-500">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <span key={index} className="material-icons text-xl">
-                    star
-                  </span>
-                ))}
-              </div>
-            </div>
-            <p className="text-lg font-semibold text-white/90">
-              Verified 5-Stars Reviews
-            </p>
-          </div>
-
-          <DragScroll className="drag-scroll hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:gap-7 lg:overflow-visible">
-            {testimonials.map((testimonial) => (
-              <article
-                key={testimonial.avatar}
-                className="w-[280px] flex-none snap-center rounded-2xl bg-white p-5 text-left lg:w-auto lg:min-h-[212px] lg:p-6"
-              >
-                <div className="mb-3 flex items-center gap-3">
-                  <Image
-                    src={testimonial.avatar}
-                    alt="Reviewer"
-                    width={48}
-                    height={48}
-                    className="h-12 w-12 rounded-full border-2 border-brand-sky object-cover"
-                  />
-                  <div className="flex items-center gap-1">
-                    <span className="font-bold text-orange-500">5.0</span>
-                    <div className="flex text-[10px] text-orange-500">
-                      {Array.from({ length: 5 }).map((_, index) => (
-                        <span key={index} className="material-icons text-[14px]">
-                          star
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed text-slate-700">
-                  {testimonial.quote}
-                </p>
-              </article>
-            ))}
-          </DragScroll>
-        </div>
-      </section>
+      <Reviews
+        heading="See What Adelaide Homeowners Are Saying"
+        reviews={testimonials}
+      />
 
       <section id="services" className="bg-white ">
         <header className=" border-slate-200 bg-white px-6 py-8 text-center md:py-12">
@@ -510,7 +574,7 @@ export default function LandingHero() {
       <section id="process-contact" className="bg-navy-dark px-6 pb-12 pt-16 md:py-14 lg:py-16">
         <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">
           <section className="bg-navy-dark text-center md:px-6 md:text-left lg:px-8">
-            <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky md:text-6xl lg:text-7xl">
+            <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-white md:text-6xl lg:text-7xl">
               SIMPLE. CLEAR.
               <br />
               DONE PROPERLY.
@@ -590,4 +654,3 @@ export default function LandingHero() {
     </main>
   );
 }
-
