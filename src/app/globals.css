@@ -41,6 +41,44 @@ h3 {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
+@keyframes comparisonScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.comparison-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.comparison-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: comparisonScroll 38s linear infinite;
+}
+
+.comparison-marquee-item {
+  position: relative;
+  flex: 0 0 auto;
+  width: clamp(210px, 26vw, 360px);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .comparison-marquee {
+    overflow-x: auto;
+  }
+
+  .comparison-marquee-track {
+    animation: none;
+  }
+}
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }

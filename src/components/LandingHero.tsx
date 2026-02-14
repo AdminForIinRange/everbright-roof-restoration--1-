@@ -80,6 +80,21 @@ const comparisons = [
   },
 ];
 
+const comparisonSlides = comparisons.flatMap((comparison, index) => [
+  {
+    key: `comparison-${index}-before`,
+    image: comparison.before,
+    alt: comparison.beforeAlt,
+    label: "Before",
+  },
+  {
+    key: `comparison-${index}-after`,
+    image: comparison.after,
+    alt: comparison.afterAlt,
+    label: "After",
+  },
+]);
+
 const services = [
   {
     title: "Roof Restoration",
@@ -288,40 +303,23 @@ export default function LandingHero() {
           Dirty Exterior?
         </h2>
 
-        <div className="hide-scrollbar flex snap-x snap-mandatory overflow-x-auto">
-          {comparisons.map((comparison) => (
-            <div
-              key={comparison.beforeAlt}
-              className="w-[80%] flex-none snap-center px-2"
-            >
-              <div className="flex gap-1 overflow-hidden rounded-xl">
-                <div className="relative w-1/2">
-                  <Image
-                    src={comparison.before}
-                    alt={comparison.beforeAlt}
-                    width={400}
-                    height={256}
-                    className="h-64 w-full object-cover"
-                  />
-                  <span className="absolute bottom-2 right-2 rounded bg-everbright-blue/70 px-2 py-0.5 text-[10px] font-bold text-white">
-                    BEFORE
-                  </span>
-                </div>
-                <div className="relative w-1/2">
-                  <Image
-                    src={comparison.after}
-                    alt={comparison.afterAlt}
-                    width={400}
-                    height={256}
-                    className="h-64 w-full object-cover"
-                  />
-                  <span className="absolute bottom-2 right-2 rounded bg-everbright-blue/70 px-2 py-0.5 text-[10px] font-bold text-white">
-                    AFTER
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="comparison-marquee">
+          <div className="comparison-marquee-track">
+            {[...comparisonSlides, ...comparisonSlides].map((slide, index) => (
+              <article key={`${slide.key}-${index}`} className="comparison-marquee-item">
+                <Image
+                  src={slide.image}
+                  alt={slide.alt}
+                  fill
+                  sizes="(min-width: 1024px) 240px, (min-width: 768px) 220px, 180px"
+                  className="object-cover"
+                />
+                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#003249]/95 px-5 py-2 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                  {slide.label}
+                </span>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -350,7 +348,7 @@ export default function LandingHero() {
         <div className="mb-8 mt-4 flex flex-col items-center">
           <div className="mb-1 flex items-center gap-2">
             <GoogleIcon />
-            <span className="text-2xl font-bold text-slate-800">5.0</span>
+            <span className="text-2xl font-bold text-orange-500">5.0</span>
             <div className="flex text-orange-500">
               {Array.from({ length: 5 }).map((_, index) => (
                 <span key={index} className="material-icons text-xl">
@@ -379,7 +377,7 @@ export default function LandingHero() {
                   className="h-12 w-12 rounded-full border-2 border-brand-sky object-cover"
                 />
                 <div className="flex items-center gap-1">
-                  <span className="font-bold text-slate-900">5.0</span>
+                  <span className="font-bold text-orange-500">5.0</span>
                   <div className="flex text-[10px] text-orange-500">
                     {Array.from({ length: 5 }).map((_, index) => (
                       <span key={index} className="material-icons text-[14px]">
@@ -441,7 +439,7 @@ export default function LandingHero() {
       </section>
 
       <section className="bg-white px-6  ">
-        <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight leading-tight text-white ">
+        <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight leading-tight text-brand-sky ">
           A Service You Can Rely On
         </h2>
 
