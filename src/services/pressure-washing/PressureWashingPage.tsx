@@ -33,6 +33,7 @@ const galleryImages = [
 const PressureWashingPage: React.FC = () => {
   return (
     <ServicePageTemplate
+      showOfferBanner={false}
       heroTitleLine="Pressure Cleaning"
       heroTitleHighlight="Services"
       heroBenefits={[

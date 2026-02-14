@@ -16,6 +16,9 @@ type ReviewsProps = {
 };
 
 const Reviews: React.FC<ReviewsProps> = ({ heading, reviews, sectionClassName = 'overflow-hidden bg-navy-dark px-6 py-16 md:py-20' }) => {
+  const hasEnoughItemsToLoop = reviews.length > 1;
+  const renderedReviews = hasEnoughItemsToLoop ? [...reviews, ...reviews] : reviews;
+
   return (
     <section className={sectionClassName}>
       <div className="mx-auto max-w-6xl xl:max-w-7xl">
@@ -26,35 +29,45 @@ const Reviews: React.FC<ReviewsProps> = ({ heading, reviews, sectionClassName = 
           </h3>
         </div>
 
-        <DragScroll className="drag-scroll hide-scrollbar -mx-4 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-8 lg:mx-0 lg:px-0">
-          {reviews.map((review, i) => (
-            <div key={i} className="w-80 flex-shrink-0 snap-start rounded-2xl border border-gray-100 bg-white p-6 shadow-xl md:w-[380px] lg:w-[420px]">
-              <div className="mb-5 flex items-center gap-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-brand-sky/20 bg-brand-sky/15 text-sm font-bold uppercase text-brand-sky">
-                  {review.name
-                    .split(' ')
-                    .map((part) => part[0])
-                    .join('')
-                    .slice(0, 2)}
-                </div>
-                <div>
-                  <div className="text-slate-900 font-semibold text-base leading-tight">{review.name}</div>
-                  <div className="flex items-center">
-                    <span className="text-orange-500 font-bold text-lg mr-1.5">{review.stars.toFixed(1)}</span>
-                    <div className="flex text-orange-400">
-                      {Array.from({ length: review.stars }).map((_, j) => (
-                        <span key={j} className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>
-                          star
-                        </span>
-                      ))}
-                    </div>
+        <DragScroll
+          className="drag-scroll hide-scrollbar -mx-4 overflow-x-auto overflow-y-hidden px-4 pb-8 lg:mx-0 lg:px-0"
+          loop={hasEnoughItemsToLoop}
+          autoScroll={hasEnoughItemsToLoop}
+          autoScrollSpeed={0.65}
+        >
+          <div className="flex w-max gap-6">
+            {renderedReviews.map((review, i) => (
+              <div
+                key={`${review.name}-${review.date}-${i}`}
+                className="w-80 flex-shrink-0 rounded-2xl border border-gray-100 bg-white p-6 shadow-xl md:w-[380px] lg:w-[420px]"
+              >
+                <div className="mb-5 flex items-center gap-4">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-brand-sky/20 bg-brand-sky/15 text-sm font-bold uppercase text-brand-sky">
+                    {review.name
+                      .split(' ')
+                      .map((part) => part[0])
+                      .join('')
+                      .slice(0, 2)}
                   </div>
-                  <div className="text-xs text-slate-500 mt-1">{review.date}</div>
+                  <div>
+                    <div className="text-slate-900 font-semibold text-base leading-tight">{review.name}</div>
+                    <div className="flex items-center">
+                      <span className="mr-1.5 text-lg font-bold text-orange-500">{review.stars.toFixed(1)}</span>
+                      <div className="flex text-orange-400">
+                        {Array.from({ length: review.stars }).map((_, j) => (
+                          <span key={j} className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>
+                            star
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="mt-1 text-xs text-slate-500">{review.date}</div>
+                  </div>
                 </div>
+                <p className="text-sm italic leading-relaxed text-slate-700 md:text-base">"{review.reviewText}"</p>
               </div>
-              <p className="text-sm italic leading-relaxed text-slate-700 md:text-base">"{review.reviewText}"</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </DragScroll>
       </div>
     </section>

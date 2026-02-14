@@ -24,6 +24,7 @@ type GalleryImage = {
 };
 
 type ServicePageTemplateProps = {
+  showOfferBanner?: boolean;
   heroTitleLine?: string;
   heroTitleHighlight: string;
   heroBenefits: Array<{ title: string; subtitle: string }>;
@@ -57,6 +58,7 @@ type ServicePageTemplateProps = {
 };
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
+  showOfferBanner = true,
   heroTitleLine,
   heroTitleHighlight,
   heroBenefits,
@@ -89,7 +91,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   mapCheckPoints,
 }) => {
   return (
-    <PageFrame>
+    <PageFrame showOfferBanner={showOfferBanner}>
       <Hero
         titleLine={heroTitleLine}
         titleHighlight={heroTitleHighlight}
