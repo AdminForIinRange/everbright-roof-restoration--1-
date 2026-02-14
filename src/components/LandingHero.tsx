@@ -101,7 +101,7 @@ const services = [
     title: "Solar Cleaning",
     description:
       "Keep your system performing safely and efficiently with regular cleaning, protecting your investment with proven expertise.",
-    image: "/genrealPhotos/Solar%20CleaningServiceCard.png",
+    image: "/genrealPhotos/Solar%20CleaningServiceCard.jpeg",
     alt: "Cleaning solar panels on a sunny day",
     href: "/solar-cleaning",
   },
