@@ -16,9 +16,9 @@ const config: Config = {
         gold: '#D4AF37',
       },
       fontFamily: {
-        display: ['Oswald', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
+        display: ['var(--font-poppins)', 'sans-serif'],
+        body: ['var(--font-poppins)', 'sans-serif'],
+        roboto: ['var(--font-poppins)', 'sans-serif'],
       },
       keyframes: {
         'offer-fade': {
