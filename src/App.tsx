@@ -43,7 +43,7 @@ const App: React.FC = () => {
 
       <main className="flex-grow">
         <Hero
-          titleHighlight="Roof Restoration Offer"
+          titleHighlight="Exclusive Deal"
           benefits={[
             { title: 'Full Roof Cleaning', subtitle: 'Starting From $899' },
             { title: 'Premium Treatment', subtitle: 'Mould Prevention' },

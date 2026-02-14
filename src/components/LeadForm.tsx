@@ -220,26 +220,6 @@ const LeadForm: React.FC<LeadFormProps> = ({
                 />
               </div>
 
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5">{typeQuestion}</label>
-                <div className="grid grid-cols-2 gap-2">
-                  {resolvedTypeOptions.map((type) => (
-                    <button
-                      key={type}
-                      type="button"
-                      onClick={() => setFormData({ ...formData, roofType: type })}
-                      className={`py-2 px-3 rounded-md text-xs font-semibold border transition-all ${
-                        formData.roofType === type
-                          ? 'bg-brand-sky border-brand-sky text-white shadow-md'
-                          : 'bg-white border-gray-200 text-slate-600 hover:border-brand-sky/50'
-                      }`}
-                    >
-                      {type}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
               <button
                 className="w-full bg-black hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-full transition-all text-sm uppercase tracking-widest shadow-lg transform active:scale-95 flex items-center justify-center"
                 type="submit"
@@ -252,26 +232,6 @@ const LeadForm: React.FC<LeadFormProps> = ({
 
           {step === 2 && (
             <>
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5">{conditionQuestion}</label>
-                <div className="grid grid-cols-2 gap-2">
-                  {resolvedConditionOptions.map((condition) => (
-                    <button
-                      key={condition}
-                      type="button"
-                      onClick={() => setFormData({ ...formData, roofCondition: condition })}
-                      className={`py-2 px-3 rounded-md text-xs font-semibold border transition-all ${
-                        formData.roofCondition === condition
-                          ? 'bg-brand-sky border-brand-sky text-white shadow-md'
-                          : 'bg-white border-gray-200 text-slate-600 hover:border-brand-sky/50'
-                      }`}
-                    >
-                      {condition}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="message">
                   Leave a message

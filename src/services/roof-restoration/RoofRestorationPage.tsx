@@ -33,7 +33,7 @@ const galleryImages = [
 const RoofRestorationPage: React.FC = () => {
   return (
     <ServicePageTemplate
-      heroTitleHighlight="Roof Restoration Offer"
+      heroTitleHighlight="Exclusive Deal"
       heroBenefits={[
         { title: 'Full Roof Cleaning', subtitle: 'Starting From $899' },
         { title: 'Premium Treatment', subtitle: 'Mould Prevention' },

@@ -217,30 +217,30 @@ export default function LandingHero() {
             enhance your Adelaide home
           </p>
 
-          <div className="mb-8 grid max-w-sm grid-cols-3 gap-2">
-            <div className="flex flex-col items-center text-center">
-              <span className="material-icons mb-1 text-brand-sky">
+          <div className="mb-8 grid max-w-sm grid-cols-3 gap-3">
+            <div className="flex flex-col items-start text-left">
+              <span className="material-icons mb-1 text-[28px] text-brand-sky">
                 schedule
               </span>
-              <span className="text-[10px] font-bold uppercase leading-tight tracking-tight text-white">
+              <span className="text-sm font-bold uppercase leading-tight tracking-tight text-white md:text-base">
                 On Time
                 <br />
                 Service
               </span>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <span className="material-icons mb-1 text-brand-sky">groups</span>
-              <span className="text-[10px] font-bold uppercase leading-tight tracking-tight text-white">
+            <div className="flex flex-col items-start text-left">
+              <span className="material-icons mb-1 text-[28px] text-brand-sky">groups</span>
+              <span className="text-sm font-bold uppercase leading-tight tracking-tight text-white md:text-base">
                 100% Works
                 <br />
                 Guaranteed
               </span>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <span className="material-icons mb-1 text-brand-sky">
+            <div className="flex flex-col items-start text-left">
+              <span className="material-icons mb-1 text-[28px] text-brand-sky">
                 verified_user
               </span>
-              <span className="text-[10px] font-bold uppercase leading-tight tracking-tight text-white">
+              <span className="text-sm font-bold uppercase leading-tight tracking-tight text-white md:text-base">
                 Insured for
                 <br />
                 up to $10M
