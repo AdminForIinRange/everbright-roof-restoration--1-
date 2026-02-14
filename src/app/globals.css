@@ -51,14 +51,48 @@ h3 {
 }
 
 .comparison-marquee {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
+  touch-action: pan-x;
+  cursor: grab;
+}
+
+.drag-scroll {
+  touch-action: pan-x;
+  cursor: grab;
 }
 
 .comparison-marquee-track {
   display: flex;
   width: max-content;
-  animation: comparisonScroll 38s linear infinite;
+  animation: comparisonScroll 26s linear infinite;
+}
+
+.comparison-marquee:hover .comparison-marquee-track,
+.comparison-marquee:active .comparison-marquee-track,
+.comparison-marquee:focus-within .comparison-marquee-track {
+  animation-play-state: paused;
+}
+
+.comparison-marquee.is-dragging {
+  cursor: grabbing;
+}
+
+.comparison-marquee.is-dragging .comparison-marquee-track {
+  animation-play-state: paused;
+}
+
+.comparison-marquee.is-dragging * {
+  user-select: none;
+}
+
+.drag-scroll.is-dragging {
+  cursor: grabbing;
+}
+
+.drag-scroll.is-dragging * {
+  user-select: none;
 }
 
 .comparison-marquee-item {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import DragScroll from "./DragScroll";
 import Footer from "./Footer";
 import Header from "./Header";
 import LeadForm from "./LeadForm";
@@ -55,28 +56,22 @@ const testimonials = [
 
 const comparisons = [
   {
-    before:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCswEf6E08G5K3KzgzN3-YflTRPHE4FaFqR3onxlN-mz99hOHP2XhErLz3w0-kvQlozqDTnqSVRr6Wpcbav3hl9uXMzoORHx3FnQwCMbPXH1PJHUGc1UOH2VJXKpHfzCeCHImc8T8tHzawm2rLAth7w7oASie9TRV7_c0iO4HXGA-YLnlcD46uHz6ZUdkf11luaN6s3ynjR3kzkfx2rTx5f_KF4ZUp_6RGQDM3-RjSWZCWJZ3ppELzh3yikAZ0Lzga9RsO9e7CXUolE",
-    after:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAGB5ANx8fiptvfadviIX2MDK12pyY8u0QgUpvKOAOxti-aID_60jXwWGss754I0Gx9zhrcl8f8PjjO3ZD42lNtxf_M9hSmb3IzvBu21-33dOcWBEJivIw_8SO414nwyUk3gud9O6Qz0anDyibcAmxFVTZQCVlj272QPMvLrUH4FUcLCCkVp3IW50ts0dHjSgUO0--MKi8Br8xcuMg_VOBDfd91s0gUrgYNJ_dc7aoR_xyrH-9DnXaQVETESWneyea8bTgmhNMWVlg5",
-    beforeAlt: "Dirty paving before cleaning",
-    afterAlt: "Clean paving after service",
+    before: "/scrollerImage/1.png",
+    after: "/scrollerImage/2.png",
+    beforeAlt: "Exterior before cleaning result 1",
+    afterAlt: "Exterior after cleaning result 1",
   },
   {
-    before:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAxhtkel2F_1ZyseJz7m8odP4_k_plOoHaXp7susVB7G9GNdfqy6K1R_W2ukKPpOBX8ywfWZV2MydXbjwdXPYvOHQmBGtqdmELAmmqC2rofGnm1Poj0M4br2XgRs2PBgNxpAfnYLFMMPeVtEQKAgD5diGasaxo0_fY21PtorhpNW6wAvUSHU-BjUK_4iYmiphq6_z6XFrpYuszB6vU6w7wVp9MS9rp5RRLH8gos8WJqOg5bZsg5C0mx0-a42kpo19JXBxdYOE8LMApF",
-    after:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCZ7GFrcTyfaQJpzQDQTIyPa8P9i_4QSUUHaAAtRgA_g0W-4Bm03BqMIG0In4FbtX7qqnNYK7feD7Q9b33-u0I6madzZ1PWL51d7eVgkKbxeWY4RWhFzC6uAqJxfnxyKRrfZtSXetPiiVdjKBAborPUbbgUpORuARVksPtbFAvyJU9PArOrDcFpntcDJZyZFmTuHL9XpyUFs-RujszA7QT5lypX-Oh8K_W_5xeCaRej5aMRIp1QJPJHE9lZkOOipLEyBAVigL1CZYyZ",
-    beforeAlt: "Mouldy wall before cleaning",
-    afterAlt: "Clean wall after service",
+    before: "/scrollerImage/3.png",
+    after: "/scrollerImage/4.png",
+    beforeAlt: "Exterior before cleaning result 2",
+    afterAlt: "Exterior after cleaning result 2",
   },
   {
-    before:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC54hWhNTVMkJFJvwIfgQQq0u9CkhFQ4f0-x6M2m3i3Uy4SXrqX9-GnVmcnDRCMVYyg886F30zQkwmSDWPravA81ErEO_5RZoWD_3kLP8TPVRTtzLt4Iq_z2NzoGRMW9kzuoV20s6-JieTWlwweWj9d_6uqQibdt3Ko0WN6V2nr6KIu8ujRfoeDxPeZkX_ErhODOJ6hCv0-nkcP3ZO9L-ADaAsYKtMnxXnMbtP-CzWUs9xpcjJx0EGh7h37K7znZbRFl2sT5WGjZtDE",
-    after:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCE16HMUc22QWS5byPuoGiN1T6pKebkdbWEl1w560ZPN30PwEApJEvYQ4C0lq0O5ykT_lJnEf5C8iONzC7GYkI3uH-D0yhr6HGMKSQL9eMLPfXca9MExe53svQ7-DSBgMGZ2bh6jdJ-8OXJsAoxDJJ0cwYKq-XJZgVsi3kQCFg-uZ5P1uwXBO23uzDfI9csMJvlKjHmU0qU5bHjushY1oB3bZLUOuZkOGGiOInewXirTv-UVYEs6hIyVSKT4VCcYdipqm9Tb7hbz8Oj",
-    beforeAlt: "Dirty stairs before cleaning",
-    afterAlt: "Clean stairs after service",
+    before: "/scrollerImage/5.png",
+    after: "/scrollerImage/6.png",
+    beforeAlt: "Exterior before cleaning result 3",
+    afterAlt: "Exterior after cleaning result 3",
   },
 ];
 
@@ -303,7 +298,7 @@ export default function LandingHero() {
           Dirty Exterior?
         </h2>
 
-        <div className="comparison-marquee">
+        <DragScroll className="comparison-marquee hide-scrollbar">
           <div className="comparison-marquee-track">
             {[...comparisonSlides, ...comparisonSlides].map((slide, index) => (
               <article key={`${slide.key}-${index}`} className="comparison-marquee-item">
@@ -320,7 +315,7 @@ export default function LandingHero() {
               </article>
             ))}
           </div>
-        </div>
+        </DragScroll>
       </section>
 
       <section className="bg-white px-8 py-14 text-center md:px-12 md:py-20 lg:px-16">
@@ -363,7 +358,7 @@ export default function LandingHero() {
             </p>
           </div>
 
-          <div className="hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:gap-7 lg:overflow-visible">
+          <DragScroll className="drag-scroll hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:gap-7 lg:overflow-visible">
             {testimonials.map((testimonial) => (
               <article
                 key={testimonial.avatar}
@@ -393,7 +388,7 @@ export default function LandingHero() {
                 </p>
               </article>
             ))}
-          </div>
+          </DragScroll>
         </div>
       </section>
 
@@ -507,7 +502,7 @@ export default function LandingHero() {
       </section>
 
       <section id="process-contact" className="bg-white md:py-8 lg:py-12">
-        <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-white shadow-2xl md:max-w-6xl md:flex-row md:rounded-[2rem] xl:max-w-7xl">
+        <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-white md:max-w-6xl md:flex-row md:rounded-[2rem] xl:max-w-7xl">
           <section className="bg-navy-dark px-6 pb-12 pt-16 text-center md:w-3/5 md:px-10 md:py-14 md:text-left lg:px-12">
             <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky md:text-6xl lg:text-7xl">
               Easy, no
