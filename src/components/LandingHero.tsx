@@ -136,23 +136,23 @@ const services = [
 const processSteps = [
   {
     number: "1",
-    title: "Get a Quote",
+    title: "Request a Quote",
     description:
-      "Fill out the quick form or call us directly. We'll review your details and provide a clear, honest quote - no hidden costs and no surprises.",
+      "Fill out the quick form. We'll review your details and provide a clear, honest quote within 24 hours - no hidden costs and no surprises.",
     italicNumber: false,
   },
   {
     number: "2",
-    title: "Site Visit",
+    title: "On-Site Assessment (If Required)",
     description:
       "For larger or more detailed jobs, we'll attend your property to inspect the surface, roof condition, access, and materials. This ensures the correct method, accurate pricing, and zero guesswork.",
     italicNumber: false,
   },
   {
     number: "3",
-    title: "Schedule the Job",
+    title: "Book & Clean",
     description:
-      "Once approved, we'll lock in a time that suits you. Our team arrives on schedule, completes the work properly, and leaves your property clean and tidy.",
+      "Choose a time that suits you. Our team arrives on time, fully equipped, and completes the job using surface-safe methods. We finish with a full clean-up and final inspection so you're left with a properly restored exterior.",
     italicNumber: false,
   },
 ];
@@ -507,17 +507,16 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section id="process-contact" className="bg-navy-dark md:py-8 lg:py-12">
-        <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-white md:max-w-6xl md:flex-row md:rounded-[2rem] xl:max-w-7xl">
-          <section className="bg-navy-dark px-6 pb-12 pt-16 text-center md:w-3/5 md:px-10 md:py-14 md:text-left lg:px-12">
+      <section id="process-contact" className="bg-navy-dark px-6 pb-12 pt-16 md:py-14 lg:py-16">
+        <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">
+          <section className="bg-navy-dark text-center md:px-6 md:text-left lg:px-8">
             <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky md:text-6xl lg:text-7xl">
               SIMPLE. CLEAR.
               <br />
-         DONE PROPERLY.
+              DONE PROPERLY.
             </h2>
             <p className="mx-auto mb-16 max-w-[320px] text-sm leading-relaxed text-white/80 md:mx-0 md:max-w-2xl md:pr-8 md:text-base">
-              We donâ€™t overcomplicate things. From your first enquiry to the final rinse-down, everything is handled professionally, safely, and with clear communication. No confusion. No pressure. Just quality work done right.
-
+              We don't overcomplicate things. From your first enquiry to the final rinse-down, everything is handled professionally, safely, and with clear communication. No confusion. No pressure. Just quality work done right.
             </p>
 
             <div className="space-y-12 md:space-y-10 lg:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0">
@@ -542,8 +541,12 @@ export default function LandingHero() {
               ))}
             </div>
           </section>
+        </div>
+      </section>
 
-          <section className="mx-1 mb-1 rounded-t-3xl bg-white p-8 md:m-0 md:flex md:w-2/5 md:flex-col md:justify-center md:rounded-none md:p-10 lg:p-12">
+      <section className="bg-white px-6 py-12 md:py-14 lg:py-16">
+        <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">
+          <div className="bg-white p-8 md:max-w-[620px] md:p-10 lg:p-12">
             <h3 className="mb-4 font-display text-5xl uppercase leading-none text-everbright-blue md:text-[3.25rem]">
               Contact Us Today
             </h3>
@@ -568,7 +571,7 @@ export default function LandingHero() {
                 ))}
               </ul>
             </div>
-          </section>
+          </div>
         </div>
       </section>
 
