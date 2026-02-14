@@ -284,7 +284,7 @@ export default function LandingHero() {
       </section>
 
       <section className="bg-everbright-blue py-12">
-        <h2 className="mb-10 text-center font-display text-5xl uppercase tracking-tight text-brand-sky">
+        <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight text-brand-sky md:text-5xl">
           Dirty Exterior?
         </h2>
 
