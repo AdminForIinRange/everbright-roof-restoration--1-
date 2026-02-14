@@ -209,7 +209,7 @@ const comparisonSlides = comparisons.flatMap((comparison, index) => [
 
 const services = [
   {
-    title: "Roof Cleaing",
+    title: "Roof Cleaning",
     description:
       "Restore roof appearance and protect against mould and lichen regrowth with a proven roof-safe cleaning and treatment process.",
     image: "/genrealPhotos/RoofcleaingServiceCard.png",
@@ -496,13 +496,13 @@ export default function LandingHero() {
                 <div className="mt-auto flex flex-col items-center gap-3">
                   <Link
                     href={service.href}
-                    className="mx-auto rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95 md:text-2xl"
+                    className="mt-[15px] mx-auto rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95 md:text-2xl"
                   >
                     Learn More
                   </Link>
                   <Link
                     href="#form"
-                    className="mx-auto rounded-full bg-white px-12 py-4 text-2xl font-bold uppercase text-everbright-blue shadow-lg transition-all hover:bg-white/90 active:scale-95 md:px-14 md:py-5 md:text-[1.65rem]"
+                    className="mx-auto rounded-full bg-white px-11 py-3.5 text-[1.5rem] font-bold uppercase text-everbright-blue shadow-lg transition-all hover:bg-white/90 active:scale-95 md:px-12 md:py-4 md:text-[1.6rem]"
                   >
                     Get a Quote
                   </Link>
