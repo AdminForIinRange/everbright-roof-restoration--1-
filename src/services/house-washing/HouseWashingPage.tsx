@@ -34,6 +34,7 @@ const HouseWashingPage: React.FC = () => {
   return (
     <ServicePageTemplate
       heroTitleHighlight="House Washing Offer"
+      heroLeftAlignBenefits
       heroBenefits={[
         { title: 'Full Exterior Wash', subtitle: 'Surface-Safe Method' },
         { title: 'Mould & Dirt Removal', subtitle: 'Refresh Street Appeal' },

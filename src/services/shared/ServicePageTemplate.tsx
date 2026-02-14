@@ -105,7 +105,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
       />
 
       <section className="bg-everbright-blue px-6 py-14 text-center md:py-16 lg:py-20">
-        <h2 className="mx-auto max-w-2xl font-display text-4xl font-bold uppercase leading-tight tracking-tight text-brand-sky md:max-w-4xl md:text-5xl lg:text-6xl">
+        <h2 className="mx-auto max-w-2xl font-display text-3xl font-bold uppercase leading-tight tracking-tight text-white md:max-w-4xl md:text-5xl lg:text-6xl">
           {readyHeadingLine1}
           <br />
           {readyHeadingLine2}

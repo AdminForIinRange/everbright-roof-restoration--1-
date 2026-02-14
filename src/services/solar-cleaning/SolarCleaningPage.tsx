@@ -34,6 +34,7 @@ const SolarCleaningPage: React.FC = () => {
   return (
     <ServicePageTemplate
       heroTitleHighlight="Solar Cleaning Offer"
+      heroLeftAlignBenefits
       heroBenefits={[
         { title: 'Panel-Safe Cleaning', subtitle: 'Pure-Water Method' },
         { title: 'Performance Focused', subtitle: 'Protect Output' },
