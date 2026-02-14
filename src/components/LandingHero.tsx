@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import DragScroll from "./DragScroll";
 import Footer from "./Footer";
@@ -138,26 +138,21 @@ const processSteps = [
     number: "1",
     title: "Get a Quote",
     description:
-      "Fill out our form or give us a call, and we'll get back to you with a quote within 24 hours.",
+      "Fill out the quick form or call us directly. We'll review your details and provide a clear, honest quote - no hidden costs and no surprises.",
     italicNumber: false,
   },
   {
     number: "2",
     title: "Site Visit",
     description:
-      "Fill out the quick form or call us directly.
-We’ll review your details and provide a clear, honest quote — no hidden costs, no surprises.
-",
+      "For larger or more detailed jobs, we'll attend your property to inspect the surface, roof condition, access, and materials. This ensures the correct method, accurate pricing, and zero guesswork.",
     italicNumber: false,
   },
   {
     number: "3",
     title: "Schedule the Job",
     description:
-      "
-For larger or more detailed jobs, we’ll attend your property to inspect the surface, roof condition, access, and materials.
-This ensures the correct method, accurate pricing, and zero guesswork.
-",
+      "Once approved, we'll lock in a time that suits you. Our team arrives on schedule, completes the work properly, and leaves your property clean and tidy.",
     italicNumber: false,
   },
 ];
@@ -512,7 +507,7 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section id="process-contact" className="bg-white md:py-8 lg:py-12">
+      <section id="process-contact" className="bg-navy-dark md:py-8 lg:py-12">
         <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-white md:max-w-6xl md:flex-row md:rounded-[2rem] xl:max-w-7xl">
           <section className="bg-navy-dark px-6 pb-12 pt-16 text-center md:w-3/5 md:px-10 md:py-14 md:text-left lg:px-12">
             <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky md:text-6xl lg:text-7xl">
@@ -521,7 +516,7 @@ export default function LandingHero() {
          DONE PROPERLY.
             </h2>
             <p className="mx-auto mb-16 max-w-[320px] text-sm leading-relaxed text-white/80 md:mx-0 md:max-w-2xl md:pr-8 md:text-base">
-              We don’t overcomplicate things. From your first enquiry to the final rinse-down, everything is handled professionally, safely, and with clear communication. No confusion. No pressure. Just quality work done right.
+              We donâ€™t overcomplicate things. From your first enquiry to the final rinse-down, everything is handled professionally, safely, and with clear communication. No confusion. No pressure. Just quality work done right.
 
             </p>
 
@@ -592,3 +587,4 @@ export default function LandingHero() {
     </main>
   );
 }
+
