@@ -24,6 +24,7 @@ type GalleryImage = {
 };
 
 type ServicePageTemplateProps = {
+  heroTitleLine?: string;
   heroTitleHighlight: string;
   heroBenefits: Array<{ title: string; subtitle: string }>;
   heroLeftImageSrc?: string;
@@ -56,6 +57,7 @@ type ServicePageTemplateProps = {
 };
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
+  heroTitleLine,
   heroTitleHighlight,
   heroBenefits,
   heroLeftImageSrc,
@@ -89,6 +91,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   return (
     <PageFrame>
       <Hero
+        titleLine={heroTitleLine}
         titleHighlight={heroTitleHighlight}
         benefits={heroBenefits}
         leftImageSrc={heroLeftImageSrc}
