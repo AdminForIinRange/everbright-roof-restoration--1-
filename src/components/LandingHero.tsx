@@ -4,8 +4,7 @@ import Footer from './Footer';
 import Header from './Header';
 import LeadForm from './LeadForm';
 
-const heroBackgroundImage =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuDOfBTawo_I_2MWLLn0D9ktk8ZCBb437BQ3oHZJHtklKUzvXpAcT2FVmfZeSdNrxePBptrbcUw5pfnoRQKCfNCYSupZ_GzAxtHNLN_dme45o5Gf4mWXdQI_GZSDwqFuWuLt7SFnTUV3gbYSGyQNSVs1LqkK6NcrcouPosKQHI5mJqrVgpkn_FWq62HSBNWhs17IrEQqmLRi5f2crvGMCVCrJPXKH__1cTY2XrYuriqh4eerxa_Qr5KI5CttPO105LL_W-XPbQPJCt_I';
+const heroBackgroundImage = '/genrealPhotos/lanidngpageimg.jpeg';
 
 function GoogleIcon() {
   return (
@@ -71,8 +70,7 @@ const services = [
     title: 'Roof Cleaning',
     description:
       'Remove mould, moss, and dirt build-up, helping prevent damage, improve appearance, and extend the life of your roof.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCsi5QidFvwskDn4sSYCc4UchE6-7vt0TUpioJYf-8YV-9StAK7sttB0TC-Q4utN5hf-_yoX0NslH1gHPT-TmCUPFReCO1KF2UCMTkPNRG0Y7VU37JVhGQjYIU5vm-JqnmAVZQK-kKuLfQFhNHR6xbbJBr-orhTztweF8RqNXZ2DeoWwkKoyOVM-e9xpWN-K69-Chf5jRcFIxQS1RcTf7K8aw5QBNSdrQdqE9n0Ue1IVIsg5gR8gw6cNKIo4gL3XiawqnwgyB9YuHoM',
+    image: '/genrealPhotos/RoofcleaingServiceCard.png',
     alt: 'Professional worker cleaning a tiled roof with a pressure washer',
     href: '/roof-cleaning',
   },
@@ -80,8 +78,7 @@ const services = [
     title: 'Pressure Washing',
     description:
       'Removes dirt, grime, and built-up stains, helping prevent surface damage and extending the life of your outdoor areas.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBQ7L8bpKnBnV5pr6LSrxyznWkAiCRTy5YP8AOutYjeO0XZFbNC_Y_VqgLgdClrLj3ohHxNjPOgUh6J4kD640UkVFkptFVmfki7F2Q56VjKlrdgHLAvxaB1RsPp-Eui7jmSopQ4lwL7Yhr9o0qA_z1MLGvWJ-5wgn3QlFd2vqreFxgxrF_Ye2O_nEyjHDB36RXgHqBf94mEcmuadbqbSTA7ht_RySsyu-23DF83EUOraG2mxSFWJk322wfRgFGsbH8eCVc1nPoCrpGE',
+    image: '/genrealPhotos/Pressure%20WashingServiceCardImage.jpeg',
     alt: 'Pressure washing a brick driveway',
     href: '/pressure-washing',
   },
@@ -89,8 +86,7 @@ const services = [
     title: 'Solar Cleaning',
     description:
       'Keep your system performing safely and efficiently with regular cleaning, protecting your investment with proven expertise.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBBL01UBXii_k91u7VUHa7jqvKildTWRxEw8Vn7S80_tPJKwwCPb_8cKnm6FLA306xiSGB-8D0h7Pi0Ac9oF4quOy8n0LiLlnSzPJ1Mlfkcj1x3Um1I-UANw6jDbscWGX1g-M4sg4r6R5aydKzIjLJ56zL26xXdO9NOt5G1V6nxXKH0lDfWPLEL-KU3UY_J7qkstHqac9CSZQEjb_Vq3CmSeYmvjPnKbBDv0YwAtznMDgRuXfJC7DH5nTTdwJJZ5WcYlXPMI45gbnoi',
+    image: '/genrealPhotos/Solar%20CleaningServiceCard.png',
     alt: 'Cleaning solar panels on a sunny day',
     href: '/solar-cleaning',
   },
@@ -98,8 +94,7 @@ const services = [
     title: 'Gutter Cleaning',
     description:
       'Removes leaves and debris, helping prevent water overflow, protecting your home from damage and keeping drainage working.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDx6q7nvyh20GrE1zkusqZUIy7hpdyTW66kh0ydatbhmNPMjo67NI0b1ztgxOQT7h0zh9rALkF_A4ej038no_PjiIrxVFVoGdENGlBlCvKhYfIeFe3BZTyGOP91WdMCJFBHH5-NZUHz972xSoEJh_bdyuxWt_Z73j9mxLSkHC-wyzh3H-mu_Dq4bg1hnFlhuj9ivcYlwa-GEZjafAfAL7WCx-4WS_pxc6dOK5ZNC6iQxTlcXKZdbM8cRyn508DlnfqSRzpddUVPcevm',
+    image: '/genrealPhotos/Gutter%20CleaningServicePage.png',
     alt: 'Cleaning leaves out of a roof gutter',
     href: '/gutter-cleaning',
   },
@@ -107,8 +102,7 @@ const services = [
     title: 'House Washing',
     description:
       "Helps remove built-up dirt and organic growth, improving your home's appearance and helping protect exterior surfaces.",
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBA9OX4a-WbUoxIZM966sIPATf7DyCYmbhFBO0uwyj6rQWr6wFiqTUY9VXJTZo4F6yiwR-nKyVr5gNGuvOStopQ7HyXnidm-Ru9sNpC9-w_V5ZpDeCe5SXJZv0fEvJeVVV7-UMPEMnd0oPeDPgYhl8M-7iAv9QMv4-oOyOOVFHnh2NYmi9MfDeluQzrnlkoYRKFKeDL_xJWIYj0AP7tvZd62EF60G9YE_dxuWXZN_lypH62XUxyebjj-i-IXvTKaQAlkH0bnyZxwLi-',
+    image: '/genrealPhotos/House%20WASHINGSERVICECARD.png',
     alt: 'Soft washing the exterior walls of a modern house',
     href: '/house-washing',
   },
@@ -265,6 +259,47 @@ export default function LandingHero() {
         </div>
       </section>
 
+      <section className="bg-everbright-blue py-12">
+        <h2 className="mb-10 text-center font-display text-5xl uppercase tracking-tight text-brand-sky">Dirty Exterior?</h2>
+
+        <div className="hide-scrollbar flex snap-x snap-mandatory overflow-x-auto">
+          {comparisons.map((comparison) => (
+            <div key={comparison.beforeAlt} className="w-[80%] flex-none snap-center px-2">
+              <div className="flex gap-1 overflow-hidden rounded-xl">
+                <div className="relative w-1/2">
+                  <Image
+                    src={comparison.before}
+                    alt={comparison.beforeAlt}
+                    width={400}
+                    height={256}
+                    className="h-64 w-full object-cover"
+                  />
+                  <span className="absolute bottom-2 right-2 rounded bg-everbright-blue/70 px-2 py-0.5 text-[10px] font-bold text-white">
+                    BEFORE
+                  </span>
+                </div>
+                <div className="relative w-1/2">
+                  <Image src={comparison.after} alt={comparison.afterAlt} width={400} height={256} className="h-64 w-full object-cover" />
+                  <span className="absolute bottom-2 right-2 rounded bg-everbright-blue/70 px-2 py-0.5 text-[10px] font-bold text-white">
+                    AFTER
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-white px-8 py-14 text-center">
+        <h2 className="mb-6 font-display text-4xl uppercase leading-tight text-everbright-blue md:text-5xl">We&apos;ll Bring Your Exterior Back To Life</h2>
+        <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-slate-500 md:text-lg">
+          Say goodbye to mould-stained tiles and hello to a professionally cleaned and treated roof that stays cleaner for longer.
+          Our proven roof cleaning and treatment process restores your roof&apos;s appearance, protects against regrowth, and enhances
+          your home&apos;s value.
+        </p>
+        <p className="font-display text-xl font-bold uppercase text-everbright-blue md:text-2xl">Clean Today. Protected for Longer.</p>
+      </section>
+
       <section className="bg-white px-5 py-12 text-center">
         <h1 className="font-display text-4xl uppercase leading-[1.1] text-everbright-blue md:text-5xl">
           Local Exterior Cleaners You Can <span className="text-brand-sky">Trust</span>
@@ -311,47 +346,6 @@ export default function LandingHero() {
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="bg-everbright-blue py-12">
-        <h2 className="mb-10 text-center font-display text-5xl uppercase tracking-tight text-brand-sky">Dirty Exterior?</h2>
-
-        <div className="hide-scrollbar flex snap-x snap-mandatory overflow-x-auto">
-          {comparisons.map((comparison) => (
-            <div key={comparison.beforeAlt} className="w-[80%] flex-none snap-center px-2">
-              <div className="flex gap-1 overflow-hidden rounded-xl">
-                <div className="relative w-1/2">
-                  <Image
-                    src={comparison.before}
-                    alt={comparison.beforeAlt}
-                    width={400}
-                    height={256}
-                    className="h-64 w-full object-cover"
-                  />
-                  <span className="absolute bottom-2 right-2 rounded bg-everbright-blue/70 px-2 py-0.5 text-[10px] font-bold text-white">
-                    BEFORE
-                  </span>
-                </div>
-                <div className="relative w-1/2">
-                  <Image src={comparison.after} alt={comparison.afterAlt} width={400} height={256} className="h-64 w-full object-cover" />
-                  <span className="absolute bottom-2 right-2 rounded bg-everbright-blue/70 px-2 py-0.5 text-[10px] font-bold text-white">
-                    AFTER
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-white px-8 py-14 text-center">
-        <h2 className="mb-6 font-display text-4xl uppercase leading-tight text-everbright-blue md:text-5xl">We&apos;ll Bring Your Exterior Back To Life</h2>
-        <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-slate-500 md:text-lg">
-          Say goodbye to mould-stained tiles and hello to a professionally cleaned and treated roof that stays cleaner for longer.
-          Our proven roof cleaning and treatment process restores your roof&apos;s appearance, protects against regrowth, and enhances
-          your home&apos;s value.
-        </p>
-        <p className="font-display text-xl font-bold uppercase text-everbright-blue md:text-2xl">Clean Today. Protected for Longer.</p>
       </section>
 
       <section id="services" className="bg-banner-dark pb-16">
