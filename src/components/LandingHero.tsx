@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Footer from './Footer';
 import Header from './Header';
 import LeadForm from './LeadForm';
+import MapSection from './MapSection';
 
 const heroBackgroundImage = '/genrealPhotos/lanidngpageimg.jpeg';
 
@@ -137,9 +138,6 @@ const contactChecklist = [
   'Premium Approved Treatments',
   'Highly Experienced Local Team',
 ];
-
-const mapThumbnail =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuCXES0J7y21cZu9jzRAan5yWMPAxy93Iy7f22GqSP2AmjvkPX14k0bNZh8xX7SBMFTDQvdvmR62udklb24bbjPqGsaBxWBpKA25DIaAoe_5ihcGXD-OIyzkrvl_An_46exUem85KTZl9luIRXjTSKOV1HEDat8ALFQsKD4V9Hm8R080qNz2wUnjhx6PLp2MPr7y244QgzYDUdRhVmUhJyvM4I_9fsPTIawyet7SHqJR-M3b229nuEAkpDDH92QeFCTpvRwPP8uYZ3JG';
 
 const reliabilityIntro = {
   title: 'Certified & Insured-',
@@ -468,30 +466,18 @@ export default function LandingHero() {
               </ul>
             </div>
           </section>
-
-          <footer className="mt-auto flex items-center justify-between gap-4 bg-navy-dark p-6">
-            <div className="group relative w-1/3 cursor-pointer overflow-hidden rounded-lg border border-white/10 aspect-[4/3]">
-              <Image src={mapThumbnail} alt="Map of Adelaide service area" fill sizes="140px" className="h-full w-full object-cover opacity-60 grayscale" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-4 w-4 animate-pulse rounded-full border-2 border-white bg-brand-sky" />
-              </div>
-              <div className="absolute right-6 top-4 h-1 w-1 rounded-full bg-white/50" />
-              <div className="absolute bottom-6 left-8 h-1 w-1 rounded-full bg-white/50" />
-            </div>
-
-            <Link
-              href="#form"
-              className="flex-1 rounded-full bg-brand-sky px-2 py-4 text-center text-white shadow-lg transition-all duration-200 hover:scale-[1.02] hover:bg-brand-sky active:scale-[0.98]"
-            >
-              <span className="font-display text-lg uppercase tracking-wide">Book Your Free Quote</span>
-            </Link>
-          </footer>
-
-          <div className="flex w-full justify-center bg-navy-dark pb-2 pt-4">
-            <div className="h-1.5 w-32 rounded-full bg-white/20" />
-          </div>
         </div>
       </section>
+
+      <MapSection
+        heading="Trusted Roof Restoration Specialists"
+        checkPoints={[
+          'Fully Insured & Safety Focused',
+          'Roof-Safe Cleaning & Treatment',
+          'Premium Approved Products',
+          'Highly Experienced Local Team',
+        ]}
+      />
 
       <Footer />
 
