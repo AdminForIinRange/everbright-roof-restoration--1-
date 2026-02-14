@@ -260,7 +260,7 @@ const processSteps = [
   },
   {
     number: "2",
-    title: "On-Site Assessment (If Required)",
+    title: "On-Site Assessment",
     description:
       "For larger or more detailed jobs, we'll attend your property to inspect the surface, roof condition, access, and materials. This ensures the correct method, accurate pricing, and zero guesswork.",
     italicNumber: false,
