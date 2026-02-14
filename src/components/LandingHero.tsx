@@ -398,7 +398,7 @@ export default function LandingHero() {
       </section>
 
       <section id="services" className="bg-white pb-16">
-        <header className="border-y border-slate-200 bg-white px-6 py-8 text-center">
+        <header className=" border-slate-200 bg-white px-6 py-8 text-center">
           <h2 className="font-display text-3xl font-bold uppercase leading-none tracking-tight text-everbright-blue md:text-4xl">
             Exterior Cleaning Services
             <span className="mt-1 block text-brand-sky">in Adelaide</span>
