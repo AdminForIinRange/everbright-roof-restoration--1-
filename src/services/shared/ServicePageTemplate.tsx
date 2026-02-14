@@ -58,7 +58,7 @@ type ServicePageTemplateProps = {
 };
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
-  showOfferBanner = true,
+  showOfferBanner = false,
   heroTitleLine,
   heroTitleHighlight,
   heroBenefits,

@@ -33,9 +33,9 @@ const galleryImages = [
 const PressureWashingPage: React.FC = () => {
   return (
     <ServicePageTemplate
-      showOfferBanner={false}
       heroTitleLine="Pressure Cleaning"
       heroTitleHighlight="Services"
+      heroLeftAlignBenefits
       heroBenefits={[
         { title: 'Driveway & Paths', subtitle: 'Starting From $249' },
         { title: 'Patios & Exteriors', subtitle: 'Deep Surface Clean' },
