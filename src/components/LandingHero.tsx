@@ -397,7 +397,7 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section id="services" className="bg-white pb-16">
+      <section id="services" className="bg-white ">
         <header className=" border-slate-200 bg-white px-6 py-8 text-center">
           <h2 className="font-display text-3xl font-bold uppercase leading-none tracking-tight text-everbright-blue md:text-4xl">
             Exterior Cleaning Services
@@ -438,7 +438,7 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section className="bg-white px-6  pt-12">
+      <section className="bg-white px-6  ">
         <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight leading-tight text-brand-sky">
           A Service You Can Rely On
         </h2>
