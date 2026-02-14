@@ -17,6 +17,7 @@ type HeroProps = {
   rightImageSrc?: string;
   rightImageAlt?: string;
   sectionClassName?: string;
+  leftAlignBenefits?: boolean;
 };
 
 const Hero: React.FC<HeroProps> = ({
@@ -29,7 +30,12 @@ const Hero: React.FC<HeroProps> = ({
   rightImageSrc = '/heroimg/8.png',
   rightImageAlt = 'Freshly cleaned exterior surface',
   sectionClassName = 'min-h-[70vh] md:min-h-[80vh]',
+  leftAlignBenefits = false,
 }) => {
+  const benefitsClassName = leftAlignBenefits
+    ? 'space-y-2 max-w-sm mb-6 text-left'
+    : 'space-y-2 max-w-sm mx-auto mb-6 text-left';
+
   return (
     <section className={`relative bg-brand-dark overflow-hidden flex items-center md:py-20 ${sectionClassName}`}>
       {/* Background Images Split */}
@@ -60,13 +66,13 @@ const Hero: React.FC<HeroProps> = ({
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 text-white text-left">
-        <h1 className="font-display text-5xl sm:text-6xl md:text-8xl uppercase font-bold leading-[0.95] mb-7 drop-shadow-xl">
+        <h1 className="font-display mt-10 text-5xl sm:text-6xl md:text-8xl uppercase font-bold leading-[0.95] mb-7 drop-shadow-xl">
           {titleLine}
           <br />
           <span className="text-brand-sky">{titleHighlight}</span>
         </h1>
 
-        <div className="space-y-2 max-w-sm mx-auto mb-6 text-left">
+        <div className={benefitsClassName}>
           {benefits.map((benefit, index) => (
             <div key={index} className="flex items-start justify-start text-left space-x-3">
               <div className="bg-brand-sky rounded-md w-6 h-6 md:w-7 md:h-7 flex items-center justify-center shadow-lg flex-shrink-0">

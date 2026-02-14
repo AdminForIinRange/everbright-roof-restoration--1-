@@ -38,6 +38,7 @@ const RoofRestorationPage: React.FC = () => {
         { title: 'Full Roof Cleaning', subtitle: 'Starting From $899' },
         { title: 'Premium Treatment', subtitle: 'Mould Prevention' },
       ]}
+      heroLeftAlignBenefits
       readyHeadingLine1="Ready to Restore &"
       readyHeadingLine2="Protect Your Roof?"
       galleryImages={galleryImages}

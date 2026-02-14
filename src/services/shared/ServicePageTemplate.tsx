@@ -30,6 +30,7 @@ type ServicePageTemplateProps = {
   heroRightImageSrc?: string;
   heroLeftImageAlt?: string;
   heroRightImageAlt?: string;
+  heroLeftAlignBenefits?: boolean;
   readyHeadingLine1: string;
   readyHeadingLine2: string;
   galleryImages: GalleryImage[];
@@ -61,6 +62,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   heroRightImageSrc,
   heroLeftImageAlt,
   heroRightImageAlt,
+  heroLeftAlignBenefits = false,
   readyHeadingLine1,
   readyHeadingLine2,
   galleryImages,
@@ -93,6 +95,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         rightImageSrc={heroRightImageSrc}
         leftImageAlt={heroLeftImageAlt}
         rightImageAlt={heroRightImageAlt}
+        leftAlignBenefits={heroLeftAlignBenefits}
         sectionClassName="min-h-[76vh] md:min-h-[90vh]"
       />
 

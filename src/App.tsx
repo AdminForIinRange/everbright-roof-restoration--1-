@@ -48,6 +48,7 @@ const App: React.FC = () => {
             { title: 'Full Roof Cleaning', subtitle: 'Starting From $899' },
             { title: 'Premium Treatment', subtitle: 'Mould Prevention' },
           ]}
+          leftAlignBenefits
         />
 
         <section className="bg-everbright-blue py-12 px-6 text-center">
