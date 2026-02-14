@@ -41,15 +41,6 @@ h3 {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-@keyframes comparisonScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 .comparison-marquee {
   overflow-x: auto;
   overflow-y: hidden;
@@ -67,21 +58,10 @@ h3 {
 .comparison-marquee-track {
   display: flex;
   width: max-content;
-  animation: comparisonScroll 26s linear infinite;
-}
-
-.comparison-marquee:hover .comparison-marquee-track,
-.comparison-marquee:active .comparison-marquee-track,
-.comparison-marquee:focus-within .comparison-marquee-track {
-  animation-play-state: paused;
 }
 
 .comparison-marquee.is-dragging {
   cursor: grabbing;
-}
-
-.comparison-marquee.is-dragging .comparison-marquee-track {
-  animation-play-state: paused;
 }
 
 .comparison-marquee.is-dragging * {

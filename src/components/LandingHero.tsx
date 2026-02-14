@@ -145,14 +145,19 @@ const processSteps = [
     number: "2",
     title: "Site Visit",
     description:
-      "If you prefer, we come to you, assess the job, and provide a quote on the spot. You're always in control and we tailor our services to fit your needs.",
+      "Fill out the quick form or call us directly.
+We’ll review your details and provide a clear, honest quote — no hidden costs, no surprises.
+",
     italicNumber: false,
   },
   {
     number: "3",
     title: "Schedule the Job",
     description:
-      "Book a time that works for you. We offer flexible scheduling to accommodate your busy life. Our team arrives promptly, ready to work.",
+      "
+For larger or more detailed jobs, we’ll attend your property to inspect the surface, roof condition, access, and materials.
+This ensures the correct method, accurate pricing, and zero guesswork.
+",
     italicNumber: false,
   },
 ];
@@ -298,7 +303,12 @@ export default function LandingHero() {
           Dirty Exterior?
         </h2>
 
-        <DragScroll className="comparison-marquee drag-scroll hide-scrollbar">
+        <DragScroll
+          className="comparison-marquee drag-scroll hide-scrollbar"
+          loop
+          autoScroll
+          autoScrollSpeed={1}
+        >
           <div className="comparison-marquee-track">
             {[...comparisonSlides, ...comparisonSlides].map((slide, index) => (
               <article key={`${slide.key}-${index}`} className="comparison-marquee-item">
@@ -506,16 +516,13 @@ export default function LandingHero() {
         <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-white md:max-w-6xl md:flex-row md:rounded-[2rem] xl:max-w-7xl">
           <section className="bg-navy-dark px-6 pb-12 pt-16 text-center md:w-3/5 md:px-10 md:py-14 md:text-left lg:px-12">
             <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky md:text-6xl lg:text-7xl">
-              Easy, no
+              SIMPLE. CLEAR.
               <br />
-              stress, just fresh
+         DONE PROPERLY.
             </h2>
             <p className="mx-auto mb-16 max-w-[320px] text-sm leading-relaxed text-white/80 md:mx-0 md:max-w-2xl md:pr-8 md:text-base">
-              Great results matter, but we also make the process simple and
-              stress-free. From booking to completion, we keep everything clear
-              and easy with our straightforward 3-step process, so you can relax
-              while we handle the hard work and deliver a beautifully cleaned
-              property.
+              We don’t overcomplicate things. From your first enquiry to the final rinse-down, everything is handled professionally, safely, and with clear communication. No confusion. No pressure. Just quality work done right.
+
             </p>
 
             <div className="space-y-12 md:space-y-10 lg:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0">
