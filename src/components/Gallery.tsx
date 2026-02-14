@@ -2,44 +2,62 @@
 import React from 'react';
 import Image from 'next/image';
 
-const Gallery: React.FC = () => {
-  const images = [
+type GalleryImage = {
+  src: string;
+  label: 'Before' | 'After';
+  alt: string;
+};
+
+type GalleryProps = {
+  altPrefix?: string;
+  images?: GalleryImage[];
+  sectionClassName?: string;
+  tileClassName?: string;
+};
+
+const Gallery: React.FC<GalleryProps> = ({
+  altPrefix = 'Roof',
+  images,
+  sectionClassName = 'grid grid-cols-2 md:grid-cols-3 gap-0.5 bg-black border-y border-black',
+  tileClassName = 'relative overflow-hidden aspect-[3/4]',
+}) => {
+  const defaultImages: GalleryImage[] = [
     {
       src: "/beforeAfter/3.png",
       label: "Before",
-      alt: "Roof before cleaning 1"
+      alt: `${altPrefix} before cleaning 1`
     },
     {
       src: "/beforeAfter/4.png",
       label: "After",
-      alt: "Roof after cleaning 1"
+      alt: `${altPrefix} after cleaning 1`
     },
     {
       src: "/beforeAfter/5.png",
       label: "Before",
-      alt: "Roof before cleaning 2"
+      alt: `${altPrefix} before cleaning 2`
     },
     {
       src: "/beforeAfter/6.png",
       label: "After",
-      alt: "Roof after cleaning 2"
+      alt: `${altPrefix} after cleaning 2`
     },
     {
       src: "/beforeAfter/9.png",
       label: "Before",
-      alt: "Roof before cleaning 3"
+      alt: `${altPrefix} before cleaning 3`
     },
     {
       src: "/beforeAfter/10.png",
       label: "After",
-      alt: "Roof after cleaning 3"
+      alt: `${altPrefix} after cleaning 3`
     }
   ];
 
   return (
-    <section className="grid grid-cols-2 md:grid-cols-3 gap-0.5 bg-black border-y border-black">
-      {images.map((img, index) => (
-        <div key={index} className="relative overflow-hidden aspect-[3/4]">
+    <section className={sectionClassName}>
+      {(images ?? defaultImages).map((img, index) => (
+        <div key={index} className={tileClassName}>
           <Image 
             alt={img.alt} 
             src={img.src} 

@@ -1,16 +1,16 @@
 
 import React from 'react';
 
-const MapSection: React.FC = () => {
-  const checkPoints = [
-    "Fully Insured & Safety Focused",
-    "Roof-Safe Methods",
-    "Premium Approved Treatments",
-    "Highly Experienced Local Team"
-  ];
+type MapSectionProps = {
+  heading: string;
+  checkPoints: string[];
+  sectionClassName?: string;
+};
+
+const MapSection: React.FC<MapSectionProps> = ({ heading, checkPoints, sectionClassName = 'bg-white py-16 px-6' }) => {
 
   return (
-    <section className="bg-white py-16 px-6">
+    <section className={sectionClassName}>
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row gap-10 items-center">
           <div className="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-2xl border border-slate-200">
@@ -26,7 +26,7 @@ const MapSection: React.FC = () => {
           
           <div className="w-full md:w-1/2 flex flex-col justify-center">
             <h2 className="font-display text-3xl md:text-5xl font-extrabold text-navy-custom mb-8 leading-none uppercase tracking-tight">
-              Trusted Roof Cleaning Specialists
+              {heading}
             </h2>
             
             <ul className="space-y-5 mb-12">

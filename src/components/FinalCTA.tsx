@@ -1,16 +1,19 @@
 import React from 'react';
 
-const FinalCTA: React.FC = () => {
+type FinalCTAProps = {
+  description: string;
+  sectionClassName?: string;
+};
+
+const FinalCTA: React.FC<FinalCTAProps> = ({ description, sectionClassName = 'bg-navy-dark pb-20 px-6 text-center' }) => {
   return (
-    <section className="bg-navy-dark pb-20 px-6 text-center">
+    <section className={sectionClassName}>
       <div className="max-w-2xl mx-auto pt-10 border-t border-white/5">
         <h2 className="font-display font-black tracking-tighter text-white text-5xl md:text-7xl mb-6 uppercase leading-[0.85]">
           CONTACT US <span className="text-brand-sky">TODAY</span>
         </h2>
         <p className="text-white text-xl md:text-2xl font-light leading-snug px-4 opacity-90 max-w-lg mx-auto">
-          Limited availability -- <span className="text-brand-sky font-bold">restore</span> and{' '}
-          <span className="text-brand-sky font-bold">protect</span> your roof with Adelaide's trusted
-          specialists.
+          {description}
         </p>
 
         <a

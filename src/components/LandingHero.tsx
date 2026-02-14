@@ -74,6 +74,7 @@ const services = [
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuCsi5QidFvwskDn4sSYCc4UchE6-7vt0TUpioJYf-8YV-9StAK7sttB0TC-Q4utN5hf-_yoX0NslH1gHPT-TmCUPFReCO1KF2UCMTkPNRG0Y7VU37JVhGQjYIU5vm-JqnmAVZQK-kKuLfQFhNHR6xbbJBr-orhTztweF8RqNXZ2DeoWwkKoyOVM-e9xpWN-K69-Chf5jRcFIxQS1RcTf7K8aw5QBNSdrQdqE9n0Ue1IVIsg5gR8gw6cNKIo4gL3XiawqnwgyB9YuHoM',
     alt: 'Professional worker cleaning a tiled roof with a pressure washer',
+    href: '/roof-cleaning',
   },
   {
     title: 'Pressure Washing',
@@ -82,6 +83,7 @@ const services = [
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuBQ7L8bpKnBnV5pr6LSrxyznWkAiCRTy5YP8AOutYjeO0XZFbNC_Y_VqgLgdClrLj3ohHxNjPOgUh6J4kD640UkVFkptFVmfki7F2Q56VjKlrdgHLAvxaB1RsPp-Eui7jmSopQ4lwL7Yhr9o0qA_z1MLGvWJ-5wgn3QlFd2vqreFxgxrF_Ye2O_nEyjHDB36RXgHqBf94mEcmuadbqbSTA7ht_RySsyu-23DF83EUOraG2mxSFWJk322wfRgFGsbH8eCVc1nPoCrpGE',
     alt: 'Pressure washing a brick driveway',
+    href: '/pressure-washing',
   },
   {
     title: 'Solar Cleaning',
@@ -90,6 +92,7 @@ const services = [
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuBBL01UBXii_k91u7VUHa7jqvKildTWRxEw8Vn7S80_tPJKwwCPb_8cKnm6FLA306xiSGB-8D0h7Pi0Ac9oF4quOy8n0LiLlnSzPJ1Mlfkcj1x3Um1I-UANw6jDbscWGX1g-M4sg4r6R5aydKzIjLJ56zL26xXdO9NOt5G1V6nxXKH0lDfWPLEL-KU3UY_J7qkstHqac9CSZQEjb_Vq3CmSeYmvjPnKbBDv0YwAtznMDgRuXfJC7DH5nTTdwJJZ5WcYlXPMI45gbnoi',
     alt: 'Cleaning solar panels on a sunny day',
+    href: '/solar-cleaning',
   },
   {
     title: 'Gutter Cleaning',
@@ -98,6 +101,7 @@ const services = [
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuDx6q7nvyh20GrE1zkusqZUIy7hpdyTW66kh0ydatbhmNPMjo67NI0b1ztgxOQT7h0zh9rALkF_A4ej038no_PjiIrxVFVoGdENGlBlCvKhYfIeFe3BZTyGOP91WdMCJFBHH5-NZUHz972xSoEJh_bdyuxWt_Z73j9mxLSkHC-wyzh3H-mu_Dq4bg1hnFlhuj9ivcYlwa-GEZjafAfAL7WCx-4WS_pxc6dOK5ZNC6iQxTlcXKZdbM8cRyn508DlnfqSRzpddUVPcevm',
     alt: 'Cleaning leaves out of a roof gutter',
+    href: '/gutter-cleaning',
   },
   {
     title: 'House Washing',
@@ -106,6 +110,7 @@ const services = [
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuBA9OX4a-WbUoxIZM966sIPATf7DyCYmbhFBO0uwyj6rQWr6wFiqTUY9VXJTZo4F6yiwR-nKyVr5gNGuvOStopQ7HyXnidm-Ru9sNpC9-w_V5ZpDeCe5SXJZv0fEvJeVVV7-UMPEMnd0oPeDPgYhl8M-7iAv9QMv4-oOyOOVFHnh2NYmi9MfDeluQzrnlkoYRKFKeDL_xJWIYj0AP7tvZd62EF60G9YE_dxuWXZN_lypH62XUxyebjj-i-IXvTKaQAlkH0bnyZxwLi-',
     alt: 'Soft washing the exterior walls of a modern house',
+    href: '/house-washing',
   },
 ];
 
@@ -369,7 +374,7 @@ export default function LandingHero() {
                 <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-6xl">{service.title}</h3>
                 <p className="mb-8 max-w-xs text-lg leading-relaxed text-white">{service.description}</p>
                 <Link
-                  href="#form"
+                  href={service.href}
                   className="rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95"
                 >
                   Learn More

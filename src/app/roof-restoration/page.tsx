@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import App from '@/App';
+import RoofRestorationPageView from '@/services/roof-restoration/RoofRestorationPage';
 
 export const metadata: Metadata = {
   title: 'Roof Restoration | Adelaide',
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function RoofRestorationPage() {
-  return <App />;
+  return <RoofRestorationPageView />;
 }

@@ -1,23 +1,44 @@
 
 import React from 'react';
 import Image from 'next/image';
-import LeadForm from './LeadForm';
 
-const Hero: React.FC = () => {
-  const benefits = [
-    { title: "Full Roof Cleaning", subtitle: "Starting From $899" },
-    { title: "Mould Prevention", subtitle: "Roof Treatment" }
-  ];
+type HeroBenefit = {
+  title: string;
+  subtitle: string;
+};
 
+type HeroProps = {
+  titleLine?: string;
+  titleHighlight: string;
+  benefits: HeroBenefit[];
+  ctaLabel?: string;
+  leftImageSrc?: string;
+  leftImageAlt?: string;
+  rightImageSrc?: string;
+  rightImageAlt?: string;
+  sectionClassName?: string;
+};
+
+const Hero: React.FC<HeroProps> = ({
+  titleLine = "Secure This Month's",
+  titleHighlight,
+  benefits,
+  ctaLabel = 'Get Your Free Quote',
+  leftImageSrc = '/heroimg/7.png',
+  leftImageAlt = 'Exterior cleaning in progress',
+  rightImageSrc = '/heroimg/8.png',
+  rightImageAlt = 'Freshly cleaned exterior surface',
+  sectionClassName = 'min-h-[70vh] md:min-h-[80vh]',
+}) => {
   return (
-    <section className="relative bg-brand-dark min-h-[70vh] md:min-h-[80vh] overflow-hidden flex items-center md:py-20">
+    <section className={`relative bg-brand-dark overflow-hidden flex items-center md:py-20 ${sectionClassName}`}>
       {/* Background Images Split */}
       <div className="absolute inset-0 z-0">
         <div className="flex h-full w-full">
           <div className="w-1/2 h-full relative">
             <Image
-              alt="Roof cleaning in progress"
-              src="/heroimg/7.png"
+              alt={leftImageAlt}
+              src={leftImageSrc}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover object-[100%_100%] opacity-35 md:opacity-45"
@@ -26,8 +47,8 @@ const Hero: React.FC = () => {
           </div>
           <div className="w-1/2 h-full relative">
             <Image
-              alt="Clean roof after restoration"
-              src="/heroimg/8.png"
+              alt={rightImageAlt}
+              src={rightImageSrc}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover object-[0%_100%] opacity-45 md:opacity-55"
@@ -40,8 +61,9 @@ const Hero: React.FC = () => {
 
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 text-white text-left">
         <h1 className="font-display text-5xl sm:text-6xl md:text-8xl uppercase font-bold leading-[0.95] mb-7 drop-shadow-xl">
-          Secure This Month's<br/>
-          <span className="text-brand-sky">Exclusive Deal</span>
+          {titleLine}
+          <br />
+          <span className="text-brand-sky">{titleHighlight}</span>
         </h1>
 
         <div className="space-y-2 max-w-sm mx-auto mb-6 text-left">
@@ -85,7 +107,7 @@ const Hero: React.FC = () => {
           href="#form"
           className="mt-7 inline-flex items-center justify-center bg-brand-sky hover:bg-sky-400 active:scale-95 text-white font-bold py-4 px-8 rounded-full transition-all shadow-[0_15px_40px_-10px_rgba(56,189,248,0.5)] uppercase tracking-widest text-base md:text-lg"
         >
-          Get Your Free Quote
+          {ctaLabel}
         </a>
       </div>
 

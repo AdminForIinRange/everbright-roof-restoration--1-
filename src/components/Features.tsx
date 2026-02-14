@@ -1,28 +1,20 @@
 
 import React from 'react';
 
-const Features: React.FC = () => {
-  const features = [
-    {
-      title: "Certified & Insured",
-      desc: "Your home is protected. We carry full public liability insurance for all roof cleaning works by our expert technicians."
-    },
-    {
-      title: "Roof-Cleaning Method",
-      desc: "We use controlled, roof-appropriate cleaning techniques that safely remove dirt without damaging your tiles or metal."
-    },
-    {
-      title: "Longer Lasting Clean",
-      desc: "Biodegradable treatments that help protect your roof from mould and lichen return for years to come."
-    },
-    {
-      title: "Experienced & Trusted",
-      desc: "Every job is completed by trained technicians with proven experience in professional roof cleaning across Adelaide."
-    }
-  ];
+type FeatureItem = {
+  title: string;
+  desc: string;
+};
+
+type FeaturesProps = {
+  features: FeatureItem[];
+  sectionClassName?: string;
+};
+
+const Features: React.FC<FeaturesProps> = ({ features, sectionClassName = 'bg-dark-navy pt-12 pb-20 px-6' }) => {
 
   return (
-    <section className="bg-dark-navy pt-12 pb-20 px-6">
+    <section className={sectionClassName}>
       <div className="max-w-2xl mx-auto">
         <div className="space-y-10 mb-16">
           {features.map((f, i) => (

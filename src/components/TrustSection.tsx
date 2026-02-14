@@ -1,19 +1,21 @@
 
 import React from 'react';
 
-const TrustSection: React.FC = () => {
+type TrustSectionProps = {
+  heading: string;
+  description: string;
+  sectionClassName?: string;
+};
+
+const TrustSection: React.FC<TrustSectionProps> = ({ heading, description, sectionClassName = 'px-6 py-16 bg-white' }) => {
   return (
-    <section className="px-6 py-16 bg-white">
+    <section className={sectionClassName}>
       <div className="max-w-xl mx-auto text-center">
         <h2 className="text-3xl md:text-5xl font-display font-bold text-dark-navy leading-tight mb-8 uppercase tracking-tight">
-          See How We've Restored and Protected Roofs Across Adelaide
+          {heading}
         </h2>
         <p className="text-slate-700 text-lg md:text-xl leading-relaxed mb-10">
-          With years of hands-on experience, we know homeowners care about 
-          <span className="text-brand-sky font-bold"> trust, precision, and results that last.</span> 
-          Our professional team specialises in roof cleaning and treatment services designed to 
-          <span className="text-brand-sky font-bold"> safely restore your roof's appearance while helping slow mould and lichen return.</span> 
-          We use proven, roof-safe methods and premium Australian-approved products to deliver consistent, high-quality results across Adelaide homes.
+          {description}
         </p>
         
         <div className="flex justify-center mt-4">

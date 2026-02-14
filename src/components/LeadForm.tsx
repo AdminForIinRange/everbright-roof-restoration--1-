@@ -6,19 +6,48 @@ import { submitLeadAction, type LeadState } from '@lib/actions/leadActions';
 
 const initialState: LeadState = { ok: false };
 
-const LeadForm: React.FC = () => {
+const defaultTypeOptions = ['Concrete tile', 'Terracotta tile', 'Colorbond / metal', 'Not sure'];
+const defaultConditionOptions = [
+  'Light surface staining',
+  'Moderate mould / lichen',
+  'Heavy mould & build-up',
+  'Not sure - needs inspection',
+];
+
+type LeadFormProps = {
+  serviceLabel?: string;
+  typeQuestion?: string;
+  typeOptions?: string[];
+  conditionQuestion?: string;
+  conditionOptions?: string[];
+  messagePlaceholder?: string;
+};
+
+const LeadForm: React.FC<LeadFormProps> = ({
+  serviceLabel = 'roof cleaning',
+  typeQuestion = 'What type of roof do you have?',
+  typeOptions = defaultTypeOptions,
+  conditionQuestion = "How would you describe your roof's current condition?",
+  conditionOptions = defaultConditionOptions,
+  messagePlaceholder = 'Tell us about your roof...',
+}) => {
+  const resolvedTypeOptions = typeOptions.length > 0 ? typeOptions : defaultTypeOptions;
+  const resolvedConditionOptions = conditionOptions.length > 0 ? conditionOptions : defaultConditionOptions;
+  const defaultRoofType = resolvedTypeOptions[resolvedTypeOptions.length - 1] ?? 'Not sure';
+  const defaultRoofCondition = resolvedConditionOptions[resolvedConditionOptions.length - 1] ?? 'Not sure - needs inspection';
+
   const [hasReset, setHasReset] = useState(false);
   const [step, setStep] = useState<1 | 2>(1);
   const previousResultRef = useRef<{ ok: boolean; error?: string }>({ ok: false });
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState(() => ({
     fullName: '',
     email: '',
     phone: '',
     address: '',
     message: '',
-    roofType: 'Not sure',
-    roofCondition: 'Not sure - needs inspection',
-  });
+    roofType: defaultRoofType,
+    roofCondition: defaultRoofCondition,
+  }));
   const [state, formAction, pending] = useActionState(submitLeadAction, initialState);
   const isSubmitted = state.ok && !hasReset;
 
@@ -27,6 +56,7 @@ const LeadForm: React.FC = () => {
 
     if (state.ok && !previousResult.ok) {
       track('lead_submit_success', {
+        serviceLabel,
         roofType: formData.roofType,
         roofCondition: formData.roofCondition,
       });
@@ -35,7 +65,7 @@ const LeadForm: React.FC = () => {
     }
 
     previousResultRef.current = { ok: state.ok, error: state.error };
-  }, [formData.roofCondition, formData.roofType, state.error, state.ok]);
+  }, [formData.roofCondition, formData.roofType, serviceLabel, state.error, state.ok]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     if (step === 1) {
@@ -50,6 +80,7 @@ const LeadForm: React.FC = () => {
     }
 
     track('lead_submit_attempt', {
+      serviceLabel,
       roofType: formData.roofType,
       roofCondition: formData.roofCondition,
     });
@@ -65,9 +96,10 @@ const LeadForm: React.FC = () => {
         </div>
         <h3 className="font-display text-3xl font-bold text-slate-900 mb-4">Request Received!</h3>
         <p className="text-slate-600 mb-8 leading-relaxed">
-          Thanks <span className="font-bold">{formData.fullName}</span>, we've received your inquiry. One of our Adelaide specialists will contact you within the next 24 hours.
+          Thanks <span className="font-bold">{formData.fullName}</span>, we've received your inquiry for{' '}
+          <span className="font-bold">{serviceLabel}</span>. One of our Adelaide specialists will contact you within the next 24 hours.
         </p>
-        <button 
+        <button
           onClick={() => {
             previousResultRef.current = { ok: false };
             setHasReset(true);
@@ -78,8 +110,8 @@ const LeadForm: React.FC = () => {
               phone: '',
               address: '',
               message: '',
-              roofType: 'Not sure',
-              roofCondition: 'Not sure - needs inspection',
+              roofType: defaultRoofType,
+              roofCondition: defaultRoofCondition,
             });
           }}
           className="text-brand-sky font-bold uppercase tracking-wider hover:underline"
@@ -95,12 +127,11 @@ const LeadForm: React.FC = () => {
       <div className="bg-white rounded-xl p-6 md:p-7 form-shadow border border-slate-200 border-t-[6px] border-t-brand-sky">
         <div className="flex items-center justify-between text-[11px] uppercase tracking-widest text-slate-500 mb-3">
           <span>{step} of 2</span>
-         
         </div>
         <h3 className="text-center font-display text-xl md:text-2xl font-bold text-slate-900 leading-snug mb-5">
-            ORGANISE A FREE QUOTE IN JUST 30 SECONDS!
+          ORGANISE A FREE QUOTE IN JUST 30 SECONDS!
         </h3>
-        
+
         <form action={formAction} onSubmit={handleSubmit} className="space-y-4">
           <input type="hidden" name="roofType" value={formData.roofType} />
           <input type="hidden" name="roofCondition" value={formData.roofCondition} />
@@ -125,16 +156,16 @@ const LeadForm: React.FC = () => {
                 <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="fullName">
                   Full Name
                 </label>
-                <input 
+                <input
                   required
                   maxLength={255}
-                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none" 
-                  id="fullName" 
-                  name="fullName" 
-                  placeholder="e.g. John Doe" 
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="e.g. John Doe"
                   type="text"
                   value={formData.fullName}
-                  onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                 />
               </div>
 
@@ -142,16 +173,16 @@ const LeadForm: React.FC = () => {
                 <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="email">
                   Email Address
                 </label>
-                <input 
+                <input
                   required
                   maxLength={255}
-                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none" 
-                  id="email" 
-                  name="email" 
-                  placeholder="your@email.com" 
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
+                  id="email"
+                  name="email"
+                  placeholder="your@email.com"
                   type="email"
                   value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
               </div>
 
@@ -159,16 +190,16 @@ const LeadForm: React.FC = () => {
                 <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="phone">
                   Phone Number
                 </label>
-                <input 
+                <input
                   required
                   maxLength={255}
-                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none" 
-                  id="phone" 
-                  name="phone" 
-                  placeholder="e.g. 0412 345 678" 
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
+                  id="phone"
+                  name="phone"
+                  placeholder="e.g. 0412 345 678"
                   type="tel"
                   value={formData.phone}
-                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 />
               </div>
 
@@ -176,32 +207,30 @@ const LeadForm: React.FC = () => {
                 <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="address">
                   Address
                 </label>
-                <input 
+                <input
                   required
                   maxLength={255}
-                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none" 
-                  id="address" 
-                  name="address" 
-                  placeholder="Street address, suburb, postcode" 
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
+                  id="address"
+                  name="address"
+                  placeholder="Street address, suburb, postcode"
                   type="text"
                   value={formData.address}
-                  onChange={(e) => setFormData({...formData, address: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                  What type of roof do you have?
-                </label>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">{typeQuestion}</label>
                 <div className="grid grid-cols-2 gap-2">
-                  {['Concrete tile', 'Terracotta tile', 'Colorbond / metal', 'Not sure'].map((type) => (
+                  {resolvedTypeOptions.map((type) => (
                     <button
                       key={type}
                       type="button"
-                      onClick={() => setFormData({...formData, roofType: type})}
+                      onClick={() => setFormData({ ...formData, roofType: type })}
                       className={`py-2 px-3 rounded-md text-xs font-semibold border transition-all ${
-                        formData.roofType === type 
-                          ? 'bg-brand-sky border-brand-sky text-white shadow-md' 
+                        formData.roofType === type
+                          ? 'bg-brand-sky border-brand-sky text-white shadow-md'
                           : 'bg-white border-gray-200 text-slate-600 hover:border-brand-sky/50'
                       }`}
                     >
@@ -211,8 +240,8 @@ const LeadForm: React.FC = () => {
                 </div>
               </div>
 
-              <button 
-                className="w-full bg-black hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-full transition-all text-sm uppercase tracking-widest shadow-lg transform active:scale-95 flex items-center justify-center" 
+              <button
+                className="w-full bg-black hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-full transition-all text-sm uppercase tracking-widest shadow-lg transform active:scale-95 flex items-center justify-center"
                 type="submit"
               >
                 Next
@@ -224,20 +253,13 @@ const LeadForm: React.FC = () => {
           {step === 2 && (
             <>
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                  How would you describe your roof's current condition?
-                </label>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">{conditionQuestion}</label>
                 <div className="grid grid-cols-2 gap-2">
-                  {[
-                    'Light surface staining',
-                    'Moderate mould / lichen',
-                    'Heavy mould & build-up',
-                    'Not sure - needs inspection',
-                  ].map((condition) => (
+                  {resolvedConditionOptions.map((condition) => (
                     <button
                       key={condition}
                       type="button"
-                      onClick={() => setFormData({...formData, roofCondition: condition})}
+                      onClick={() => setFormData({ ...formData, roofCondition: condition })}
                       className={`py-2 px-3 rounded-md text-xs font-semibold border transition-all ${
                         formData.roofCondition === condition
                           ? 'bg-brand-sky border-brand-sky text-white shadow-md'
@@ -254,16 +276,16 @@ const LeadForm: React.FC = () => {
                 <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="message">
                   Leave a message
                 </label>
-                <textarea 
-                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none" 
-                  id="message" 
-                  name="message" 
-                  placeholder="Tell us about your roof..." 
+                <textarea
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
+                  id="message"
+                  name="message"
+                  placeholder={messagePlaceholder}
                   rows={3}
                   maxLength={255}
                   value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
-                ></textarea>
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                />
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -274,8 +296,8 @@ const LeadForm: React.FC = () => {
                 >
                   Back
                 </button>
-                <button 
-                  className="w-full sm:w-auto sm:flex-1 bg-black hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-full transition-all text-sm uppercase tracking-widest shadow-lg transform active:scale-95 flex items-center justify-center" 
+                <button
+                  className="w-full sm:w-auto sm:flex-1 bg-black hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-full transition-all text-sm uppercase tracking-widest shadow-lg transform active:scale-95 flex items-center justify-center"
                   type="submit"
                   disabled={pending}
                 >
@@ -285,7 +307,7 @@ const LeadForm: React.FC = () => {
               </div>
             </>
           )}
-          
+
           <div className="flex items-center justify-center space-x-2 text-[10px] text-gray-500 italic pt-2">
             <span className="material-icons text-xs">lock</span>
             <p>Your details are secured. Never submit passwords.</p>
