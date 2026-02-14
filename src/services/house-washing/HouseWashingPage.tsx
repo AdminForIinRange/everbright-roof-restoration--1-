@@ -1,16 +1,6 @@
 import React from 'react';
 
-import Features from '@/components/Features';
-import FinalCTA from '@/components/FinalCTA';
-import Gallery from '@/components/Gallery';
-import Hero from '@/components/Hero';
-import LeadForm from '@/components/LeadForm';
-import MapSection from '@/components/MapSection';
-import PageFrame from '@/components/PageFrame';
-import Reviews from '@/components/Reviews';
-import TrustSection from '@/components/TrustSection';
-import ValueProp from '@/components/ValueProp';
-import { buildServiceReviews } from '@/services/shared/reviews';
+import ServicePageTemplate from '@/services/shared/ServicePageTemplate';
 
 const features = [
   {
@@ -42,86 +32,47 @@ const galleryImages = [
 
 const HouseWashingPage: React.FC = () => {
   return (
-    <PageFrame>
-      <Hero
-        titleHighlight="House Washing Offer"
-        benefits={[
-          { title: 'Full Exterior Wash', subtitle: 'Surface-Safe Method' },
-          { title: 'Mould & Dirt Removal', subtitle: 'Refresh Street Appeal' },
-        ]}
-        leftImageSrc="/beforeAfter/9.png"
-        rightImageSrc="/beforeAfter/10.png"
-        leftImageAlt="House exterior before washing"
-        rightImageAlt="House exterior after washing"
-        sectionClassName="min-h-[74vh] md:min-h-[86vh]"
-      />
-
-      <section className="bg-everbright-blue py-12 px-6 text-center">
-        <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold uppercase leading-tight tracking-tight text-brand-sky md:text-5xl">
-          Ready to Refresh Your
-          <br />
-          Home Exterior?
-        </h2>
-      </section>
-
-      <Gallery
-        images={galleryImages}
-        sectionClassName="grid grid-cols-2 gap-1 bg-black border-y border-black md:grid-cols-3"
-        tileClassName="relative overflow-hidden aspect-[3/2]"
-      />
-
-      <ValueProp
-        heading="WE'LL REFRESH YOUR HOME'S EXTERIOR"
-        paragraphs={[
-          'Our house washing service removes built-up dirt, organic growth, and surface grime to dramatically improve exterior appearance.',
-          'We tailor the cleaning method to your surface type, delivering a reliable clean while helping protect exterior finishes.',
-        ]}
-        tagline="Fresh Exterior. Strong First Impression."
-        sectionClassName="bg-white py-16 px-6 text-center"
-      />
-
-      <section id="form" className="relative z-10 mt-6 bg-[#003249] py-8 md:py-10">
-        <div className="mx-auto w-full max-w-2xl px-4">
-          <LeadForm
-            serviceLabel="house washing"
-            typeQuestion="What exterior needs house washing?"
-            typeOptions={['Brick exterior', 'Rendered exterior', 'Weatherboard / cladding', 'Not sure']}
-            conditionQuestion="How would you describe the exterior condition?"
-            conditionOptions={['Light dirt', 'Mould / mildew patches', 'Heavy grime build-up', 'Not sure - needs inspection']}
-            messagePlaceholder="Tell us what parts of the home need washing..."
-          />
-        </div>
-      </section>
-
-      <section className="border-t border-white/10 bg-banner-dark py-8 px-6 text-center">
-        <h2 className="font-display text-4xl font-bold uppercase tracking-tight text-brand-sky md:text-5xl">
-          Built Around
-          <br />
-          Your Home
-        </h2>
-      </section>
-
-      <Features features={features} />
-
-      <TrustSection
-        heading="See How We've Refreshed Home Exteriors Across Adelaide"
-        description="From brick to render and cladding, we apply surface-appropriate washing methods for consistent quality, safe cleaning, and visible curb appeal improvements."
-      />
-
-      <Reviews heading="See What Adelaide Homeowners Are Saying" reviews={buildServiceReviews('house washing')} />
-
-      <FinalCTA description="Limited availability - refresh your home's exterior with Adelaide's trusted house washing specialists." />
-
-      <MapSection
-        heading="Trusted House Washing Specialists"
-        checkPoints={[
-          'Fully Insured & Safety Focused',
-          'Soft-Wash Surface-Safe Methods',
-          'Mould Treatment Options',
-          'Highly Experienced Local Team',
-        ]}
-      />
-    </PageFrame>
+    <ServicePageTemplate
+      heroTitleHighlight="House Washing Offer"
+      heroBenefits={[
+        { title: 'Full Exterior Wash', subtitle: 'Surface-Safe Method' },
+        { title: 'Mould & Dirt Removal', subtitle: 'Refresh Street Appeal' },
+      ]}
+      heroLeftImageSrc="/beforeAfter/9.png"
+      heroRightImageSrc="/beforeAfter/10.png"
+      heroLeftImageAlt="House exterior before washing"
+      heroRightImageAlt="House exterior after washing"
+      readyHeadingLine1="Ready to Refresh Your"
+      readyHeadingLine2="Home Exterior?"
+      galleryImages={galleryImages}
+      valueHeading="WE'LL REFRESH YOUR HOME'S EXTERIOR"
+      valueParagraphs={[
+        'Our house washing service removes built-up dirt, organic growth, and surface grime to dramatically improve exterior appearance.',
+        'We tailor the cleaning method to your surface type, delivering a reliable clean while helping protect exterior finishes.',
+      ]}
+      valueTagline="Fresh Exterior. Strong First Impression."
+      formServiceLabel="house washing"
+      formTypeQuestion="What exterior needs house washing?"
+      formTypeOptions={['Brick exterior', 'Rendered exterior', 'Weatherboard / cladding', 'Not sure']}
+      formConditionQuestion="How would you describe the exterior condition?"
+      formConditionOptions={['Light dirt', 'Mould / mildew patches', 'Heavy grime build-up', 'Not sure - needs inspection']}
+      formMessagePlaceholder="Tell us what parts of the home need washing..."
+      reliabilityHeadingLine1="Built Around"
+      reliabilityHeadingLine2="Your Home"
+      features={features}
+      trustHeading="See How We've Refreshed Home Exteriors Across Adelaide"
+      trustDescription="From brick to render and cladding, we apply surface-appropriate washing methods for consistent quality, safe cleaning, and visible curb appeal improvements."
+      reviewsHeading="See What Adelaide Homeowners Are Saying"
+      reviewServiceLabel="house washing"
+      finalCtaDescription="Limited availability - refresh your home's exterior with Adelaide's trusted house washing specialists."
+      mapHeading="Trusted House Washing Specialists"
+      mapCheckPoints={[
+        'Fully Insured & Safety Focused',
+        'Soft-Wash Surface-Safe Methods',
+        'Mould Treatment Options',
+        'Highly Experienced Local Team',
+      ]}
+    />
   );
 };
 
