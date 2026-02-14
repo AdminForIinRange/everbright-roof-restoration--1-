@@ -33,7 +33,8 @@ const galleryImages = [
 const HouseWashingPage: React.FC = () => {
   return (
     <ServicePageTemplate
-      heroTitleHighlight="House Washing Offer"
+      heroTitleLine="House Washing"
+      heroTitleHighlight="Services"
       heroLeftAlignBenefits
       heroBenefits={[
         { title: 'Full Exterior Wash', subtitle: 'Surface-Safe Method' },

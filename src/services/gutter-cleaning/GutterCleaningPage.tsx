@@ -33,7 +33,8 @@ const galleryImages = [
 const GutterCleaningPage: React.FC = () => {
   return (
     <ServicePageTemplate
-      heroTitleHighlight="Gutter Cleaning Offer"
+      heroTitleLine="Gutter Cleaning"
+      heroTitleHighlight="Services"
       heroLeftAlignBenefits
       heroBenefits={[
         { title: 'Full Gutter Clean', subtitle: 'Debris Removed' },
