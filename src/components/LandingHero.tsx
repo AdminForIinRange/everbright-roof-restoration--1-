@@ -579,7 +579,7 @@ export default function LandingHero() {
               <br />
               DONE. PROPERLY.
             </h2>
-            <p className="mx-auto mb-16 max-w-[320px] text-sm leading-relaxed text-white/80 md:mx-0 md:max-w-2xl md:pr-8 md:text-base">
+            <p className="mx-auto mb-16 max-w-[320px] text-sm leading-relaxed text-white md:mx-0 md:max-w-2xl md:pr-8 md:text-base">
               We don't overcomplicate things. From your first enquiry to the final rinse-down, everything is handled professionally, safely, and with clear communication. No confusion. No pressure. Just quality work done right.
             </p>
 
@@ -597,7 +597,7 @@ export default function LandingHero() {
                     <h3 className="mb-2 font-display text-2xl uppercase tracking-tight text-white">
                       {step.title}
                     </h3>
-                    <p className="px-8 text-sm leading-snug text-white/70 md:px-0 md:text-base">
+                    <p className="px-8 text-sm leading-snug text-white md:px-0 md:text-base">
                       {step.description}
                     </p>
                   </div>
