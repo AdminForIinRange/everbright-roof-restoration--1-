@@ -1,4 +1,5 @@
 import React from 'react';
+import DragScroll from './DragScroll';
 
 type ReviewItem = {
   name: string;
@@ -25,9 +26,9 @@ const Reviews: React.FC<ReviewsProps> = ({ heading, reviews, sectionClassName = 
           </h3>
         </div>
 
-        <div className="hide-scrollbar -mx-4 flex snap-x gap-6 overflow-x-auto px-4 pb-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 xl:gap-8">
+        <DragScroll className="drag-scroll hide-scrollbar -mx-4 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-8 lg:mx-0 lg:px-0">
           {reviews.map((review, i) => (
-            <div key={i} className="w-80 flex-shrink-0 snap-center rounded-2xl border border-gray-100 bg-white p-6 shadow-xl lg:w-full lg:min-h-[300px] lg:p-7 lg:transition-transform lg:duration-300 lg:hover:-translate-y-1">
+            <div key={i} className="w-80 flex-shrink-0 snap-start rounded-2xl border border-gray-100 bg-white p-6 shadow-xl md:w-[380px] lg:w-[420px]">
               <div className="mb-5 flex items-center gap-4">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-brand-sky/20 bg-brand-sky/15 text-sm font-bold uppercase text-brand-sky">
                   {review.name
@@ -54,7 +55,7 @@ const Reviews: React.FC<ReviewsProps> = ({ heading, reviews, sectionClassName = 
               <p className="text-sm italic leading-relaxed text-slate-700 md:text-base">"{review.reviewText}"</p>
             </div>
           ))}
-        </div>
+        </DragScroll>
       </div>
     </section>
   );
