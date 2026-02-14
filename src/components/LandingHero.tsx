@@ -418,17 +418,19 @@ export default function LandingHero() {
                 sizes="(min-width: 768px) 448px, 100vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,23,42,0.4),rgba(15,23,42,0.85))]" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-6xl">
-                  {service.title}
-                </h3>
-                <p className="mb-8 max-w-xs text-lg leading-relaxed text-white">
-                  {service.description}
-                </p>
+              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.9))]" />
+              <div className="absolute inset-0 flex flex-col p-8 text-center">
+                <div className="flex flex-1 flex-col items-center justify-center">
+                  <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-6xl">
+                    {service.title}
+                  </h3>
+                  <p className="max-w-xs text-lg leading-relaxed text-white">
+                    {service.description}
+                  </p>
+                </div>
                 <Link
                   href={service.href}
-                  className="rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95"
+                  className="mx-auto rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95"
                 >
                   Learn More
                 </Link>
