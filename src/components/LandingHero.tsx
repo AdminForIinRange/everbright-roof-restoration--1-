@@ -452,7 +452,7 @@ export default function LandingHero() {
           appearance, protects against regrowth, and enhances your home&apos;s
           value.
         </p>
-        <p className="font-display text-xl font-bold uppercase text-everbright-blue md:text-2xl">
+        <p className="font-display text-md font-bold uppercase text-everbright-blue md:text-2xl">
           Clean Today. Protected for Longer.
         </p>
       </section>
