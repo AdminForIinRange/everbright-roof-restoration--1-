@@ -441,7 +441,7 @@ export default function LandingHero() {
       </section>
 
       <section className="bg-white px-6  ">
-        <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight leading-tight text-brand-sky">
+        <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight leading-tight text-white ">
           A Service You Can Rely On
         </h2>
 

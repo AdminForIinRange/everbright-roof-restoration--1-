@@ -125,7 +125,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
       </section>
 
       <section className="border-t border-white/10 bg-banner-dark px-6 py-8 text-center">
-        <h2 className="font-display text-4xl font-bold uppercase tracking-tight text-brand-sky md:text-5xl">
+        <h2 className="font-display text-4xl font-bold uppercase tracking-tight text-white md:text-5xl">
           {reliabilityHeadingLine1}
           <br />
           {reliabilityHeadingLine2}
