@@ -44,8 +44,8 @@ const PressureWashingPage: React.FC = () => {
       heroRightImageSrc="/prussewshingImges/20.png"
       heroLeftImageAlt="Dirty driveway before pressure washing"
       heroRightImageAlt="Clean driveway after pressure washing"
-      readyHeadingLine1="Ready to Refresh Your"
-      readyHeadingLine2="Exterior Surfaces?"
+      readyHeadingLine1="Ready to Refresh"
+      readyHeadingLine2="Your Exterior Surfaces?"
       galleryImages={galleryImages}
       valueHeading="WE'LL BRING YOUR SURFACES BACK TO LIFE"
       valueParagraphs={[
