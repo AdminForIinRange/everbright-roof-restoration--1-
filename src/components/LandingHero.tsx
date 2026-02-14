@@ -574,10 +574,10 @@ export default function LandingHero() {
       <section id="process-contact" className="bg-navy-dark px-6 pb-12 pt-16 md:py-14 lg:py-16">
         <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">
           <section className="bg-navy-dark text-center md:px-6 md:text-left lg:px-8">
-            <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-white md:text-6xl lg:text-7xl">
+            <h2 className="mb-6 font-display text-4xl uppercase leading-[1.1] tracking-[-0.02em] text-white md:text-6xl lg:text-7xl">
               SIMPLE. CLEAR.
               <br />
-              DONE PROPERLY.
+              DONE. PROPERLY.
             </h2>
             <p className="mx-auto mb-16 max-w-[320px] text-sm leading-relaxed text-white/80 md:mx-0 md:max-w-2xl md:pr-8 md:text-base">
               We don't overcomplicate things. From your first enquiry to the final rinse-down, everything is handled professionally, safely, and with clear communication. No confusion. No pressure. Just quality work done right.
