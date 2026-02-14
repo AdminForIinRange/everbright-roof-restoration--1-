@@ -19,7 +19,7 @@ h3 {
 }
 
 .roof-gradient-overlay {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.36) 100%);
 }
 
 .form-shadow {

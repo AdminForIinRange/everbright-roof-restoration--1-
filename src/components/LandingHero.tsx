@@ -151,7 +151,7 @@ const processSteps = [
     title: "Site Visit",
     description:
       "If you prefer, we come to you, assess the job, and provide a quote on the spot. You're always in control and we tailor our services to fit your needs.",
-    italicNumber: true,
+    italicNumber: false,
   },
   {
     number: "3",
@@ -500,9 +500,9 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section id="process-contact" className="bg-navy-dark">
-        <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-navy-dark shadow-2xl">
-          <section className="px-6 pb-12 pt-16 text-center">
+      <section id="process-contact" className="bg-white">
+        <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-white shadow-2xl">
+          <section className="bg-navy-dark px-6 pb-12 pt-16 text-center">
             <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky md:text-7xl">
               Easy, no
               <br />
@@ -568,6 +568,7 @@ export default function LandingHero() {
 
       <MapSection
         heading="Trusted Roof Restoration Specialists"
+        sectionClassName="bg-white py-16 px-6"
         checkPoints={[
           "Fully Insured & Safety Focused",
           "Roof-Safe Cleaning & Treatment",
