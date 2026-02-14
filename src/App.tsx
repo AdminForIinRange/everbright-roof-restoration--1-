@@ -51,7 +51,7 @@ const App: React.FC = () => {
           leftAlignBenefits
         />
 
-        <section className="bg-everbright-blue py-12 px-6 text-center">
+        <section className="bg-everbright-blue px-6 py-12 text-center md:py-16 lg:py-20">
           <h2 className="font-display text-brand-sky text-4xl md:text-5xl font-bold uppercase leading-tight tracking-tight max-w-2xl mx-auto">
             Ready to Clean &
             <br />
@@ -70,8 +70,8 @@ const App: React.FC = () => {
           tagline="Restore Today. Protect for Longer."
         />
 
-        <section id="form" className="relative z-10 mt-6 bg-[#003249] py-6 md:py-8">
-          <div className="mx-auto w-full max-w-2xl px-4">
+        <section id="form" className="relative z-10 mt-6 bg-[#003249] py-6 md:py-12 lg:py-14">
+          <div className="mx-auto w-full max-w-2xl px-4 md:max-w-3xl lg:max-w-4xl">
             <LeadForm
               serviceLabel="roof restoration"
               typeQuestion="What type of roof do you have?"
@@ -88,7 +88,7 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        <section className="bg-banner-dark py-8 px-6 text-center border-t border-white/10">
+        <section className="border-t border-white/10 bg-banner-dark px-6 py-8 text-center md:py-10">
           <h2 className="font-display text-white text-4xl md:text-5xl font-bold uppercase tracking-tight">
             A Service You
             <br />

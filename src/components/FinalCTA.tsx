@@ -5,20 +5,20 @@ type FinalCTAProps = {
   sectionClassName?: string;
 };
 
-const FinalCTA: React.FC<FinalCTAProps> = ({ description, sectionClassName = 'bg-navy-dark pb-20 px-6 text-center' }) => {
+const FinalCTA: React.FC<FinalCTAProps> = ({ description, sectionClassName = 'bg-navy-dark px-6 pb-20 text-center md:pb-24' }) => {
   return (
     <section className={sectionClassName}>
-      <div className="max-w-2xl mx-auto pt-10 border-t border-white/5">
-        <h2 className="font-display font-black tracking-tighter text-white text-5xl md:text-7xl mb-6 uppercase leading-[0.85]">
+      <div className="mx-auto max-w-4xl border-t border-white/5 pt-10">
+        <h2 className="mb-6 font-display text-5xl font-black uppercase leading-[0.85] tracking-tighter text-white md:text-7xl">
           CONTACT US <span className="text-brand-sky">TODAY</span>
         </h2>
-        <p className="text-white text-xl md:text-2xl font-light leading-snug px-4 opacity-90 max-w-lg mx-auto">
+        <p className="mx-auto max-w-2xl px-4 text-xl font-light leading-snug text-white opacity-90 md:text-2xl">
           {description}
         </p>
 
         <a
           href="#form"
-          className="mt-12 inline-block bg-brand-sky hover:bg-sky-400 active:scale-95 text-white font-bold py-5 px-14 rounded-full transition-all shadow-[0_15px_40px_-10px_rgba(56,189,248,0.5)] uppercase tracking-widest text-xl"
+          className="mt-12 inline-block rounded-full bg-brand-sky px-14 py-5 text-xl font-bold uppercase tracking-widest text-white shadow-[0_15px_40px_-10px_rgba(56,189,248,0.5)] transition-all hover:bg-sky-400 active:scale-95"
         >
           Get Your Free Quote
         </a>

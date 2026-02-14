@@ -11,12 +11,12 @@ const MapSection: React.FC<MapSectionProps> = ({ heading, checkPoints, sectionCl
 
   return (
     <section className={sectionClassName}>
-      <div className="max-w-5xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-10 items-center">
-          <div className="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-2xl border border-slate-200">
+      <div className="mx-auto max-w-6xl">
+        <div className="flex flex-col items-center gap-10 md:flex-row md:items-stretch md:gap-12 lg:gap-16">
+          <div className="w-full overflow-hidden rounded-2xl border border-slate-200 shadow-2xl md:w-1/2">
             <iframe
               title="Google Maps - Adelaide SA"
-              className="w-full h-72 md:h-[400px] border-0"
+              className="h-72 w-full border-0 md:h-[420px] lg:h-[460px]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
@@ -24,12 +24,12 @@ const MapSection: React.FC<MapSectionProps> = ({ heading, checkPoints, sectionCl
             />
           </div>
           
-          <div className="w-full md:w-1/2 flex flex-col justify-center">
-            <h2 className="font-display text-3xl md:text-5xl font-extrabold text-navy-custom mb-8 leading-none uppercase tracking-tight">
+          <div className="flex w-full flex-col justify-center md:w-1/2">
+            <h2 className="mb-8 font-display text-3xl font-extrabold uppercase leading-none tracking-tight text-navy-custom md:text-5xl">
               {heading}
             </h2>
             
-            <ul className="space-y-5 mb-12">
+            <ul className="mb-12 space-y-5">
               {checkPoints.map((point, index) => (
                 <li key={index} className="flex items-center gap-4">
                   <span className="material-symbols-outlined text-brand-sky flex-shrink-0 text-3xl">check</span>
@@ -40,7 +40,7 @@ const MapSection: React.FC<MapSectionProps> = ({ heading, checkPoints, sectionCl
             
             <a
               href="#form"
-              className="block w-full bg-brand-sky hover:bg-sky-400 active:scale-[0.98] transition-all text-white font-display font-bold text-3xl py-6 rounded-full shadow-[0_15px_30px_-5px_rgba(56,189,248,0.4)] tracking-wide uppercase text-center"
+              className="block w-full rounded-full bg-brand-sky py-6 text-center font-display text-3xl font-bold uppercase tracking-wide text-white shadow-[0_15px_30px_-5px_rgba(56,189,248,0.4)] transition-all hover:bg-sky-400 active:scale-[0.98] md:max-w-md"
             >
               Book Your Free Quote
             </a>

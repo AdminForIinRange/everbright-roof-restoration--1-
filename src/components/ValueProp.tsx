@@ -8,18 +8,18 @@ type ValuePropProps = {
   sectionClassName?: string;
 };
 
-const ValueProp: React.FC<ValuePropProps> = ({ heading, paragraphs, tagline, sectionClassName = 'bg-white py-16 px-6 text-center' }) => {
+const ValueProp: React.FC<ValuePropProps> = ({ heading, paragraphs, tagline, sectionClassName = 'bg-white px-6 py-16 text-center md:py-20' }) => {
   return (
     <section className={sectionClassName}>
-      <div className="max-w-3xl mx-auto">
-        <h2 className="font-display text-dark-navy text-3xl md:text-5xl font-bold uppercase mb-8 leading-[1.1]">
+      <div className="mx-auto max-w-4xl">
+        <h2 className="mb-8 font-display text-3xl font-bold uppercase leading-[1.1] text-dark-navy md:text-5xl">
           {heading}
         </h2>
-        <div className="font-body text-gray-700 space-y-6 text-base md:text-lg leading-relaxed">
+        <div className="space-y-6 font-body text-base leading-relaxed text-gray-700 md:text-lg">
           {paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
-          <p className="font-extrabold text-dark-navy tracking-tight text-xl md:text-2xl pt-4">
+          <p className="pt-4 text-xl font-extrabold tracking-tight text-dark-navy md:text-2xl">
             {tagline}
           </p>
         </div>

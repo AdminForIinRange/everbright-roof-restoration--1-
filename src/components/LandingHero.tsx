@@ -199,7 +199,7 @@ export default function LandingHero() {
       id="top"
       className="bg-white font-body text-slate-900 [&_h1]:font-bold [&_h2]:font-bold [&_h3]:font-bold [&_h4]:font-bold"
     >
-      <section className="relative flex min-h-screen w-full flex-col overflow-hidden bg-brand-dark">
+      <section className="relative flex min-h-screen w-full flex-col overflow-hidden bg-brand-dark md:min-h-[92vh]">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroBackgroundImage}
@@ -216,9 +216,9 @@ export default function LandingHero() {
           <Header />
         </div>
 
-        <div className="relative z-10 flex flex-grow flex-col justify-end px-6 pb-12 pt-8">
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow flex-col justify-end px-6 pb-12 pt-8 md:px-10 md:pb-16 md:pt-12 lg:px-12 lg:pb-20">
           <div className="mb-6">
-            <h1 className="font-display text-5xl font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:text-8xl">
+            <h1 className="font-display text-5xl font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[8.5rem]">
               Trusted
               <br />
               <span className="text-brand-sky">Exterior Cleaning</span>
@@ -227,12 +227,12 @@ export default function LandingHero() {
             </h1>
           </div>
 
-          <p className="mb-8 max-w-sm text-lg leading-relaxed text-white/90">
+          <p className="mb-8 max-w-sm text-lg leading-relaxed text-white/90 md:max-w-xl md:text-xl">
             Exterior cleaning systems tailored to safely restore, protect, and
             enhance your Adelaide home
           </p>
 
-          <div className="mb-8 grid max-w-sm grid-cols-3 gap-3">
+          <div className="mb-8 grid max-w-sm grid-cols-3 gap-3 md:max-w-xl md:gap-6">
             <div className="flex flex-col items-start text-left">
               <span className="material-icons mb-1 text-[28px] text-brand-sky">
                 schedule
@@ -285,7 +285,7 @@ export default function LandingHero() {
 
           <Link
             href="#form"
-            className="w-full rounded-2xl bg-brand-sky py-5 text-center font-display text-2xl uppercase tracking-wide text-white shadow-lg transition-transform hover:bg-brand-sky/90 active:scale-[0.98]"
+            className="w-full rounded-2xl bg-brand-sky py-5 text-center font-display text-2xl uppercase tracking-wide text-white shadow-lg transition-transform hover:bg-brand-sky/90 active:scale-[0.98] md:w-auto md:min-w-[320px] md:px-12"
           >
             Book Your Free Quote
           </Link>
@@ -323,7 +323,7 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section className="bg-white px-8 py-14 text-center">
+      <section className="bg-white px-8 py-14 text-center md:py-20">
         <h2 className="mb-6 font-display text-4xl uppercase leading-tight text-everbright-blue md:text-5xl">
           We&apos;ll Bring Your Exterior Back To Life
         </h2>
@@ -340,58 +340,60 @@ export default function LandingHero() {
       </section>
 
       <section className="bg-banner-dark px-5 py-12 text-center">
-        <h1 className="font-display text-4xl uppercase leading-[1.1] text-white md:text-5xl">
-          Local Exterior Cleaners You Can{" "}
-          <span className="text-brand-sky">Trust</span>
-        </h1>
+        <div className="mx-auto max-w-6xl">
+          <h1 className="font-display text-4xl uppercase leading-[1.1] text-white md:text-5xl">
+            Local Exterior Cleaners You Can{" "}
+            <span className="text-brand-sky">Trust</span>
+          </h1>
 
-        <div className="mb-8 mt-4 flex flex-col items-center">
-          <div className="mb-1 flex items-center gap-2">
-            <GoogleIcon />
-            <span className="text-2xl font-bold text-orange-500">5.0</span>
-            <div className="flex text-orange-500">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <span key={index} className="material-icons text-xl">
-                  star
-                </span>
-              ))}
+          <div className="mb-8 mt-4 flex flex-col items-center">
+            <div className="mb-1 flex items-center gap-2">
+              <GoogleIcon />
+              <span className="text-2xl font-bold text-orange-500">5.0</span>
+              <div className="flex text-orange-500">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <span key={index} className="material-icons text-xl">
+                    star
+                  </span>
+                ))}
+              </div>
             </div>
+            <p className="text-lg font-semibold text-white/90">
+              Verified 5-Stars Reviews
+            </p>
           </div>
-          <p className="text-lg font-semibold text-white/90">
-            Verified 5-Stars Reviews
-          </p>
-        </div>
 
-        <div className="hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
-          {testimonials.map((testimonial) => (
-            <article
-              key={testimonial.avatar}
-              className="w-[280px] flex-none snap-center rounded-2xl bg-white p-5 text-left"
-            >
-              <div className="mb-3 flex items-center gap-3">
-                <Image
-                  src={testimonial.avatar}
-                  alt="Reviewer"
-                  width={48}
-                  height={48}
-                  className="h-12 w-12 rounded-full border-2 border-brand-sky object-cover"
-                />
-                <div className="flex items-center gap-1">
-                  <span className="font-bold text-orange-500">5.0</span>
-                  <div className="flex text-[10px] text-orange-500">
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <span key={index} className="material-icons text-[14px]">
-                        star
-                      </span>
-                    ))}
+          <div className="hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible">
+            {testimonials.map((testimonial) => (
+              <article
+                key={testimonial.avatar}
+                className="w-[280px] flex-none snap-center rounded-2xl bg-white p-5 text-left lg:w-auto"
+              >
+                <div className="mb-3 flex items-center gap-3">
+                  <Image
+                    src={testimonial.avatar}
+                    alt="Reviewer"
+                    width={48}
+                    height={48}
+                    className="h-12 w-12 rounded-full border-2 border-brand-sky object-cover"
+                  />
+                  <div className="flex items-center gap-1">
+                    <span className="font-bold text-orange-500">5.0</span>
+                    <div className="flex text-[10px] text-orange-500">
+                      {Array.from({ length: 5 }).map((_, index) => (
+                        <span key={index} className="material-icons text-[14px]">
+                          star
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <p className="text-sm leading-relaxed text-slate-700">
-                {testimonial.quote}
-              </p>
-            </article>
-          ))}
+                <p className="text-sm leading-relaxed text-slate-700">
+                  {testimonial.quote}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -403,11 +405,11 @@ export default function LandingHero() {
           </h2>
         </header>
 
-        <div className="mx-auto max-w-md space-y-6 px-5 pb-24 pt-8">
+        <div className="mx-auto max-w-md space-y-6 px-5 pb-24 pt-8 md:grid md:max-w-6xl md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-3 lg:gap-8 xl:gap-10">
           {services.map((service) => (
             <article
               key={service.title}
-              className="group relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl"
+              className="group relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl md:aspect-[5/6]"
             >
               <Image
                 src={service.image}
@@ -417,9 +419,9 @@ export default function LandingHero() {
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.9))]" />
-              <div className="absolute inset-0 flex flex-col p-8 text-center">
+              <div className="absolute inset-0 flex flex-col p-8 text-center md:p-7 lg:p-8">
                 <div className="flex flex-1 flex-col items-center justify-center">
-                  <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-6xl">
+                  <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-[3.25rem] lg:text-6xl">
                     {service.title}
                   </h3>
                   <p className="max-w-xs text-lg leading-relaxed text-white">
@@ -438,38 +440,13 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section className="bg-white px-6  ">
-        <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight leading-tight text-brand-sky ">
-          A Service You Can Rely On
-        </h2>
+      <section className="bg-white px-6 md:px-8 md:pt-4">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-10 text-center font-display text-4xl uppercase leading-tight tracking-tight text-brand-sky">
+            A Service You Can Rely On
+          </h2>
 
-        <div className="mb-6 flex items-start gap-3">
-          <span
-            className="material-symbols-outlined shrink-0 text-3xl text-brand-sky"
-            style={{
-              fontVariationSettings:
-                "'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24",
-            }}
-          >
-            check_circle
-          </span>
-          <div className="flex flex-col sm:flex-row sm:items-start sm:gap-4">
-            <h3 className="min-w-[160px] text-lg font-bold text-slate-800">
-              {reliabilityIntro.title}
-            </h3>
-            <p className="mt-1 text-base text-slate-500 sm:mt-0 md:text-lg">
-              {reliabilityIntro.description}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white px-6 py-8">
-        {reliabilityPoints.map((point) => (
-          <div
-            key={point.title}
-            className="mb-8 flex items-start gap-3 last:mb-0"
-          >
+          <div className="mb-6 flex items-start gap-3 md:mx-auto md:max-w-4xl">
             <span
               className="material-symbols-outlined shrink-0 text-3xl text-brand-sky"
               style={{
@@ -479,36 +456,65 @@ export default function LandingHero() {
             >
               check_circle
             </span>
-            <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2">
-              <h3 className="mb-1 text-lg font-bold leading-tight text-slate-800">
-                {point.title}
+            <div className="flex flex-col sm:flex-row sm:items-start sm:gap-4">
+              <h3 className="min-w-[160px] text-lg font-bold text-slate-800">
+                {reliabilityIntro.title}
               </h3>
-              <p className="text-base text-slate-500 md:text-lg">
-                {point.description}
+              <p className="mt-1 text-base text-slate-500 sm:mt-0 md:text-lg">
+                {reliabilityIntro.description}
               </p>
             </div>
           </div>
-        ))}
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-8 md:px-8 md:pb-16">
+        <div className="mx-auto max-w-6xl md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-8">
+          {reliabilityPoints.map((point) => (
+            <div
+              key={point.title}
+              className="mb-8 flex items-start gap-3 last:mb-0 md:mb-0"
+            >
+              <span
+                className="material-symbols-outlined shrink-0 text-3xl text-brand-sky"
+                style={{
+                  fontVariationSettings:
+                    "'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24",
+                }}
+              >
+                check_circle
+              </span>
+              <div className="grid grid-cols-1 gap-x-6">
+                <h3 className="mb-1 text-lg font-bold leading-tight text-slate-800">
+                  {point.title}
+                </h3>
+                <p className="text-base text-slate-500 md:text-lg">
+                  {point.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section
         id="services-quiz"
-        className="flex min-h-screen items-center justify-center bg-everbright-blue px-6 py-12"
+        className="flex min-h-screen items-center justify-center bg-everbright-blue px-6 py-12 md:min-h-0 md:py-20"
       >
         <div className="w-full max-w-2xl">
           <LeadForm />
         </div>
       </section>
 
-      <section id="process-contact" className="bg-white">
-        <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-white shadow-2xl">
-          <section className="bg-navy-dark px-6 pb-12 pt-16 text-center">
-            <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky md:text-7xl">
+      <section id="process-contact" className="bg-white md:py-8">
+        <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-white shadow-2xl md:max-w-6xl md:flex-row md:rounded-[2rem]">
+          <section className="bg-navy-dark px-6 pb-12 pt-16 text-center md:w-3/5 md:px-10 md:py-14 md:text-left lg:px-12">
+            <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky md:text-6xl lg:text-7xl">
               Easy, no
               <br />
               stress, just fresh
             </h2>
-            <p className="mx-auto mb-16 max-w-[320px] text-sm leading-relaxed text-white/80 md:text-base">
+            <p className="mx-auto mb-16 max-w-[320px] text-sm leading-relaxed text-white/80 md:mx-0 md:max-w-2xl md:pr-8 md:text-base">
               Great results matter, but we also make the process simple and
               stress-free. From booking to completion, we keep everything clear
               and easy with our straightforward 3-step process, so you can relax
@@ -516,29 +522,31 @@ export default function LandingHero() {
               property.
             </p>
 
-            <div className="space-y-12">
+            <div className="space-y-12 md:space-y-10 lg:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0">
               {processSteps.map((step) => (
-                <div key={step.number} className="flex flex-col items-center">
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-sky shadow-lg shadow-brand-sky/20">
+                <div key={step.number} className="flex flex-col items-center md:flex-row md:items-start md:gap-5 md:text-left lg:flex-col lg:items-center lg:text-center">
+                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-sky shadow-lg shadow-brand-sky/20 md:mb-0">
                     <span
                       className={`text-3xl font-black text-white ${step.italicNumber ? "italic" : ""}`}
                     >
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="mb-2 font-display text-2xl uppercase tracking-tight text-white">
-                    {step.title}
-                  </h3>
-                  <p className="px-8 text-sm leading-snug text-white/70 md:text-base">
-                    {step.description}
-                  </p>
+                  <div>
+                    <h3 className="mb-2 font-display text-2xl uppercase tracking-tight text-white">
+                      {step.title}
+                    </h3>
+                    <p className="px-8 text-sm leading-snug text-white/70 md:px-0 md:text-base">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="mx-1 mb-1 rounded-t-3xl bg-white p-8">
-            <h3 className="mb-4 font-display text-5xl uppercase leading-none text-everbright-blue">
+          <section className="mx-1 mb-1 rounded-t-3xl bg-white p-8 md:m-0 md:flex md:w-2/5 md:flex-col md:justify-center md:rounded-none md:p-10 lg:p-12">
+            <h3 className="mb-4 font-display text-5xl uppercase leading-none text-everbright-blue md:text-[3.25rem]">
               Contact Us Today
             </h3>
             <p className="mb-8 text-base leading-snug text-slate-700 md:text-lg">

@@ -7,27 +7,31 @@ type TrustSectionProps = {
   sectionClassName?: string;
 };
 
-const TrustSection: React.FC<TrustSectionProps> = ({ heading, description, sectionClassName = 'px-6 py-16 bg-white' }) => {
+const TrustSection: React.FC<TrustSectionProps> = ({ heading, description, sectionClassName = 'bg-white px-6 py-16 md:py-20' }) => {
   return (
     <section className={sectionClassName}>
-      <div className="max-w-xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-display font-bold text-dark-navy leading-tight mb-8 uppercase tracking-tight">
-          {heading}
-        </h2>
-        <p className="text-slate-700 text-lg md:text-xl leading-relaxed mb-10">
-          {description}
-        </p>
-        
-        <div className="flex justify-center mt-4">
-          <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 flex items-center justify-center bg-black rounded-full border-4 border-gold shadow-2xl overflow-hidden">
-            <div className="text-center text-gold px-2">
-              <div className="text-[9px] sm:text-[10px] md:text-xs uppercase font-bold tracking-widest leading-none mb-1">Satisfaction</div>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-black leading-none my-0.5">100%</div>
-              <div className="text-[9px] sm:text-[10px] md:text-xs uppercase font-bold tracking-widest leading-none mt-1">Guaranteed</div>
-              <div className="flex justify-center gap-0.5 mt-1">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="material-symbols-outlined text-xs sm:text-sm md:text-base fill-current" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                ))}
+      <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-xl text-center lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-[minmax(0,1fr)_220px] lg:items-center lg:gap-12 lg:text-left">
+          <div>
+            <h2 className="mb-8 font-display text-3xl font-bold uppercase leading-tight tracking-tight text-dark-navy md:text-5xl">
+              {heading}
+            </h2>
+            <p className="mb-10 text-lg leading-relaxed text-slate-700 md:text-xl lg:mb-0">
+              {description}
+            </p>
+          </div>
+
+          <div className="mt-4 flex justify-center lg:mt-0 lg:justify-end">
+            <div className="relative flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-4 border-gold bg-black shadow-2xl sm:h-36 sm:w-36 md:h-40 md:w-40">
+              <div className="px-2 text-center text-gold">
+                <div className="mb-1 text-[9px] font-bold uppercase leading-none tracking-widest sm:text-[10px] md:text-xs">Satisfaction</div>
+                <div className="my-0.5 text-2xl font-black leading-none sm:text-3xl md:text-4xl">100%</div>
+                <div className="mt-1 text-[9px] font-bold uppercase leading-none tracking-widest sm:text-[10px] md:text-xs">Guaranteed</div>
+                <div className="mt-1 flex justify-center gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="material-symbols-outlined fill-current text-xs sm:text-sm md:text-base" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

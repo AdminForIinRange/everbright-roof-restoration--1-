@@ -33,11 +33,11 @@ const Hero: React.FC<HeroProps> = ({
   leftAlignBenefits = false,
 }) => {
   const benefitsClassName = leftAlignBenefits
-    ? 'space-y-2 max-w-sm mb-6 text-left'
-    : 'space-y-2 max-w-sm mx-auto mb-6 text-left';
+    ? 'mb-6 max-w-sm space-y-2 text-left md:max-w-md'
+    : 'mx-auto mb-6 max-w-sm space-y-2 text-left md:max-w-md';
 
   return (
-    <section className={`relative bg-brand-dark overflow-hidden flex items-center md:py-20 ${sectionClassName}`}>
+    <section className={`relative flex items-center overflow-hidden bg-brand-dark md:py-20 lg:py-24 ${sectionClassName}`}>
       {/* Background Images Split */}
       <div className="absolute inset-0 z-0">
         <div className="flex h-full w-full">
@@ -65,8 +65,8 @@ const Hero: React.FC<HeroProps> = ({
         <div className="absolute inset-0 roof-gradient-overlay"></div>
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-4xl px-6 text-white text-left">
-        <h1 className="font-display mt-10 text-5xl sm:text-6xl md:text-8xl uppercase font-bold leading-[0.95] mb-7 drop-shadow-xl">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 text-left text-white md:px-10 lg:px-12">
+        <h1 className="font-display mb-7 mt-10 text-5xl font-bold uppercase leading-[0.95] drop-shadow-xl sm:text-6xl md:text-7xl lg:text-8xl">
           {titleLine}
           <br />
           <span className="text-brand-sky">{titleHighlight}</span>
@@ -87,7 +87,7 @@ const Hero: React.FC<HeroProps> = ({
         </div>
 
         {/* Social Proof */}
-        <div className="flex flex-col items-start justify-start space-y-2 mt-4">
+        <div className="mt-4 flex flex-col items-start justify-start space-y-2">
           <div className="flex items-center space-x-2 py-1">
             <div className="bg-white p-1 rounded-full w-6 h-6 flex items-center justify-center shadow-inner">
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24">
@@ -97,21 +97,21 @@ const Hero: React.FC<HeroProps> = ({
                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
               </svg>
             </div>
-            <span className="text-lg font-bold text-amber-400">5.0</span>
+            <span className="text-lg font-bold text-amber-400 md:text-xl">5.0</span>
             <div className="flex text-amber-400">
               {[...Array(5)].map((_, i) => (
                 <span key={i} className="material-icons text-lg">star</span>
               ))}
             </div>
           </div>
-          <p className="text-xs font-bold uppercase tracking-widest text-gray-300">
+          <p className="text-xs font-bold uppercase tracking-widest text-gray-300 md:text-sm">
             Google 5-Stars Rated
           </p>
         </div>
 
         <a
           href="#form"
-          className="mt-7 inline-flex items-center justify-center bg-brand-sky hover:bg-sky-400 active:scale-95 text-white font-bold py-4 px-8 rounded-full transition-all shadow-[0_15px_40px_-10px_rgba(56,189,248,0.5)] uppercase tracking-widest text-base md:text-lg"
+          className="mt-7 inline-flex items-center justify-center rounded-full bg-brand-sky px-8 py-4 text-base font-bold uppercase tracking-widest text-white shadow-[0_15px_40px_-10px_rgba(56,189,248,0.5)] transition-all hover:bg-sky-400 active:scale-95 md:px-10 md:text-lg"
         >
           {ctaLabel}
         </a>

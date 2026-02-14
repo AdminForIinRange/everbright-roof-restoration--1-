@@ -76,7 +76,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
 
   if (isSubmitted) {
     return (
-      <div className="max-w-md mx-auto bg-white rounded-xl p-10 form-shadow border-t-[6px] border-brand-sky text-center animate-fade-in">
+      <div className="mx-auto max-w-md animate-fade-in rounded-xl border-t-[6px] border-brand-sky bg-white p-10 text-center form-shadow md:max-w-lg md:p-12">
         <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
           <span className="material-icons text-4xl">check_circle</span>
         </div>
@@ -108,13 +108,13 @@ const LeadForm: React.FC<LeadFormProps> = ({
   }
 
   return (
-    <div className="max-w-md mx-auto w-full">
-      <div className="bg-white rounded-xl p-6 md:p-7 form-shadow border border-slate-200 border-t-[6px] border-t-brand-sky">
+    <div className="mx-auto w-full max-w-md md:max-w-lg">
+      <div className="rounded-xl border border-slate-200 border-t-[6px] border-t-brand-sky bg-white p-6 form-shadow md:p-8">
         <h3 className="text-center font-display text-xl md:text-2xl font-bold text-slate-900 leading-snug mb-5">
           ORGANISE A FREE QUOTE IN JUST 30 SECONDS!
         </h3>
 
-        <form action={formAction} onSubmit={handleSubmit} className="space-y-4">
+        <form action={formAction} onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
           <input type="hidden" name="roofType" value={formData.roofType} />
           <input type="hidden" name="roofCondition" value={formData.roofCondition} />
 
@@ -124,72 +124,74 @@ const LeadForm: React.FC<LeadFormProps> = ({
             </div>
           )}
 
-          <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="fullName">
-              Full Name
-            </label>
-            <input
-              required
-              maxLength={255}
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
-              id="fullName"
-              name="fullName"
-              placeholder="e.g. John Doe"
-              type="text"
-              value={formData.fullName}
-              onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-            />
-          </div>
+          <div className="md:grid md:grid-cols-2 md:gap-4">
+            <div className="md:col-span-1">
+              <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="fullName">
+                Full Name
+              </label>
+              <input
+                required
+                maxLength={255}
+                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
+                id="fullName"
+                name="fullName"
+                placeholder="e.g. John Doe"
+                type="text"
+                value={formData.fullName}
+                onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+              />
+            </div>
 
-          <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="email">
-              Email Address
-            </label>
-            <input
-              required
-              maxLength={255}
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
-              id="email"
-              name="email"
-              placeholder="your@email.com"
-              type="email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            />
-          </div>
+            <div className="mt-4 md:col-span-1 md:mt-0">
+              <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="email">
+                Email Address
+              </label>
+              <input
+                required
+                maxLength={255}
+                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                type="email"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              />
+            </div>
 
-          <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="phone">
-              Phone Number
-            </label>
-            <input
-              required
-              maxLength={255}
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
-              id="phone"
-              name="phone"
-              placeholder="e.g. 0412 345 678"
-              type="tel"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            />
-          </div>
+            <div className="mt-4 md:col-span-1 md:mt-0">
+              <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="phone">
+                Phone Number
+              </label>
+              <input
+                required
+                maxLength={255}
+                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
+                id="phone"
+                name="phone"
+                placeholder="e.g. 0412 345 678"
+                type="tel"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              />
+            </div>
 
-          <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="address">
-              Address
-            </label>
-            <input
-              required
-              maxLength={255}
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
-              id="address"
-              name="address"
-              placeholder="Street address, suburb, postcode"
-              type="text"
-              value={formData.address}
-              onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-            />
+            <div className="mt-4 md:col-span-1 md:mt-0">
+              <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="address">
+                Address
+              </label>
+              <input
+                required
+                maxLength={255}
+                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
+                id="address"
+                name="address"
+                placeholder="Street address, suburb, postcode"
+                type="text"
+                value={formData.address}
+                onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+              />
+            </div>
           </div>
 
           <div>
@@ -197,7 +199,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
               Leave a message
             </label>
             <textarea
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
+              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none md:min-h-[120px]"
               id="message"
               name="message"
               placeholder={messagePlaceholder}
