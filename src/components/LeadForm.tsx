@@ -76,7 +76,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
 
   if (isSubmitted) {
     return (
-      <div className="mx-auto max-w-md animate-fade-in rounded-xl border-t-[6px] border-brand-sky bg-white p-10 text-center form-shadow md:max-w-lg md:p-12">
+      <div className="mx-auto max-w-md animate-fade-in rounded-xl border-t-[6px] border-brand-sky bg-white p-10 text-center form-shadow md:max-w-2xl md:p-12 lg:max-w-3xl">
         <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
           <span className="material-icons text-4xl">check_circle</span>
         </div>
@@ -108,9 +108,9 @@ const LeadForm: React.FC<LeadFormProps> = ({
   }
 
   return (
-    <div className="mx-auto w-full max-w-md md:max-w-lg">
-      <div className="rounded-xl border border-slate-200 border-t-[6px] border-t-brand-sky bg-white p-6 form-shadow md:p-8">
-        <h3 className="text-center font-display text-xl md:text-2xl font-bold text-slate-900 leading-snug mb-5">
+    <div className="mx-auto w-full max-w-md md:max-w-2xl lg:max-w-3xl">
+      <div className="rounded-xl border border-slate-200 border-t-[6px] border-t-brand-sky bg-white p-6 form-shadow md:p-10">
+        <h3 className="text-center font-display text-xl md:text-3xl font-bold text-slate-900 leading-snug mb-5 md:mb-7">
           ORGANISE A FREE QUOTE IN JUST 30 SECONDS!
         </h3>
 
@@ -211,7 +211,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
           </div>
 
           <button
-            className="w-full bg-black hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-full transition-all text-sm uppercase tracking-widest shadow-lg transform active:scale-95 flex items-center justify-center"
+            className="w-full bg-black hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-full transition-all text-sm uppercase tracking-widest shadow-lg transform active:scale-95 flex items-center justify-center md:py-4 md:text-base"
             type="submit"
             disabled={pending}
           >
@@ -219,7 +219,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
             <span className="material-icons ml-2 text-base">arrow_forward</span>
           </button>
 
-          <div className="flex items-center justify-center space-x-2 text-[10px] text-gray-500 italic pt-2">
+          <div className="flex items-center justify-center space-x-2 text-[10px] text-gray-500 italic pt-2 md:text-xs">
             <span className="material-icons text-xs">lock</span>
             <p>Your details are secured. Never submit passwords.</p>
           </div>

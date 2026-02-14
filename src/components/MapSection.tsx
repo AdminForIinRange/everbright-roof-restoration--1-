@@ -7,11 +7,11 @@ type MapSectionProps = {
   sectionClassName?: string;
 };
 
-const MapSection: React.FC<MapSectionProps> = ({ heading, checkPoints, sectionClassName = 'bg-white py-16 px-6' }) => {
+const MapSection: React.FC<MapSectionProps> = ({ heading, checkPoints, sectionClassName = 'bg-white py-16 px-6 md:py-20 lg:py-24' }) => {
 
   return (
     <section className={sectionClassName}>
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl xl:max-w-7xl">
         <div className="flex flex-col items-center gap-10 md:flex-row md:items-stretch md:gap-12 lg:gap-16">
           <div className="w-full overflow-hidden rounded-2xl border border-slate-200 shadow-2xl md:w-1/2">
             <iframe
@@ -25,7 +25,7 @@ const MapSection: React.FC<MapSectionProps> = ({ heading, checkPoints, sectionCl
           </div>
           
           <div className="flex w-full flex-col justify-center md:w-1/2">
-            <h2 className="mb-8 font-display text-3xl font-extrabold uppercase leading-none tracking-tight text-navy-custom md:text-5xl">
+            <h2 className="mb-8 font-display text-3xl font-extrabold uppercase leading-none tracking-tight text-navy-custom md:text-5xl lg:text-6xl">
               {heading}
             </h2>
             
@@ -40,7 +40,7 @@ const MapSection: React.FC<MapSectionProps> = ({ heading, checkPoints, sectionCl
             
             <a
               href="#form"
-              className="block w-full rounded-full bg-brand-sky py-6 text-center font-display text-3xl font-bold uppercase tracking-wide text-white shadow-[0_15px_30px_-5px_rgba(56,189,248,0.4)] transition-all hover:bg-sky-400 active:scale-[0.98] md:max-w-md"
+              className="block w-full rounded-full bg-brand-sky py-6 text-center font-display text-3xl font-bold uppercase tracking-wide text-white shadow-[0_15px_30px_-5px_rgba(56,189,248,0.4)] transition-all hover:bg-sky-400 active:scale-[0.98] md:max-w-md lg:max-w-lg"
             >
               Book Your Free Quote
             </a>

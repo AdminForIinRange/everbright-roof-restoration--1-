@@ -11,11 +11,11 @@ type ValuePropProps = {
 const ValueProp: React.FC<ValuePropProps> = ({ heading, paragraphs, tagline, sectionClassName = 'bg-white px-6 py-16 text-center md:py-20' }) => {
   return (
     <section className={sectionClassName}>
-      <div className="mx-auto max-w-4xl">
-        <h2 className="mb-8 font-display text-3xl font-bold uppercase leading-[1.1] text-dark-navy md:text-5xl">
+      <div className="mx-auto max-w-4xl lg:max-w-5xl">
+        <h2 className="mb-8 font-display text-3xl font-bold uppercase leading-[1.1] text-dark-navy md:text-5xl lg:text-6xl">
           {heading}
         </h2>
-        <div className="space-y-6 font-body text-base leading-relaxed text-gray-700 md:text-lg">
+        <div className="space-y-6 font-body text-base leading-relaxed text-gray-700 md:text-lg lg:text-xl">
           {paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}

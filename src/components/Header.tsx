@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Header: React.FC = () => {
   return (
     <header className="border-b border-navy-dark/80 bg-navy-dark px-4 py-4 text-white md:px-8">
-      <div className="mx-auto flex w-full items-center justify-between md:max-w-6xl">
+      <div className="mx-auto flex w-full items-center justify-between md:max-w-6xl xl:max-w-7xl">
         <div className="flex flex-col items-center">
           <Image
             src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
             width={600}
             height={408}
             sizes="(min-width: 768px) 12rem, 10rem"
-            className="h-10 w-auto object-contain md:h-12"
+            className="h-10 w-auto object-contain md:h-12 lg:h-14"
             priority
           />
         </div>

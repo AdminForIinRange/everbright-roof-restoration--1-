@@ -65,8 +65,8 @@ const Hero: React.FC<HeroProps> = ({
         <div className="absolute inset-0 roof-gradient-overlay"></div>
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 text-left text-white md:px-10 lg:px-12">
-        <h1 className="font-display mb-7 mt-10 text-5xl font-bold uppercase leading-[0.95] drop-shadow-xl sm:text-6xl md:text-7xl lg:text-8xl">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 text-left text-white md:px-10 lg:px-12 xl:max-w-7xl">
+        <h1 className="font-display mb-7 mt-10 text-5xl font-bold uppercase leading-[0.95] drop-shadow-xl sm:text-6xl md:max-w-5xl md:text-7xl lg:text-8xl xl:text-[8.75rem]">
           {titleLine}
           <br />
           <span className="text-brand-sky">{titleHighlight}</span>
@@ -79,8 +79,8 @@ const Hero: React.FC<HeroProps> = ({
                 <span className="material-icons text-white font-bold text-base md:text-lg">check</span>
               </div>
               <div>
-                <p className="text-xl md:text-2xl font-bold leading-tight">{benefit.title}</p>
-                <p className="text-xl md:text-2xl font-bold text-brand-sky">{benefit.subtitle}</p>
+                <p className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">{benefit.title}</p>
+                <p className="text-xl md:text-2xl lg:text-3xl font-bold text-brand-sky">{benefit.subtitle}</p>
               </div>
             </div>
           ))}
@@ -111,7 +111,7 @@ const Hero: React.FC<HeroProps> = ({
 
         <a
           href="#form"
-          className="mt-7 inline-flex items-center justify-center rounded-full bg-brand-sky px-8 py-4 text-base font-bold uppercase tracking-widest text-white shadow-[0_15px_40px_-10px_rgba(56,189,248,0.5)] transition-all hover:bg-sky-400 active:scale-95 md:px-10 md:text-lg"
+          className="mt-7 inline-flex items-center justify-center rounded-full bg-brand-sky px-8 py-4 text-base font-bold uppercase tracking-widest text-white shadow-[0_15px_40px_-10px_rgba(56,189,248,0.5)] transition-all hover:bg-sky-400 active:scale-95 md:px-10 md:text-lg lg:px-12 lg:py-5 lg:text-xl"
         >
           {ctaLabel}
         </a>

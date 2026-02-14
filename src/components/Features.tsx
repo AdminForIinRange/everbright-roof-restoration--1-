@@ -16,14 +16,14 @@ const Features: React.FC<FeaturesProps> = ({ features, sectionClassName = 'bg-da
   return (
     <section className={sectionClassName}>
       <div className="mx-auto max-w-6xl">
-        <div className="mb-16 space-y-10 md:grid md:grid-cols-2 md:gap-x-10 md:gap-y-12 md:space-y-0 lg:gap-x-14">
+        <div className="mb-16 space-y-10 md:grid md:grid-cols-2 md:gap-x-10 md:gap-y-12 md:space-y-0 lg:gap-x-14 lg:gap-y-14">
           {features.map((f, i) => (
-            <div key={i} className="flex items-start gap-5 md:rounded-2xl md:border md:border-white/10 md:bg-white/[0.02] md:p-6">
+            <div key={i} className="flex items-start gap-5 md:rounded-2xl md:border md:border-white/10 md:bg-white/[0.02] md:p-6 lg:min-h-[235px] lg:p-7">
               <div className="flex-shrink-0 mt-1">
                 <span className="material-icons text-brand-sky text-4xl">check_circle_outline</span>
               </div>
               <div>
-                <h3 className="mb-2 font-display text-2xl font-bold uppercase tracking-wide text-white md:text-[1.75rem]">
+                <h3 className="mb-2 font-display text-2xl font-bold uppercase tracking-wide text-white md:text-[1.75rem] lg:text-[2rem]">
                   {f.title}-
                 </h3>
                 <p className="font-body text-base leading-relaxed text-gray-300 md:text-lg">
@@ -45,7 +45,7 @@ const Features: React.FC<FeaturesProps> = ({ features, sectionClassName = 'bg-da
           </a>
         </div>
       </div>
-      <div className="h-10"></div>
+      <div className="h-10 md:h-0"></div>
     </section>
   );
 };

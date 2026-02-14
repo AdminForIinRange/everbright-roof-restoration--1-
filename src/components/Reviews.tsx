@@ -17,17 +17,17 @@ type ReviewsProps = {
 const Reviews: React.FC<ReviewsProps> = ({ heading, reviews, sectionClassName = 'overflow-hidden bg-navy-dark px-6 py-16 md:py-20' }) => {
   return (
     <section className={sectionClassName}>
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl xl:max-w-7xl">
         <div className="mb-12 text-center md:mb-14">
           <h4 className="mb-3 text-xl font-medium italic text-white opacity-80 md:text-2xl">Don't Take Our Word for It</h4>
-          <h3 className="font-display text-4xl font-bold uppercase leading-[0.9] tracking-tight text-brand-sky md:text-6xl">
+          <h3 className="font-display text-4xl font-bold uppercase leading-[0.9] tracking-tight text-brand-sky md:text-6xl lg:text-7xl">
             {heading}
           </h3>
         </div>
 
-        <div className="hide-scrollbar -mx-4 flex snap-x gap-6 overflow-x-auto px-4 pb-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0">
+        <div className="hide-scrollbar -mx-4 flex snap-x gap-6 overflow-x-auto px-4 pb-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 xl:gap-8">
           {reviews.map((review, i) => (
-            <div key={i} className="w-80 flex-shrink-0 snap-center rounded-2xl border border-gray-100 bg-white p-6 shadow-xl lg:w-full lg:min-h-[280px] lg:transition-transform lg:duration-300 lg:hover:-translate-y-1">
+            <div key={i} className="w-80 flex-shrink-0 snap-center rounded-2xl border border-gray-100 bg-white p-6 shadow-xl lg:w-full lg:min-h-[300px] lg:p-7 lg:transition-transform lg:duration-300 lg:hover:-translate-y-1">
               <div className="mb-5 flex items-center gap-4">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-brand-sky/20 bg-brand-sky/15 text-sm font-bold uppercase text-brand-sky">
                   {review.name

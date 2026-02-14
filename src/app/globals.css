@@ -69,6 +69,12 @@ h3 {
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .comparison-marquee-item {
+    width: clamp(250px, 21vw, 420px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .comparison-marquee {
     overflow-x: auto;

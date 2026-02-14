@@ -199,7 +199,7 @@ export default function LandingHero() {
       id="top"
       className="bg-white font-body text-slate-900 [&_h1]:font-bold [&_h2]:font-bold [&_h3]:font-bold [&_h4]:font-bold"
     >
-      <section className="relative flex min-h-screen w-full flex-col overflow-hidden bg-brand-dark md:min-h-[92vh]">
+      <section className="relative flex min-h-screen w-full flex-col overflow-hidden bg-brand-dark md:min-h-[92vh] lg:min-h-screen">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroBackgroundImage}
@@ -216,9 +216,9 @@ export default function LandingHero() {
           <Header />
         </div>
 
-        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow flex-col justify-end px-6 pb-12 pt-8 md:px-10 md:pb-16 md:pt-12 lg:px-12 lg:pb-20">
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow flex-col justify-end px-6 pb-12 pt-8 md:px-10 md:pb-16 md:pt-12 lg:px-12 lg:pb-20 xl:max-w-7xl">
           <div className="mb-6">
-            <h1 className="font-display text-5xl font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[8.5rem]">
+            <h1 className="font-display text-5xl font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[8.5rem] xl:text-[9rem]">
               Trusted
               <br />
               <span className="text-brand-sky">Exterior Cleaning</span>
@@ -227,7 +227,7 @@ export default function LandingHero() {
             </h1>
           </div>
 
-          <p className="mb-8 max-w-sm text-lg leading-relaxed text-white/90 md:max-w-xl md:text-xl">
+          <p className="mb-8 max-w-sm text-lg leading-relaxed text-white/90 md:max-w-xl md:text-xl lg:max-w-2xl">
             Exterior cleaning systems tailored to safely restore, protect, and
             enhance your Adelaide home
           </p>
@@ -292,14 +292,14 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section id="form" className="bg-everbright-blue py-6 md:py-8">
-        <div className="mx-auto w-full max-w-2xl px-4">
+      <section id="form" className="bg-everbright-blue py-6 md:py-12 lg:py-14">
+        <div className="mx-auto w-full max-w-2xl px-4 md:max-w-5xl lg:max-w-6xl">
           <LeadForm />
         </div>
       </section>
 
-      <section className="bg-everbright-blue py-12">
-        <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight text-white md:text-5xl">
+      <section className="bg-everbright-blue py-12 md:py-16">
+        <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight text-white md:text-5xl lg:text-6xl">
           Dirty Exterior?
         </h2>
 
@@ -323,11 +323,11 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section className="bg-white px-8 py-14 text-center md:py-20">
-        <h2 className="mb-6 font-display text-4xl uppercase leading-tight text-everbright-blue md:text-5xl">
+      <section className="bg-white px-8 py-14 text-center md:px-12 md:py-20 lg:px-16">
+        <h2 className="mb-6 font-display text-4xl uppercase leading-tight text-everbright-blue md:text-5xl lg:text-6xl">
           We&apos;ll Bring Your Exterior Back To Life
         </h2>
-        <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-slate-500 md:text-lg">
+        <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-slate-500 md:max-w-3xl md:text-lg lg:text-xl">
           Say goodbye to mould-stained tiles and hello to a professionally
           cleaned and treated roof that stays cleaner for longer. Our proven
           roof cleaning and treatment process restores your roof&apos;s
@@ -339,9 +339,9 @@ export default function LandingHero() {
         </p>
       </section>
 
-      <section className="bg-banner-dark px-5 py-12 text-center">
+      <section className="bg-banner-dark px-5 py-12 text-center md:py-16">
         <div className="mx-auto max-w-6xl">
-          <h1 className="font-display text-4xl uppercase leading-[1.1] text-white md:text-5xl">
+          <h1 className="font-display text-4xl uppercase leading-[1.1] text-white md:text-5xl lg:text-6xl">
             Local Exterior Cleaners You Can{" "}
             <span className="text-brand-sky">Trust</span>
           </h1>
@@ -363,11 +363,11 @@ export default function LandingHero() {
             </p>
           </div>
 
-          <div className="hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible">
+          <div className="hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:gap-7 lg:overflow-visible">
             {testimonials.map((testimonial) => (
               <article
                 key={testimonial.avatar}
-                className="w-[280px] flex-none snap-center rounded-2xl bg-white p-5 text-left lg:w-auto"
+                className="w-[280px] flex-none snap-center rounded-2xl bg-white p-5 text-left lg:w-auto lg:min-h-[212px] lg:p-6"
               >
                 <div className="mb-3 flex items-center gap-3">
                   <Image
@@ -398,8 +398,8 @@ export default function LandingHero() {
       </section>
 
       <section id="services" className="bg-white ">
-        <header className=" border-slate-200 bg-white px-6 py-8 text-center">
-          <h2 className="font-display text-3xl font-bold uppercase leading-none tracking-tight text-everbright-blue md:text-4xl">
+        <header className=" border-slate-200 bg-white px-6 py-8 text-center md:py-12">
+          <h2 className="font-display text-3xl font-bold uppercase leading-none tracking-tight text-everbright-blue md:text-4xl lg:text-5xl">
             Exterior Cleaning Services
             <span className="mt-1 block text-brand-sky">in Adelaide</span>
           </h2>
@@ -420,17 +420,17 @@ export default function LandingHero() {
               />
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.9))]" />
               <div className="absolute inset-0 flex flex-col p-8 text-center md:p-7 lg:p-8">
-                <div className="flex flex-1 flex-col items-center justify-center">
+                <div className="flex flex-1 flex-col items-center justify-center md:justify-start md:pt-6">
                   <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-[3.25rem] lg:text-6xl">
                     {service.title}
                   </h3>
-                  <p className="max-w-xs text-lg leading-relaxed text-white">
+                  <p className="max-w-xs text-lg leading-relaxed text-white md:max-w-sm md:text-xl">
                     {service.description}
                   </p>
                 </div>
                 <Link
                   href={service.href}
-                  className="mx-auto rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95"
+                  className="mx-auto rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95 md:mt-auto md:text-2xl"
                 >
                   Learn More
                 </Link>
@@ -440,9 +440,9 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section className="bg-white px-6 md:px-8 md:pt-4">
+      <section className="bg-white px-6 md:px-8 md:pt-8">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-10 text-center font-display text-4xl uppercase leading-tight tracking-tight text-brand-sky">
+          <h2 className="mb-10 text-center font-display text-4xl uppercase leading-tight tracking-tight text-brand-sky md:text-5xl lg:text-6xl">
             A Service You Can Rely On
           </h2>
 
@@ -469,11 +469,11 @@ export default function LandingHero() {
       </section>
 
       <section className="bg-white px-6 py-8 md:px-8 md:pb-16">
-        <div className="mx-auto max-w-6xl md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-8">
+        <div className="mx-auto max-w-6xl md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-8 lg:gap-10">
           {reliabilityPoints.map((point) => (
             <div
               key={point.title}
-              className="mb-8 flex items-start gap-3 last:mb-0 md:mb-0"
+              className="mb-8 flex items-start gap-3 last:mb-0 md:mb-0 md:rounded-2xl md:border md:border-slate-200 md:p-6"
             >
               <span
                 className="material-symbols-outlined shrink-0 text-3xl text-brand-sky"
@@ -506,8 +506,8 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section id="process-contact" className="bg-white md:py-8">
-        <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-white shadow-2xl md:max-w-6xl md:flex-row md:rounded-[2rem]">
+      <section id="process-contact" className="bg-white md:py-8 lg:py-12">
+        <div className="relative mx-auto flex w-full max-w-[430px] flex-col overflow-hidden bg-white shadow-2xl md:max-w-6xl md:flex-row md:rounded-[2rem] xl:max-w-7xl">
           <section className="bg-navy-dark px-6 pb-12 pt-16 text-center md:w-3/5 md:px-10 md:py-14 md:text-left lg:px-12">
             <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-brand-sky md:text-6xl lg:text-7xl">
               Easy, no
@@ -524,7 +524,7 @@ export default function LandingHero() {
 
             <div className="space-y-12 md:space-y-10 lg:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0">
               {processSteps.map((step) => (
-                <div key={step.number} className="flex flex-col items-center md:flex-row md:items-start md:gap-5 md:text-left lg:flex-col lg:items-center lg:text-center">
+                <div key={step.number} className="flex flex-col items-center md:flex-row md:items-start md:gap-5 md:text-left lg:flex-col lg:items-center lg:rounded-2xl lg:bg-white/[0.04] lg:px-4 lg:py-5 lg:text-center">
                   <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-sky shadow-lg shadow-brand-sky/20 md:mb-0">
                     <span
                       className={`text-3xl font-black text-white ${step.italicNumber ? "italic" : ""}`}
@@ -576,7 +576,7 @@ export default function LandingHero() {
 
       <MapSection
         heading="Trusted Roof Restoration Specialists"
-        sectionClassName="bg-white py-16 px-6"
+        sectionClassName="bg-white py-16 px-6 md:py-20 lg:py-24"
         checkPoints={[
           "Fully Insured & Safety Focused",
           "Roof-Safe Cleaning & Treatment",

@@ -10,10 +10,10 @@ type TrustSectionProps = {
 const TrustSection: React.FC<TrustSectionProps> = ({ heading, description, sectionClassName = 'bg-white px-6 py-16 md:py-20' }) => {
   return (
     <section className={sectionClassName}>
-      <div className="mx-auto max-w-6xl">
-        <div className="mx-auto max-w-xl text-center lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-[minmax(0,1fr)_220px] lg:items-center lg:gap-12 lg:text-left">
+      <div className="mx-auto max-w-6xl xl:max-w-7xl">
+        <div className="mx-auto max-w-xl text-center lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-[minmax(0,1fr)_240px] lg:items-center lg:gap-14 lg:text-left">
           <div>
-            <h2 className="mb-8 font-display text-3xl font-bold uppercase leading-tight tracking-tight text-dark-navy md:text-5xl">
+            <h2 className="mb-8 font-display text-3xl font-bold uppercase leading-tight tracking-tight text-dark-navy md:text-5xl lg:text-6xl">
               {heading}
             </h2>
             <p className="mb-10 text-lg leading-relaxed text-slate-700 md:text-xl lg:mb-0">
