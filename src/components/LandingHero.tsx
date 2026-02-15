@@ -445,11 +445,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
           We&apos;ll Bring Your Exterior Back To Life
         </h2>
         <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-black md:max-w-3xl md:text-lg lg:text-xl">
-          Say goodbye to mould-stained tiles and hello to a professionally
-          cleaned and treated roof that stays cleaner for longer. Our proven
-          roof cleaning and treatment process restores your roof&apos;s
-          appearance, protects against regrowth, and enhances your home&apos;s
-          value.
+          Mould, grime and buildup don’t just make your home look tired they can slowly damage surfaces and reduce the life of your roof, gutters and outdoor areas. Our professional exterior cleaning removes years of buildup safely and properly, restoring your home’s appearance and helping protect it long term. The result? A cleaner, fresher looking home you can feel proud of without the stress or risk of damage.
         </p>
         <p className="font-display text-md font-bold uppercase text-everbright-blue md:text-2xl">
           Clean Today. Protected for Longer.
