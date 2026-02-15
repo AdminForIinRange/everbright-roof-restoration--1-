@@ -4,7 +4,6 @@ import DragScroll from "./DragScroll";
 import Footer from "./Footer";
 import Header from "./Header";
 import LeadForm from "./LeadForm";
-import MapSection from "./MapSection";
 import Reviews from "./Reviews";
 
 const heroBackgroundImage = "/genrealPhotos/lanidngpageimg.jpeg";
@@ -260,10 +259,10 @@ const processSteps = [
 ];
 
 const contactChecklist = [
-  "Fully Insured & Safety Focused",
-  "Surface safe cleaning",
-  "Premium Approved Treatments",
-  "Highly Experienced Local Team",
+  "Fully Certified & $10M Insured",
+  "Surface-safe cleaning methods",
+  "Premium approved products",
+  "Experienced local exterior cleaning team",
 ];
 
 
@@ -602,20 +601,19 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
         </div>
       </section>
 
-      <section className="bg-white px-6 py-12 md:py-14 lg:py-16">
+      <section className="bg-white px-6 pb-4 pt-12 md:pb-6 md:pt-14 lg:pb-8 lg:pt-16">
         <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">
           <div className="bg-white p-8 md:max-w-[620px] md:p-10 lg:p-12">
             <h3 className="mb-4 font-display text-5xl uppercase leading-none text-everbright-blue md:text-[3.25rem]">
               Contact Us Today
             </h3>
             <p className="mb-8 text-base leading-snug text-slate-700 md:text-lg">
-              Limited availability - restore and protect the exterior of your
-              home with Adelaide&apos;s trusted specialists.
+              Limited availability - refresh and protect your home with Adelaide&apos;s trusted exterior cleaning specialists.
             </p>
 
             <div className="space-y-3">
               <h4 className="font-display text-lg uppercase text-everbright-blue">
-                Trusted Roof Cleaning Specialists
+                Trusted Exterior Cleaning Specialists
               </h4>
               <ul className="space-y-1.5">
                 {contactChecklist.map((item) => (
@@ -633,16 +631,20 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
         </div>
       </section>
 
-      <MapSection
-        heading="Trusted Roof Restoration Specialists"
-        sectionClassName="bg-white py-16 px-6 md:py-20 lg:py-24"
-        checkPoints={[
-          "Fully Insured & Safety Focused",
-          "Roof-Safe Cleaning & Treatment",
-          "Premium Approved Products",
-          "Highly Experienced Local Team",
-        ]}
-      />
+      <section className="bg-white px-6 pb-16 pt-2 md:pb-20 md:pt-4 lg:pb-24">
+        <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">
+          <div className="w-full overflow-hidden rounded-2xl border border-slate-200 shadow-2xl">
+            <iframe
+              title="Google Maps - Adelaide SA"
+              className="h-72 w-full border-0 md:h-[420px] lg:h-[460px]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+              src="https://www.google.com/maps?q=Adelaide%20SA&output=embed"
+            />
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </main>
