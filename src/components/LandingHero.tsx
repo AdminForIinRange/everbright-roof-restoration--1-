@@ -267,26 +267,20 @@ const contactChecklist = [
 ];
 
 const reliabilityIntro = {
-  title: "Certified & Insured",
+  title: "Fully Certified & $10M Insured",
   description:
-    "Full public liability insurance for all exterior cleaning work up to 10M",
+    "Complete peace of mind with full public liability coverage and professional safety standards on every job.",
 };
 
 const reliabilityPoints = [
   {
-    title: "SurfaceSafe Cleaning Methods",
+    title: "Surface-Safe Cleaning Systems",
     description:
-      "Controlled, surfaceappropriate pressure to clean without damage.",
+      "Controlled, surface specific pressure that cleans thoroughly without causing damage.",
   },
   {
-    title: "100% satisfaction Guarantee",
-    description:
-      "Our reputation is built on quality workmanship and genuine customer reviews, with a clear focus on your satisfaction. If you're not happy, we'll make it right.",
-  },
-  {
-    title: "Experienced &  Trusted Local Team",
-    description:
-      "Our trained team uses professionalgrade equipment to clean exterior surfaces safely and effectively, achieving highquality, longlasting results.",
+    title: "100% Satisfaction Guarantee",
+    description: "If you're not happy, we'll return and make it right.",
   },
 ];
 
@@ -568,7 +562,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
 
       <section
         id="services-quiz"
-        className="flex min-h-screen items-center justify-center bg-everbright-blue px-6 py-12 md:min-h-0 md:py-20"
+        className="bg-everbright-blue px-6 py-6 md:py-10"
       >
         <div className="w-full max-w-2xl">
           <LeadForm />
