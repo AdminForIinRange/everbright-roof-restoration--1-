@@ -422,7 +422,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                   </span>
                 </div>
 
-                <div className="comparison-marquee-half comparison-marquee-half-after">
+                <div className="comparison-marquee-half">
                   <Image
                     src={comparison.after}
                     alt={comparison.afterAlt}

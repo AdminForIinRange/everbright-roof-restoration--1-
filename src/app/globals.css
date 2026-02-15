@@ -58,6 +58,7 @@ h3 {
 .comparison-marquee-track {
   display: flex;
   width: max-content;
+  gap: 14px;
 }
 
 .comparison-marquee.is-dragging {
@@ -90,10 +91,6 @@ h3 {
   position: relative;
   flex: 1 1 50%;
   min-width: 0;
-}
-
-.comparison-marquee-half-after {
-  border-left: 2px solid #fff;
 }
 
 @media (min-width: 768px) {
