@@ -60,7 +60,7 @@ const Hero: React.FC<HeroProps> = ({
                 alt={leftImageAlt}
                 src={leftImageSrc}
                 fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
+                sizes="50vw"
                 className="object-cover object-[100%_100%] opacity-35 md:opacity-45"
                 priority
               />
@@ -70,9 +70,9 @@ const Hero: React.FC<HeroProps> = ({
                 alt={rightImageAlt}
                 src={rightImageSrc}
                 fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
+                sizes="50vw"
                 className="object-cover object-[0%_100%] opacity-45 md:opacity-55"
-                priority
+                loading="eager"
               />
             </div>
           </div>

@@ -14,7 +14,6 @@ const Header: React.FC = () => {
             height={408}
             sizes="(min-width: 768px) 12rem, 10rem"
             className="h-10 w-auto object-contain md:h-12 lg:h-14"
-            priority
           />
         </div>
 

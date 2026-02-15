@@ -412,6 +412,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                     fill
                     draggable={false}
                     sizes="(min-width: 1024px) 360px, (min-width: 768px) 280px, 210px"
+                    quality={72}
                     className="pointer-events-none object-cover"
                   />
                   <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#003249]/95 px-5 py-2 font-display text-2xl uppercase leading-none tracking-tight text-white">
@@ -426,6 +427,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                     fill
                     draggable={false}
                     sizes="(min-width: 1024px) 360px, (min-width: 768px) 280px, 210px"
+                    quality={72}
                     className="pointer-events-none object-cover"
                   />
                   <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#003249]/95 px-5 py-2 font-display text-2xl uppercase leading-none tracking-tight text-white">
@@ -473,7 +475,8 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                 src={service.image}
                 alt={service.alt}
                 fill
-                sizes="(min-width: 768px) 448px, 100vw"
+                sizes="(min-width: 1280px) 360px, (min-width: 1024px) 31vw, (min-width: 768px) 47vw, 92vw"
+                quality={74}
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.9))]" />

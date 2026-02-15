@@ -122,6 +122,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
             ? 'grid grid-cols-1 bg-black border-y border-black'
             : 'grid grid-cols-2 gap-1 bg-black border-y border-black md:grid-cols-3'
         }
+        imageSizes={galleryImages.length === 1 ? '100vw' : '(min-width: 768px) 33vw, 50vw'}
       />
 
       <ValueProp heading={valueHeading} paragraphs={valueParagraphs} tagline={valueTagline} sectionClassName="bg-white px-6 py-20 text-center" />

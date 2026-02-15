@@ -13,6 +13,7 @@ type GalleryProps = {
   images?: GalleryImage[];
   sectionClassName?: string;
   tileClassName?: string;
+  imageSizes?: string;
 };
 
 const Gallery: React.FC<GalleryProps> = ({
@@ -20,6 +21,7 @@ const Gallery: React.FC<GalleryProps> = ({
   images,
   sectionClassName = 'grid grid-cols-2 md:grid-cols-3 gap-0.5 bg-black border-y border-black',
   tileClassName = 'relative overflow-hidden aspect-[3/4]',
+  imageSizes = '(min-width: 768px) 33vw, 50vw',
 }) => {
   const defaultImages: GalleryImage[] = [
     {
@@ -62,7 +64,8 @@ const Gallery: React.FC<GalleryProps> = ({
             alt={img.alt} 
             src={img.src} 
             fill
-            sizes="(min-width: 768px) 33vw, 50vw"
+            sizes={imageSizes}
+            quality={74}
             className={`object-cover ${img.label === 'Before' ? 'opacity-80' : 'opacity-100'}`} 
           />
         </div>
