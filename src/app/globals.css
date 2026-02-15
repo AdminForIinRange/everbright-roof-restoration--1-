@@ -58,7 +58,6 @@ h3 {
 .comparison-marquee-track {
   display: flex;
   width: max-content;
-  gap: 14px;
 }
 
 .comparison-marquee.is-dragging {
