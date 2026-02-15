@@ -266,13 +266,14 @@ const contactChecklist = [
   "Highly Experienced Local Team",
 ];
 
-const reliabilityIntro = {
+
+
+const reliabilityPoints = [
+  {
   title: "Fully Certified & $10M Insured",
   description:
     "Complete peace of mind with full public liability coverage and professional safety standards on every job.",
-};
-
-const reliabilityPoints = [
+}, 
   {
     title: "Surface-Safe Cleaning Systems",
     description:
@@ -281,6 +282,9 @@ const reliabilityPoints = [
   {
     title: "100% Satisfaction Guarantee",
     description: "If you're not happy, we'll return and make it right.",
+  }, {
+    title: "Experienced & Trusted Local Team",
+    description: "Fully trained technicians delivering safe, high-quality results with professional-grade equipment.",
   },
 ];
 
@@ -509,25 +513,6 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
             A Service You Can Rely On
           </h2>
 
-          <div className="mb-6 flex items-start gap-3 md:mx-auto md:max-w-4xl">
-            <span
-              className="material-symbols-outlined shrink-0 text-3xl text-brand-sky"
-              style={{
-                fontVariationSettings:
-                  "'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24",
-              }}
-            >
-              check_circle
-            </span>
-            <div className="flex flex-col sm:flex-row sm:items-start sm:gap-4">
-              <h3 className="min-w-[160px] text-lg font-bold text-slate-800">
-                {reliabilityIntro.title}
-              </h3>
-              <p className="mt-1 text-base text-slate-500 sm:mt-0 md:text-lg">
-                {reliabilityIntro.description}
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
