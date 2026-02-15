@@ -211,7 +211,7 @@ const services = [
   {
     title: "Roof Cleaning",
     description:
-      "Safely remove mould, and built-up grime from your roof, restoring its appearance and helping protect it from long term damage.",
+      "Safely remove mould, and builtup grime from your roof, restoring its appearance and helping protect it from long term damage.",
     image: "/genrealPhotos/RoofcleaingServiceCard.png",
     alt: "Professional worker cleaning a tiled roof with a pressure washer",
     href: "/roof-restoration",
@@ -219,7 +219,7 @@ const services = [
   {
     title: "Pressure Washing",
     description:
-      "Remove built-up dirt, stains and grime from driveways and outdoor surfaces — restoring a clean, well-kept look to your home.",
+      "Remove built up dirt, stains and grime from driveways and outdoor surfaces restoring a clean, well kept look to your home.",
     image: "/genrealPhotos/Pressure%20WashingServiceCardImage.jpeg",
     alt: "Pressure washing a brick driveway",
     href: "/pressure-washing",
@@ -243,7 +243,7 @@ const services = [
   {
     title: "House Washing",
     description:
-      "Helps remove built-up dirt and organic growth, improving your home's appearance and helping protect exterior surfaces.",
+      "Soft exterior cleaning that helps protect your walls from mould and buildup while restoring a clean finish.",
     image: "/genrealPhotos/House%20WASHINGSERVICECARD.png",
     alt: "Soft washing the exterior walls of a modern house",
     href: "/house-washing",
