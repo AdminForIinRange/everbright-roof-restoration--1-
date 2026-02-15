@@ -110,7 +110,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
   return (
     <div className="mx-auto w-full max-w-md md:max-w-2xl lg:max-w-3xl">
       <div className="rounded-xl border border-slate-200 border-t-[6px] border-t-brand-sky bg-white p-6 form-shadow md:p-10">
-        <h3 className="text-center font-display text-xl md:text-3xl font-bold text-slate-900 leading-snug mb-5 md:mb-7">
+        <h3 className="mb-5 text-center font-display text-xl font-bold leading-snug text-slate-900 md:mb-7 md:text-3xl">
           ORGANISE A FREE QUOTE IN JUST 30 SECONDS!
         </h3>
 
@@ -124,94 +124,74 @@ const LeadForm: React.FC<LeadFormProps> = ({
             </div>
           )}
 
-          <div className="md:grid md:grid-cols-2 md:gap-4">
-            <div className="md:col-span-1">
-              <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="fullName">
-                Full Name
-              </label>
-              <input
-                required
-                maxLength={255}
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
-                id="fullName"
-                name="fullName"
-                placeholder="e.g. John Doe"
-                type="text"
-                value={formData.fullName}
-                onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-              />
-            </div>
-
-            <div className="mt-4 md:col-span-1 md:mt-0">
-              <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="email">
-                Email Address
-              </label>
-              <input
-                required
-                maxLength={255}
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
-                id="email"
-                name="email"
-                placeholder="your@email.com"
-                type="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              />
-            </div>
-
-            <div className="mt-4 md:col-span-1 md:mt-0">
-              <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="phone">
-                Phone Number
-              </label>
-              <input
-                required
-                maxLength={255}
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
-                id="phone"
-                name="phone"
-                placeholder="e.g. 0412 345 678"
-                type="tel"
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              />
-            </div>
-
-            <div className="mt-4 md:col-span-1 md:mt-0">
-              <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="address">
-                Address
-              </label>
-              <input
-                required
-                maxLength={255}
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none"
-                id="address"
-                name="address"
-                placeholder="Street address, suburb, postcode"
-                type="text"
-                value={formData.address}
-                onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-              />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1.5" htmlFor="message">
-              Leave a message
-            </label>
-            <textarea
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm text-slate-900 focus:ring-2 focus:ring-brand-sky focus:border-brand-sky transition-all outline-none md:min-h-[120px]"
-              id="message"
-              name="message"
-              placeholder={messagePlaceholder}
-              rows={3}
+          <div className="space-y-4 md:space-y-5">
+            <input
+              required
               maxLength={255}
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              className="w-full rounded-none border-0 border-b border-gray-300 bg-transparent px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-500 transition-all outline-none focus:border-brand-sky"
+              id="fullName"
+              name="fullName"
+              aria-label="Full Name"
+              placeholder="Full Name"
+              type="text"
+              value={formData.fullName}
+              onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+            />
+
+            <input
+              required
+              maxLength={255}
+              className="w-full rounded-none border-0 border-b border-gray-300 bg-transparent px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-500 transition-all outline-none focus:border-brand-sky"
+              id="email"
+              name="email"
+              aria-label="Email"
+              placeholder="Email"
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            />
+
+            <input
+              required
+              maxLength={255}
+              className="w-full rounded-none border-0 border-b border-gray-300 bg-transparent px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-500 transition-all outline-none focus:border-brand-sky"
+              id="phone"
+              name="phone"
+              aria-label="Mobile"
+              placeholder="Mobile"
+              type="tel"
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            />
+
+            <input
+              required
+              maxLength={255}
+              className="w-full rounded-none border-0 border-b border-gray-300 bg-transparent px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-500 transition-all outline-none focus:border-brand-sky"
+              id="address"
+              name="address"
+              aria-label="Job Suburb"
+              placeholder="Job Suburb"
+              type="text"
+              value={formData.address}
+              onChange={(e) => setFormData({ ...formData, address: e.target.value })}
             />
           </div>
 
+          <textarea
+            className="w-full resize-none rounded-none border-0 border-b border-gray-300 bg-transparent px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-500 transition-all outline-none focus:border-brand-sky md:min-h-[120px]"
+            id="message"
+            name="message"
+            aria-label="How can we help?"
+            placeholder={messagePlaceholder}
+            rows={3}
+            maxLength={255}
+            value={formData.message}
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          />
+
           <button
-            className="w-full bg-black hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-full transition-all text-sm uppercase tracking-widest shadow-lg transform active:scale-95 flex items-center justify-center md:py-4 md:text-base"
+            className="flex w-full items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-bold uppercase tracking-widest text-white shadow-lg transition-all hover:bg-slate-800 active:scale-95 disabled:cursor-not-allowed disabled:opacity-70 md:py-4 md:text-base"
             type="submit"
             disabled={pending}
           >
@@ -219,7 +199,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
             <span className="material-icons ml-2 text-base">arrow_forward</span>
           </button>
 
-          <div className="flex items-center justify-center space-x-2 text-[10px] text-gray-500 italic pt-2 md:text-xs">
+          <div className="flex items-center justify-center space-x-2 pt-2 text-[10px] italic text-gray-500 md:text-xs">
             <span className="material-icons text-xs">lock</span>
             <p>Your details are secured. Never submit passwords.</p>
           </div>
