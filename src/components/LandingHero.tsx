@@ -211,7 +211,7 @@ const services = [
   {
     title: "Roof Cleaning",
     description:
-      "Restore roof appearance and protect against mould and lichen regrowth with a proven roof-safe cleaning and treatment process.",
+      "Safely remove mould, and built-up grime from your roof, restoring its appearance and helping protect it from long term damage.",
     image: "/genrealPhotos/RoofcleaingServiceCard.png",
     alt: "Professional worker cleaning a tiled roof with a pressure washer",
     href: "/roof-restoration",
@@ -219,7 +219,7 @@ const services = [
   {
     title: "Pressure Washing",
     description:
-      "Removes dirt, grime, and built-up stains, helping prevent surface damage and extending the life of your outdoor areas.",
+      "Remove built-up dirt, stains and grime from driveways and outdoor surfaces — restoring a clean, well-kept look to your home.",
     image: "/genrealPhotos/Pressure%20WashingServiceCardImage.jpeg",
     alt: "Pressure washing a brick driveway",
     href: "/pressure-washing",
@@ -227,7 +227,7 @@ const services = [
   {
     title: "Solar Cleaning",
     description:
-      "Keep your system performing safely and efficiently with regular cleaning, protecting your investment with proven expertise.",
+      "Clean solar panels perform better. We safely remove dust and buildup to help your system run efficiently.",
     image: "/genrealPhotos/Solar%20CleaningServiceCard.jpeg",
     alt: "Cleaning solar panels on a sunny day",
     href: "/solar-cleaning",
@@ -235,7 +235,7 @@ const services = [
   {
     title: "Gutter Cleaning",
     description:
-      "Removes leaves and debris, helping prevent water overflow, protecting your home from damage and keeping drainage working.",
+      "Clear blocked gutters to help prevent overflow, leaks and costly water damage around your home.",
     image: "/genrealPhotos/Gutter%20CleaningServicePage.png",
     alt: "Cleaning leaves out of a roof gutter",
     href: "/gutter-cleaning",
@@ -330,7 +330,7 @@ export default function LandingHero() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow flex-col justify-end px-6 pb-12 pt-8 md:px-10 md:pb-16 md:pt-12 lg:px-12 lg:pb-20 xl:max-w-7xl">
           <div className="mb-6">
-            <h1 className="font-display text-[40px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[8.5rem] xl:text-[9rem]">
+            <h1 className="font-display text-[30px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[8.5rem] xl:text-[9rem]">
               Adelaide
               <br />
               <span className="text-brand-sky">Exterior Cleaning</span>
