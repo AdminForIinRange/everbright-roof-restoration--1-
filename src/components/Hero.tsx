@@ -18,6 +18,7 @@ type HeroProps = {
   rightImageAlt?: string;
   sectionClassName?: string;
   leftAlignBenefits?: boolean;
+  singleBackgroundImage?: boolean;
 };
 
 const Hero: React.FC<HeroProps> = ({
@@ -31,6 +32,7 @@ const Hero: React.FC<HeroProps> = ({
   rightImageAlt = 'Freshly cleaned exterior surface',
   sectionClassName = 'min-h-[70vh] md:min-h-[80vh]',
   leftAlignBenefits = false,
+  singleBackgroundImage = false,
 }) => {
   const benefitsClassName = leftAlignBenefits
     ? 'mb-6 max-w-sm space-y-2 text-left md:max-w-md'
@@ -40,28 +42,41 @@ const Hero: React.FC<HeroProps> = ({
     <section className={`relative flex items-center overflow-hidden bg-brand-dark md:py-20 lg:py-24 ${sectionClassName}`}>
       {/* Background Images Split */}
       <div className="absolute inset-0 z-0">
-        <div className="flex h-full w-full">
-          <div className="w-1/2 h-full relative">
+        {singleBackgroundImage ? (
+          <div className="relative h-full w-full">
             <Image
               alt={leftImageAlt}
               src={leftImageSrc}
               fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[100%_100%] opacity-35 md:opacity-45"
+              sizes="100vw"
+              className="object-cover opacity-40 md:opacity-50"
               priority
             />
           </div>
-          <div className="w-1/2 h-full relative">
-            <Image
-              alt={rightImageAlt}
-              src={rightImageSrc}
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[0%_100%] opacity-45 md:opacity-55"
-              priority
-            />
+        ) : (
+          <div className="flex h-full w-full">
+            <div className="w-1/2 h-full relative">
+              <Image
+                alt={leftImageAlt}
+                src={leftImageSrc}
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover object-[100%_100%] opacity-35 md:opacity-45"
+                priority
+              />
+            </div>
+            <div className="w-1/2 h-full relative">
+              <Image
+                alt={rightImageAlt}
+                src={rightImageSrc}
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover object-[0%_100%] opacity-45 md:opacity-55"
+                priority
+              />
+            </div>
           </div>
-        </div>
+        )}
         <div className="absolute inset-0 roof-gradient-overlay"></div>
       </div>
 

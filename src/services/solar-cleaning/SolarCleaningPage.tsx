@@ -2,6 +2,8 @@ import React from 'react';
 
 import ServicePageTemplate from '@/services/shared/ServicePageTemplate';
 
+const solarImage = '/solaorcleaingImages/IMG_1021.jpeg';
+
 const features = [
   {
     title: 'Certified & Insured',
@@ -22,12 +24,7 @@ const features = [
 ];
 
 const galleryImages = [
-  { src: '/beforeAfter/9.png', label: 'Before' as const, alt: 'Solar cleaning before result 1' },
-  { src: '/beforeAfter/10.png', label: 'After' as const, alt: 'Solar cleaning after result 1' },
-  { src: '/beforeAfter/3.png', label: 'Before' as const, alt: 'Solar cleaning before result 2' },
-  { src: '/beforeAfter/4.png', label: 'After' as const, alt: 'Solar cleaning after result 2' },
-  { src: '/beforeAfter/5.png', label: 'Before' as const, alt: 'Solar cleaning before result 3' },
-  { src: '/beforeAfter/6.png', label: 'After' as const, alt: 'Solar cleaning after result 3' },
+  { src: solarImage, label: 'After' as const, alt: 'Solar cleaning service result' },
 ];
 
 const SolarCleaningPage: React.FC = () => {
@@ -40,10 +37,9 @@ const SolarCleaningPage: React.FC = () => {
         { title: 'Panel-Safe Cleaning', subtitle: 'Pure-Water Method' },
         { title: 'Performance Focused', subtitle: 'Protect Output' },
       ]}
-      heroLeftImageSrc="/beforeAfter/9.png"
-      heroRightImageSrc="/beforeAfter/10.png"
-      heroLeftImageAlt="Dusty solar panel before cleaning"
-      heroRightImageAlt="Clean solar panel after cleaning"
+      heroSingleBackgroundImage
+      heroLeftImageSrc={solarImage}
+      heroLeftImageAlt="Solar panels after professional cleaning"
       readyHeadingLine1="Ready to Improve"
       readyHeadingLine2="Solar Performance?"
       galleryImages={galleryImages}
