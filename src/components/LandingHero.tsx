@@ -340,8 +340,7 @@ export default function LandingHero() {
           </div>
 
           <p className="mb-8 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:max-w-2xl">
-            Exterior cleaning systems tailored to safely restore, protect, and
-            enhance your Adelaide home
+We help Adelaide homeowners keep their homes clean and protected with safe, professional exterior cleaning  services.
           </p>
 
           <div className="mb-8 grid max-w-sm grid-cols-3 gap-3 md:max-w-xl md:gap-6">
