@@ -237,23 +237,23 @@ const services = [
 const processSteps = [
   {
     number: "1",
-    title: "Request a Quote",
+    title: "Get Your Quote",
     description:
-      "Fill out the quick form. We'll review your details and provide a clear, honest quote within 24 hours - no hidden costs and no surprises.",
+      "Fill out the quick form and we'll send you a clear, honest quote within 24 hours - no hidden costs.",
     italicNumber: false,
   },
   {
     number: "2",
-    title: "On-Site Assessment",
+    title: "We Assess Properly",
     description:
-      "For larger or more detailed jobs, we'll attend your property to inspect the surface, roof condition, access, and materials. This ensures the correct method, accurate pricing, and zero guesswork.",
+      "For larger jobs, we inspect your property to check surfaces, condition, and access. This ensures the right method and accurate pricing from the start.",
     italicNumber: false,
   },
   {
     number: "3",
-    title: "Book & Clean",
+    title: "We Clean & Finish Right",
     description:
-      "Choose a time that suits you. Our team arrives on time, fully equipped, and completes the job using surface-safe methods. We finish with a full clean-up and final inspection so you're left with a properly restored exterior.",
+      "Our team arrives on time, fully equipped, and completes the job using safe, surface-specific methods. We finish with a full clean-up and final check so your exterior looks properly restored.",
     italicNumber: false,
   },
 ];
@@ -561,10 +561,10 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
             <h2 className="mb-6 font-display text-4xl uppercase leading-[1.1] tracking-[-0.02em] text-white md:text-6xl lg:text-7xl">
               SIMPLE. CLEAR.
               <br />
-              DONE. PROPERLY.
+              DONE RIGHT.
             </h2>
             <p className="mx-auto mb-16 max-w-[320px] text-sm leading-relaxed text-white md:mx-0 md:max-w-2xl md:pr-8 md:text-base">
-              We don't overcomplicate things. From your first enquiry to the final rinse-down, everything is handled professionally, safely, and with clear communication. No confusion. No pressure. Just quality work done right.
+              From your first enquiry to the final clean-up, we keep everything straightforward and professional. Clear pricing. Safe methods. No surprises.
             </p>
 
             <div className="space-y-12 md:space-y-10 lg:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0">
