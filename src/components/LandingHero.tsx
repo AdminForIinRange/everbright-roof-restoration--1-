@@ -352,9 +352,9 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                 verified_user
               </span>
               <span className="text-sm font-bold uppercase leading-tight tracking-tight text-white md:text-base">
-                Insured for
+                Fully 
                 <br />
-                up to $10M
+           Insured
               </span>
             </div>
           </div>
