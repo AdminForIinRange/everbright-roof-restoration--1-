@@ -192,21 +192,6 @@ const comparisons = [
   },
 ];
 
-const comparisonSlides = comparisons.flatMap((comparison, index) => [
-  {
-    key: `comparison-${index}-before`,
-    image: comparison.before,
-    alt: comparison.beforeAlt,
-    label: "Before",
-  },
-  {
-    key: `comparison-${index}-after`,
-    image: comparison.after,
-    alt: comparison.afterAlt,
-    label: "After",
-  },
-]);
-
 const services = [
   {
     title: "Roof Cleaning",
@@ -421,19 +406,35 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
           autoScrollSpeed={1}
         >
           <div className="comparison-marquee-track">
-            {[...comparisonSlides, ...comparisonSlides].map((slide, index) => (
-              <article key={`${slide.key}-${index}`} className="comparison-marquee-item">
-                <Image
-                  src={slide.image}
-                  alt={slide.alt}
-                  fill
-                  draggable={false}
-                  sizes="(min-width: 1024px) 240px, (min-width: 768px) 220px, 180px"
-                  className="pointer-events-none object-cover"
-                />
-                <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#003249]/95 px-5 py-2 font-display text-2xl uppercase leading-none tracking-tight text-white">
-                  {slide.label}
-                </span>
+            {[...comparisons, ...comparisons].map((comparison, index) => (
+              <article key={`comparison-pair-${index}`} className="comparison-marquee-pair">
+                <div className="comparison-marquee-half">
+                  <Image
+                    src={comparison.before}
+                    alt={comparison.beforeAlt}
+                    fill
+                    draggable={false}
+                    sizes="(min-width: 1024px) 360px, (min-width: 768px) 280px, 210px"
+                    className="pointer-events-none object-cover"
+                  />
+                  <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#003249]/95 px-5 py-2 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                    Before
+                  </span>
+                </div>
+
+                <div className="comparison-marquee-half comparison-marquee-half-after">
+                  <Image
+                    src={comparison.after}
+                    alt={comparison.afterAlt}
+                    fill
+                    draggable={false}
+                    sizes="(min-width: 1024px) 360px, (min-width: 768px) 280px, 210px"
+                    className="pointer-events-none object-cover"
+                  />
+                  <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#003249]/95 px-5 py-2 font-display text-2xl uppercase leading-none tracking-tight text-white">
+                    After
+                  </span>
+                </div>
               </article>
             ))}
           </div>

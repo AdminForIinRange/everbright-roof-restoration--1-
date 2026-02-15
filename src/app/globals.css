@@ -76,17 +76,29 @@ h3 {
   user-select: none;
 }
 
-.comparison-marquee-item {
+.comparison-marquee-pair {
   position: relative;
+  display: flex;
   flex: 0 0 auto;
-  width: clamp(210px, 26vw, 360px);
-  aspect-ratio: 3 / 4;
+  width: clamp(420px, 52vw, 720px);
+  aspect-ratio: 6 / 4;
   overflow: hidden;
+  border: 2px solid #fff;
+}
+
+.comparison-marquee-half {
+  position: relative;
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.comparison-marquee-half-after {
+  border-left: 2px solid #fff;
 }
 
 @media (min-width: 768px) {
-  .comparison-marquee-item {
-    width: clamp(250px, 21vw, 420px);
+  .comparison-marquee-pair {
+    width: clamp(500px, 42vw, 840px);
   }
 }
 
