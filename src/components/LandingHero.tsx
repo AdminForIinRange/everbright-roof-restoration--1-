@@ -517,40 +517,42 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
       </section>
 
       <section className="bg-white px-6 py-8 md:px-8 md:pb-16">
-        <div className="mx-auto max-w-6xl md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-8 lg:gap-10">
-          {reliabilityPoints.map((point) => (
-            <div
-              key={point.title}
-              className="mb-8 flex items-start gap-3 last:mb-0 md:mb-0 md:rounded-2xl md:border md:border-slate-200 md:p-6"
-            >
-              <span
-                className="material-symbols-outlined shrink-0 text-3xl text-brand-sky"
-                style={{
-                  fontVariationSettings:
-                    "'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24",
-                }}
+        <div className="mx-auto max-w-6xl">
+          <div className="md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-8 lg:gap-10">
+            {reliabilityPoints.map((point) => (
+              <div
+                key={point.title}
+                className="mb-8 flex items-start gap-3 last:mb-0 md:mb-0 md:rounded-2xl md:border md:border-slate-200 md:p-6"
               >
-                check_circle
-              </span>
-              <div className="grid grid-cols-1 gap-x-6">
-                <h3 className="mb-1 text-lg font-bold leading-tight text-slate-800">
-                  {point.title}
-                </h3>
-                <p className="text-base text-slate-500 md:text-lg">
-                  {point.description}
-                </p>
+                <span
+                  className="material-symbols-outlined shrink-0 text-3xl text-brand-sky"
+                  style={{
+                    fontVariationSettings:
+                      "'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24",
+                  }}
+                >
+                  check_circle
+                </span>
+                <div className="grid grid-cols-1 gap-x-6">
+                  <h3 className="mb-1 text-lg font-bold leading-tight text-slate-800">
+                    {point.title}
+                  </h3>
+                  <p className="text-base text-slate-500 md:text-lg">
+                    {point.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
 
-      <section
-        id="services-quiz"
-        className="bg-everbright-blue px-6 py-6 md:py-10"
-      >
-        <div className="w-full max-w-2xl">
-          <LeadForm />
+          <div className="mt-8 flex justify-center md:mt-10">
+            <Link
+              href="#services-quiz"
+              className="rounded-full bg-brand-sky px-10 py-4 text-center font-display text-2xl uppercase tracking-wide text-white shadow-lg transition-transform hover:bg-brand-sky/90 active:scale-[0.98] md:px-12"
+            >
+              Book Your Free Quote
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -588,6 +590,15 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
               ))}
             </div>
           </section>
+        </div>
+      </section>
+
+      <section
+        id="services-quiz"
+        className="bg-everbright-blue px-6 py-6 md:py-10"
+      >
+        <div className="w-full max-w-2xl">
+          <LeadForm />
         </div>
       </section>
 
