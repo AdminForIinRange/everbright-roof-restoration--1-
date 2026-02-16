@@ -113,6 +113,9 @@ const LeadForm: React.FC<LeadFormProps> = ({
         <h3 className="mb-5 text-center font-display text-xl font-bold leading-snug text-slate-900 md:mb-7 md:text-3xl">
           ORGANISE A FREE QUOTE IN JUST 30 SECONDS!
         </h3>
+          <h3 className="mb-5 text-center font-display text-sm font-light  leading-snug text-slate-900 md:mb-7 md:text-3xl">
+         Fill in the form below and one of our team will reach out within 24 hours
+        </h3>
 
         <form action={formAction} onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
           <input type="hidden" name="roofType" value={formData.roofType} />
