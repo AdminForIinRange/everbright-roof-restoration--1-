@@ -197,7 +197,7 @@ const services = [
     description:
       "Safely restore your roof's appearance and extend its life.",
     detail:
-      "Restore your roof safely without damaging tiles.",
+      "",
     points: [
       "Remove green mould, lichen & built-up grime",
       "Improve street appeal & help protect your roof long-term",
@@ -493,10 +493,18 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                 sizes="(min-width: 1280px) 360px, (min-width: 1024px) 31vw, (min-width: 768px) 47vw, 92vw"
                 quality={62}
                 className={`object-cover transition-transform duration-500 ${
-                  service.title === 'Roof Cleaning' ? 'scale-[1.14] group-hover:scale-[1.2]' : 'group-hover:scale-110'
+                  service.title === 'Roof Cleaning'
+                    ? 'scale-[1.2] object-[52%_44%] group-hover:scale-[1.26]'
+                    : 'group-hover:scale-110'
                 }`}
               />
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.9))]" />
+              <div
+                className={`absolute inset-0 ${
+                  service.title === 'Roof Cleaning'
+                    ? 'bg-[linear-gradient(to_bottom,rgba(0,0,0,0.62),rgba(0,0,0,0.94))]'
+                    : 'bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.9))]'
+                }`}
+              />
               <div className="absolute inset-0 flex flex-col p-8 text-left md:p-7 lg:p-8">
                 <div className="flex flex-1 flex-col items-start justify-center md:justify-start md:pt-4">
                   <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-[3.25rem] lg:text-6xl">
@@ -511,7 +519,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                     </p>
                   ) : null}
                   {service.points.length > 0 ? (
-                    <ul className="mt-4 space-y-2">
+                    <ul className="mt-1 space-y-2">
                       {service.points.map((point) => (
                         <li key={point} className="flex items-start gap-2 text-sm leading-snug text-white md:text-base">
                           <span className="material-symbols-outlined mt-0.5 text-base text-brand-sky">check_circle</span>
