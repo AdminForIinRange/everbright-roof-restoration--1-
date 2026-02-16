@@ -214,13 +214,13 @@ const LeadForm: React.FC<LeadFormProps> = ({
             />
           </div>
 
-          <fieldset className="rounded-md border border-slate-200 px-4 py-3">
-            <legend className="px-1 text-sm font-semibold text-slate-900">What services are needed?</legend>
-            <div className="space-y-2 pt-1">
+          <fieldset className="border-0 border-b border-gray-300 px-4 py-2.5">
+            <legend className="mb-2 px-0 text-sm text-slate-500">What services are needed?</legend>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               {resolvedServiceNeededOptions.map((serviceOption) => (
                 <label
                   key={serviceOption}
-                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-900"
                 >
                   <input
                     type="checkbox"
