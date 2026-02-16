@@ -25,15 +25,29 @@ export async function getRecentLeadsAction(
 
   try {
     const { databases } = await createAdminClient();
+    const pageSize = 100;
+    let offset = 0;
+    let total = Number.POSITIVE_INFINITY;
+    const allLeads: Lead[] = [];
 
-    // Pull latest 50 by creation time (newest first)
-    const res = await databases.listDocuments(
-      appwriteConfig.databaseId,
-      appwriteConfig.leadsCollectionId,
-      [Query.orderDesc("$createdAt"), Query.limit(50)]
-    );
+    // Pull all leads in pages, newest first.
+    while (allLeads.length < total) {
+      const res = await databases.listDocuments(
+        appwriteConfig.databaseId,
+        appwriteConfig.leadsCollectionId,
+        [Query.orderDesc("$createdAt"), Query.limit(pageSize), Query.offset(offset)]
+      );
 
-    return { ok: true, data: res.documents as Lead[] };
+      total = res.total;
+      const page = res.documents as Lead[];
+
+      if (page.length === 0) break;
+
+      allLeads.push(...page);
+      offset += page.length;
+    }
+
+    return { ok: true, data: allLeads };
   } catch (err: unknown) {
     console.error("getRecentLeadsAction error:", err);
     const message =

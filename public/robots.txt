@@ -1,9 +1,7 @@
-# *
 User-agent: *
 Allow: /
+Disallow: /showcase
 
-# Host
 Host: https://www.everbrightpressurewashing.com.au/
 
-# Sitemaps
 Sitemap: https://www.everbrightpressurewashing.com.au/sitemap.xml

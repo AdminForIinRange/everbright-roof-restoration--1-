@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { Poppins } from 'next/font/google';
 import Script from 'next/script';
 import type { ReactNode } from 'react';
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from '@lib/seo';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -13,22 +14,116 @@ const poppins = Poppins({
   display: 'swap',
 });
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${SITE_URL}/#organization`,
+  name: SITE_NAME,
+  url: SITE_URL,
+  image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
+  description:
+    'Professional exterior cleaning services in Adelaide, including roof cleaning, pressure washing, gutter cleaning, house washing, and solar cleaning.',
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Adelaide SA',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Adelaide',
+    addressRegion: 'SA',
+    addressCountry: 'AU',
+  },
+  makesOffer: [
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Roof Cleaning' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pressure Washing' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Solar Cleaning' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gutter Cleaning' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'House Washing' } },
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  name: SITE_NAME,
+  url: SITE_URL,
+  inLanguage: 'en-AU',
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'EverBright',
+    default: 'Exterior Cleaning Adelaide',
     template: '%s | EverBright',
   },
-  description: 'EverBright exterior cleaning and restoration services in Adelaide.',
+  description:
+    'EverBright provides professional exterior cleaning in Adelaide: roof cleaning, pressure washing, gutter cleaning, house washing, and solar panel cleaning.',
+  applicationName: SITE_NAME,
+  keywords: [
+    'exterior cleaning Adelaide',
+    'roof cleaning Adelaide',
+    'pressure washing Adelaide',
+    'gutter cleaning Adelaide',
+    'house washing Adelaide',
+    'solar panel cleaning Adelaide',
+    'roof restoration Adelaide',
+    'EverBright Adelaide',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'EverBright Exterior Cleaning Adelaide',
+    description:
+      'Professional exterior cleaning in Adelaide including roof cleaning, pressure washing, gutter cleaning, house washing, and solar panel cleaning.',
+    url: '/',
+    siteName: SITE_NAME,
+    locale: 'en_AU',
+    type: 'website',
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        alt: 'EverBright exterior cleaning and restoration in Adelaide',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EverBright Exterior Cleaning Adelaide',
+    description:
+      'Professional exterior cleaning in Adelaide including roof cleaning, pressure washing, gutter cleaning, house washing, and solar panel cleaning.',
+    images: [DEFAULT_OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-AU">
       <head>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body className={`${poppins.variable} bg-slate-50 font-body text-slate-900 antialiased`}>
