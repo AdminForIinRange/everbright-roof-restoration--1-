@@ -18,6 +18,21 @@ h3 {
   line-height: 1.1;
 }
 
+.service-page-fade :is(h1, h2, h3, h4),
+.landing-page-fade :is(h1, h2, h3, h4) {
+  animation-name: fadeInUp;
+  animation-duration: 700ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
+.landing-page-fade .landing-hero-copy {
+  animation-name: fadeInUp;
+  animation-duration: 900ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
 .roof-gradient-overlay {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.36) 100%);
 }
@@ -99,6 +114,12 @@ h3 {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .service-page-fade :is(h1, h2, h3, h4),
+  .landing-page-fade :is(h1, h2, h3, h4),
+  .landing-page-fade .landing-hero-copy {
+    animation: none !important;
+  }
+
   .comparison-marquee {
     overflow-x: auto;
   }
