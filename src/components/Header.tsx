@@ -38,23 +38,12 @@ const Header: React.FC = () => {
               width={600}
               height={408}
               sizes="(min-width: 768px) 12rem, 10rem"
-              className="h-10 w-auto object-contain md:h-12 lg:h-14"
+              className="h-14 w-auto object-contain md:h-12 lg:h-14"
             />
           </Link>
 
           <div className="flex items-center justify-end gap-3 text-right">
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-wider text-white/80 md:text-[12px]">Have A Question?</p>
-              <a
-                className="block text-sm font-bold transition-colors hover:text-brand-sky md:text-base"
-                href="tel:+61 411 017 366"
-                data-analytics-event="header_phone_click"
-                data-analytics-location="header"
-                data-analytics-type="phone"
-              >
-                +61 411 017 366
-              </a>
-            </div>
+           
 
             <a
               className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white transition-colors hover:text-brand-sky"

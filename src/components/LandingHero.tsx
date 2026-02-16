@@ -195,7 +195,13 @@ const services = [
   {
     title: "Roof Cleaning",
     description:
-      "Safely remove mould, and builtup grime from your roof, restoring its appearance and helping protect it from long term damage.",
+      "Safely restore your roof's appearance and extend its life.",
+    detail:
+      "Restore your roof safely without damaging tiles.",
+    points: [
+      "Remove green mould, lichen & built-up grime",
+      "Improve street appeal & help protect your roof long-term",
+    ],
     image: "/genrealPhotos/RoofcleaingServiceCard.webp",
     alt: "Professional worker cleaning a tiled roof with a pressure washer",
     href: "/roof-restoration",
@@ -204,6 +210,8 @@ const services = [
     title: "Pressure Washing",
     description:
       "Remove built up dirt, stains and grime from driveways and outdoor surfaces restoring a clean, well kept look to your home.",
+    detail: "",
+    points: [],
     image: "/genrealPhotos/Pressure%20WashingServiceCardImage.webp",
     alt: "Pressure washing a brick driveway",
     href: "/pressure-washing",
@@ -212,6 +220,8 @@ const services = [
     title: "Solar Cleaning",
     description:
       "Clean solar panels perform better. We safely remove dust and buildup to help your system run efficiently.",
+    detail: "",
+    points: [],
     image: "/genrealPhotos/Solar%20CleaningServiceCard.webp",
     alt: "Cleaning solar panels on a sunny day",
     href: "/solar-cleaning",
@@ -220,6 +230,8 @@ const services = [
     title: "Gutter Cleaning",
     description:
       "Clear blocked gutters to help prevent overflow, leaks and costly water damage around your home.",
+    detail: "",
+    points: [],
     image: "/genrealPhotos/Gutter%20CleaningServicePage.webp",
     alt: "Cleaning leaves out of a roof gutter",
     href: "/gutter-cleaning",
@@ -228,6 +240,8 @@ const services = [
     title: "House Washing",
     description:
       "Soft exterior cleaning that helps protect your walls from mould and buildup while restoring a clean finish.",
+    detail: "",
+    points: [],
     image: "/genrealPhotos/House%20WASHINGSERVICECARD.webp",
     alt: "Soft washing the exterior walls of a modern house",
     href: "/house-washing",
@@ -478,28 +492,45 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                 fill
                 sizes="(min-width: 1280px) 360px, (min-width: 1024px) 31vw, (min-width: 768px) 47vw, 92vw"
                 quality={62}
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className={`object-cover transition-transform duration-500 ${
+                  service.title === 'Roof Cleaning' ? 'scale-[1.14] group-hover:scale-[1.2]' : 'group-hover:scale-110'
+                }`}
               />
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.9))]" />
-              <div className="absolute inset-0 flex flex-col p-8 text-center md:p-7 lg:p-8">
-                <div className="flex flex-1 flex-col items-center justify-center md:justify-start md:pt-6">
+              <div className="absolute inset-0 flex flex-col p-8 text-left md:p-7 lg:p-8">
+                <div className="flex flex-1 flex-col items-start justify-center md:justify-start md:pt-4">
                   <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-[3.25rem] lg:text-6xl">
                     {service.title}
                   </h3>
                   <p className="max-w-xs text-lg leading-relaxed text-white md:max-w-sm md:text-xl">
                     {service.description}
                   </p>
+                  {service.detail ? (
+                    <p className="mt-3 max-w-xs text-sm font-medium leading-relaxed text-white/95 md:max-w-sm md:text-base">
+                      {service.detail}
+                    </p>
+                  ) : null}
+                  {service.points.length > 0 ? (
+                    <ul className="mt-4 space-y-2">
+                      {service.points.map((point) => (
+                        <li key={point} className="flex items-start gap-2 text-sm leading-snug text-white md:text-base">
+                          <span className="material-symbols-outlined mt-0.5 text-base text-brand-sky">check_circle</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
                 </div>
-                <div className="mt-auto flex flex-col items-center gap-3">
+                <div className="mt-auto grid w-full grid-cols-2 gap-3">
                   <Link
                     href={service.href}
-                    className="mt-[15px] mx-auto rounded-full bg-brand-sky px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95 md:text-2xl"
+                    className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-brand-sky px-4 py-3 text-center text-base font-bold uppercase whitespace-nowrap text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95 md:text-lg"
                   >
                     Learn More
                   </Link>
                   <Link
                     href="#form"
-                    className="mx-auto rounded-full bg-white px-11 py-3.5 text-[1.5rem] font-bold uppercase text-everbright-blue shadow-lg transition-all hover:bg-white/90 active:scale-95 md:px-12 md:py-4 md:text-[1.6rem]"
+                    className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-white px-4 py-3 text-center text-base font-bold uppercase whitespace-nowrap text-everbright-blue shadow-lg transition-all hover:bg-white/90 active:scale-95 md:text-lg"
                   >
                     Get My Quote
                   </Link>
