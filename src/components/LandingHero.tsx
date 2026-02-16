@@ -506,7 +506,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                 }`}
               />
               <div className="absolute inset-0 flex flex-col p-8 text-left md:p-7 lg:p-8">
-                <div className="flex flex-1 flex-col items-start justify-center md:justify-start md:pt-4">
+                <div className="flex flex-1 flex-col items-start justify-start md:justify-start md:pt-4">
                   <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-[3.25rem] lg:text-6xl">
                     {service.title}
                   </h3>
@@ -519,7 +519,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                     </p>
                   ) : null}
                   {service.points.length > 0 ? (
-                    <ul className="mt-1 space-y-2">
+                    <ul className="mt-3 space-y-2">
                       {service.points.map((point) => (
                         <li key={point} className="flex items-start gap-2 text-sm leading-snug text-white md:text-base">
                           <span className="material-symbols-outlined mt-0.5 text-base text-brand-sky">check_circle</span>
