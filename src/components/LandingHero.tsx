@@ -326,8 +326,8 @@ export default function LandingHero() {
 We help Adelaide homeowners keep their homes clean and protected with safe, professional exterior cleaning  services.
           </p>
 
-          <div className="mb-8 grid max-w-sm grid-cols-3 gap-3 md:max-w-xl md:gap-6">
-            <div className="flex flex-col items-start text-left">
+          <div className="mb-8 flex max-w-sm gap-2 md:max-w-xl md:gap-6">
+            <div className="flex min-w-0 flex-1 flex-col items-start text-left">
               <span className="material-icons mb-1 text-[28px] text-brand-sky">
                 schedule
               </span>
@@ -337,7 +337,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                 Service
               </span>
             </div>
-            <div className="flex flex-col items-start text-left">
+            <div className="flex min-w-0 flex-1 flex-col items-start text-left">
               <span className="material-icons mb-1 text-[28px] text-brand-sky">groups</span>
               <span className="text-sm font-bold uppercase leading-tight tracking-tight text-white md:text-base">
                 100% Works
@@ -345,7 +345,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                 Guaranteed
               </span>
             </div>
-            <div className="flex flex-col items-start text-left">
+            <div className="flex min-w-0 flex-1 flex-col items-start text-left">
               <span className="material-icons mb-1 text-[28px] text-brand-sky">
                 verified_user
               </span>
@@ -379,9 +379,9 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
 
           <Link
             href="#form"
-            className="w-full rounded-2xl bg-brand-sky py-5 text-center font-display text-2xl uppercase tracking-wide text-white shadow-lg transition-transform hover:bg-brand-sky/90 active:scale-[0.98] md:w-auto md:min-w-[320px] md:px-12"
+            className="w-full rounded-2xl bg-brand-sky py-5 text-center font-display text-2xl  tracking-wide text-white shadow-lg transition-transform hover:bg-brand-sky/90 active:scale-[0.98] md:w-auto md:min-w-[320px] md:px-12"
           >
-            Book Your Free Quote
+            Book Your FREE Quote
           </Link>
         </div>
       </section>

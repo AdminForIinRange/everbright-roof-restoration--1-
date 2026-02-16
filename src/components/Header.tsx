@@ -42,29 +42,39 @@ const Header: React.FC = () => {
             />
           </Link>
 
-          <div className="flex items-center gap-3 text-right">
-            <button
-              type="button"
-              onClick={() => setIsMenuOpen(true)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/25 text-white transition-colors hover:border-brand-sky hover:text-brand-sky"
-              aria-label="Open menu"
-            >
-              <span className="material-icons text-[22px]">menu</span>
-            </button>
-
+          <div className="flex items-center justify-end gap-3 text-right">
             <div>
               <p className="text-[10px] font-bold uppercase tracking-wider text-white/80 md:text-[12px]">Have A Question?</p>
               <a
-                className="flex items-center justify-end text-sm font-bold transition-colors hover:text-brand-sky md:text-base"
+                className="block text-sm font-bold transition-colors hover:text-brand-sky md:text-base"
                 href="tel:+61 411 017 366"
                 data-analytics-event="header_phone_click"
                 data-analytics-location="header"
                 data-analytics-type="phone"
               >
-                <span className="material-icons mr-1 text-sm md:hidden">phone</span>
                 +61 411 017 366
               </a>
             </div>
+
+            <a
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white transition-colors hover:text-brand-sky"
+              href="tel:+61 411 017 366"
+              aria-label="Call +61 411 017 366"
+              data-analytics-event="header_phone_icon_click"
+              data-analytics-location="header"
+              data-analytics-type="phone"
+            >
+              <span className="material-icons text-[20px]">phone</span>
+            </a>
+
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen(true)}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white transition-colors hover:text-brand-sky"
+              aria-label="Open menu"
+            >
+              <span className="material-icons text-[22px]">menu</span>
+            </button>
           </div>
         </div>
       </header>
