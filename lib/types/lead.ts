@@ -7,5 +7,6 @@ export type Lead = {
   address?: string;
   roofType?: string;
   roofCondition?: string;
+  whatTypeOfService?: string;
   message?: string;
 };

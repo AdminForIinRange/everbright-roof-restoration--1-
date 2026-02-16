@@ -13,6 +13,13 @@ const defaultConditionOptions = [
   'Heavy mould & build-up',
   'Not sure - needs inspection',
 ];
+const defaultServiceNeededOptions = [
+  'Roof Cleaning',
+  'Pressure Washing',
+  'Solar Cleaning',
+  'Gutter Cleaning',
+  'House Washing',
+];
 
 type LeadFormProps = {
   serviceLabel?: string;
@@ -20,6 +27,7 @@ type LeadFormProps = {
   typeOptions?: string[];
   conditionQuestion?: string;
   conditionOptions?: string[];
+  serviceNeededOptions?: string[];
   messagePlaceholder?: string;
 };
 
@@ -27,10 +35,13 @@ const LeadForm: React.FC<LeadFormProps> = ({
   serviceLabel = 'roof cleaning',
   typeOptions = defaultTypeOptions,
   conditionOptions = defaultConditionOptions,
+  serviceNeededOptions = defaultServiceNeededOptions,
   messagePlaceholder = 'How can we help?',
 }) => {
   const resolvedTypeOptions = typeOptions.length > 0 ? typeOptions : defaultTypeOptions;
   const resolvedConditionOptions = conditionOptions.length > 0 ? conditionOptions : defaultConditionOptions;
+  const resolvedServiceNeededOptions =
+    serviceNeededOptions.length > 0 ? serviceNeededOptions : defaultServiceNeededOptions;
   const defaultRoofType = resolvedTypeOptions[resolvedTypeOptions.length - 1] ?? 'Not sure';
   const defaultRoofCondition = resolvedConditionOptions[resolvedConditionOptions.length - 1] ?? 'Not sure - needs inspection';
 
@@ -44,9 +55,27 @@ const LeadForm: React.FC<LeadFormProps> = ({
     message: '',
     roofType: defaultRoofType,
     roofCondition: defaultRoofCondition,
+    requestedServices: [] as string[],
   }));
+  const whatTypeOfService =
+    formData.requestedServices.length > 0
+      ? resolvedServiceNeededOptions.filter((option) => formData.requestedServices.includes(option)).join(', ')
+      : serviceLabel;
   const [state, formAction, pending] = useActionState(submitLeadAction, initialState);
   const isSubmitted = state.ok && !hasReset;
+
+  const handleServiceToggle = (service: string) => {
+    setFormData((previousFormData) => {
+      const isSelected = previousFormData.requestedServices.includes(service);
+
+      return {
+        ...previousFormData,
+        requestedServices: isSelected
+          ? previousFormData.requestedServices.filter((selectedService) => selectedService !== service)
+          : [...previousFormData.requestedServices, service],
+      };
+    });
+  };
 
   useEffect(() => {
     const previousResult = previousResultRef.current;
@@ -56,19 +85,21 @@ const LeadForm: React.FC<LeadFormProps> = ({
         serviceLabel,
         roofType: formData.roofType,
         roofCondition: formData.roofCondition,
+        whatTypeOfService,
       });
     } else if (state.error && state.error !== previousResult.error) {
       track('lead_submit_error');
     }
 
     previousResultRef.current = { ok: state.ok, error: state.error };
-  }, [formData.roofCondition, formData.roofType, serviceLabel, state.error, state.ok]);
+  }, [formData.roofCondition, formData.roofType, serviceLabel, state.error, state.ok, whatTypeOfService]);
 
   const handleSubmit = () => {
     track('lead_submit_attempt', {
       serviceLabel,
       roofType: formData.roofType,
       roofCondition: formData.roofCondition,
+      whatTypeOfService,
     });
     previousResultRef.current = { ok: false };
     setHasReset(false);
@@ -97,6 +128,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
               message: '',
               roofType: defaultRoofType,
               roofCondition: defaultRoofCondition,
+              requestedServices: [],
             });
           }}
           className="text-brand-sky font-bold uppercase tracking-wider hover:underline"
@@ -120,6 +152,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
         <form action={formAction} onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
           <input type="hidden" name="roofType" value={formData.roofType} />
           <input type="hidden" name="roofCondition" value={formData.roofCondition} />
+          <input type="hidden" name="whatTypeOfService" value={whatTypeOfService} />
 
           {state.error && !isSubmitted && !hasReset && (
             <div className="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-xs font-semibold text-red-700">
@@ -180,6 +213,26 @@ const LeadForm: React.FC<LeadFormProps> = ({
               onChange={(e) => setFormData({ ...formData, address: e.target.value })}
             />
           </div>
+
+          <fieldset className="rounded-md border border-slate-200 px-4 py-3">
+            <legend className="px-1 text-sm font-semibold text-slate-900">What services are needed?</legend>
+            <div className="space-y-2 pt-1">
+              {resolvedServiceNeededOptions.map((serviceOption) => (
+                <label
+                  key={serviceOption}
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="checkbox"
+                    checked={formData.requestedServices.includes(serviceOption)}
+                    onChange={() => handleServiceToggle(serviceOption)}
+                    className="h-4 w-4 rounded border-slate-300 text-brand-sky focus:ring-brand-sky"
+                  />
+                  <span>{serviceOption}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
 
           <textarea
             className="w-full resize-none rounded-none border-0 border-b border-gray-300 bg-transparent px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-500 transition-all outline-none focus:border-brand-sky md:min-h-[120px]"

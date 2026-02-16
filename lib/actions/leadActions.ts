@@ -35,12 +35,17 @@ export async function submitLeadAction(
     const roofType = sanitize(formData.get("roofType")) || "Not sure";
     const roofCondition =
       sanitize(formData.get("roofCondition")) || "Not sure - needs inspection";
+    const whatTypeOfService =
+      sanitize(formData.get("whatTypeOfService")) || "Not specified";
     const message = sanitize(formData.get("message"));
 
     if (!fullName) return { ok: false, error: "Full name is required" };
     if (!email || !isEmail(email)) return { ok: false, error: "Valid email is required" };
     if (!phone) return { ok: false, error: "Phone number is required" };
     if (!address) return { ok: false, error: "Address is required" };
+    if (whatTypeOfService.length > 255) {
+      return { ok: false, error: "Service selection must be 255 characters or less" };
+    }
     if (message.length > 255) {
       return { ok: false, error: "Message must be 255 characters or less" };
     }
@@ -58,6 +63,7 @@ export async function submitLeadAction(
         address,
         roofType,
         roofCondition,
+        whatTypeOfService,
         message,
       }
     );
