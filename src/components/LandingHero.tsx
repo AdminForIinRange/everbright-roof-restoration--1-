@@ -291,7 +291,7 @@ export default function LandingHero() {
   return (
     <main
       id="top"
-      className="landing-page-fade bg-white font-body text-slate-900 [&_h1]:font-bold [&_h2]:font-bold [&_h3]:font-bold [&_h4]:font-bold"
+      className="bg-white font-body text-slate-900 [&_h1]:font-bold [&_h2]:font-bold [&_h3]:font-bold [&_h4]:font-bold"
     >
       <section className="relative flex min-h-screen w-full flex-col overflow-hidden bg-brand-dark md:min-h-[92vh] lg:min-h-screen">
         <div className="absolute inset-0 z-0">
@@ -307,13 +307,13 @@ export default function LandingHero() {
           <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0.6)_50%,rgba(0,0,0,1)_100%)]" />
         </div>
 
-        <div className="relative z-10">
+        <div className="relative z-[1000]">
           <Header />
         </div>
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow flex-col justify-end px-6 pb-12 pt-8 md:px-10 md:pb-16 md:pt-12 lg:px-12 lg:pb-20 xl:max-w-7xl">
           <div className="mb-6">
-            <h1 className="font-display text-[55px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[8.5rem] xl:text-[9rem]">
+            <h1 className="animate__animated animate__fadeInDown font-display text-[55px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[8.5rem] xl:text-[9rem]">
               Adelaide
               <br />
               <span className="text-brand-sky">Exterior </span>
@@ -322,7 +322,7 @@ export default function LandingHero() {
             </h1>
           </div>
 
-          <p className="landing-hero-copy mb-8 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:max-w-2xl">
+          <p className="mb-8 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:max-w-2xl">
 We help Adelaide homeowners keep their homes clean and protected with safe, professional exterior cleaning  services.
           </p>
 

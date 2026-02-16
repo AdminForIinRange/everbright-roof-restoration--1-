@@ -83,7 +83,7 @@ const Hero: React.FC<HeroProps> = ({
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 text-left text-white md:px-10 lg:px-12 xl:max-w-7xl">
-        <h1 className="font-display mb-7 mt-10 text-5xl font-bold uppercase leading-[0.95] drop-shadow-xl sm:text-6xl md:max-w-5xl md:text-7xl lg:text-8xl xl:text-[8.75rem]">
+        <h1 className="animate__animated animate__fadeInDown font-display mb-7 mt-10 text-5xl font-bold uppercase leading-[0.95] drop-shadow-xl sm:text-6xl md:max-w-5xl md:text-7xl lg:text-8xl xl:text-[8.75rem]">
           {titleLine}
           <br />
           <span className="text-brand-sky">{titleHighlight}</span>
