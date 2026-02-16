@@ -16,7 +16,7 @@ const PageFrame: React.FC<PageFrameProps> = ({ children, showOfferBanner = true 
       <Header />
       <AnnouncementBar />
       {showOfferBanner ? <OfferBanner /> : null}
-      <main className="flex-grow">{children}</main>
+      <main className="service-page-fade flex-grow">{children}</main>
       <Footer />
     </div>
   );

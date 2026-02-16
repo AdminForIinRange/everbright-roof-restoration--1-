@@ -25,32 +25,32 @@ const Gallery: React.FC<GalleryProps> = ({
 }) => {
   const defaultImages: GalleryImage[] = [
     {
-      src: "/beforeAfter/3.png",
+      src: "/beforeAfter/3.webp",
       label: "Before",
       alt: `${altPrefix} before cleaning 1`
     },
     {
-      src: "/beforeAfter/4.png",
+      src: "/beforeAfter/4.webp",
       label: "After",
       alt: `${altPrefix} after cleaning 1`
     },
     {
-      src: "/beforeAfter/5.png",
+      src: "/beforeAfter/5.webp",
       label: "Before",
       alt: `${altPrefix} before cleaning 2`
     },
     {
-      src: "/beforeAfter/6.png",
+      src: "/beforeAfter/6.webp",
       label: "After",
       alt: `${altPrefix} after cleaning 2`
     },
     {
-      src: "/beforeAfter/9.png",
+      src: "/beforeAfter/9.webp",
       label: "Before",
       alt: `${altPrefix} before cleaning 3`
     },
     {
-      src: "/beforeAfter/10.png",
+      src: "/beforeAfter/10.webp",
       label: "After",
       alt: `${altPrefix} after cleaning 3`
     }
@@ -65,7 +65,7 @@ const Gallery: React.FC<GalleryProps> = ({
             src={img.src} 
             fill
             sizes={imageSizes}
-            quality={74}
+            quality={62}
             className={`object-cover ${img.label === 'Before' ? 'opacity-80' : 'opacity-100'}`} 
           />
         </div>

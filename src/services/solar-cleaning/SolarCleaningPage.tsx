@@ -2,7 +2,7 @@ import React from 'react';
 
 import ServicePageTemplate from '@/services/shared/ServicePageTemplate';
 
-const solarImage = '/solaorcleaingImages/IMG_1021.jpeg';
+const solarImage = '/solaorcleaingImages/IMG_1021.webp';
 
 const features = [
   {

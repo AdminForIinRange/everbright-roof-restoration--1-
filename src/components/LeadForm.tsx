@@ -206,8 +206,8 @@ const LeadForm: React.FC<LeadFormProps> = ({
               className="w-full rounded-none border-0 border-b border-gray-300 bg-transparent px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-500 transition-all outline-none focus:border-brand-sky"
               id="address"
               name="address"
-              aria-label="Job Suburb"
-              placeholder="Job Suburb"
+              aria-label="address"
+              placeholder="address"
               type="text"
               value={formData.address}
               onChange={(e) => setFormData({ ...formData, address: e.target.value })}

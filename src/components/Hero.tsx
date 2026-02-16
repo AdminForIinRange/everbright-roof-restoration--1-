@@ -26,9 +26,9 @@ const Hero: React.FC<HeroProps> = ({
   titleHighlight,
   benefits,
   ctaLabel = 'Get Your Free Quote',
-  leftImageSrc = '/heroimg/7.png',
+  leftImageSrc = '/heroimg/7.webp',
   leftImageAlt = 'Exterior cleaning in progress',
-  rightImageSrc = '/heroimg/8.png',
+  rightImageSrc = '/heroimg/8.webp',
   rightImageAlt = 'Freshly cleaned exterior surface',
   sectionClassName = 'min-h-[70vh] md:min-h-[80vh]',
   leftAlignBenefits = false,
@@ -49,6 +49,7 @@ const Hero: React.FC<HeroProps> = ({
               src={leftImageSrc}
               fill
               sizes="100vw"
+              quality={68}
               className="object-cover opacity-40 md:opacity-50"
               priority
             />
@@ -61,6 +62,7 @@ const Hero: React.FC<HeroProps> = ({
                 src={leftImageSrc}
                 fill
                 sizes="50vw"
+                quality={64}
                 className="object-cover object-[100%_100%] opacity-35 md:opacity-45"
                 priority
               />
@@ -71,8 +73,8 @@ const Hero: React.FC<HeroProps> = ({
                 src={rightImageSrc}
                 fill
                 sizes="50vw"
+                quality={64}
                 className="object-cover object-[0%_100%] opacity-45 md:opacity-55"
-                loading="eager"
               />
             </div>
           </div>

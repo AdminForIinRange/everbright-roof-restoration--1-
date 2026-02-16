@@ -22,12 +22,12 @@ const features = [
 ];
 
 const galleryImages = [
-  { src: '/beforeAfter/9.png', label: 'Before' as const, alt: 'House washing before result 1' },
-  { src: '/beforeAfter/10.png', label: 'After' as const, alt: 'House washing after result 1' },
-  { src: '/beforeAfter/5.png', label: 'Before' as const, alt: 'House washing before result 2' },
-  { src: '/beforeAfter/6.png', label: 'After' as const, alt: 'House washing after result 2' },
-  { src: '/beforeAfter/3.png', label: 'Before' as const, alt: 'House washing before result 3' },
-  { src: '/beforeAfter/4.png', label: 'After' as const, alt: 'House washing after result 3' },
+  { src: '/beforeAfter/9.webp', label: 'Before' as const, alt: 'House washing before result 1' },
+  { src: '/beforeAfter/10.webp', label: 'After' as const, alt: 'House washing after result 1' },
+  { src: '/beforeAfter/5.webp', label: 'Before' as const, alt: 'House washing before result 2' },
+  { src: '/beforeAfter/6.webp', label: 'After' as const, alt: 'House washing after result 2' },
+  { src: '/beforeAfter/3.webp', label: 'Before' as const, alt: 'House washing before result 3' },
+  { src: '/beforeAfter/4.webp', label: 'After' as const, alt: 'House washing after result 3' },
 ];
 
 const HouseWashingPage: React.FC = () => {
@@ -40,8 +40,8 @@ const HouseWashingPage: React.FC = () => {
         { title: 'Full Exterior Wash', subtitle: 'Surface-Safe Method' },
         { title: 'Mould & Dirt Removal', subtitle: 'Refresh Street Appeal' },
       ]}
-      heroLeftImageSrc="/beforeAfter/9.png"
-      heroRightImageSrc="/beforeAfter/10.png"
+      heroLeftImageSrc="/beforeAfter/9.webp"
+      heroRightImageSrc="/beforeAfter/10.webp"
       heroLeftImageAlt="House exterior before washing"
       heroRightImageAlt="House exterior after washing"
       readyHeadingLine1="Ready to Refresh Your"

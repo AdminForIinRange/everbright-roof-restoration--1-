@@ -172,20 +172,20 @@ const testimonials: Array<{
 
 const comparisons = [
   {
-    before: "/scrollerImage/1.png",
-    after: "/scrollerImage/2.png",
+    before: "/scrollerImage/1.webp",
+    after: "/scrollerImage/2.webp",
     beforeAlt: "Exterior before cleaning result 1",
     afterAlt: "Exterior after cleaning result 1",
   },
   {
-    before: "/scrollerImage/3.png",
-    after: "/scrollerImage/4.png",
+    before: "/scrollerImage/3.webp",
+    after: "/scrollerImage/4.webp",
     beforeAlt: "Exterior before cleaning result 2",
     afterAlt: "Exterior after cleaning result 2",
   },
   {
-    before: "/scrollerImage/5.png",
-    after: "/scrollerImage/6.png",
+    before: "/scrollerImage/5.webp",
+    after: "/scrollerImage/6.webp",
     beforeAlt: "Exterior before cleaning result 3",
     afterAlt: "Exterior after cleaning result 3",
   },
@@ -196,7 +196,7 @@ const services = [
     title: "Roof Cleaning",
     description:
       "Safely remove mould, and builtup grime from your roof, restoring its appearance and helping protect it from long term damage.",
-    image: "/genrealPhotos/RoofcleaingServiceCard.png",
+    image: "/genrealPhotos/RoofcleaingServiceCard.webp",
     alt: "Professional worker cleaning a tiled roof with a pressure washer",
     href: "/roof-restoration",
   },
@@ -204,7 +204,7 @@ const services = [
     title: "Pressure Washing",
     description:
       "Remove built up dirt, stains and grime from driveways and outdoor surfaces restoring a clean, well kept look to your home.",
-    image: "/genrealPhotos/Pressure%20WashingServiceCardImage.jpeg",
+    image: "/genrealPhotos/Pressure%20WashingServiceCardImage.webp",
     alt: "Pressure washing a brick driveway",
     href: "/pressure-washing",
   },
@@ -212,7 +212,7 @@ const services = [
     title: "Solar Cleaning",
     description:
       "Clean solar panels perform better. We safely remove dust and buildup to help your system run efficiently.",
-    image: "/genrealPhotos/Solar%20CleaningServiceCard.jpeg",
+    image: "/genrealPhotos/Solar%20CleaningServiceCard.webp",
     alt: "Cleaning solar panels on a sunny day",
     href: "/solar-cleaning",
   },
@@ -220,7 +220,7 @@ const services = [
     title: "Gutter Cleaning",
     description:
       "Clear blocked gutters to help prevent overflow, leaks and costly water damage around your home.",
-    image: "/genrealPhotos/Gutter%20CleaningServicePage.png",
+    image: "/genrealPhotos/Gutter%20CleaningServicePage.webp",
     alt: "Cleaning leaves out of a roof gutter",
     href: "/gutter-cleaning",
   },
@@ -228,7 +228,7 @@ const services = [
     title: "House Washing",
     description:
       "Soft exterior cleaning that helps protect your walls from mould and buildup while restoring a clean finish.",
-    image: "/genrealPhotos/House%20WASHINGSERVICECARD.png",
+    image: "/genrealPhotos/House%20WASHINGSERVICECARD.webp",
     alt: "Soft washing the exterior walls of a modern house",
     href: "/house-washing",
   },
@@ -291,7 +291,7 @@ export default function LandingHero() {
   return (
     <main
       id="top"
-      className="bg-white font-body text-slate-900 [&_h1]:font-bold [&_h2]:font-bold [&_h3]:font-bold [&_h4]:font-bold"
+      className="landing-page-fade bg-white font-body text-slate-900 [&_h1]:font-bold [&_h2]:font-bold [&_h3]:font-bold [&_h4]:font-bold"
     >
       <section className="relative flex min-h-screen w-full flex-col overflow-hidden bg-brand-dark md:min-h-[92vh] lg:min-h-screen">
         <div className="absolute inset-0 z-0">
@@ -301,6 +301,7 @@ export default function LandingHero() {
             fill
             priority
             sizes="100vw"
+            quality={72}
             className="object-cover"
           />
           <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0.6)_50%,rgba(0,0,0,1)_100%)]" />
@@ -321,7 +322,7 @@ export default function LandingHero() {
             </h1>
           </div>
 
-          <p className="mb-8 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:max-w-2xl">
+          <p className="landing-hero-copy mb-8 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:max-w-2xl">
 We help Adelaide homeowners keep their homes clean and protected with safe, professional exterior cleaning  services.
           </p>
 
@@ -412,7 +413,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                     fill
                     draggable={false}
                     sizes="(min-width: 1024px) 360px, (min-width: 768px) 280px, 210px"
-                    quality={72}
+                    quality={58}
                     className="pointer-events-none object-cover"
                   />
                   <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#003249]/95 px-5 py-2 font-display text-2xl uppercase leading-none tracking-tight text-white">
@@ -427,7 +428,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                     fill
                     draggable={false}
                     sizes="(min-width: 1024px) 360px, (min-width: 768px) 280px, 210px"
-                    quality={72}
+                    quality={58}
                     className="pointer-events-none object-cover"
                   />
                   <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#003249]/95 px-5 py-2 font-display text-2xl uppercase leading-none tracking-tight text-white">
@@ -476,7 +477,7 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
                 alt={service.alt}
                 fill
                 sizes="(min-width: 1280px) 360px, (min-width: 1024px) 31vw, (min-width: 768px) 47vw, 92vw"
-                quality={74}
+                quality={62}
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.9))]" />

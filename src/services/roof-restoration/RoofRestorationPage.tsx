@@ -22,12 +22,12 @@ const features = [
 ];
 
 const galleryImages = [
-  { src: '/beforeAfter/3.png', label: 'Before' as const, alt: 'Roof restoration before result 1' },
-  { src: '/beforeAfter/4.png', label: 'After' as const, alt: 'Roof restoration after result 1' },
-  { src: '/beforeAfter/5.png', label: 'Before' as const, alt: 'Roof restoration before result 2' },
-  { src: '/beforeAfter/6.png', label: 'After' as const, alt: 'Roof restoration after result 2' },
-  { src: '/beforeAfter/9.png', label: 'Before' as const, alt: 'Roof restoration before result 3' },
-  { src: '/beforeAfter/10.png', label: 'After' as const, alt: 'Roof restoration after result 3' },
+  { src: '/beforeAfter/3.webp', label: 'Before' as const, alt: 'Roof restoration before result 1' },
+  { src: '/beforeAfter/4.webp', label: 'After' as const, alt: 'Roof restoration after result 1' },
+  { src: '/beforeAfter/5.webp', label: 'Before' as const, alt: 'Roof restoration before result 2' },
+  { src: '/beforeAfter/6.webp', label: 'After' as const, alt: 'Roof restoration after result 2' },
+  { src: '/beforeAfter/9.webp', label: 'Before' as const, alt: 'Roof restoration before result 3' },
+  { src: '/beforeAfter/10.webp', label: 'After' as const, alt: 'Roof restoration after result 3' },
 ];
 
 const RoofRestorationPage: React.FC = () => {

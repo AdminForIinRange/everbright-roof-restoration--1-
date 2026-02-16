@@ -22,12 +22,12 @@ const features = [
 ];
 
 const galleryImages = [
-  { src: '/beforeAfter/5.png', label: 'Before' as const, alt: 'Gutter cleaning before result 1' },
-  { src: '/beforeAfter/6.png', label: 'After' as const, alt: 'Gutter cleaning after result 1' },
-  { src: '/beforeAfter/3.png', label: 'Before' as const, alt: 'Gutter cleaning before result 2' },
-  { src: '/beforeAfter/4.png', label: 'After' as const, alt: 'Gutter cleaning after result 2' },
-  { src: '/beforeAfter/9.png', label: 'Before' as const, alt: 'Gutter cleaning before result 3' },
-  { src: '/beforeAfter/10.png', label: 'After' as const, alt: 'Gutter cleaning after result 3' },
+  { src: '/beforeAfter/5.webp', label: 'Before' as const, alt: 'Gutter cleaning before result 1' },
+  { src: '/beforeAfter/6.webp', label: 'After' as const, alt: 'Gutter cleaning after result 1' },
+  { src: '/beforeAfter/3.webp', label: 'Before' as const, alt: 'Gutter cleaning before result 2' },
+  { src: '/beforeAfter/4.webp', label: 'After' as const, alt: 'Gutter cleaning after result 2' },
+  { src: '/beforeAfter/9.webp', label: 'Before' as const, alt: 'Gutter cleaning before result 3' },
+  { src: '/beforeAfter/10.webp', label: 'After' as const, alt: 'Gutter cleaning after result 3' },
 ];
 
 const GutterCleaningPage: React.FC = () => {
@@ -40,8 +40,8 @@ const GutterCleaningPage: React.FC = () => {
         { title: 'Full Gutter Clean', subtitle: 'Debris Removed' },
         { title: 'Flow Restored', subtitle: 'Downpipe Check' },
       ]}
-      heroLeftImageSrc="/beforeAfter/5.png"
-      heroRightImageSrc="/beforeAfter/6.png"
+      heroLeftImageSrc="/beforeAfter/5.webp"
+      heroRightImageSrc="/beforeAfter/6.webp"
       heroLeftImageAlt="Blocked gutter before cleaning"
       heroRightImageAlt="Clean gutter after service"
       readyHeadingLine1="Ready to Clear & Protect"

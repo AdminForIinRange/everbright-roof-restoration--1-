@@ -22,12 +22,12 @@ const features = [
 ];
 
 const galleryImages = [
-  { src: '/prussewshingImges/19.png', label: 'Before' as const, alt: 'Pressure washing before result 1' },
-  { src: '/prussewshingImges/20.png', label: 'After' as const, alt: 'Pressure washing after result 1' },
-  { src: '/prussewshingImges/21.png', label: 'Before' as const, alt: 'Pressure washing before result 2' },
-  { src: '/prussewshingImges/22.png', label: 'After' as const, alt: 'Pressure washing after result 2' },
-  { src: '/prussewshingImges/23.png', label: 'Before' as const, alt: 'Pressure washing before result 3' },
-  { src: '/prussewshingImges/24.png', label: 'After' as const, alt: 'Pressure washing after result 3' },
+  { src: '/prussewshingImges/19.webp', label: 'Before' as const, alt: 'Pressure washing before result 1' },
+  { src: '/prussewshingImges/20.webp', label: 'After' as const, alt: 'Pressure washing after result 1' },
+  { src: '/prussewshingImges/21.webp', label: 'Before' as const, alt: 'Pressure washing before result 2' },
+  { src: '/prussewshingImges/22.webp', label: 'After' as const, alt: 'Pressure washing after result 2' },
+  { src: '/prussewshingImges/23.webp', label: 'Before' as const, alt: 'Pressure washing before result 3' },
+  { src: '/prussewshingImges/24.webp', label: 'After' as const, alt: 'Pressure washing after result 3' },
 ];
 
 const PressureWashingPage: React.FC = () => {
@@ -40,8 +40,8 @@ const PressureWashingPage: React.FC = () => {
         { title: 'Driveway & Paths', subtitle: 'Starting From $249' },
         { title: 'Patios & Exteriors', subtitle: 'Deep Surface Clean' },
       ]}
-      heroLeftImageSrc="/prussewshingImges/19.png"
-      heroRightImageSrc="/prussewshingImges/20.png"
+      heroLeftImageSrc="/prussewshingImges/19.webp"
+      heroRightImageSrc="/prussewshingImges/20.webp"
       heroLeftImageAlt="Dirty driveway before pressure washing"
       heroRightImageAlt="Clean driveway after pressure washing"
       readyHeadingLine1="Ready to Refresh"
