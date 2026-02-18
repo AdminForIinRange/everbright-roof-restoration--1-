@@ -487,10 +487,7 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section
-        id="form"
-        className="bg-white pt-4 pb-6 md:py-12 lg:py-14"
-      >
+      <section id="form" className="bg-white pt-4 pb-6 md:py-12 lg:py-14">
         <div className="mx-auto w-full max-w-2xl px-4 md:max-w-5xl lg:max-w-6xl">
           <div className="overflow-hidden rounded-xl border border-black">
             <LeadForm />
@@ -556,7 +553,7 @@ export default function LandingHero() {
         </h2>
         <div className="mx-auto mb-10 max-w-lg space-y-6 text-base leading-relaxed text-black md:max-w-3xl md:text-lg lg:text-xl">
           <p>
-            Mould, lichen and grime don’t just affect how your home looks — over
+            Mould, lichen and grime don’t just affect how your home looks,over
             time, they can weaken surfaces and shorten the life of your roof,
             gutters and outdoor areas.
           </p>
@@ -565,10 +562,6 @@ export default function LandingHero() {
             remove buildup thoroughly without causing damage. No excessive
             pressure. No shortcuts. Just controlled, professional cleaning done
             the right way.
-          </p>
-          <p>
-            The result? A cleaner, fresher home that looks cared for — and stays
-            protected longer.
           </p>
         </div>
         <p className="font-display text-md font-bold uppercase text-everbright-blue md:text-2xl">
