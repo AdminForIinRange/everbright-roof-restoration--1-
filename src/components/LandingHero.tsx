@@ -325,14 +325,14 @@ export default function LandingHero() {
           <Header />
         </div>
 
-        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow flex-col justify-end px-6 pb-12 pt-8 md:px-10 md:pb-16 md:pt-12 lg:px-12 lg:pb-20 xl:max-w-7xl">
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow flex-col justify-end px-6 pb-0 pt-8 md:px-10 md:pb-0 md:pt-12 lg:px-12 lg:pb-0 xl:max-w-7xl">
           <div className="mb-6">
             <h1 className="animate__animated animate__fadeInDown font-display text-[55px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[8.5rem] xl:text-[9rem]">
-              Adelaide
+              Exterior Cleaning,
               <br />
-              <span className="text-brand-sky">Exterior </span>
+              <span className="text-brand-sky">Done Properly </span>
               <br />
-         Cleaning
+         
             </h1>
           </div>
 
@@ -436,10 +436,43 @@ appearance and protect your home.
           >
             Book Your FREE Quote
           </Link>
+
+          <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 bg-[#04283d] py-5 md:py-6">
+            <div className="mx-auto grid w-full max-w-6xl grid-cols-3 gap-3 px-6 sm:gap-4 md:gap-6 md:px-10 lg:px-12">
+              <div className="flex min-w-0 flex-col items-start text-left">
+                <span className="material-icons mb-2 text-[30px] leading-none text-brand-sky sm:text-[36px] md:text-[44px]">
+                  schedule
+                </span>
+                <span className="font-display text-[1rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
+                  On Time Service
+                </span>
+              </div>
+              <div className="flex min-w-0 flex-col items-start text-left">
+                <span className="material-icons mb-2 text-[30px] leading-none text-brand-sky sm:text-[36px] md:text-[44px]">
+                  groups
+                </span>
+                <span className="font-display text-[1rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
+                  100% Satisfaction
+                  <br />
+                  Guarantee
+                </span>
+              </div>
+              <div className="flex min-w-0 flex-col items-start text-left">
+                <span className="material-icons mb-2 text-[30px] leading-none text-brand-sky sm:text-[36px] md:text-[44px]">
+                  verified_user
+                </span>
+                <span className="font-display text-[1rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
+                  Fully INSURED FOR All
+                  <br />
+                  Jobs
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="form" className="bg-everbright-blue py-6 md:py-12 lg:py-14">
+      <section id="form" className="bg-everbright-blue pt-0 pb-6 md:py-12 lg:py-14">
         <div className="mx-auto w-full max-w-2xl px-4 md:max-w-5xl lg:max-w-6xl">
           <LeadForm />
         </div>
