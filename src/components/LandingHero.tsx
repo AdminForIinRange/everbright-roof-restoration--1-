@@ -451,7 +451,7 @@ appearance and protect your home.
             Book Your FREE Quote
           </Link>
 
-          <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 bg-[#04283d] py-5 md:py-6">
+          <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 bg-everbright-blue py-5 md:py-6">
             <div className="mx-auto grid w-full max-w-6xl grid-cols-3 gap-3 px-6 sm:gap-4 md:gap-6 md:px-10 lg:px-12">
               <div className="flex min-w-0 flex-col items-start text-left">
                 <Clock3 className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16" strokeWidth={2.5} />
@@ -486,7 +486,7 @@ appearance and protect your home.
         </div>
       </section>
 
-      <section className="bg-everbright-blue py-12 md:py-16">
+      <section className="bg-everbright-blue pt-12 pb-0 md:pt-16 md:pb-0">
         <h2 className="mb-10 text-center font-display text-4xl uppercase tracking-tight text-white md:text-5xl lg:text-6xl">
           Dirty Exterior?
         </h2>
