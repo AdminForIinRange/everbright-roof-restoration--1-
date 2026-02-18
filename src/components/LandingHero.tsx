@@ -196,12 +196,13 @@ const services = [
   {
     title: "Roof Cleaning",
     description:
-      "Safely restore your roof's appearance and extend its life.",
+      "Roof cleaning designed to remove harmful buildup without damaging your tiles.",
     detail:
       "",
     points: [
-      "Remove green mould, lichen & built-up grime",
-      "Improve street appeal & help protect your roof long-term",
+      "Remove mould, lichen & black streaks",
+      "Restore colour and street appeal",
+      "Protect tiles from long term deterioration",
     ],
     image: "/genrealPhotos/RoofcleaingServiceCard.webp",
     alt: "Professional worker cleaning a tiled roof with a pressure washer",
@@ -210,19 +211,27 @@ const services = [
   {
     title: "Pressure Washing",
     description:
-      "Remove built up dirt, stains and grime from driveways and outdoor surfaces restoring a clean, well kept look to your home.",
+      "Thorough cleaning for driveways, paths and outdoor areas using controlled pressure systems.",
     detail: "",
-    points: [],
+    points: [
+      "Remove oil stains, algae & grime",
+      "Improve street appeal instantly",
+      "Reduce slippery surface buildup",
+    ],
     image: "/genrealPhotos/Pressure%20WashingServiceCardImage.webp",
     alt: "Pressure washing a brick driveway",
     href: "/pressure-washing",
   },
   {
-    title: "Solar Cleaning",
+    title: "Solar Panel Cleaning",
     description:
-      "Clean solar panels perform better. We safely remove dust and buildup to help your system run efficiently.",
+      "Maximise panel efficiency with safe, purified water cleaning.",
     detail: "",
-    points: [],
+    points: [
+      "Remove dust, grime & bird droppings",
+      "Improve solar performance",
+      "Purified water systems (no harsh chemicals)",
+    ],
     image: "/genrealPhotos/Solar%20CleaningServiceCard.webp",
     alt: "Cleaning solar panels on a sunny day",
     href: "/solar-cleaning",
@@ -230,9 +239,13 @@ const services = [
   {
     title: "Gutter Cleaning",
     description:
-      "Clear blocked gutters to help prevent overflow, leaks and costly water damage around your home.",
+      "Complete debris removal to keep water flowing properly and protect your home.",
     detail: "",
-    points: [],
+    points: [
+      "Remove leaves, dirt & blockages",
+      "Clear downpipes thoroughly",
+      "Prevent overflow and water damage",
+    ],
     image: "/genrealPhotos/Gutter%20CleaningServicePage.webp",
     alt: "Cleaning leaves out of a roof gutter",
     href: "/gutter-cleaning",
@@ -544,7 +557,7 @@ or risk of damage.
       </section>
 
       <Reviews
-        heading="See What Adelaide Homeowners Are Saying"
+        heading="Local Exterior Cleaners You Trust"
         reviews={testimonials}
       />
 
