@@ -569,9 +569,9 @@ export default function LandingHero() {
         </p>
       </section>
 
-      <section id="services" className="bg-white ">
-        <header className=" border-slate-200 bg-white px-6 py-8 text-center md:py-12">
-          <h2 className="font-display text-3xl font-bold uppercase leading-none tracking-tight text-everbright-blue md:text-4xl lg:text-5xl">
+      <section id="services" className="bg-navy-dark">
+        <header className="px-6 py-8 text-center md:py-12">
+          <h2 className="font-display text-3xl font-bold uppercase leading-none tracking-tight text-white md:text-4xl lg:text-5xl">
             Exterior Cleaning Services
             <span className="mt-1 block text-brand-sky">in Adelaide</span>
           </h2>
@@ -653,7 +653,7 @@ export default function LandingHero() {
 
       <section className="bg-white px-6 md:px-8 md:pt-8">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-10 text-center font-display text-4xl uppercase leading-tight tracking-tight text-brand-sky md:text-5xl lg:text-6xl">
+          <h2 className="mb-10 text-center mt-10 font-display text-4xl uppercase leading-tight tracking-tight text-brand-sky md:text-5xl lg:text-6xl">
             A Service You Can Rely On
           </h2>
         </div>
