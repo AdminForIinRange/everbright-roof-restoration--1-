@@ -539,18 +539,22 @@ appearance and protect your home.
         <h2 className="mb-6 font-display text-4xl uppercase leading-tight text-everbright-blue md:text-5xl lg:text-6xl">
           We&apos;ll Bring Your Exterior Back To Life
         </h2>
-        <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-black md:max-w-3xl md:text-lg lg:text-xl">
-         Mould, grime and buildup don’t just make your hMould, lichen and grime don’t just affect how your home looks —
-over time, they can weaken surfaces and shorten the life of your roof, gutters and outdoor areas.
-
-Our surface-specific exterior cleaning systems are designed to remove buildup thoroughly without causing
-damage. No excessive pressure. No shortcuts. Just controlled, professional cleaning done the right way.
-The result? A cleaner, fresher home that looks cared for — and stays protected longer.
-ome look tired, they can slowly damage surfaces and reduce the life of your roof, gutters and outdoor areas. Our
-professional exterior cleaning removes years of buildup safely and properly, restoring your home’s appearance and
-helping protect it long term. The result? A cleaner, fresher-looking home you can feel proud of without the stress
-or risk of damage.
-        </p>
+        <div className="mx-auto mb-10 max-w-lg space-y-6 text-base leading-relaxed text-black md:max-w-3xl md:text-lg lg:text-xl">
+          <p>
+            Mould, lichen and grime don’t just affect how your home looks — over
+            time, they can weaken surfaces and shorten the life of your roof,
+            gutters and outdoor areas.
+          </p>
+          <p>
+            Our surface-specific exterior cleaning systems are designed to remove
+            buildup thoroughly without causing damage. No excessive pressure. No
+            shortcuts. Just controlled, professional cleaning done the right way.
+          </p>
+          <p>
+            The result? A cleaner, fresher home that looks cared for — and stays
+            protected longer.
+          </p>
+        </div>
         <p className="font-display text-md font-bold uppercase text-everbright-blue md:text-2xl">
           Clean Today. Protected for Longer.
         </p>
