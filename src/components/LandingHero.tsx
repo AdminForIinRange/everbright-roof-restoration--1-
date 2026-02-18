@@ -297,21 +297,24 @@ const contactChecklist = [
 
 const reliabilityPoints = [
   {
-  title: "Fully Certified & $10M Insured",
-  description:
-    "Complete peace of mind with full public liability coverage and professional safety standards on every job.",
-}, 
-  {
-    title: "Surface-Safe Cleaning Systems",
+    title: "100% Satisfaction Guaranteed",
     description:
-      "Controlled, surface specific pressure that cleans thoroughly without causing damage.",
+      "We stand behind every job. If you’re not completely satisfied, we’ll return and make it right, no questions.",
   },
   {
-    title: "100% Satisfaction Guarantee",
-    description: "If you're not happy, we'll return and make it right.",
-  }, {
-    title: "Experienced & Trusted Local Team",
-    description: "Fully trained technicians delivering safe, high-quality results with professional-grade equipment.",
+    title: "Experienced, Trusted & Local",
+    description:
+      "As a locally operated Adelaide team, we take pride in delivering professional results through experienced, highly trained technicians and clear communication from start to finish.",
+  },
+  {
+    title: "Surface-Safe Cleaning Methods",
+    description:
+      "We use controlled, surface-specific methods designed to clean thoroughly without causing damage to tiles, concrete or exterior finishes.",
+  },
+  {
+    title: "Fully Insured for Peace of Mind",
+    description:
+      "All exterior cleaning work is covered by public liability insurance, so your home is protected at every stage.",
   },
 ];
 
