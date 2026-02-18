@@ -337,9 +337,47 @@ export default function LandingHero() {
           </div>
 
           <p className="mb-8 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:max-w-2xl">
-We help Adelaide homeowners keep their homes clean and protected with safe, professional exterior cleaning  services.
+Adelaide’s trusted exterior cleaning team
+delivering safe, precise methods that restore
+appearance and protect your home.
           </p>
 
+          <ul className="mb-8 grid max-w-3xl grid-cols-2 gap-x-4 gap-y-3 text-left sm:gap-x-8 sm:gap-y-4">
+            <li className="flex items-center gap-2.5 sm:gap-3">
+              <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
+                check_circle
+              </span>
+              <span className="font-body text-lg leading-none text-white sm:text-2xl">
+                Roof Cleaning
+              </span>
+            </li>
+            <li className="flex items-center gap-2.5 sm:gap-3">
+              <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
+                check_circle
+              </span>
+              <span className="font-body text-lg leading-none text-white sm:text-2xl">
+                Solar Cleaning
+              </span>
+            </li>
+            <li className="flex items-center gap-2.5 sm:gap-3">
+              <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
+                check_circle
+              </span>
+              <span className="font-body text-lg leading-none text-white sm:text-2xl">
+                Gutter Cleaning
+              </span>
+            </li>
+            <li className="flex items-center gap-2.5 sm:gap-3">
+              <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
+                check_circle
+              </span>
+              <span className="font-body text-lg leading-none text-white sm:text-2xl">
+                Pressure Washing
+              </span>
+            </li>
+          </ul>
+
+          {/*
           <div className="mb-8 flex max-w-sm gap-2 md:max-w-xl md:gap-6">
             <div className="flex min-w-0 flex-1 flex-col items-start text-left">
               <span className="material-icons mb-1 text-[28px] text-brand-sky">
@@ -366,10 +404,11 @@ We help Adelaide homeowners keep their homes clean and protected with safe, prof
               <span className="text-sm font-bold uppercase leading-tight tracking-tight text-white md:text-base">
                 Fully 
                 <br />
-           Insured
+               Insured
               </span>
             </div>
           </div>
+          */}
 
           <div className="mb-8 flex flex-col">
             <div className="flex items-center gap-3">
