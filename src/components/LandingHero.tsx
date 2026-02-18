@@ -197,8 +197,7 @@ const services = [
     title: "Roof Cleaning",
     description:
       "Roof cleaning designed to remove harmful buildup without damaging your tiles.",
-    detail:
-      "",
+    detail: "",
     points: [
       "Remove mould, lichen & black streaks",
       "Restore colour and street appeal",
@@ -293,8 +292,6 @@ const contactChecklist = [
   "Experienced local exterior cleaning team",
 ];
 
-
-
 const reliabilityPoints = [
   {
     title: "100% Satisfaction Guaranteed",
@@ -349,14 +346,12 @@ export default function LandingHero() {
               <br />
               <span className="text-brand-sky">Done Properly </span>
               <br />
-         
             </h1>
           </div>
 
           <p className="mb-8 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:max-w-2xl">
-Adelaide’s trusted exterior cleaning team
-delivering safe, precise methods that restore
-appearance and protect your home.
+            Adelaide’s trusted exterior cleaning team delivering safe, precise
+            methods that restore appearance and protect your home.
           </p>
 
           <ul className="mb-8 grid max-w-3xl grid-cols-2 gap-x-4 gap-y-3 text-left sm:gap-x-8 sm:gap-y-4">
@@ -457,13 +452,19 @@ appearance and protect your home.
           <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 bg-everbright-blue py-5 md:py-6">
             <div className="mx-auto grid w-full max-w-6xl grid-cols-3 gap-3 px-6 sm:gap-4 md:gap-6 md:px-10 lg:px-12">
               <div className="flex min-w-0 flex-col items-start text-left">
-                <Clock3 className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16" strokeWidth={2.5} />
+                <Clock3
+                  className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16"
+                  strokeWidth={2.5}
+                />
                 <span className="font-display text-[0.9rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
                   On Time Service
                 </span>
               </div>
               <div className="flex min-w-0 flex-col items-start text-left">
-                <UsersRound className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16" strokeWidth={2.5} />
+                <UsersRound
+                  className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16"
+                  strokeWidth={2.5}
+                />
                 <span className="font-display text-[0.8rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
                   100% Satisfaction
                   <br />
@@ -471,7 +472,10 @@ appearance and protect your home.
                 </span>
               </div>
               <div className="flex min-w-0 flex-col items-start text-left">
-                <ShieldCheck className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16" strokeWidth={2.5} />
+                <ShieldCheck
+                  className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16"
+                  strokeWidth={2.5}
+                />
                 <span className="font-display text-[0.8rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
                   Fully INSURED FOR All
                   <br />
@@ -483,9 +487,14 @@ appearance and protect your home.
         </div>
       </section>
 
-      <section id="form" className="bg-everbright-blue pt-0 pb-6 md:py-12 lg:py-14">
+      <section
+        id="form"
+        className="bg-white pt-4 pb-6 md:py-12 lg:py-14"
+      >
         <div className="mx-auto w-full max-w-2xl px-4 md:max-w-5xl lg:max-w-6xl">
-          <LeadForm />
+          <div className="overflow-hidden rounded-xl border border-black">
+            <LeadForm />
+          </div>
         </div>
       </section>
 
@@ -502,7 +511,10 @@ appearance and protect your home.
         >
           <div className="comparison-marquee-track">
             {[...comparisons, ...comparisons].map((comparison, index) => (
-              <article key={`comparison-pair-${index}`} className="comparison-marquee-pair">
+              <article
+                key={`comparison-pair-${index}`}
+                className="comparison-marquee-pair"
+              >
                 <div className="comparison-marquee-half">
                   <Image
                     src={comparison.before}
@@ -549,9 +561,10 @@ appearance and protect your home.
             gutters and outdoor areas.
           </p>
           <p>
-            Our surface-specific exterior cleaning systems are designed to remove
-            buildup thoroughly without causing damage. No excessive pressure. No
-            shortcuts. Just controlled, professional cleaning done the right way.
+            Our surface-specific exterior cleaning systems are designed to
+            remove buildup thoroughly without causing damage. No excessive
+            pressure. No shortcuts. Just controlled, professional cleaning done
+            the right way.
           </p>
           <p>
             The result? A cleaner, fresher home that looks cared for — and stays
@@ -584,16 +597,16 @@ appearance and protect your home.
                 sizes="(min-width: 1280px) 360px, (min-width: 1024px) 31vw, (min-width: 768px) 47vw, 92vw"
                 quality={62}
                 className={`object-cover transition-transform duration-500 ${
-                  service.title === 'Roof Cleaning'
-                    ? 'scale-[1.2] object-[52%_44%] group-hover:scale-[1.26]'
-                    : 'group-hover:scale-110'
+                  service.title === "Roof Cleaning"
+                    ? "scale-[1.2] object-[52%_44%] group-hover:scale-[1.26]"
+                    : "group-hover:scale-110"
                 }`}
               />
               <div
                 className={`absolute inset-0 ${
-                  service.title === 'Roof Cleaning'
-                    ? 'bg-[linear-gradient(to_bottom,rgba(0,0,0,0.62),rgba(0,0,0,0.94))]'
-                    : 'bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.9))]'
+                  service.title === "Roof Cleaning"
+                    ? "bg-[linear-gradient(to_bottom,rgba(0,0,0,0.62),rgba(0,0,0,0.94))]"
+                    : "bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.9))]"
                 }`}
               />
               <div className="absolute inset-0 flex flex-col p-8 text-left md:p-7 lg:p-8">
@@ -612,8 +625,13 @@ appearance and protect your home.
                   {service.points.length > 0 ? (
                     <ul className="mt-3 space-y-2">
                       {service.points.map((point) => (
-                        <li key={point} className="flex items-start gap-2 text-sm leading-snug text-white md:text-base">
-                          <span className="material-symbols-outlined mt-0.5 text-base text-brand-sky">check_circle</span>
+                        <li
+                          key={point}
+                          className="flex items-start gap-2 text-sm leading-snug text-white md:text-base"
+                        >
+                          <span className="material-symbols-outlined mt-0.5 text-base text-brand-sky">
+                            check_circle
+                          </span>
                           <span>{point}</span>
                         </li>
                       ))}
@@ -645,7 +663,6 @@ appearance and protect your home.
           <h2 className="mb-10 text-center font-display text-4xl uppercase leading-tight tracking-tight text-brand-sky md:text-5xl lg:text-6xl">
             A Service You Can Rely On
           </h2>
-
         </div>
       </section>
 
@@ -696,7 +713,10 @@ appearance and protect your home.
         highlightWord="Trust"
       />
 
-      <section id="process-contact" className="bg-navy-dark px-6 pb-12 pt-16 md:py-14 lg:py-16">
+      <section
+        id="process-contact"
+        className="bg-navy-dark px-6 pb-12 pt-16 md:py-14 lg:py-16"
+      >
         <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">
           <section className="bg-navy-dark text-center md:px-6 md:text-left lg:px-8">
             <h2 className="mb-6 font-display text-4xl uppercase leading-[1.1] tracking-[-0.02em] text-white md:text-6xl lg:text-7xl">
@@ -705,12 +725,17 @@ appearance and protect your home.
               DONE RIGHT.
             </h2>
             <p className="mx-auto mb-16 max-w-[320px] text-sm leading-relaxed text-white md:mx-0 md:max-w-2xl md:pr-8 md:text-base">
-              From your first enquiry to the final clean-up, we keep everything straightforward and professional. Clear pricing. Safe methods. No surprises.
+              From your first enquiry to the final clean-up, we keep everything
+              straightforward and professional. Clear pricing. Safe methods. No
+              surprises.
             </p>
 
             <div className="space-y-12 md:space-y-10 lg:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0">
               {processSteps.map((step) => (
-                <div key={step.number} className="flex flex-col items-center md:flex-row md:items-start md:gap-5 md:text-left lg:flex-col lg:items-center lg:rounded-2xl lg:bg-white/[0.04] lg:px-4 lg:py-5 lg:text-center">
+                <div
+                  key={step.number}
+                  className="flex flex-col items-center md:flex-row md:items-start md:gap-5 md:text-left lg:flex-col lg:items-center lg:rounded-2xl lg:bg-white/[0.04] lg:px-4 lg:py-5 lg:text-center"
+                >
                   <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-sky shadow-lg shadow-brand-sky/20 md:mb-0">
                     <span
                       className={`text-3xl font-black text-white ${step.italicNumber ? "italic" : ""}`}
@@ -749,7 +774,8 @@ appearance and protect your home.
               Contact Us Today
             </h3>
             <p className="mb-8 text-base leading-snug text-slate-700 md:text-lg">
-              Limited availability - refresh and protect your home with Adelaide&apos;s trusted exterior cleaning specialists.
+              Limited availability - refresh and protect your home with
+              Adelaide&apos;s trusted exterior cleaning specialists.
             </p>
 
             <div className="space-y-3">
@@ -791,4 +817,3 @@ appearance and protect your home.
     </main>
   );
 }
-
