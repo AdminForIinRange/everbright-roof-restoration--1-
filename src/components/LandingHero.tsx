@@ -559,6 +559,7 @@ or risk of damage.
       <Reviews
         heading="Local Exterior Cleaners You Trust"
         reviews={testimonials}
+        showTrustBadge
       />
 
       <section id="services" className="bg-white ">
