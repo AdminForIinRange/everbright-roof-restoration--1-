@@ -1,5 +1,6 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
+import { Clock3, ShieldCheck, UsersRound } from "lucide-react";
 import DragScroll from "./DragScroll";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -327,7 +328,7 @@ export default function LandingHero() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow flex-col justify-end px-6 pb-0 pt-8 md:px-10 md:pb-0 md:pt-12 lg:px-12 lg:pb-0 xl:max-w-7xl">
           <div className="mb-6">
-            <h1 className="animate__animated animate__fadeInDown font-display text-[55px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[8.5rem] xl:text-[9rem]">
+            <h1 className="animate__animated animate__fadeInDown font-display text-[50px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[8.5rem] xl:text-[9rem]">
               Exterior Cleaning,
               <br />
               <span className="text-brand-sky">Done Properly </span>
@@ -440,28 +441,22 @@ appearance and protect your home.
           <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 bg-[#04283d] py-5 md:py-6">
             <div className="mx-auto grid w-full max-w-6xl grid-cols-3 gap-3 px-6 sm:gap-4 md:gap-6 md:px-10 lg:px-12">
               <div className="flex min-w-0 flex-col items-start text-left">
-                <span className="material-icons mb-2 text-[30px] leading-none text-brand-sky sm:text-[36px] md:text-[44px]">
-                  schedule
-                </span>
-                <span className="font-display text-[1rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
+                <Clock3 className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16" strokeWidth={2.5} />
+                <span className="font-display text-[0.9rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
                   On Time Service
                 </span>
               </div>
               <div className="flex min-w-0 flex-col items-start text-left">
-                <span className="material-icons mb-2 text-[30px] leading-none text-brand-sky sm:text-[36px] md:text-[44px]">
-                  groups
-                </span>
-                <span className="font-display text-[1rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
+                <UsersRound className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16" strokeWidth={2.5} />
+                <span className="font-display text-[0.8rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
                   100% Satisfaction
                   <br />
                   Guarantee
                 </span>
               </div>
               <div className="flex min-w-0 flex-col items-start text-left">
-                <span className="material-icons mb-2 text-[30px] leading-none text-brand-sky sm:text-[36px] md:text-[44px]">
-                  verified_user
-                </span>
-                <span className="font-display text-[1rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
+                <ShieldCheck className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16" strokeWidth={2.5} />
+                <span className="font-display text-[0.8rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
                   Fully INSURED FOR All
                   <br />
                   Jobs
@@ -532,7 +527,16 @@ appearance and protect your home.
           We&apos;ll Bring Your Exterior Back To Life
         </h2>
         <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-black md:max-w-3xl md:text-lg lg:text-xl">
-          Mould, grime and buildup don’t just make your home look tired they can slowly damage surfaces and reduce the life of your roof, gutters and outdoor areas. Our professional exterior cleaning removes years of buildup safely and properly, restoring your home’s appearance and helping protect it long term. The result? A cleaner, fresher looking home you can feel proud of without the stress or risk of damage.
+         Mould, grime and buildup don’t just make your hMould, lichen and grime don’t just affect how your home looks —
+over time, they can weaken surfaces and shorten the life of your roof, gutters and outdoor areas.
+
+Our surface-specific exterior cleaning systems are designed to remove buildup thoroughly without causing
+damage. No excessive pressure. No shortcuts. Just controlled, professional cleaning done the right way.
+The result? A cleaner, fresher home that looks cared for — and stays protected longer.
+ome look tired, they can slowly damage surfaces and reduce the life of your roof, gutters and outdoor areas. Our
+professional exterior cleaning removes years of buildup safely and properly, restoring your home’s appearance and
+helping protect it long term. The result? A cleaner, fresher-looking home you can feel proud of without the stress
+or risk of damage.
         </p>
         <p className="font-display text-md font-bold uppercase text-everbright-blue md:text-2xl">
           Clean Today. Protected for Longer.
@@ -765,3 +769,4 @@ appearance and protect your home.
     </main>
   );
 }
+
