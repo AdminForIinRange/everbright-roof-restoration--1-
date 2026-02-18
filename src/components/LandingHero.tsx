@@ -581,7 +581,7 @@ export default function LandingHero() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="group relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl md:aspect-[5/6]"
+              className="group relative aspect-[3.5/5] overflow-hidden rounded-[2rem] shadow-2xl md:aspect-[5/6]"
             >
               <Image
                 src={service.image}
