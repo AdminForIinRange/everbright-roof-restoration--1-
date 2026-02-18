@@ -607,7 +607,7 @@ export default function LandingHero() {
                   <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-[3.25rem] lg:text-6xl">
                     {service.title}
                   </h3>
-                  <p className="max-w-xs text-lg leading-relaxed text-white md:max-w-sm md:text-xl">
+                  <p className="max-w-xs text-md leading-relaxed text-white md:max-w-sm md:text-xl">
                     {service.description}
                   </p>
                   {service.detail ? (
@@ -616,7 +616,7 @@ export default function LandingHero() {
                     </p>
                   ) : null}
                   {service.points.length > 0 ? (
-                    <ul className="mt-5 space-y-2">
+                    <ul className="mt-8 space-y-2">
                       {service.points.map((point) => (
                         <li
                           key={point}
