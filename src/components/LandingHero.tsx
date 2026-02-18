@@ -556,12 +556,6 @@ or risk of damage.
         </p>
       </section>
 
-      <Reviews
-        heading="Local Exterior Cleaners You Trust"
-        reviews={testimonials}
-        showTrustBadge
-      />
-
       <section id="services" className="bg-white ">
         <header className=" border-slate-200 bg-white px-6 py-8 text-center md:py-12">
           <h2 className="font-display text-3xl font-bold uppercase leading-none tracking-tight text-everbright-blue md:text-4xl lg:text-5xl">
@@ -687,6 +681,13 @@ or risk of damage.
           </div>
         </div>
       </section>
+
+      <Reviews
+        heading="Local Exterior Cleaners You Trust"
+        reviews={testimonials}
+        showTrustBadge
+        highlightWord="Trust"
+      />
 
       <section id="process-contact" className="bg-navy-dark px-6 pb-12 pt-16 md:py-14 lg:py-16">
         <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">

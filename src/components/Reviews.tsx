@@ -14,6 +14,7 @@ type ReviewsProps = {
   reviews: ReviewItem[];
   sectionClassName?: string;
   showTrustBadge?: boolean;
+  highlightWord?: string;
 };
 
 function GoogleIcon() {
@@ -46,30 +47,47 @@ const Reviews: React.FC<ReviewsProps> = ({
   reviews,
   sectionClassName = 'overflow-hidden bg-navy-dark px-6 py-16 md:py-20',
   showTrustBadge = false,
+  highlightWord,
 }) => {
   const hasEnoughItemsToLoop = reviews.length > 1;
   const renderedReviews = hasEnoughItemsToLoop ? [...reviews, ...reviews] : reviews;
+  const shouldHighlightWord = Boolean(highlightWord && heading.includes(highlightWord));
+  const headingParts = shouldHighlightWord
+    ? heading.split(highlightWord as string)
+    : [heading];
 
   return (
     <section className={sectionClassName}>
       <div className="mx-auto max-w-6xl xl:max-w-7xl">
         <div className="mb-12 text-center md:mb-14">
-          <h4 className="mb-3 text-xl font-medium italic text-white opacity-80 md:text-2xl">Don't Take Our Word for It</h4>
-          <h3 className="font-display text-4xl font-bold uppercase leading-[0.9] tracking-tight text-brand-sky md:text-6xl lg:text-7xl">
-            {heading}
+      
+          <h3
+            className={`font-display text-4xl font-bold uppercase leading-[0.9] tracking-tight md:text-6xl lg:text-7xl ${
+              shouldHighlightWord ? 'text-white' : 'text-brand-sky'
+            }`}
+          >
+            {shouldHighlightWord ? (
+              <>
+                {headingParts[0]}
+                <span className="text-brand-sky">{highlightWord}</span>
+                {headingParts.slice(1).join(highlightWord as string)}
+              </>
+            ) : (
+              heading
+            )}
           </h3>
           {showTrustBadge ? (
             <div className="mt-5 flex flex-col items-center">
               <div className="flex items-center gap-2">
                 <GoogleIcon />
-                <span className="text-[2rem] font-bold leading-none text-[#FBBF24] md:text-[2.25rem]">5.0</span>
+                <span className="text-[2rem] font-bold leading-none text-[#FF8A00] md:text-[2.25rem]">5.0</span>
                 <div className="flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, index) => (
                     <span key={index} className="text-3xl leading-none text-[#FF8A00] md:text-4xl">★</span>
                   ))}
                 </div>
               </div>
-              <p className="mt-2 text-3xl font-semibold leading-none text-white md:text-4xl">
+              <p className="mt-2 text-1xl font-semibold leading-none text-white md:text-4xl">
                 Verified 5-Stars Reviews
               </p>
             </div>
