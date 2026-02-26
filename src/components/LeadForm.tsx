@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useActionState, useEffect, useRef, useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { track } from '@vercel/analytics';
 import { submitLeadAction, type LeadState } from '@lib/actions/leadActions';
 
@@ -47,6 +48,9 @@ const LeadForm: React.FC<LeadFormProps> = ({
 
   const [hasReset, setHasReset] = useState(false);
   const previousResultRef = useRef<{ ok: boolean; error?: string }>({ ok: false });
+  const hasRedirectedRef = useRef(false);
+  const router = useRouter();
+  const pathname = usePathname();
   const [formData, setFormData] = useState(() => ({
     fullName: '',
     email: '',
@@ -94,6 +98,16 @@ const LeadForm: React.FC<LeadFormProps> = ({
     previousResultRef.current = { ok: state.ok, error: state.error };
   }, [formData.roofCondition, formData.roofType, serviceLabel, state.error, state.ok, whatTypeOfService]);
 
+  useEffect(() => {
+    if (!isSubmitted || hasRedirectedRef.current) {
+      return;
+    }
+
+    hasRedirectedRef.current = true;
+    const returnPath = pathname && pathname.startsWith('/') ? pathname : '/';
+    router.push(`/thank-you?from=${encodeURIComponent(returnPath)}`);
+  }, [isSubmitted, pathname, router]);
+
   const handleSubmit = () => {
     track('lead_submit_attempt', {
       serviceLabel,
@@ -102,39 +116,16 @@ const LeadForm: React.FC<LeadFormProps> = ({
       whatTypeOfService,
     });
     previousResultRef.current = { ok: false };
+    hasRedirectedRef.current = false;
     setHasReset(false);
   };
 
   if (isSubmitted) {
     return (
       <div className="mx-auto max-w-md animate-fade-in rounded-xl border-t-[6px] border-brand-sky bg-white p-10 text-center form-shadow md:max-w-2xl md:p-12 lg:max-w-3xl">
-        <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-          <span className="material-icons text-4xl">check_circle</span>
-        </div>
-        <h3 className="font-display text-3xl font-bold text-slate-900 mb-4">Request Received!</h3>
-        <p className="text-slate-600 mb-8 leading-relaxed">
-          Thanks <span className="font-bold">{formData.fullName}</span>, we've received your inquiry for{' '}
-          <span className="font-bold">{serviceLabel}</span>. One of our Adelaide specialists will contact you within the next 24 hours.
-        </p>
-        <button
-          onClick={() => {
-            previousResultRef.current = { ok: false };
-            setHasReset(true);
-            setFormData({
-              fullName: '',
-              email: '',
-              phone: '',
-              address: '',
-              message: '',
-              roofType: defaultRoofType,
-              roofCondition: defaultRoofCondition,
-              requestedServices: [],
-            });
-          }}
-          className="text-brand-sky font-bold uppercase tracking-wider hover:underline"
-        >
-          Send another inquiry
-        </button>
+        <div className="mx-auto mb-6 h-12 w-12 animate-pulse rounded-full border-4 border-brand-sky/20 border-t-brand-sky" />
+        <h3 className="mb-3 font-display text-2xl font-bold text-slate-900 md:text-3xl">Sending you to confirmation...</h3>
+        <p className="text-slate-600">Your request has been submitted successfully.</p>
       </div>
     );
   }
