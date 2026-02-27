@@ -409,11 +409,11 @@ export default function New() {
             <h2 className="text-[#ff4444] dark:text-[#ff6666] font-medium text-xl tracking-wide text-shadow">
               Bring Your Home Back to Life!
             </h2>
-            <h1 className="text-white  px-0 font-display text-[40px] text-nowrap font-bold uppercase leading-none tracking-tight text-shadow drop-shadow-xl">
+            <h1 className="text-white  px-0 impact-offer-font text-[50px] text-nowrap font-bold uppercase leading-none tracking-tight text-shadow drop-shadow-xl">
               Roof Cleaning
             </h1>
             <div className="pt-0 pb-2">
-              <p className="text-white text-[14px] font-light leading-tight text-shadow">
+              <p className="text-white text-[16px] font-light leading-tight text-shadow">
                 Serving Adelaide
                 <br />
                 &amp; Surrounding Areas
@@ -421,7 +421,7 @@ export default function New() {
             </div>
           </div>
           <div className="mb-6 text-nowrap space-y-6">
-            <div className="impact-offer-font font-bold text-[30px] leading-none text-shadow">
+            <div className="font-display font-bold text-[25px] leading-none text-shadow">
               <span className="text-white block mb-1">Spring Sale Roof</span>
               <span className="text-white">
                 Cleaning from{" "}
@@ -430,7 +430,7 @@ export default function New() {
                 </span>{" "}
               </span>
             </div>
-            <p className="text-white pt-[60px] text-[18px] font-medium tracking-wide text-shadow max-w-[100%] mx-auto">
+            <p className="text-white pt-[50px] text-[14px] font-medium tracking-wide text-shadow max-w-[100%] mx-auto">
               Fill out the form below to grab <br />
               this offer <span className="font-bold uppercase">Today</span>
             </p>
