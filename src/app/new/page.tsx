@@ -709,12 +709,12 @@ export default function New() {
               </h2>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-accent uppercase leading-none tracking-tight"></h2>
             </div>
-            <blockquote className="text-xl md:text-2xl font-serif italic text-white mb-6 opacity-90">
+            <blockquote className="text-xl md:text-2xl font-serif italic text-left text-white mb-6 opacity-90">
               “I’ll get around to it.”
             </blockquote>
-            <div className="max-w-prose mx-auto text-white text-base md:text-lg leading-relaxed space-y-4 opacity-95 font-light">
+            <div className="  text-left max-w-prose mx-auto text-white text-base md:text-lg leading-relaxed space-y-4 opacity-95 font-light">
               <p>
-                That’s what most homeowners say — until the roof starts making
+                That’s what most homeowners say until the roof starts making
                 the whole house look older than it is...
               </p>
               <p>
@@ -726,13 +726,13 @@ export default function New() {
                 pressure washer isn’t how you want to spend your weekend.
               </p>
             </div>
-            <h3 className="mt-8 text-xl font-bold text-white">
+            <h3 className="mt-8 text-left text-xl font-bold text-white">
               But waiting comes with a cost:
             </h3>
           </section>
 
           <section className="bg-white dark:bg-gray-800 px-6 py-10 text-center border-t border-gray-200 dark:border-gray-700">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary dark:text-white uppercase leading-tight tracking-tight">
+            <h2 className="text-[22px]  md:text-4xl font-display font-bold text-primary dark:text-white uppercase leading-tight tracking-tight">
               The longer it’s left, the more <br />
               <span className="text-accent">expensive</span> it becomes to fix
             </h2>
