@@ -390,8 +390,8 @@ export default function New() {
             className="w-full h-full object-cover object-top"
             src="/newhosuebackground.png"
           />
-          <div className="absolute inset-0 bg-primary/85 dark:bg-black/75 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/55 to-black/70"></div>
+          <div className="absolute inset-0 bg-black/75 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/72 to-black/88"></div>
         </div>
         <div className="relative z-10 flex flex-col items-center justify-start min-h-screen px-4 py-8 max-w-md mx-auto w-full text-center">
           <a className="w-full mb-8 group" href="tel:0411017366">
@@ -401,7 +401,7 @@ export default function New() {
               </span>
             </div>
           </a>
-          <div className="space-y-2 mb-8">
+          <div className="space-y-2 mb-5">
             <h2 className="text-[#ff4444] dark:text-[#ff6666] font-medium text-xl tracking-wide text-shadow">
               Bring Your Home Back to Life!
             </h2>
