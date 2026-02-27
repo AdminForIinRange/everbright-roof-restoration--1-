@@ -55,7 +55,7 @@ export default function New() {
                   xl: "1rem",
                 },
                 backgroundImage: {
-                  'hero-pattern': "url('https://images.unsplash.com/photo-1628624747186-a941c725611b?q=80&w=2574&auto=format&fit=crop')",
+                  'hero-pattern': "url('/newhosuebackground.png')",
                 }
               },
             },
@@ -382,7 +382,7 @@ export default function New() {
           <img
             alt="Terracotta roof tiles under a blue sky"
             className="w-full h-full object-cover object-center"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDace6eM2V-uG13weeEgTbesLs6y4S_4Djh-1dUwWCbSsbcFzSRtCn4R0hlrCnjudD50OlBblVjtzcsW31U_jq8RE0esHCLUj6QlWj2FN-QoXoCVfvPYxZiG6lMZ_0GsuOUeDkct7kAfK7q2qfLVqU3GICkLF_p49SmACLQs_fvS15wOZ2-ikCxVzORVv-LGD1qYevOkq7TFUpKw5A3BQx_HC6UZpNtPgY5O_sN0qmj6LiFoVNXxmYsyNChS3emt0Wddgo4ZgbrOFI"
+            src="/newhosuebackground.png"
           />
           <div className="absolute inset-0 bg-primary/80 dark:bg-black/70 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-black/60"></div>
