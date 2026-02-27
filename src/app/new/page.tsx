@@ -416,7 +416,7 @@ export default function New() {
               </p>
             </div>
           </div>
-          <div className="mb-8 text-nowrap space-y-6">
+          <div className="mb-6 text-nowrap space-y-6">
             <div className="font-display font-bold text-[30px] leading-none text-shadow">
               <span className="text-white block mb-1">Spring Sale Roof</span>
               <span className="text-white">
@@ -426,12 +426,12 @@ export default function New() {
                 </span>{" "}
               </span>
             </div>
-            <p className="text-white pt-[60px] text-[13px] font-medium tracking-wide text-shadow max-w-[100%] mx-auto">
-              Fill out the form below to grab this offer{" "}
-              <span className="font-bold uppercase">Today</span>
+            <p className="text-white pt-[60px] text-[18px] font-medium tracking-wide text-shadow max-w-[100%] mx-auto">
+              Fill out the form below to grab <br />
+              this offer <span className="font-bold uppercase">Today</span>
             </p>
           </div>
-          <div className="w-full bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-auto mb-4">
+          <div className="w-[85%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-auto mb-4">
             <div className="p-6 pb-8">
               <h3 className="text-primary dark:text-white font-bold text-2xl mb-6 text-left leading-tight">
                 What is the size of your roof?
