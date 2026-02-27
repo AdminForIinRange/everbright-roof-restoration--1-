@@ -384,8 +384,8 @@ export default function New() {
             className="w-full h-full object-cover object-center"
             src="/newhosuebackground.png"
           />
-          <div className="absolute inset-0 bg-primary/80 dark:bg-black/70 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-black/60"></div>
+          <div className="absolute inset-0 bg-primary/85 dark:bg-black/75 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/55 to-black/70"></div>
         </div>
         <div className="relative z-10 flex flex-col items-center justify-start min-h-screen px-4 py-8 max-w-md mx-auto w-full text-center">
           <a className="w-full mb-8 group" href="tel:0411017366">
