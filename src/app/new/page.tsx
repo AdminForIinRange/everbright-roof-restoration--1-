@@ -689,7 +689,7 @@ export default function New() {
 
           <section className="bg-primary flex-grow px-6 py-12 pb-16 text-center relative overflow-hidden">
             <div className="flex flex-col items-center justify-center mb-10">
-              <div className="mb-2 relative w-72 max-w-full">
+              <div className="mb-2 relative w-62 max-w-full">
                 <img
                   alt="EverBright Pressure Washing logo"
                   className="mx-auto h-auto w-full object-contain drop-shadow-lg"
@@ -700,11 +700,14 @@ export default function New() {
             <div className="mb-8">
               <h2 className="text-4xl md:text-5xl font-display font-bold text-white uppercase leading-none tracking-tight mb-2">
                 Dirty Roof Today.{" "}
-                <span className="text-accent block mt-1">Expensive</span>
+                <span className="text-accent block mt-1">
+                  Expensive Repairs 
+                </span>
+                <span className="text-accent block mt-1">
+                  Tomorrow  
+                </span>
               </h2>
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-accent uppercase leading-none tracking-tight">
-                Repairs Tomorrow.
-              </h2>
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-accent uppercase leading-none tracking-tight"></h2>
             </div>
             <blockquote className="text-xl md:text-2xl font-serif italic text-white mb-6 opacity-90">
               “I’ll get around to it.”
