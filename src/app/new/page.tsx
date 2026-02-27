@@ -413,7 +413,7 @@ export default function New() {
               Roof Cleaning
             </h1>
             <div className="pt-0 pb-2">
-              <p className="text-white text-[16px] font-light leading-tight text-shadow">
+              <p className="text-white text-[18px] font-light leading-tight text-shadow">
                 Serving Adelaide
                 <br />
                 &amp; Surrounding Areas
@@ -421,7 +421,7 @@ export default function New() {
             </div>
           </div>
           <div className="mb-6 text-nowrap space-y-6">
-            <div className="font-display font-bold text-[25px] leading-none text-shadow">
+            <div className="font-display font-bold text-[28px] leading-none text-shadow">
               <span className="text-white block mb-1">Spring Sale Roof</span>
               <span className="text-white">
                 Cleaning from{" "}
