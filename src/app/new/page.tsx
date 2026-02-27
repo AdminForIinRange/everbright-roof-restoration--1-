@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
-import Script from 'next/script';
+import type { Metadata } from "next";
+import Script from "next/script";
 
-import Footer from '@/components/Footer';
-import { buildPageMetadata } from '@lib/seo';
-import ForceLightMode from './ForceLightMode';
+import Footer from "@/components/Footer";
+import { buildPageMetadata } from "@lib/seo";
+import ForceLightMode from "./ForceLightMode";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'New',
-  description: 'Draft landing page build area for the new page.',
-  path: '/new',
+  title: "New",
+  description: "Draft landing page build area for the new page.",
+  path: "/new",
   noIndex: true,
 });
 
@@ -20,8 +20,14 @@ export default function New() {
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,400&display=swap"
         rel="stylesheet"
       />
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+      />
       <link
         href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
         rel="stylesheet"
@@ -381,7 +387,7 @@ export default function New() {
         <div className="fixed inset-0 z-0">
           <img
             alt="Terracotta roof tiles under a blue sky"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-top"
             src="/newhosuebackground.png"
           />
           <div className="absolute inset-0 bg-primary/85 dark:bg-black/75 mix-blend-multiply"></div>
@@ -399,27 +405,29 @@ export default function New() {
             <h2 className="text-[#ff4444] dark:text-[#ff6666] font-medium text-xl tracking-wide text-shadow">
               Bring Your Home Back to Life!
             </h2>
-            <h1 className="text-white font-display text-6xl font-bold uppercase leading-none tracking-tight text-shadow drop-shadow-xl">
+            <h1 className="text-white  px-0 font-display text-6xl text-nowrap font-bold uppercase leading-none tracking-tight text-shadow drop-shadow-xl">
               Roof Cleaning
             </h1>
             <div className="pt-4 pb-2">
-              <p className="text-white text-2xl font-light leading-tight text-shadow">
+              <p className="text-white text-[18px] font-light leading-tight text-shadow">
                 Serving Adelaide
                 <br />
                 &amp; Surrounding Areas
               </p>
             </div>
           </div>
-          <div className="mb-8 space-y-6">
-            <div className="font-display font-bold text-5xl leading-none text-shadow">
+          <div className="mb-8 text-nowrap space-y-6">
+            <div className="font-display font-bold text-[40px] leading-none text-shadow">
               <span className="text-white block mb-1">Spring Sale Roof</span>
-              <span className="text-white">Cleaning from </span>
-              <span className="text-[#ff3333] inline-block transform scale-110 ml-1 drop-shadow-md">
-                $899
+              <span className="text-white">
+                Cleaning from{" "}
+                <span className="text-[#ff3333] inline-block transform scale-110 ml-1 drop-shadow-md">
+                  $899
+                </span>{" "}
               </span>
             </div>
-            <p className="text-white text-lg font-medium tracking-wide text-shadow max-w-[80%] mx-auto">
-              Fill out the form below to grab this offer{' '}
+            <p className="text-white pt-[170px] text-lg font-medium tracking-wide text-shadow max-w-[100%] mx-auto">
+              Fill out the form below to grab this offer{" "}
               <span className="font-bold uppercase">Today</span>
             </p>
           </div>
@@ -511,12 +519,12 @@ export default function New() {
                   </span>
                 </label>
                 <div className="pt-6">
-                <button
-                  className="hero-next-button w-full bg-primary hover:bg-blue-900 text-white font-bold text-3xl py-4 rounded shadow-lg transition-transform transform active:scale-95 uppercase tracking-wide"
-                  type="submit"
-                >
-                  Next
-                </button>
+                  <button
+                    className="hero-next-button w-full bg-primary hover:bg-blue-900 text-white font-bold text-3xl py-4 rounded shadow-lg transition-transform transform active:scale-95 uppercase tracking-wide"
+                    type="submit"
+                  >
+                    Next
+                  </button>
                 </div>
               </form>
             </div>
@@ -531,7 +539,12 @@ export default function New() {
             </h1>
             <div className="flex flex-col items-center justify-center mb-8">
               <div className="flex items-center space-x-2 mb-1">
-                <svg className="w-6 h-6" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  className="w-6 h-6"
+                  version="1.1"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
                     fill="#EA4335"
@@ -549,7 +562,9 @@ export default function New() {
                     fill="#34A853"
                   ></path>
                 </svg>
-                <span className="text-xl font-bold text-black dark:text-black">5.0</span>
+                <span className="text-xl font-bold text-black dark:text-black">
+                  5.0
+                </span>
                 <div className="flex text-star-yellow">
                   <i className="material-icons text-lg">star</i>
                   <i className="material-icons text-lg">star</i>
@@ -572,7 +587,9 @@ export default function New() {
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4gBR53wYlahjFfmMROMhBckEuHm32FsvQvzRvTA8qqUHJk11GG3u2RaXbkbhvgKf32k_flqr20sOk42gSiljd9pl0CXKr58sFs84NgpWdaNUeb2rqTyNPXLw5GpFYhogBR01wZDHJAzSEG2FDZOg8707VKjABbpfAbS48tJ3ypBXziPED1fkYIEHZ1bhwC50zLuhscr_cQO9x4wBCg-m_F7DBwycgLe9ljUFm1v0S_B4DKDr6PfegOBqGjCAkFwb2YAzgWjn-yHw"
                     />
                   </div>
-                  <span className="text-star-yellow font-bold text-sm">5.0</span>
+                  <span className="text-star-yellow font-bold text-sm">
+                    5.0
+                  </span>
                   <div className="flex text-star-yellow">
                     <i className="material-icons text-xs">star</i>
                     <i className="material-icons text-xs">star</i>
@@ -582,9 +599,10 @@ export default function New() {
                   </div>
                 </div>
                 <p className="text-white text-xs leading-relaxed mb-3 font-light">
-                  "Really solid cleaning by Shuyal and his team, they did an amazing job! They arrived on time, had
-                  excellent communication, and left everything spotless. We will definitely be hiring them again for
-                  our other properties."
+                  "Really solid cleaning by Shuyal and his team, they did an
+                  amazing job! They arrived on time, had excellent
+                  communication, and left everything spotless. We will
+                  definitely be hiring them again for our other properties."
                 </p>
               </div>
               <div className="bg-primary flex-shrink-0 w-64 rounded-xl p-4 text-left shadow-lg snap-center">
@@ -596,7 +614,9 @@ export default function New() {
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3V_R9Hef2am2ULtwbJYauO8tr8MFWcH4XHHhB727NqRhwRgwNLhQbudgTTJEmaNwvsPFs_bVFR0uaN4tLFGhXEQTg5OB3UNgiasRURtSS3kIWwt1gokskxsTOuZF_o2DyeewL-TtTaHqnJ3zB17y87DZmOY542Z025R5M6DK6WfWCKQ5GkxYISBvIn7_2qFIUJNg_JWFRv8BgWH_TpWRK4m8WAacmTDzcm3EZDRs3_3dw8LAs2IBuK2Jkv2ihKhHsz6vx1T9aOA"
                     />
                   </div>
-                  <span className="text-star-yellow font-bold text-sm">5.0</span>
+                  <span className="text-star-yellow font-bold text-sm">
+                    5.0
+                  </span>
                   <div className="flex text-star-yellow">
                     <i className="material-icons text-xs">star</i>
                     <i className="material-icons text-xs">star</i>
@@ -606,8 +626,8 @@ export default function New() {
                   </div>
                 </div>
                 <p className="text-white text-xs leading-relaxed mb-3 font-light">
-                  "Shuyal did an amazing job cleaning my gutters, very happy with the clean up afterwards too. Would
-                  highly recommend!"
+                  "Shuyal did an amazing job cleaning my gutters, very happy
+                  with the clean up afterwards too. Would highly recommend!"
                 </p>
               </div>
               <div className="bg-primary flex-shrink-0 w-64 rounded-xl p-4 text-left shadow-lg snap-center">
@@ -619,7 +639,9 @@ export default function New() {
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIG75-c3ChPeb87A-B_0-sB_Yy2kSc63gpNoF0edCN3pJGn52TTOIb14kJbWqxPwDAe08fqYRjueqWVEdaaRNpjqobX7DrFTveiKaUYiesBz2SLPZnJiT5zC-lYIAJJBs2486epNtg7FdMcR3QzbCtoyCElS8U0t6nVrGea8lDJiAgv66acafCS2G8O7Ak38sWnHskxTkbZius_GmglRmQaVWFlMDnEYRROPqiWsrk7RHO-MDxIEB-3cCBQaDMtaBPztJylnM40SI"
                     />
                   </div>
-                  <span className="text-star-yellow font-bold text-sm">5.0</span>
+                  <span className="text-star-yellow font-bold text-sm">
+                    5.0
+                  </span>
                   <div className="flex text-star-yellow">
                     <i className="material-icons text-xs">star</i>
                     <i className="material-icons text-xs">star</i>
@@ -629,8 +651,8 @@ export default function New() {
                   </div>
                 </div>
                 <p className="text-white text-xs leading-relaxed mb-3 font-light">
-                  "Fantastic service. The team was professional and the results were beyond my expectations. My roof
-                  looks brand new again."
+                  "Fantastic service. The team was professional and the results
+                  were beyond my expectations. My roof looks brand new again."
                 </p>
               </div>
               <div className="bg-primary flex-shrink-0 w-64 rounded-xl p-4 text-left shadow-lg snap-center">
@@ -642,7 +664,9 @@ export default function New() {
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKke2ZwMzUruxHWpvXzKOnrEvl3RToOMqis7QCYBVZzj92BUcu63qGrwHnky7bIM0ISLf-gpZ7R2BJ_cnxdj6LIYfCfxXD1rGs7gae1o36JmF9JBdN5V05wTvMR9MzMXLmSYERjhUOkoWbR3vB2MC7G4AqebWM8KSnPQDFHzjKfOgEYFKgStvIrsZ7CTz65Rt-4CEFhQzQb8PBOPNR-750PZiC6CtCpTsN-vn16YLcwBihxlx77iA-7qjLyjTUrH9g15Dy7hzH1t4"
                     />
                   </div>
-                  <span className="text-star-yellow font-bold text-sm">5.0</span>
+                  <span className="text-star-yellow font-bold text-sm">
+                    5.0
+                  </span>
                   <div className="flex text-star-yellow">
                     <i className="material-icons text-xs">star</i>
                     <i className="material-icons text-xs">star</i>
@@ -652,8 +676,8 @@ export default function New() {
                   </div>
                 </div>
                 <p className="text-white text-xs leading-relaxed mb-3 font-light">
-                  "Prompt, polite and thorough. I've recommended EverBright to all my neighbors already. Great value
-                  for the price."
+                  "Prompt, polite and thorough. I've recommended EverBright to
+                  all my neighbors already. Great value for the price."
                 </p>
               </div>
             </div>
@@ -671,7 +695,8 @@ export default function New() {
             </div>
             <div className="mb-8">
               <h2 className="text-4xl md:text-5xl font-display font-bold text-white uppercase leading-none tracking-tight mb-2">
-                Dirty Roof Today. <span className="text-accent block mt-1">Expensive</span>
+                Dirty Roof Today.{" "}
+                <span className="text-accent block mt-1">Expensive</span>
               </h2>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-accent uppercase leading-none tracking-tight">
                 Repairs Tomorrow.
@@ -682,17 +707,21 @@ export default function New() {
             </blockquote>
             <div className="max-w-prose mx-auto text-white text-base md:text-lg leading-relaxed space-y-4 opacity-95 font-light">
               <p>
-                That’s what most homeowners say — until the roof starts making the whole house look older than it is...
+                That’s what most homeowners say — until the roof starts making
+                the whole house look older than it is...
               </p>
               <p>
-                You’ve seen the stains creeping across the tiles. You know it hasn’t been cleaned in years.
+                You’ve seen the stains creeping across the tiles. You know it
+                hasn’t been cleaned in years.
               </p>
               <p>
-                But life’s busy. And let’s be honest, climbing up there with a pressure washer isn’t how you want to
-                spend your weekend.
+                But life’s busy. And let’s be honest, climbing up there with a
+                pressure washer isn’t how you want to spend your weekend.
               </p>
             </div>
-            <h3 className="mt-8 text-xl font-bold text-white">But waiting comes with a cost:</h3>
+            <h3 className="mt-8 text-xl font-bold text-white">
+              But waiting comes with a cost:
+            </h3>
           </section>
 
           <section className="bg-white dark:bg-gray-800 px-6 py-10 text-center border-t border-gray-200 dark:border-gray-700">
@@ -716,19 +745,26 @@ export default function New() {
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 mt-0.5">
                     <div className="w-8 h-8 rounded-full border-2 border-red-500 flex items-center justify-center">
-                      <span className="material-icons-outlined text-red-500" style={{ fontSize: '20px' }}>
+                      <span
+                        className="material-icons-outlined text-red-500"
+                        style={{ fontSize: "20px" }}
+                      >
                         close
                       </span>
                     </div>
                   </div>
                   <p className="text-white text-[15px] leading-snug font-medium opacity-95">
-                    Mould stained roofs make your entire home look older than it is
+                    Mould stained roofs make your entire home look older than it
+                    is
                   </p>
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 mt-0.5">
                     <div className="w-8 h-8 rounded-full border-2 border-red-500 flex items-center justify-center">
-                      <span className="material-icons-outlined text-red-500" style={{ fontSize: '20px' }}>
+                      <span
+                        className="material-icons-outlined text-red-500"
+                        style={{ fontSize: "20px" }}
+                      >
                         close
                       </span>
                     </div>
@@ -740,25 +776,33 @@ export default function New() {
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 mt-0.5">
                     <div className="w-8 h-8 rounded-full border-2 border-red-500 flex items-center justify-center">
-                      <span className="material-icons-outlined text-red-500" style={{ fontSize: '20px' }}>
+                      <span
+                        className="material-icons-outlined text-red-500"
+                        style={{ fontSize: "20px" }}
+                      >
                         close
                       </span>
                     </div>
                   </div>
                   <p className="text-white text-[15px] leading-snug font-medium opacity-95">
-                    Moisture trapped on your roof can lead to cracked tiles and hidden leaks
+                    Moisture trapped on your roof can lead to cracked tiles and
+                    hidden leaks
                   </p>
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 mt-0.5">
                     <div className="w-8 h-8 rounded-full border-2 border-red-500 flex items-center justify-center">
-                      <span className="material-icons-outlined text-red-500" style={{ fontSize: '20px' }}>
+                      <span
+                        className="material-icons-outlined text-red-500"
+                        style={{ fontSize: "20px" }}
+                      >
                         close
                       </span>
                     </div>
                   </div>
                   <p className="text-white text-[15px] leading-snug font-medium opacity-95">
-                    Neglected roofs can knock thousands off perceived property value
+                    Neglected roofs can knock thousands off perceived property
+                    value
                   </p>
                 </div>
               </div>
@@ -766,7 +810,9 @@ export default function New() {
             <section className="space-y-2">
               <div className="relative w-full rounded-lg overflow-hidden shadow-md group">
                 <div className="absolute top-0 left-0 bg-primary px-4 py-1.5 z-10">
-                  <span className="text-white font-bold text-sm tracking-wide">Before</span>
+                  <span className="text-white font-bold text-sm tracking-wide">
+                    Before
+                  </span>
                 </div>
                 <img
                   alt="Dirty roof covered in lichen and mold before pressure washing"
@@ -776,7 +822,9 @@ export default function New() {
               </div>
               <div className="relative w-full rounded-lg overflow-hidden shadow-md group">
                 <div className="absolute top-0 left-0 bg-primary px-4 py-1.5 z-10">
-                  <span className="text-white font-bold text-sm tracking-wide">After</span>
+                  <span className="text-white font-bold text-sm tracking-wide">
+                    After
+                  </span>
                 </div>
                 <img
                   alt="Clean and bright red terracotta roof after professional cleaning"
@@ -792,22 +840,29 @@ export default function New() {
           <div className="max-w-[430px] mx-auto p-8 font-body">
             <header className="mb-8" data-purpose="page-title">
               <h1 className="text-[26px] font-heading font-bold text-center uppercase tracking-tight">
-                Professional Roof Cleaning That <span className="text-accent-blue">Restores Your Home</span> –
+                Professional Roof Cleaning That{" "}
+                <span className="text-accent-blue">Restores Your Home</span> –
                 Without Risk
               </h1>
             </header>
 
-            <section className="space-y-6 text-[17px] leading-relaxed mb-10" data-purpose="marketing-copy">
+            <section
+              className="space-y-6 text-[17px] leading-relaxed mb-10"
+              data-purpose="marketing-copy"
+            >
               <p>
-                You want a home you’re proud to pull into. You want a roof that looks clean, well-kept, and properly
-                maintained, not stained, streaked, or ageing your entire property.
+                You want a home you’re proud to pull into. You want a roof that
+                looks clean, well-kept, and properly maintained, not stained,
+                streaked, or ageing your entire property.
               </p>
               <p>
-                You want peace of mind knowing mould and lichen aren’t slowly damaging your tiles. You want it handled
-                safely, correctly, and without risking injury or costly mistakes.
+                You want peace of mind knowing mould and lichen aren’t slowly
+                damaging your tiles. You want it handled safely, correctly, and
+                without risking injury or costly mistakes.
               </p>
               <p>
-                At EverBright, we make it happen safely, professionally, and without shortcuts.
+                At EverBright, we make it happen safely, professionally, and
+                without shortcuts.
               </p>
             </section>
 
@@ -815,7 +870,10 @@ export default function New() {
               className="border border-card-custom rounded-lg bg-opacity-50 overflow-hidden"
               data-purpose="benefits-checklist"
             >
-              <div aria-hidden="true" className="px-4 py-3 border-b border-card-custom flex gap-1.5">
+              <div
+                aria-hidden="true"
+                className="px-4 py-3 border-b border-card-custom flex gap-1.5"
+              >
                 <div className="w-3 h-3 rounded-full bg-[#1a4163]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#1a4163]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#1a4163]"></div>
@@ -862,7 +920,8 @@ export default function New() {
                     </svg>
                   </div>
                   <p className="text-[16px] font-medium leading-snug">
-                    Every job is fully insured and handled by certified technician
+                    Every job is fully insured and handled by certified
+                    technician
                   </p>
                 </div>
 
@@ -884,7 +943,8 @@ export default function New() {
                     </svg>
                   </div>
                   <p className="text-[16px] font-medium leading-snug">
-                    Cleaned roofs stay visibly cleaner for 3+ years after just our treatment
+                    Cleaned roofs stay visibly cleaner for 3+ years after just
+                    our treatment
                   </p>
                 </div>
 
@@ -906,7 +966,8 @@ export default function New() {
                     </svg>
                   </div>
                   <p className="text-[16px] font-medium leading-snug">
-                    We help you protect one of the most expensive parts of your home.
+                    We help you protect one of the most expensive parts of your
+                    home.
                   </p>
                 </div>
               </div>
@@ -915,7 +976,10 @@ export default function New() {
         </div>
 
         <div className="new-section-5 relative z-10 w-full bg-white font-body antialiased">
-          <header className="bg-navy py-3 px-4 text-center" data-purpose="top-announcement">
+          <header
+            className="bg-navy py-3 px-4 text-center"
+            data-purpose="top-announcement"
+          >
             <h2 className="text-white font-heading text-xl md:text-2xl font-bold uppercase tracking-wider">
               And we can help you too!
             </h2>
@@ -923,19 +987,27 @@ export default function New() {
 
           <div className="py-8 text-center" data-purpose="services-overview">
             <section className="mb-6 px-6">
-              <h1 className="text-navy font-heading text-4xl font-bold uppercase mb-2">Our Services</h1>
-              <p className="text-navy font-heading text-xl font-medium">100% Satisfaction Guaranteed</p>
+              <h1 className="text-navy font-heading text-4xl font-bold uppercase mb-2">
+                Our Services
+              </h1>
+              <p className="text-navy font-heading text-xl font-medium">
+                100% Satisfaction Guaranteed
+              </p>
             </section>
 
             <section className="service-section-padding mb-8">
               <p className="text-body-blue text-[15px] leading-relaxed text-left mx-auto max-w-sm">
-                We deliver professional roof and exterior cleaning for homeowners across Adelaide and surrounding
-                suburbs. Our mission is to restore and protect your home with safe, controlled cleaning that keeps your
-                home looking its best year-round.
+                We deliver professional roof and exterior cleaning for
+                homeowners across Adelaide and surrounding suburbs. Our mission
+                is to restore and protect your home with safe, controlled
+                cleaning that keeps your home looking its best year-round.
               </p>
             </section>
 
-            <section className="service-section-padding text-left max-w-md mx-auto" data-purpose="roof-cleaning-card">
+            <section
+              className="service-section-padding text-left max-w-md mx-auto"
+              data-purpose="roof-cleaning-card"
+            >
               <div className="mb-6">
                 <img
                   alt="Before and after comparison of a roof cleaning service showing dark mossy tiles versus clean red tiles"
@@ -945,13 +1017,19 @@ export default function New() {
                 />
               </div>
 
-              <h3 className="text-navy font-heading text-3xl font-bold uppercase mb-4">Roof Cleaning</h3>
+              <h3 className="text-navy font-heading text-3xl font-bold uppercase mb-4">
+                Roof Cleaning
+              </h3>
 
               <p className="text-body-blue text-[15px] leading-snug mb-4">
-                Keep your roof clean, protected, and looking its best with our professional roof cleaning service.
+                Keep your roof clean, protected, and looking its best with our
+                professional roof cleaning service.
               </p>
 
-              <ul className="text-black font-bold text-[13px] space-y-1 mb-5" data-purpose="service-features">
+              <ul
+                className="text-black font-bold text-[13px] space-y-1 mb-5"
+                data-purpose="service-features"
+              >
                 <li>• Safe removal of mould, lichen, and built-up stains</li>
                 <li>• Designed to restore and protect your roof</li>
               </ul>
@@ -988,15 +1066,23 @@ export default function New() {
                 />
               </div>
 
-              <h3 className="text-navy font-heading text-3xl font-bold uppercase mb-4">Pressure Washing</h3>
+              <h3 className="text-navy font-heading text-3xl font-bold uppercase mb-4">
+                Pressure Washing
+              </h3>
 
               <p className="text-body-blue text-[15px] leading-snug mb-4">
-                Keep your outdoor surfaces clean, protected, and looking their best with our professional pressure
-                washing service.
+                Keep your outdoor surfaces clean, protected, and looking their
+                best with our professional pressure washing service.
               </p>
 
-              <ul className="text-black font-bold text-[13px] space-y-1 mb-5" data-purpose="service-features">
-                <li>• Suitable for driveways, paths, patios, and exterior hard surfaces</li>
+              <ul
+                className="text-black font-bold text-[13px] space-y-1 mb-5"
+                data-purpose="service-features"
+              >
+                <li>
+                  • Suitable for driveways, paths, patios, and exterior hard
+                  surfaces
+                </li>
                 <li>• Designed to restore appearance and protect surfaces</li>
               </ul>
 
@@ -1032,14 +1118,19 @@ export default function New() {
                 />
               </div>
 
-              <h3 className="text-navy font-heading text-3xl font-bold uppercase mb-4">Gutter Cleaning</h3>
+              <h3 className="text-navy font-heading text-3xl font-bold uppercase mb-4">
+                Gutter Cleaning
+              </h3>
 
               <p className="text-body-blue text-[15px] leading-snug mb-4">
-                Keep your gutters clear, flowing, and protecting your home with our professional gutter cleaning
-                service.
+                Keep your gutters clear, flowing, and protecting your home with
+                our professional gutter cleaning service.
               </p>
 
-              <ul className="text-black font-bold text-[13px] space-y-1 mb-5" data-purpose="service-features">
+              <ul
+                className="text-black font-bold text-[13px] space-y-1 mb-5"
+                data-purpose="service-features"
+              >
                 <li>• Removal of leaves, debris, and built-up blockages</li>
                 <li>• Helps prevent water overflow and internal damage</li>
               </ul>
@@ -1070,7 +1161,9 @@ export default function New() {
             <h2 className="text-white text-xl md:text-2xl font-normal tracking-wide">
               Adelaide Homeowner Love
             </h2>
-            <h1 className="text-white text-5xl font-brand tracking-tight pt-1">EverBright</h1>
+            <h1 className="text-white text-5xl font-brand tracking-tight pt-1">
+              EverBright
+            </h1>
             <p className="text-white text-sm tracking-wider uppercase opacity-90 font-medium">
               Pressure Washing
             </p>
@@ -1094,11 +1187,15 @@ export default function New() {
                 </span>
               </div>
               <p className="text-black dark:text-black text-[15px] leading-relaxed mb-4 font-sans">
-                Shayal did an amazing job cleaning my gutters, very happy with the clean up afterwards too. Would highly
-                recommend
+                Shayal did an amazing job cleaning my gutters, very happy with
+                the clean up afterwards too. Would highly recommend
               </p>
               <div className="flex items-center space-x-2">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  className="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
                     fill="#4285F4"
@@ -1116,7 +1213,9 @@ export default function New() {
                     fill="#EA4335"
                   ></path>
                 </svg>
-                <span className="text-[#f58634] font-bold text-xl font-sans">5.0</span>
+                <span className="text-[#f58634] font-bold text-xl font-sans">
+                  5.0
+                </span>
                 <div className="flex space-x-0.5 text-[#f58634]">
                   <span className="material-icons text-2xl">star</span>
                   <span className="material-icons text-2xl">star</span>
@@ -1139,11 +1238,15 @@ export default function New() {
                 </span>
               </div>
               <p className="text-black dark:text-black text-[15px] leading-relaxed mb-4 font-sans">
-                Shayal did an amazing job cleaning my gutters, very happy with the clean up afterwards too. Would highly
-                recommend
+                Shayal did an amazing job cleaning my gutters, very happy with
+                the clean up afterwards too. Would highly recommend
               </p>
               <div className="flex items-center space-x-2">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  className="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
                     fill="#4285F4"
@@ -1161,7 +1264,9 @@ export default function New() {
                     fill="#EA4335"
                   ></path>
                 </svg>
-                <span className="text-[#f58634] font-bold text-xl font-sans">5.0</span>
+                <span className="text-[#f58634] font-bold text-xl font-sans">
+                  5.0
+                </span>
                 <div className="flex space-x-0.5 text-[#f58634]">
                   <span className="material-icons text-2xl">star</span>
                   <span className="material-icons text-2xl">star</span>
@@ -1184,11 +1289,15 @@ export default function New() {
                 </span>
               </div>
               <p className="text-black dark:text-black text-[15px] leading-relaxed mb-4 font-sans">
-                Shayal did an amazing job cleaning my gutters, very happy with the clean up afterwards too. Would highly
-                recommend
+                Shayal did an amazing job cleaning my gutters, very happy with
+                the clean up afterwards too. Would highly recommend
               </p>
               <div className="flex items-center space-x-2">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  className="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
                     fill="#4285F4"
@@ -1206,7 +1315,9 @@ export default function New() {
                     fill="#EA4335"
                   ></path>
                 </svg>
-                <span className="text-[#f58634] font-bold text-xl font-sans">5.0</span>
+                <span className="text-[#f58634] font-bold text-xl font-sans">
+                  5.0
+                </span>
                 <div className="flex space-x-0.5 text-[#f58634]">
                   <span className="material-icons text-2xl">star</span>
                   <span className="material-icons text-2xl">star</span>
@@ -1229,11 +1340,15 @@ export default function New() {
                 </span>
               </div>
               <p className="text-black dark:text-black text-[15px] leading-relaxed mb-4 font-sans">
-                Shayal did an amazing job cleaning my gutters, very happy with the clean up afterwards too. Would highly
-                recommend
+                Shayal did an amazing job cleaning my gutters, very happy with
+                the clean up afterwards too. Would highly recommend
               </p>
               <div className="flex items-center space-x-2">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  className="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
                     fill="#4285F4"
@@ -1251,7 +1366,9 @@ export default function New() {
                     fill="#EA4335"
                   ></path>
                 </svg>
-                <span className="text-[#f58634] font-bold text-xl font-sans">5.0</span>
+                <span className="text-[#f58634] font-bold text-xl font-sans">
+                  5.0
+                </span>
                 <div className="flex space-x-0.5 text-[#f58634]">
                   <span className="material-icons text-2xl">star</span>
                   <span className="material-icons text-2xl">star</span>
@@ -1353,7 +1470,8 @@ export default function New() {
                 href="tel:0411017366"
               >
                 <span className="text-white font-display text-3xl md:text-4xl uppercase tracking-normal">
-                  Call us Today: <span className="whitespace-nowrap">0411 017 366</span>
+                  Call us Today:{" "}
+                  <span className="whitespace-nowrap">0411 017 366</span>
                 </span>
               </a>
             </section>
@@ -1363,12 +1481,15 @@ export default function New() {
         <div className="new-section-8 relative z-10 w-full bg-background-light dark:bg-background-dark min-h-screen flex flex-col items-center justify-center p-6 text-center font-body antialiased selection:bg-navy-accent selection:text-white">
           <div className="max-w-md w-full flex flex-col items-center space-y-6">
             <div className="space-y-4">
-              <h2 className="text-primary text-3xl font-bold tracking-tight">Still not sure?</h2>
+              <h2 className="text-primary text-3xl font-bold tracking-tight">
+                Still not sure?
+              </h2>
               <h1 className="font-display text-white text-4xl leading-tight font-bold uppercase tracking-tighter drop-shadow-sm">
                 100% FREE Roof Inspections &amp; Quotes - No Obligation
               </h1>
               <p className="text-white text-lg leading-snug px-2 opacity-95">
-                Every quote is honest, detailed, and tailored to your roof, with no pushy sales tactics.
+                Every quote is honest, detailed, and tailored to your roof, with
+                no pushy sales tactics.
               </p>
             </div>
 
@@ -1385,7 +1506,7 @@ export default function New() {
                 <div className="w-full h-full rounded-full bg-black border-2 border-yellow-500 relative flex items-center justify-center">
                   <svg
                     className="absolute w-[90%] h-[90%] animate-spin-slow"
-                    style={{ animationDuration: '20s' }}
+                    style={{ animationDuration: "20s" }}
                     viewBox="0 0 100 100"
                   >
                     <defs>
@@ -1394,8 +1515,17 @@ export default function New() {
                         id="circlePath"
                       ></path>
                     </defs>
-                    <text fill="white" fontSize="8.5" fontWeight="bold" letterSpacing="2">
-                      <textPath href="#circlePath" startOffset="50%" textAnchor="middle">
+                    <text
+                      fill="white"
+                      fontSize="8.5"
+                      fontWeight="bold"
+                      letterSpacing="2"
+                    >
+                      <textPath
+                        href="#circlePath"
+                        startOffset="50%"
+                        textAnchor="middle"
+                      >
                         SATISFACTION GUARANTEED
                       </textPath>
                     </text>
@@ -1446,12 +1576,17 @@ export default function New() {
                   </div>
 
                   <div className="absolute left-2 top-1/2 -translate-y-1/2 -rotate-12 opacity-80">
-                    <i className="material-icons text-yellow-500 text-4xl" style={{ transform: 'scaleX(-1)' }}>
+                    <i
+                      className="material-icons text-yellow-500 text-4xl"
+                      style={{ transform: "scaleX(-1)" }}
+                    >
                       emoji_nature
                     </i>
                   </div>
                   <div className="absolute right-2 top-1/2 -translate-y-1/2 rotate-12 opacity-80">
-                    <i className="material-icons text-yellow-500 text-4xl">emoji_nature</i>
+                    <i className="material-icons text-yellow-500 text-4xl">
+                      emoji_nature
+                    </i>
                   </div>
                 </div>
               </div>
