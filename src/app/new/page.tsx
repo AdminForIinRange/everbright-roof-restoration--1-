@@ -396,7 +396,7 @@ export default function New() {
         <div className="relative z-10 flex flex-col items-center justify-start min-h-screen px-4 py-8 max-w-md mx-auto w-full text-center">
           <a className="w-full mb-8 group" href="tel:0411017366">
             <div className="bg-primary/90 border-4 border-blue-500 py-3 px-2 shadow-lg hover:bg-primary transition-colors duration-300">
-              <span className="text-white font-display text-2xl tracking-wide font-medium uppercase group-hover:scale-105 inline-block transition-transform">
+              <span className="text-white font-display text-1xl tracking-wide font-medium uppercase group-hover:scale-105 inline-block transition-transform">
                 Click to call: 0411 017 366
               </span>
             </div>
@@ -405,7 +405,7 @@ export default function New() {
             <h2 className="text-[#ff4444] dark:text-[#ff6666] font-medium text-xl tracking-wide text-shadow">
               Bring Your Home Back to Life!
             </h2>
-            <h1 className="text-white  px-0 font-display text-6xl text-nowrap font-bold uppercase leading-none tracking-tight text-shadow drop-shadow-xl">
+            <h1 className="text-white  px-0 font-display text-[40px] text-nowrap font-bold uppercase leading-none tracking-tight text-shadow drop-shadow-xl">
               Roof Cleaning
             </h1>
             <div className="pt-4 pb-2">
@@ -417,7 +417,7 @@ export default function New() {
             </div>
           </div>
           <div className="mb-8 text-nowrap space-y-6">
-            <div className="font-display font-bold text-[40px] leading-none text-shadow">
+            <div className="font-display font-bold text-[30px] leading-none text-shadow">
               <span className="text-white block mb-1">Spring Sale Roof</span>
               <span className="text-white">
                 Cleaning from{" "}
@@ -426,7 +426,7 @@ export default function New() {
                 </span>{" "}
               </span>
             </div>
-            <p className="text-white pt-[170px] text-lg font-medium tracking-wide text-shadow max-w-[100%] mx-auto">
+            <p className="text-white pt-[60px] text-[13px] font-medium tracking-wide text-shadow max-w-[100%] mx-auto">
               Fill out the form below to grab this offer{" "}
               <span className="font-bold uppercase">Today</span>
             </p>
