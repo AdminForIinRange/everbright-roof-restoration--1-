@@ -77,6 +77,10 @@ export default function New() {
         .text-shadow {
           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+        .impact-offer-font {
+          font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          letter-spacing: 0.01em;
+        }
         .custom-checkbox {
           appearance: none;
           background-color: transparent;
@@ -401,15 +405,15 @@ export default function New() {
               </span>
             </div>
           </a>
-          <div className="space-y-2 mb-5">
+          <div className="space-y-2 mb-6">
             <h2 className="text-[#ff4444] dark:text-[#ff6666] font-medium text-xl tracking-wide text-shadow">
               Bring Your Home Back to Life!
             </h2>
             <h1 className="text-white  px-0 font-display text-[40px] text-nowrap font-bold uppercase leading-none tracking-tight text-shadow drop-shadow-xl">
               Roof Cleaning
             </h1>
-            <div className="pt-4 pb-2">
-              <p className="text-white text-[18px] font-light leading-tight text-shadow">
+            <div className="pt-0 pb-2">
+              <p className="text-white text-[14px] font-light leading-tight text-shadow">
                 Serving Adelaide
                 <br />
                 &amp; Surrounding Areas
@@ -417,7 +421,7 @@ export default function New() {
             </div>
           </div>
           <div className="mb-6 text-nowrap space-y-6">
-            <div className="font-display font-bold text-[30px] leading-none text-shadow">
+            <div className="impact-offer-font font-bold text-[30px] leading-none text-shadow">
               <span className="text-white block mb-1">Spring Sale Roof</span>
               <span className="text-white">
                 Cleaning from{" "}
@@ -533,9 +537,9 @@ export default function New() {
 
         <div className="new-section-2 relative z-10">
           <section className="bg-white dark:bg-gray-800 px-6 py-10 text-center border-b border-gray-200 dark:border-gray-700">
-            <h1 className="text-3xl md:text-4xl font-display font-bold text-primary dark:text-white uppercase leading-tight tracking-tight mb-4">
-              Local Exterior Cleaners You <br />
-              Can <span className="text-secondary">Trust</span>
+            <h1 className="text-[22px] text-nowrap md:text-4xl font-display font-bold text-primary dark:text-white uppercase leading-tight tracking-tight mb-4">
+              Local Exterior Cleaners <br />
+              You Can <span className="text-secondary">Trust</span>
             </h1>
             <div className="flex flex-col items-center justify-center mb-8">
               <div className="flex items-center space-x-2 mb-1">
@@ -562,7 +566,7 @@ export default function New() {
                     fill="#34A853"
                   ></path>
                 </svg>
-                <span className="text-xl font-bold text-black dark:text-black">
+                <span className="text-xl font-bold text-[#FBBC05] dark:text-text-[#FBBC05]">
                   5.0
                 </span>
                 <div className="flex text-star-yellow">
