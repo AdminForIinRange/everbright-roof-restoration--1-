@@ -433,8 +433,8 @@ export default function New() {
           </div>
           <div className="mb-6 text-nowrap space-y-6 pt-4">
             <div className="font-display font-bold text-[25px] leading-none text-shadow">
-              <span className="text-white block mb-1 uppercase">Spring Sale Roof</span>
-              <span className="text-white uppercase">
+              <span className="text-[#38BDF8] block mb-1 uppercase">Spring Sale Roof</span>
+              <span className="text-[#38BDF8] uppercase">
                 Cleaning from{" "}
                 <span className="text-[#38BDF8] inline-block transform scale-110 ml-1 drop-shadow-md">
                   $899
