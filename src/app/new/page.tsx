@@ -901,10 +901,10 @@ export default function New() {
 
           <div className="py-8 text-center" data-purpose="services-overview">
             <section className="mb-6 px-6">
-              <h1 className="text-navy font-heading text-4xl font-bold uppercase mb-2">
+              <h1 className="text-primary font-heading text-4xl font-bold uppercase mb-2">
                 Our Services
               </h1>
-              <p className="text-navy font-heading text-xl font-medium">
+              <p className="text-[#38BDF8]  font-heading text-xl font-medium">
                 100% Satisfaction Guaranteed
               </p>
             </section>
@@ -931,7 +931,7 @@ export default function New() {
                 />
               </div>
 
-              <h3 className="text-navy font-heading text-3xl font-bold uppercase mb-4">
+              <h3 className="text-primary font-heading text-3xl font-bold uppercase mb-4">
                 Roof Cleaning
               </h3>
 
@@ -958,7 +958,7 @@ export default function New() {
 
               <div className="mt-4" data-purpose="cta-container">
                 <a
-                  className="block w-full border-[3px] border-blue-600 py-3 text-center text-navy font-heading text-2xl font-bold uppercase transition-colors hover:bg-blue-50"
+                  className="block w-full border-[3px] border-[#38BDF8] py-3 text-center text-primary font-heading text-2xl font-bold uppercase transition-colors hover:bg-blue-50"
                   href="#"
                   role="button"
                 >
@@ -980,7 +980,7 @@ export default function New() {
                 />
               </div>
 
-              <h3 className="text-navy font-heading text-3xl font-bold uppercase mb-4">
+              <h3 className="text-primary font-heading text-3xl font-bold uppercase mb-4">
                 Pressure Washing
               </h3>
 
@@ -1010,7 +1010,7 @@ export default function New() {
 
               <div className="mt-4" data-purpose="cta-container">
                 <a
-                  className="block w-full border-[3px] border-blue-600 py-3 text-center text-navy font-heading text-2xl font-bold uppercase transition-colors hover:bg-blue-50"
+                  className="block w-full border-[3px] border-[#38BDF8]  py-3 text-center text-primary font-heading text-2xl font-bold uppercase transition-colors hover:bg-blue-50"
                   href="#"
                   role="button"
                 >
@@ -1032,7 +1032,7 @@ export default function New() {
                 />
               </div>
 
-              <h3 className="text-navy font-heading text-3xl font-bold uppercase mb-4">
+              <h3 className="text-primary font-heading text-3xl font-bold uppercase mb-4">
                 Gutter Cleaning
               </h3>
 
@@ -1059,7 +1059,7 @@ export default function New() {
 
               <div className="mt-4" data-purpose="cta-container">
                 <a
-                  className="block w-full border-[3px] border-blue-600 py-3 text-center text-navy font-heading text-2xl font-bold uppercase transition-colors hover:bg-blue-50"
+                  className="block w-full border-[3px] border-[#38BDF8]  py-3 text-center text-primary font-heading text-2xl font-bold uppercase transition-colors hover:bg-blue-50"
                   href="#"
                   role="button"
                 >
