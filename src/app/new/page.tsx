@@ -432,19 +432,19 @@ export default function New() {
             </div>
           </div>
           <div className="w-[85%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-[25px] mb-4 ">
-            <p className=" pl-6 text-black pt-[20px] text-[14px] text-left  font-normal tracking-wide  max-w-[100%] border-b border-gray-200 pb-1">
+            <p className=" pl-6 text-black pt-[20px] text-[15px] text-left  font-normal tracking-wide  max-w-[100%] border-b border-gray-200 pb-1">
               Fill out the form below to grab <br />
-              this offer <span className="font-bold uppercase">Today</span>
+              this offer <span className="font-bold uppercase text-brand-dark">Today</span>
             </p>
-            <div className="p-6 pb-[15px] pt-[20px]">
-              <h3 className="text-primary dark:text-white font-bold text-2xl mb-6 text-left leading-tight">
+            <div className="p-6 pb-[15px] pt-[10px]">
+              <h3 className="text-primary dark:text-white font-bold text-xl mb-2 text-left leading-tight">
                 What is the size of your roof?
               </h3>
-              <form className="space-y-4">
-                <label className="flex items-center space-x-4 cursor-pointer group">
+              <form className="space-y-2">
+                <label className="flex items-center space-x-2 cursor-pointer group">
                   <div className="relative flex items-center">
                     <input
-                      className="peer h-6 w-6 cursor-pointer appearance-none border-2 border-primary bg-white transition-all checked:bg-primary hover:border-blue-600 dark:border-gray-400 dark:bg-gray-700 dark:checked:bg-primary"
+                      className="peer h-4 w-4 cursor-pointer appearance-none border-2 border-primary bg-white transition-all checked:bg-primary hover:border-blue-600 dark:border-gray-400 dark:bg-gray-700 dark:checked:bg-primary"
                       name="roof_size"
                       type="radio"
                       value="small"
@@ -468,10 +468,10 @@ export default function New() {
                     100-150m2 (Small)
                   </span>
                 </label>
-                <label className="flex items-center space-x-4 cursor-pointer group">
+                <label className="flex items-center space-x-2 cursor-pointer group">
                   <div className="relative flex items-center">
                     <input
-                      className="peer h-6 w-6 cursor-pointer appearance-none border-2 border-primary bg-white transition-all checked:bg-primary hover:border-blue-600 dark:border-gray-400 dark:bg-gray-700 dark:checked:bg-primary"
+                      className="peer h-4 w-4 cursor-pointer appearance-none border-2 border-primary bg-white transition-all checked:bg-primary hover:border-blue-600 dark:border-gray-400 dark:bg-gray-700 dark:checked:bg-primary"
                       name="roof_size"
                       type="radio"
                       value="medium"
@@ -495,10 +495,10 @@ export default function New() {
                     150-250m2(Medium)
                   </span>
                 </label>
-                <label className="flex items-center space-x-4 cursor-pointer group">
+                <label className="flex items-center space-x-2 cursor-pointer group">
                   <div className="relative flex items-center">
                     <input
-                      className="peer h-6 w-6 cursor-pointer appearance-none border-2 border-primary bg-white transition-all checked:bg-primary hover:border-blue-600 dark:border-gray-400 dark:bg-gray-700 dark:checked:bg-primary"
+                      className="peer h-4 w-4 cursor-pointer appearance-none border-2 border-primary bg-white transition-all checked:bg-primary hover:border-blue-600 dark:border-gray-400 dark:bg-gray-700 dark:checked:bg-primary"
                       name="roof_size"
                       type="radio"
                       value="big"
