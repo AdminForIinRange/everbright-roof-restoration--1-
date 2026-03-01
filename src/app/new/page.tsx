@@ -633,7 +633,7 @@ export default function New() {
                 pressure washer isn’t how you want to spend your weekend.
               </p>
             </div>
-            <h3 className="mt-8 text-left text-xl font-bold text-white">
+            <h3 className="mt-12 text-left text-2xl impact-offer-font text-white">
               But waiting comes with a cost:
             </h3>
           </section>
