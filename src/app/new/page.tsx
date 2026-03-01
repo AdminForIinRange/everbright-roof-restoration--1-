@@ -387,16 +387,27 @@ export default function New() {
         }
       `}</style>
 
-      <main className="new-hero-light font-body antialiased text-gray-900 bg-background-light dark:bg-background-dark min-h-screen relative">
-        <div className="fixed inset-0 z-0">
-          <img
-            alt="Terracotta roof tiles under a blue sky"
-            className="w-full h-full object-cover object-top "
-            src="/newhosuebackground.png"
-          />
+       <main className="new-hero-light font-body antialiased text-gray-900 bg-background-light dark:bg-background-dark min-h-screen relative">
+         <div className="fixed inset-0 z-0">
+          <div className="flex h-full w-full">
+            <div className="relative h-full w-1/2">
+              <img
+                alt="Exterior cleaning in progress"
+                className="h-full w-full object-cover object-[100%_100%]"
+                src="/heroimg/7.png"
+              />
+            </div>
+            <div className="relative h-full w-1/2">
+              <img
+                alt="Freshly cleaned exterior surface"
+                className="h-full w-full object-cover object-[0%_100%]"
+                src="/heroimg/8.png"
+              />
+            </div>
+          </div>
           <div className="absolute inset-0 bg-black/75 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/72 to-black/88"></div>
-        </div>
+         </div>
         <div className="relative z-10 flex flex-col items-center justify-start min-h-screen px-4 py-8 pt-[10px] max-w-md mx-auto w-full text-center">
           <a className="w-[250px] mb-8 group" href="tel:0411017366">
             <div className="bg-primary/90 border-4 border-blue-500 py-1 px-[0] shadow-lg hover:bg-primary transition-colors duration-300">
