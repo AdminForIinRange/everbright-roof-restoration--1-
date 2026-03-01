@@ -139,7 +139,7 @@ export default function New() {
 
         /* Section-local token overrides for the second pasted Tailwind snippet */
         .new-section-2 .bg-primary {
-          background-color: #0C3C60 !important;
+          background-color: #0B1E2B !important;
         }
         .new-section-2 .text-primary {
           color: #0C3C60 !important;
@@ -159,7 +159,7 @@ export default function New() {
 
         /* Section-local token overrides for the third pasted Tailwind snippet */
         .new-section-3 .bg-primary {
-          background-color: #0F4C75 !important;
+          background-color: #0B1E2B !important;
         }
         .new-section-3.bg-background-light,
         .new-section-3 .bg-background-light {
@@ -179,7 +179,7 @@ export default function New() {
 
         /* Section-local custom classes for the fourth pasted snippet */
         .new-section-4 {
-          --bg-dark-blue: #0b2d4b;
+          --bg-dark-blue: #0B1E2B;
           --accent-blue: #3b82f6;
           --card-border: #1a4163;
           --checkmark-green: #22c55e;
@@ -232,7 +232,7 @@ export default function New() {
         .new-section-6,
         .new-section-6.bg-primary,
         .new-section-6 .bg-primary {
-          background-color: #0e335b !important;
+          background-color: #0B1E2B !important;
           background-image: none !important;
         }
         .new-section-6 .bg-card-light {
@@ -271,13 +271,13 @@ export default function New() {
           background-image: none !important;
         }
         .new-section-7 .bg-primary {
-          background-color: #11304e !important;
+          background-color: #0B1E2B !important;
         }
         .new-section-7 .bg-secondary {
-          background-color: #1a4269 !important;
+          background-color: #0B1E2B !important;
         }
         .new-section-7 .hover\\:bg-secondary:hover {
-          background-color: #1a4269 !important;
+          background-color: #0B1E2B !important;
         }
         .new-section-7 .text-primary {
           color: #11304e !important;
@@ -301,12 +301,12 @@ export default function New() {
         .new-section-8,
         .new-section-8.bg-background-light,
         .new-section-8 .bg-background-light {
-          background-color: #0E2F50 !important;
+          background-color: #0B1E2B !important;
           background-image: none !important;
         }
         .dark .new-section-8.dark\\:bg-background-dark,
         .dark .new-section-8 .dark\\:bg-background-dark {
-          background-color: #0B2540 !important;
+          background-color: #0B1E2B !important;
           background-image: none !important;
         }
         .new-section-8 .text-primary {
@@ -347,10 +347,10 @@ export default function New() {
           position: relative;
           z-index: 10;
           width: 100%;
-          background: #11304e;
+          background: #0B1E2B;
         }
         .new-page-footer footer {
-          background-color: #11304e !important;
+          background-color: #0B1E2B !important;
           background-image: none !important;
         }
         @keyframes new-section-8-spin {
@@ -648,7 +648,7 @@ export default function New() {
 
         <div className="new-section-3 relative z-10 bg-background-light dark:bg-background-dark font-body antialiased min-h-screen flex justify-center">
           <div className="w-full max-w-md mx-auto p-4 space-y-6">
-            <section className="bg-primary text-white rounded-2xl p-6 shadow-lg relative overflow-hidden">
+            <section className="bg-[#0B1E2B] text-white rounded-2xl p-6 shadow-lg relative overflow-hidden">
               <div className="absolute top-4 left-4 flex space-x-1.5 opacity-30">
                 <div className="w-3 h-3 rounded-full bg-black/40"></div>
                 <div className="w-3 h-3 rounded-full bg-black/40"></div>
