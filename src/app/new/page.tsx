@@ -405,7 +405,7 @@ export default function New() {
               />
             </div>
           </div>
-          <div className="absolute inset-0 bg-black/75 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-black/80 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/72 to-black/88"></div>
          </div>
         <div className="relative z-10 flex flex-col items-center justify-start min-h-screen px-4 py-8 pt-[10px] max-w-md mx-auto w-full text-center">
