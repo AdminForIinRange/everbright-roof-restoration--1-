@@ -824,7 +824,7 @@ export default function New() {
                 <img
                   alt="Dirty roof covered in lichen and mold before pressure washing"
                   className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-105"
-                  src="/beforeafter/5.png"
+                  src="/beforeAfter/5.png"
                 />
               </div>
               <div className="relative w-full rounded-lg overflow-hidden shadow-md group">
@@ -836,7 +836,7 @@ export default function New() {
                 <img
                   alt="Clean and bright red terracotta roof after professional cleaning"
                   className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-105"
-                  src="/beforeafter/6.png"
+                  src="/beforeAfter/6.png"
                 />
               </div>
             </section>
