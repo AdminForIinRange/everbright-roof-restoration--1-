@@ -596,7 +596,7 @@ export default function New() {
             <RoofReviewsCarousel />
           </section>
 
-          <section className="bg-primary flex-grow px-6 py-12 pb-16 text-center relative overflow-hidden">
+          <section className="bg-[#0B1E2B] flex-grow px-6 py-12 pb-16 text-center relative overflow-hidden">
             <div className="flex flex-col items-center justify-center mb-10">
               <div className="mb-2 relative w-62 max-w-full">
                 <img

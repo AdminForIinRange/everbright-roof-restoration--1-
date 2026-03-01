@@ -25,6 +25,8 @@ const DragScroll: React.FC<DragScrollProps> = ({
   const isHoveringRef = useRef(false);
   const isTouchingRef = useRef(false);
   const rafRef = useRef<number | null>(null);
+  const lastFrameTimeRef = useRef<number | null>(null);
+  const preciseScrollLeftRef = useRef(0);
   const [isDragging, setIsDragging] = useState(false);
 
   const getLoopWidth = () => {
@@ -52,6 +54,8 @@ const DragScroll: React.FC<DragScrollProps> = ({
     } else if (container.scrollLeft <= 0) {
       container.scrollLeft += loopWidth;
     }
+
+    preciseScrollLeftRef.current = container.scrollLeft;
   };
 
   useEffect(() => {
@@ -67,18 +71,29 @@ const DragScroll: React.FC<DragScrollProps> = ({
       }
     }
 
+    preciseScrollLeftRef.current = container.scrollLeft;
+    lastFrameTimeRef.current = null;
+
     const handleScroll = () => {
       normalizeLoopPosition();
+      preciseScrollLeftRef.current = container.scrollLeft;
     };
 
     container.addEventListener('scroll', handleScroll, { passive: true });
 
     if (autoScroll) {
-      const animate = () => {
+      const animate = (timestamp: number) => {
+        const lastTimestamp = lastFrameTimeRef.current ?? timestamp;
+        const deltaMs = Math.min(timestamp - lastTimestamp, 32);
+        lastFrameTimeRef.current = timestamp;
         const shouldPause = isDragging || isHoveringRef.current || isTouchingRef.current;
         if (!shouldPause && containerRef.current) {
-          containerRef.current.scrollLeft += autoScrollSpeed;
+          const pixelsPerSecond = autoScrollSpeed * 60;
+          preciseScrollLeftRef.current += (pixelsPerSecond * deltaMs) / 1000;
+          containerRef.current.scrollLeft = Math.round(preciseScrollLeftRef.current);
           normalizeLoopPosition();
+        } else if (containerRef.current) {
+          preciseScrollLeftRef.current = containerRef.current.scrollLeft;
         }
         rafRef.current = requestAnimationFrame(animate);
       };
@@ -91,6 +106,7 @@ const DragScroll: React.FC<DragScrollProps> = ({
         cancelAnimationFrame(rafRef.current);
       }
       rafRef.current = null;
+      lastFrameTimeRef.current = null;
     };
   }, [autoScroll, autoScrollSpeed, isDragging, loop]);
 
@@ -110,6 +126,7 @@ const DragScroll: React.FC<DragScrollProps> = ({
     activePointerIdRef.current = event.pointerId;
     startXRef.current = event.clientX;
     scrollLeftRef.current = containerRef.current.scrollLeft;
+    preciseScrollLeftRef.current = containerRef.current.scrollLeft;
     event.currentTarget.setPointerCapture(event.pointerId);
   };
 
@@ -121,6 +138,7 @@ const DragScroll: React.FC<DragScrollProps> = ({
     event.preventDefault();
     const deltaX = event.clientX - startXRef.current;
     containerRef.current.scrollLeft = scrollLeftRef.current - deltaX;
+    preciseScrollLeftRef.current = containerRef.current.scrollLeft;
   };
 
   const handlePointerEnd = (event: React.PointerEvent<HTMLDivElement>) => {
@@ -133,6 +151,9 @@ const DragScroll: React.FC<DragScrollProps> = ({
     activePointerIdRef.current = null;
     isMouseDragRef.current = false;
     isTouchingRef.current = false;
+    if (containerRef.current) {
+      preciseScrollLeftRef.current = containerRef.current.scrollLeft;
+    }
     setIsDragging(false);
   };
 
