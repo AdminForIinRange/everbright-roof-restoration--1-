@@ -899,9 +899,9 @@ export default function New() {
             </h2>
           </header>
 
-          <div className="py-8 text-center" data-purpose="services-overview">
+          <div className="py-8 pt-[0px] text-center" data-purpose="services-overview">
             <section className="mb-6 px-6">
-              <h1 className="text-primary font-heading text-4xl font-bold uppercase mb-2">
+              <h1 className="text-primary font-heading text-5xl font-bold uppercase mb-2">
                 Our Services
               </h1>
               <p className="text-[#38BDF8]  font-heading text-xl font-medium">
