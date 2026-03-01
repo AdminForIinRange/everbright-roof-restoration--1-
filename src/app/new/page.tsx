@@ -435,7 +435,7 @@ export default function New() {
               this offer <span className="font-bold uppercase">Today</span>
             </p>
           </div>
-          <div className="w-[85%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-auto mb-4">
+          <div className="w-[85%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-[0px] mb-4">
             <div className="p-6 pb-8">
               <h3 className="text-primary dark:text-white font-bold text-2xl mb-6 text-left leading-tight">
                 What is the size of your roof?
