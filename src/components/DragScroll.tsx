@@ -23,6 +23,7 @@ const DragScroll: React.FC<DragScrollProps> = ({
   const activePointerIdRef = useRef<number | null>(null);
   const isMouseDragRef = useRef(false);
   const isHoveringRef = useRef(false);
+  const isTouchingRef = useRef(false);
   const rafRef = useRef<number | null>(null);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -74,7 +75,7 @@ const DragScroll: React.FC<DragScrollProps> = ({
 
     if (autoScroll) {
       const animate = () => {
-        const shouldPause = isDragging || isHoveringRef.current;
+        const shouldPause = isDragging || isHoveringRef.current || isTouchingRef.current;
         if (!shouldPause && containerRef.current) {
           containerRef.current.scrollLeft += autoScrollSpeed;
           normalizeLoopPosition();
@@ -98,12 +99,11 @@ const DragScroll: React.FC<DragScrollProps> = ({
       return;
     }
 
-    setIsDragging(true);
-
     if (event.pointerType !== 'mouse') {
       return;
     }
 
+    setIsDragging(true);
     event.preventDefault();
     isMouseDragRef.current = true;
     activePointerIdRef.current = event.pointerId;
@@ -150,6 +150,15 @@ const DragScroll: React.FC<DragScrollProps> = ({
       onPointerUp={handlePointerEnd}
       onPointerCancel={handlePointerEnd}
       onPointerLeave={handlePointerEnd}
+      onTouchStart={() => {
+        isTouchingRef.current = true;
+      }}
+      onTouchEnd={() => {
+        isTouchingRef.current = false;
+      }}
+      onTouchCancel={() => {
+        isTouchingRef.current = false;
+      }}
     >
       {children}
     </div>

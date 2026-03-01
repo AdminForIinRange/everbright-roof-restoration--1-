@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import DragScroll from '@/components/DragScroll';
 import { buildServiceReviews } from '@/services/shared/reviews';
@@ -23,42 +23,40 @@ function formatInitials(name: string) {
 export default function RoofReviewsCarousel() {
   const reviews = useMemo(() => buildServiceReviews('roof restoration'), []);
 
-  const [reduceMotion, setReduceMotion] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const media = window.matchMedia?.('(prefers-reduced-motion: reduce)');
-    if (!media) return;
-
-    const update = () => setReduceMotion(media.matches);
-    update();
-
-    if (typeof media.addEventListener === 'function') {
-      media.addEventListener('change', update);
-      return () => media.removeEventListener('change', update);
-    }
-
-    media.addListener(update);
-    return () => media.removeListener(update);
-  }, []);
-
   return (
     <DragScroll
       className="overflow-x-auto no-scrollbar pb-4 -mx-6 px-0"
       loop
-      autoScroll={!reduceMotion}
+      autoScroll
       autoScrollSpeed={0.7}
     >
       <div className="flex flex-nowrap space-x-1 w-max">
         {reviews.map((review) => (
-          <ReviewCard key={`${review.name}-${review.date}`} review={review} />
+          <ReviewCard key={buildReviewKey(review)} review={review} />
         ))}
         {reviews.map((review) => (
-          <ReviewCard key={`${review.name}-${review.date}-dup`} review={review} />
+          <ReviewCard key={`${buildReviewKey(review)}-dup`} review={review} />
         ))}
       </div>
     </DragScroll>
   );
+}
+
+function buildReviewKey(review: {
+  name: string;
+  date: string;
+  reviewText: string;
+  stars: number;
+}) {
+  return `${review.name}-${review.date}-${review.stars}-${hashString(review.reviewText)}`;
+}
+
+function hashString(input: string) {
+  let hash = 5381;
+  for (let i = 0; i < input.length; i += 1) {
+    hash = (hash * 33) ^ input.charCodeAt(i);
+  }
+  return (hash >>> 0).toString(36);
 }
 
 function ReviewCard({

@@ -12,7 +12,7 @@ const serviceReviews: Record<string, ServiceReview[]> = {
       name: 'Isabell Hann',
       date: 'a month ago',
       reviewText:
-        "Shayal and his team were fantastic to deal with. He cleaned our terracotta roof and the result was excellent.",
+        "Shayal and his team were fantastic to deal with. He cleaned our terracotta roof and did an amazing job. Great communication the whole way through and we're very happy with the results. Highly recommend his service.",
       stars: 5,
       platform: 'google',
     },
@@ -20,7 +20,7 @@ const serviceReviews: Record<string, ServiceReview[]> = {
       name: 'Mairi Ivy',
       date: '2 months ago',
       reviewText:
-        'Great roof clean from start to finish. They arrived on time, removed mould properly, and cleaned up well.',
+        'Shayal and his team did a great job cleaning our roof. They came on time, cleaned our roof that was covered in mould, and cleaned up after the job. Highly recommend the team!',
       stars: 5,
       platform: 'google',
     },
@@ -28,7 +28,15 @@ const serviceReviews: Record<string, ServiceReview[]> = {
       name: 'Yama Amiri',
       date: 'a month ago',
       reviewText:
-        'Our roof was heavily covered in mould and now it looks new again. Very professional team.',
+        'Shayal and his team did an amazing job cleaning our roof that was covered in mould. The roof now looks new and refreshed.',
+      stars: 5,
+      platform: 'google',
+    },
+    {
+      name: 'Andy',
+      date: '3 months ago',
+      reviewText:
+        'From the moment I first dealt with Shayal he was polite and professional. Very easy to deal with, upfront and honest. Did an amazing job on pressure washing my roof.',
       stars: 5,
       platform: 'google',
     },
@@ -36,7 +44,7 @@ const serviceReviews: Record<string, ServiceReview[]> = {
       name: 'Yogesh Mandavkar',
       date: 'a month ago',
       reviewText:
-        'Roof cleaning was done very professionally and the site was left clean. Friendly and respectful crew.',
+        'Roof cleaning was done very professionally and all the mess was cleaned after work. Place looks clean and fresh.',
       stars: 5,
       platform: 'google',
     },
@@ -44,7 +52,7 @@ const serviceReviews: Record<string, ServiceReview[]> = {
       name: 'Sudip Ramdam',
       date: '8 months ago',
       reviewText:
-        'Our roof soft-wash removed years of grime and moss. Great finish and no damage to the tiles.',
+        'We had our roof soft-washed and the results were better than expected. Years of grime and moss were gone without damage.',
       stars: 5,
       platform: 'google',
     },
@@ -248,5 +256,18 @@ const fallbackReviews: ServiceReview[] = [
 
 export function buildServiceReviews(serviceName: string): ServiceReview[] {
   const key = serviceName.trim().toLowerCase();
-  return serviceReviews[key] ?? fallbackReviews;
+  const primaryReviews = serviceReviews[key];
+  if (!primaryReviews) {
+    return fallbackReviews;
+  }
+
+  const seen = new Set<string>();
+  const merged = [...primaryReviews, ...fallbackReviews].filter((review) => {
+    const signature = `${review.name}::${review.reviewText}`;
+    if (seen.has(signature)) return false;
+    seen.add(signature);
+    return true;
+  });
+
+  return merged;
 }
