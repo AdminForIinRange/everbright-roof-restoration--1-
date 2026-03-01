@@ -397,15 +397,15 @@ export default function New() {
           <div className="absolute inset-0 bg-black/75 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/72 to-black/88"></div>
         </div>
-        <div className="relative z-10 flex flex-col items-center justify-start min-h-screen px-4 py-8 max-w-md mx-auto w-full text-center">
-          <a className="w-full mb-8 group" href="tel:0411017366">
-            <div className="bg-primary/90 border-4 border-blue-500 py-3 px-2 shadow-lg hover:bg-primary transition-colors duration-300">
-              <span className="text-white font-display text-1xl tracking-wide font-medium uppercase group-hover:scale-105 inline-block transition-transform">
+        <div className="relative z-10 flex flex-col items-center justify-start min-h-screen px-4 py-8 pt-[10px] max-w-md mx-auto w-full text-center">
+          <a className="w-[250px] mb-8 group" href="tel:0411017366"  >
+            <div className="bg-primary/90 border-4 border-blue-500 py-1 px-[0] shadow-lg hover:bg-primary transition-colors duration-300">
+              <span className="text-white font-display text-1xl tracking-wid font-medium uppercase group-hover:scale-105 inline-block transition-transform">
                 Click to call: 0411 017 366
               </span>
             </div>
           </a>
-          <div className="space-y-2 mb-6">
+          <div className="space-y-2 mb-6 mt-[-20px]" >
             <h2 className="text-[#ff4444] dark:text-[#ff6666] font-medium text-xl tracking-wide text-shadow">
               Bring Your Home Back to Life!
             </h2>
@@ -421,7 +421,7 @@ export default function New() {
             </div>
           </div>
           <div className="mb-6 text-nowrap space-y-6">
-            <div className="font-display font-bold text-[28px] leading-none text-shadow">
+            <div className="font-display font-bold text-[25px] leading-none text-shadow">
               <span className="text-white block mb-1">Spring Sale Roof</span>
               <span className="text-white">
                 Cleaning from{" "}
@@ -430,7 +430,7 @@ export default function New() {
                 </span>{" "}
               </span>
             </div>
-            <p className="text-white pt-[50px] text-[14px] font-medium tracking-wide text-shadow max-w-[100%] mx-auto">
+            <p className="text-white pt-[20px] text-[14px]  font-normal tracking-wide text-shadow max-w-[100%] mx-auto">
               Fill out the form below to grab <br />
               this offer <span className="font-bold uppercase">Today</span>
             </p>
