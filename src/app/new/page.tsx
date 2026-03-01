@@ -549,7 +549,7 @@ export default function New() {
 
         <div className="new-section-2 relative z-10">
           <section className="bg-white dark:bg-gray-800 px-6 py-10 text-center border-b border-gray-200 dark:border-gray-700">
-            <h1 className="text-[22px] text-nowrap md:text-4xl font-display font-bold text-primary dark:text-white uppercase leading-tight tracking-tight mb-4">
+            <h1 className="text-[25px] text-nowrap md:text-4xl font-display font-bold text-primary dark:text-white uppercase leading-tight tracking-tight mb-4">
               Local Exterior Cleaners <br />
               You Can <span className="text-secondary">Trust</span>
             </h1>
