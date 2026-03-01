@@ -4,6 +4,7 @@ import Script from "next/script";
 import Footer from "@/components/Footer";
 import { buildPageMetadata } from "@lib/seo";
 import ForceLightMode from "./ForceLightMode";
+import RoofReviewsCarousel from "./RoofReviewsCarousel";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "New",
@@ -588,114 +589,11 @@ export default function New() {
                   <i className="material-icons text-lg">star</i>
                 </div>
               </div>
-              <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+             <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                 Verified 5-Stars Reviews
               </p>
             </div>
-            <div className="flex overflow-x-auto space-x-4 pb-4 px-2 no-scrollbar snap-x">
-              <div className="bg-primary flex-shrink-0 w-64 rounded-xl p-4 text-left shadow-lg snap-center relative">
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-8 h-8 rounded-full overflow-hidden bg-gray-300">
-                    <img
-                      alt="Customer Profile"
-                      className="w-full h-full object-cover"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4gBR53wYlahjFfmMROMhBckEuHm32FsvQvzRvTA8qqUHJk11GG3u2RaXbkbhvgKf32k_flqr20sOk42gSiljd9pl0CXKr58sFs84NgpWdaNUeb2rqTyNPXLw5GpFYhogBR01wZDHJAzSEG2FDZOg8707VKjABbpfAbS48tJ3ypBXziPED1fkYIEHZ1bhwC50zLuhscr_cQO9x4wBCg-m_F7DBwycgLe9ljUFm1v0S_B4DKDr6PfegOBqGjCAkFwb2YAzgWjn-yHw"
-                    />
-                  </div>
-                  <span className="text-star-yellow font-bold text-sm">
-                    5.0
-                  </span>
-                  <div className="flex text-star-yellow">
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                  </div>
-                </div>
-                <p className="text-white text-xs leading-relaxed mb-3 font-light">
-                  "Really solid cleaning by Shuyal and his team, they did an
-                  amazing job! They arrived on time, had excellent
-                  communication, and left everything spotless. We will
-                  definitely be hiring them again for our other properties."
-                </p>
-              </div>
-              <div className="bg-primary flex-shrink-0 w-64 rounded-xl p-4 text-left shadow-lg snap-center">
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-8 h-8 rounded-full overflow-hidden bg-gray-300">
-                    <img
-                      alt="Customer Profile"
-                      className="w-full h-full object-cover"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3V_R9Hef2am2ULtwbJYauO8tr8MFWcH4XHHhB727NqRhwRgwNLhQbudgTTJEmaNwvsPFs_bVFR0uaN4tLFGhXEQTg5OB3UNgiasRURtSS3kIWwt1gokskxsTOuZF_o2DyeewL-TtTaHqnJ3zB17y87DZmOY542Z025R5M6DK6WfWCKQ5GkxYISBvIn7_2qFIUJNg_JWFRv8BgWH_TpWRK4m8WAacmTDzcm3EZDRs3_3dw8LAs2IBuK2Jkv2ihKhHsz6vx1T9aOA"
-                    />
-                  </div>
-                  <span className="text-star-yellow font-bold text-sm">
-                    5.0
-                  </span>
-                  <div className="flex text-star-yellow">
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                  </div>
-                </div>
-                <p className="text-white text-xs leading-relaxed mb-3 font-light">
-                  "Shuyal did an amazing job cleaning my gutters, very happy
-                  with the clean up afterwards too. Would highly recommend!"
-                </p>
-              </div>
-              <div className="bg-primary flex-shrink-0 w-64 rounded-xl p-4 text-left shadow-lg snap-center">
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-8 h-8 rounded-full overflow-hidden bg-gray-300">
-                    <img
-                      alt="Customer Profile"
-                      className="w-full h-full object-cover"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIG75-c3ChPeb87A-B_0-sB_Yy2kSc63gpNoF0edCN3pJGn52TTOIb14kJbWqxPwDAe08fqYRjueqWVEdaaRNpjqobX7DrFTveiKaUYiesBz2SLPZnJiT5zC-lYIAJJBs2486epNtg7FdMcR3QzbCtoyCElS8U0t6nVrGea8lDJiAgv66acafCS2G8O7Ak38sWnHskxTkbZius_GmglRmQaVWFlMDnEYRROPqiWsrk7RHO-MDxIEB-3cCBQaDMtaBPztJylnM40SI"
-                    />
-                  </div>
-                  <span className="text-star-yellow font-bold text-sm">
-                    5.0
-                  </span>
-                  <div className="flex text-star-yellow">
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                  </div>
-                </div>
-                <p className="text-white text-xs leading-relaxed mb-3 font-light">
-                  "Fantastic service. The team was professional and the results
-                  were beyond my expectations. My roof looks brand new again."
-                </p>
-              </div>
-              <div className="bg-primary flex-shrink-0 w-64 rounded-xl p-4 text-left shadow-lg snap-center">
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-8 h-8 rounded-full overflow-hidden bg-gray-300">
-                    <img
-                      alt="Customer Profile"
-                      className="w-full h-full object-cover"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKke2ZwMzUruxHWpvXzKOnrEvl3RToOMqis7QCYBVZzj92BUcu63qGrwHnky7bIM0ISLf-gpZ7R2BJ_cnxdj6LIYfCfxXD1rGs7gae1o36JmF9JBdN5V05wTvMR9MzMXLmSYERjhUOkoWbR3vB2MC7G4AqebWM8KSnPQDFHzjKfOgEYFKgStvIrsZ7CTz65Rt-4CEFhQzQb8PBOPNR-750PZiC6CtCpTsN-vn16YLcwBihxlx77iA-7qjLyjTUrH9g15Dy7hzH1t4"
-                    />
-                  </div>
-                  <span className="text-star-yellow font-bold text-sm">
-                    5.0
-                  </span>
-                  <div className="flex text-star-yellow">
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                    <i className="material-icons text-xs">star</i>
-                  </div>
-                </div>
-                <p className="text-white text-xs leading-relaxed mb-3 font-light">
-                  "Prompt, polite and thorough. I've recommended EverBright to
-                  all my neighbors already. Great value for the price."
-                </p>
-              </div>
-            </div>
+            <RoofReviewsCarousel />
           </section>
 
           <section className="bg-primary flex-grow px-6 py-12 pb-16 text-center relative overflow-hidden">
