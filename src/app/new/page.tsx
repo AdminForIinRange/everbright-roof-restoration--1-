@@ -410,17 +410,17 @@ export default function New() {
          </div>
         <div className="relative z-10 flex flex-col items-center justify-start min-h-screen px-4 py-8 pt-[10px] max-w-md mx-auto w-full text-center">
           <a className="w-[250px] mb-8 group" href="tel:0411017366">
-            <div className="bg-primary/90 border-4 border-blue-500 py-1 px-[0] shadow-lg hover:bg-primary transition-colors duration-300">
+            <div className="bg-primary/90 border-4 border-[#38BDF8] py-1 px-[0] shadow-lg hover:bg-primary transition-colors duration-300">
               <span className="text-white font-display text-1xl tracking-wid font-medium uppercase group-hover:scale-105 inline-block transition-transform">
                 Click to call: 0411 017 366
               </span>
             </div>
           </a>
           <div className="space-y-2 mb-6 mt-[-00px]">
-            <h2 className="text-white  font-medium text-xl tracking-wide text-shadow">
+            <h2 className="text-[#38BDF8] font-medium text-xl tracking-wide text-shadow">
               Bring Your Home Back to Life!
             </h2>
-            <h1 className="text-[#38BDF8] px-0 impact-offer-font text-[60px] text-nowrap font-bold uppercase leading-none tracking-tight text-shadow drop-shadow-xl">
+            <h1 className="text-white  px-0 impact-offer-font text-[55px] text-nowrap font-bold uppercase leading-none tracking-tight text-shadow drop-shadow-xl">
               Roof Cleaning
             </h1>
             <div className="pt-0 pb-2">
@@ -433,8 +433,8 @@ export default function New() {
           </div>
           <div className="mb-6 text-nowrap space-y-6 pt-4">
             <div className="font-display font-bold text-[25px] leading-none text-shadow">
-              <span className="text-[#38BDF8] block mb-1 uppercase">Spring Sale Roof</span>
-              <span className="text-[#38BDF8] uppercase">
+              <span className="text-white block mb-1 uppercase">Spring Sale Roof</span>
+              <span className="text-white uppercase">
                 Cleaning from{" "}
                 <span className="text-[#38BDF8] inline-block transform scale-110 ml-1 drop-shadow-md">
                   $899
