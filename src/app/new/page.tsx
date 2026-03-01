@@ -436,7 +436,7 @@ export default function New() {
               Fill out the form below to grab <br />
               this offer <span className="font-bold uppercase">Today</span>
             </p>
-            <div className="p-6 pb-8 pt-[20px]">
+            <div className="p-6 pb-[15px] pt-[20px]">
               <h3 className="text-primary dark:text-white font-bold text-2xl mb-6 text-left leading-tight">
                 What is the size of your roof?
               </h3>
@@ -522,7 +522,7 @@ export default function New() {
                     250m2+ (Big)
                   </span>
                 </label>
-                <div className="pt-6">
+                <div className="pt-0">
                   <button
                     className="hero-next-button w-full bg-primary hover:bg-blue-900 text-white font-bold text-3xl py-4 rounded shadow-lg transition-transform transform active:scale-95 uppercase tracking-wide"
                     type="submit"
