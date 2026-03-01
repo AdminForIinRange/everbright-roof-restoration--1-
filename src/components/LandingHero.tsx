@@ -205,7 +205,7 @@ const services = [
     ],
     image: "/genrealPhotos/RoofcleaingServiceCard.webp",
     alt: "Professional worker cleaning a tiled roof with a pressure washer",
-    href: "/roof-restoration",
+    href: "/new",
   },
   {
     title: "Pressure Washing",

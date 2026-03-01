@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Script from "next/script";
 
 import Footer from "@/components/Footer";
@@ -55,6 +56,21 @@ const secondaryRoofCleaningReviews: RoofCleaningReview[] = [
     reviewText:
       "We had our roof soft-washed by Shayal from EverBright the results were honestly better than we expected. The roof had years of built-up grime, moss, and black streaks, now it looks clean and refreshed without any damage to the tiles.",
     stars: 5,
+  },
+];
+
+const homepageDirtyExteriorComparisons = [
+  {
+    before: "/scrollerImage/1.webp",
+    after: "/scrollerImage/2.webp",
+    beforeAlt: "Exterior before cleaning result 1",
+    afterAlt: "Exterior after cleaning result 1",
+  },
+  {
+    before: "/scrollerImage/5.webp",
+    after: "/scrollerImage/6.webp",
+    beforeAlt: "Exterior before cleaning result 2",
+    afterAlt: "Exterior after cleaning result 2",
   },
 ];
 
@@ -125,6 +141,61 @@ function RoofCleaningReviewCard({
         </div>
       </div>
     </div>
+  );
+}
+
+function TransformationComparisonCard({
+  comparison,
+  index,
+}: {
+  comparison: (typeof homepageDirtyExteriorComparisons)[number];
+  index: number;
+}) {
+  return (
+    <article className="w-full rounded-sm bg-[#0B1E2B] p-3 shadow-2xl">
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <span className="font-display text-xl uppercase tracking-wide text-white">
+          Project {index + 1}
+        </span>
+        <span className="text-[11px] uppercase tracking-[0.24em] text-white/60">
+          Before / After
+        </span>
+      </div>
+
+      <div className="grid grid-cols-2 gap-2">
+        <div className="space-y-2">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-sm border border-white/10 bg-slate-900">
+            <Image
+              src={comparison.before}
+              alt={comparison.beforeAlt}
+              fill
+              sizes="(min-width: 768px) 220px, calc((100vw - 42px) / 2)"
+              quality={62}
+              className="object-cover"
+            />
+          </div>
+          <span className="block bg-white px-3 py-2 text-center font-display text-xl uppercase tracking-wide text-primary">
+            Before
+          </span>
+        </div>
+
+        <div className="space-y-2">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-sm border border-white/10 bg-slate-900">
+            <Image
+              src={comparison.after}
+              alt={comparison.afterAlt}
+              fill
+              sizes="(min-width: 768px) 220px, calc((100vw - 42px) / 2)"
+              quality={62}
+              className="object-cover"
+            />
+          </div>
+          <span className="block bg-white px-3 py-2 text-center font-display text-xl uppercase tracking-wide text-primary">
+            After
+          </span>
+        </div>
+      </div>
+    </article>
   );
 }
 
@@ -403,13 +474,6 @@ export default function New() {
         .new-section-7.font-sans,
         .new-section-7 .font-sans {
           font-family: 'Roboto Condensed', sans-serif !important;
-        }
-        .new-section-7 .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .new-section-7 .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
         }
 
         /* Section-local custom classes for the eighth pasted snippet */
@@ -1214,79 +1278,14 @@ export default function New() {
               </h1>
             </header>
 
-            <section className="w-full overflow-x-auto hide-scrollbar pb-4 -mx-4 px-4">
-              <div className="flex flex-nowrap gap-1 min-w-max">
-                <div className="relative w-40 h-72 rounded-sm overflow-hidden flex-shrink-0 group">
-                  <img
-                    alt="Dirty stone patio covered in moss and grime"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm2KfVT7Ky3pFy51322DwDZ6cowBsBxsmbJIEstK5pZ2DkR2GH-jyP7eJud-Xt9r0lBPpRE_PImxlu-mx8KCPr05IYguFiaKKRZOMXl0_DEeEiGrNWrnSlbro2x-RSP3nxTIqJ3HNH9SZ7Krlik-V8ZKw8RFvrU0URc90lw-fBlvukUs-h7hypRii_mHHXljXDzfaiKcGtqIvJtxEoQ3kysAF4q4I1IDrHYsuASEhRxWNu3P-_Zd4TwNNiUzOeAQVIEUz_jgPZIKQ"
-                  />
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-primary text-white font-display uppercase text-lg px-3 py-1 tracking-wider shadow-lg">
-                      Before
-                    </span>
-                  </div>
-                </div>
-
-                <div className="relative w-40 h-72 rounded-sm overflow-hidden flex-shrink-0 group">
-                  <img
-                    alt="Clean pristine stone patio after pressure washing"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUHWA2mPQ5FbA8vmSuyGBu-myPtZl_R860BYiKKx-ZBevrOt2zBqwEODAcDrSYB0dds5v9sRP-Wwlw9Wh09oM6ktnOWizci3x13lV7UFFBS0QMAj3VT1L4bvxBGFJ-bLhZEMLTCweUkuWYEDFBks157X4CrIMACGHBYyJdRyGWSKpaUz-iTUpI6hfeqCA7b6Qu4bVXlB2F3Kh32EG7HoTLuA0XbNLNnE1bZ06xVohDi-dEkQoA3TOeMCsh832yiGx1ll5VT2uCAr0"
-                  />
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-primary text-white font-display uppercase text-lg px-3 py-1 tracking-wider shadow-lg">
-                      After
-                    </span>
-                  </div>
-                </div>
-
-                <div className="relative w-40 h-72 rounded-sm overflow-hidden flex-shrink-0 group">
-                  <img
-                    alt="Dirty exterior white wall with green algae and stains"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx1h9L9mLEMcv6i3ZKgIxp6ZP5ssRKLzbxIjY_LTUDNjT7CO6sx5xARMeY5qHb2fBrAldBs4mJ30uKdYPyw4tnTWRkOi5vOoHOtISLVDdCsv5G7h93F6ZN0U9R5s-vT8Ra9aMKHr8tOc_41Wbdo_WIADiIA3Pa0HNIxVliLHgiU58bMNhkc5MO0p6i5XHPzPczcKqATV_YspsVVVEAKlhunv8EHEEmuew9EA9BdXfqlFxJptj3ZK1ZOszeFgUaD6lvU65qmcTajRs"
-                  />
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-primary text-white font-display uppercase text-lg px-3 py-1 tracking-wider shadow-lg">
-                      Before
-                    </span>
-                  </div>
-                </div>
-
-                <div className="relative w-40 h-72 rounded-sm overflow-hidden flex-shrink-0 group">
-                  <img
-                    alt="Clean bright white exterior wall after cleaning"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWv58xktdF31Ai12qB72RRvCBIRw9gVDzis2EM9orqRL321kaMBXKrWWB7jKlveBzseH4jS8pavxvZLpu-8ptHRTQRzx2FrI0dlbvbI3eTmQ7S8YQuu9LJlIu6EeXgOxj3echlIPh7K7A0xa4587cj0KmAeNVXZVCM4KY8GG143kgChC1-DNWnKj5mMBFSwRYh-yS0slJFYebwinGNvU6dh6arwE8BLOR7ycgFXMoBhpTIXkKnJxQNg8Tai4fAK5iX3q-NP0Ia4AY"
-                  />
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-primary text-white font-display uppercase text-lg px-3 py-1 tracking-wider shadow-lg">
-                      After
-                    </span>
-                  </div>
-                </div>
-
-                <div className="relative w-24 h-72 rounded-sm overflow-hidden flex-shrink-0 group opacity-90">
-                  <img
-                    alt="Dirty brick stairs leading up a garden path"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs0m91OvKGBbIoCEUcN2PnvSswH90g4aEAd8kloCGZzPFfasw6o0zcveZkcKPLIleGW5A6Ej0VNsqDMqzC4oTrJLutoS3crXS_7BUES00MqjyE5hmjVaGD1sjFNqlcGp7FCetKtTbxWP8yc9dpaL2SrRaXR-kjm4VtHYAOIKRRj0wq-zGvVg26ujaDTiUnn6s4nrcDCnbkYmREWrApZYxlEilTqqpk9L4-EV6ptLpUxpcav-PuMpUWsBXDhz56Of0KUV8s84OFdBA"
-                  />
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-primary text-white font-display uppercase text-lg px-3 py-1 tracking-wider shadow-lg whitespace-nowrap">
-                      Before
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex justify-center mt-2 space-x-1 opacity-40 dark:opacity-60">
-                <div className="w-1.5 h-1.5 rounded-full bg-primary dark:bg-blue-300"></div>
-                <div className="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600"></div>
-                <div className="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600"></div>
-              </div>
+            <section className="w-full space-y-5">
+              {homepageDirtyExteriorComparisons.map((comparison, index) => (
+                <TransformationComparisonCard
+                  key={`new-transformation-${index}`}
+                  comparison={comparison}
+                  index={index}
+                />
+              ))}
             </section>
 
             <section className="w-full mt-6">
@@ -1326,95 +1325,14 @@ export default function New() {
               </button>
             </div>
 
-            <div className="pt-4 relative">
-              <div className="w-48 h-48 rounded-full bg-gradient-to-b from-yellow-300 via-yellow-600 to-yellow-800 p-2 shadow-2xl flex items-center justify-center">
-                <div className="w-full h-full rounded-full bg-black border-2 border-yellow-500 relative flex items-center justify-center">
-                  <svg
-                    className="absolute w-[90%] h-[90%] animate-spin-slow"
-                    style={{ animationDuration: "20s" }}
-                    viewBox="0 0 100 100"
-                  >
-                    <defs>
-                      <path
-                        d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
-                        id="circlePath"
-                      ></path>
-                    </defs>
-                    <text
-                      fill="white"
-                      fontSize="8.5"
-                      fontWeight="bold"
-                      letterSpacing="2"
-                    >
-                      <textPath
-                        href="#circlePath"
-                        startOffset="50%"
-                        textAnchor="middle"
-                      >
-                        SATISFACTION GUARANTEED
-                      </textPath>
-                    </text>
-                  </svg>
-
-                  <div className="absolute bottom-6 w-full text-center">
-                    <svg
-                      className="mx-auto transform rotate-180 opacity-90"
-                      height="40"
-                      viewBox="0 0 120 40"
-                      width="120"
-                    >
-                      <path
-                        d="M10,20 Q30,35 60,35 T110,20"
-                        fill="transparent"
-                        stroke="url(#goldGradient)"
-                        strokeWidth="0"
-                      ></path>
-                      <text
-                        className="tracking-widest uppercase"
-                        fill="white"
-                        fontSize="8"
-                        fontWeight="bold"
-                        textAnchor="middle"
-                        transform="rotate(0 60,25)"
-                        x="60"
-                        y="25"
-                      >
-                        Guaranteed
-                      </text>
-                    </svg>
-                  </div>
-
-                  <div className="flex flex-col items-center justify-center z-10 bg-radial-gradient">
-                    <div className="flex space-x-1 mb-0 text-yellow-400">
-                      <i className="material-icons text-sm">star</i>
-                      <i className="material-icons text-sm">star</i>
-                      <i className="material-icons text-sm">star</i>
-                    </div>
-                    <span className="font-display text-yellow-400 text-6xl font-bold leading-none tracking-tighter drop-shadow-md">
-                      100%
-                    </span>
-                    <div className="flex space-x-1 mt-1 text-yellow-400">
-                      <i className="material-icons text-sm">star</i>
-                      <i className="material-icons text-sm">star</i>
-                      <i className="material-icons text-sm">star</i>
-                    </div>
-                  </div>
-
-                  <div className="absolute left-2 top-1/2 -translate-y-1/2 -rotate-12 opacity-80">
-                    <i
-                      className="material-icons text-yellow-500 text-4xl"
-                      style={{ transform: "scaleX(-1)" }}
-                    >
-                      emoji_nature
-                    </i>
-                  </div>
-                  <div className="absolute right-2 top-1/2 -translate-y-1/2 rotate-12 opacity-80">
-                    <i className="material-icons text-yellow-500 text-4xl">
-                      emoji_nature
-                    </i>
-                  </div>
-                </div>
-              </div>
+            <div className="relative w-72 max-w-full aspect-square">
+              <Image
+                src="/genrealPhotos/image-removebg-preview.png"
+                alt="EverBright service illustration"
+                fill
+                sizes="(min-width: 768px) 288px, min(18rem, 100vw - 3rem)"
+                className="object-contain"
+              />
             </div>
           </div>
 
