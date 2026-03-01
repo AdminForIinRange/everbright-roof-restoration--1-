@@ -927,7 +927,7 @@ export default function New() {
                   alt="Before and after comparison of a roof cleaning service showing dark mossy tiles versus clean red tiles"
                   className="w-full h-auto rounded-sm shadow-sm"
                   data-purpose="service-comparison-image"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6mT2yfIZePjP29_pIrJ8vxI3miS4kEoKzyqlZ1BbvqVJMfr8opuHbzbCskMz-WAmbGSdJZK88jmPJeSFkrivJuKvxg4CA-eubUROynlnnHOFOAUOa8htcJ_xQPE4GfzN1NAQcVbffbOi2X1r2gaZcjlb1LdHFKYcDAyj9Bq4q46oHVHnPSRON_ajC2H-BKJECOcS-wIkDR08DEGLaTlDLC0m6r61U1k_CzizopefCK7J6lIConUzuO5n5xbHq1XAjY-BIbrWlWQI"
+                  src="/genrealPhotos/RoofcleaingServiceCard.png"
                 />
               </div>
 
