@@ -123,21 +123,8 @@ export default function New() {
         }
       `}</style>
       <style>{`
-        html,
         body {
           min-height: max(884px, 100dvh);
-          background-color: #000;
-          background-image:
-            linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 0.8),
-              rgba(0, 0, 0, 0.72),
-              rgba(0, 0, 0, 0.88)
-            ),
-            url('/newhosuebackground.png');
-          background-position: top center;
-          background-repeat: no-repeat;
-          background-size: cover;
         }
       `}</style>
       <style>{`
@@ -418,7 +405,7 @@ export default function New() {
               </span>
             </div>
           </a>
-          <div className="space-y-2 mb-6 mt-[-20px]">
+          <div className="space-y-2 mb-6 mt-[-00px]">
             <h2 className="text-[#ff4444] dark:text-[#ff6666] font-medium text-xl tracking-wide text-shadow">
               Bring Your Home Back to Life!
             </h2>
