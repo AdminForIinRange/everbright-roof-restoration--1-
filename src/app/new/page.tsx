@@ -409,7 +409,7 @@ export default function New() {
             <h2 className="text-[#ff4444] dark:text-[#ff6666] font-medium text-xl tracking-wide text-shadow">
               Bring Your Home Back to Life!
             </h2>
-            <h1 className="text-white  px-0 impact-offer-font text-[50px] text-nowrap font-bold uppercase leading-none tracking-tight text-shadow drop-shadow-xl">
+            <h1 className="text-white  px-0 impact-offer-font text-[60px] text-nowrap font-bold uppercase leading-none tracking-tight text-shadow drop-shadow-xl">
               Roof Cleaning
             </h1>
             <div className="pt-0 pb-2">
