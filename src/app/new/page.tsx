@@ -431,7 +431,7 @@ export default function New() {
               </span>
             </div>
           </div>
-          <div className="w-[85%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-[50px] mb-4 ">
+          <div className="w-[85%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-[25px] mb-4 ">
             <p className=" pl-6 text-black pt-[20px] text-[14px] text-left  font-normal tracking-wide  max-w-[100%] border-b border-gray-200 pb-1">
               Fill out the form below to grab <br />
               this offer <span className="font-bold uppercase">Today</span>
