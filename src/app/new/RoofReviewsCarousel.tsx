@@ -25,7 +25,7 @@ export default function RoofReviewsCarousel() {
 
   return (
     <DragScroll
-      className="overflow-x-auto no-scrollbar pb-4 -mx-6 px-0"
+      className="drag-scroll hide-scrollbar -mx-6 overflow-x-auto overflow-y-hidden pb-4 px-0"
       loop
       autoScroll
       autoScrollSpeed={0.7}

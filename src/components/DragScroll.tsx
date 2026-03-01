@@ -100,6 +100,7 @@ const DragScroll: React.FC<DragScrollProps> = ({
     }
 
     if (event.pointerType !== 'mouse') {
+      isTouchingRef.current = true;
       return;
     }
 
@@ -131,6 +132,7 @@ const DragScroll: React.FC<DragScrollProps> = ({
     }
     activePointerIdRef.current = null;
     isMouseDragRef.current = false;
+    isTouchingRef.current = false;
     setIsDragging(false);
   };
 
@@ -150,15 +152,6 @@ const DragScroll: React.FC<DragScrollProps> = ({
       onPointerUp={handlePointerEnd}
       onPointerCancel={handlePointerEnd}
       onPointerLeave={handlePointerEnd}
-      onTouchStart={() => {
-        isTouchingRef.current = true;
-      }}
-      onTouchEnd={() => {
-        isTouchingRef.current = false;
-      }}
-      onTouchCancel={() => {
-        isTouchingRef.current = false;
-      }}
     >
       {children}
     </div>
