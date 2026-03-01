@@ -123,8 +123,21 @@ export default function New() {
         }
       `}</style>
       <style>{`
+        html,
         body {
           min-height: max(884px, 100dvh);
+          background-color: #000;
+          background-image:
+            linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.8),
+              rgba(0, 0, 0, 0.72),
+              rgba(0, 0, 0, 0.88)
+            ),
+            url('/newhosuebackground.png');
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-size: cover;
         }
       `}</style>
       <style>{`
