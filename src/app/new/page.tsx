@@ -420,10 +420,10 @@ export default function New() {
               </p>
             </div>
           </div>
-          <div className="mb-6 text-nowrap space-y-6">
+          <div className="mb-6 text-nowrap space-y-6 pt-4">
             <div className="font-display font-bold text-[25px] leading-none text-shadow">
-              <span className="text-white block mb-1">Spring Sale Roof</span>
-              <span className="text-white">
+              <span className="text-white block mb-1 uppercase">Spring Sale Roof</span>
+              <span className="text-white uppercase">
                 Cleaning from{" "}
                 <span className="text-[#ff3333] inline-block transform scale-110 ml-1 drop-shadow-md">
                   $899
@@ -431,8 +431,8 @@ export default function New() {
               </span>
             </div>
           </div>
-          <div className="w-[85%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-[90px] mb-4 ">
-            <p className="text-black pt-[20px] text-[14px]  font-normal tracking-wide  max-w-[100%] ">
+          <div className="w-[85%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-[70px] mb-4 ">
+            <p className=" pl-6 text-black pt-[20px] text-[14px] text-left  font-normal tracking-wide  max-w-[100%] border-b border-gray-200 pb-1">
               Fill out the form below to grab <br />
               this offer <span className="font-bold uppercase">Today</span>
             </p>
