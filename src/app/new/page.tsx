@@ -824,7 +824,7 @@ export default function New() {
                 <img
                   alt="Dirty roof covered in lichen and mold before pressure washing"
                   className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-105"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJG0rHPb107XjCgUoJjWj69oLDeqacLwAKd3R1hiWqewiDx6TbHYizTdAKwuIOkIz42qMVC1cS-Weywb-mn_ETchgZWb30w2aJohxtIxcSYS-VMSpvQs3gGr-0gZPDPdTtTaQUxAIiN7vMezqX9_7QHBk4RpDzeujh1Y6fdR7IXDuWuomIj0dsDZWEK4GHiW0TqR-XGpV7XKWcQK6pQGHWWAF_SNJLivIrZiVgqjbWiyYL2bGPQQxY5pUEZmltI6m-5BtjBhea8fc"
+                  src="/beforeafter/5.png"
                 />
               </div>
               <div className="relative w-full rounded-lg overflow-hidden shadow-md group">
@@ -836,7 +836,7 @@ export default function New() {
                 <img
                   alt="Clean and bright red terracotta roof after professional cleaning"
                   className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-105"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsgQZ6FblQwjBG5E5v1Hv69hHtdrZ62LfksW_sU9C_rlJeHta3n7CLv6yN_dVUBVJrkyDxNDxeGoDE8CWPtkJBIH9EmJ1h_58Gq2XUbfJfQbf9m_BMyxNjYWyPoR0q_vkE5VGTfXi4sfj09-7c2mzpKj0uIWDGClKSE3zmXXSAHrfgyIFEdhiTfQdFR1m4AW6RipR2O1iE6e1Mhnpb0bbSaQkDrxFCtb7UxpZYS4zPx-P9mHzcxFkep6lSbMU2A4_X9xr52Jct42E"
+                  src="/beforeafter/6.png"
                 />
               </div>
             </section>
