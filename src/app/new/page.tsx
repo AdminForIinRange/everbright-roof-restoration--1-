@@ -753,9 +753,9 @@ export default function New() {
         <div className="new-section-4 relative z-10 w-full bg-navy-custom text-white antialiased">
           <div className="max-w-[430px] mx-auto p-8 font-body">
             <header className="mb-8" data-purpose="page-title">
-              <h1 className="text-[26px] font-heading font-bold text-center uppercase tracking-tight">
+              <h1 className="text-[26px] font-heading font-bold text-strat uppercase tracking-tight">
                 Professional Roof Cleaning That{" "}
-                <span className="text-accent-blue">Restores Your Home</span> –
+                <span className="text-brand-sky">Restores Your Home</span> –
                 Without Risk
               </h1>
             </header>
@@ -766,7 +766,7 @@ export default function New() {
             >
               <p>
                 You want a home you’re proud to pull into. You want a roof that
-                looks clean, well-kept, and properly maintained, not stained,
+                looks clean, well kept, and properly maintained, not stained,
                 streaked, or ageing your entire property.
               </p>
               <p>
@@ -781,7 +781,7 @@ export default function New() {
             </section>
 
             <section
-              className="border border-card-custom rounded-lg bg-opacity-50 overflow-hidden"
+              className="border border-card-custom bg-white rounded-lg  overflow-hidden"
               data-purpose="benefits-checklist"
             >
               <div
@@ -811,7 +811,7 @@ export default function New() {
                       ></path>
                     </svg>
                   </div>
-                  <p className="text-[16px] font-medium leading-snug">
+                  <p className="text-[16px] text-dark-navy font-medium leading-snug">
                     Our customers say they wish they'd cleaned their roof sooner
                   </p>
                 </div>
@@ -833,7 +833,7 @@ export default function New() {
                       ></path>
                     </svg>
                   </div>
-                  <p className="text-[16px] font-medium leading-snug">
+                  <p className="text-[16px] text-dark-navy font-medium leading-snug">
                     Every job is fully insured and handled by certified
                     technician
                   </p>
@@ -856,7 +856,7 @@ export default function New() {
                       ></path>
                     </svg>
                   </div>
-                  <p className="text-[16px] font-medium leading-snug">
+                  <p className="text-[16px] text-dark-navy font-medium leading-snug">
                     Cleaned roofs stay visibly cleaner for 3+ years after just
                     our treatment
                   </p>
@@ -879,7 +879,7 @@ export default function New() {
                       ></path>
                     </svg>
                   </div>
-                  <p className="text-[16px] font-medium leading-snug">
+                  <p className="text-[16px] text-dark-navy font-medium leading-snug">
                     We help you protect one of the most expensive parts of your
                     home.
                   </p>
@@ -891,7 +891,7 @@ export default function New() {
 
         <div className="new-section-5 relative z-10 w-full bg-white font-body antialiased">
           <header
-            className="bg-navy py-3 px-4 text-center"
+            className="bg-primary py-3 px-4 text-center"
             data-purpose="top-announcement"
           >
             <h2 className="text-white font-heading text-xl md:text-2xl font-bold uppercase tracking-wider">
