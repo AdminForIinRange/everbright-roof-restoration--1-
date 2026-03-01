@@ -46,7 +46,7 @@ export default function New() {
             theme: {
               extend: {
                 colors: {
-                  primary: "#0B2B4A",
+                  primary: "#0B1E2B",
                   secondary: "#ff3333",
                   accent: "#FF4500",
                   "background-light": "#ffffff",
@@ -90,7 +90,7 @@ export default function New() {
           color: currentColor;
           width: 1.5em;
           height: 1.5em;
-          border: 1px solid #0B2B4A;
+          border: 1px solid #0B1E2B;
           border-radius: 0;
           display: grid;
           place-content: center;
@@ -101,7 +101,7 @@ export default function New() {
           height: 1em;
           transform: scale(0);
           transition: 120ms transform ease-in-out;
-          box-shadow: inset 1em 1em #0B2B4A;
+          box-shadow: inset 1em 1em #0B1E2B;
           transform-origin: center;
           clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
         }
@@ -110,13 +110,13 @@ export default function New() {
           -webkit-appearance: none;
           height: 24px;
           width: 24px;
-          background-color: #0B2B4A;
+          background-color: #0B1E2B;
           cursor: pointer;
           display: inline-block;
           position: relative;
         }
         .checkbox-square:checked {
-          background-color: #0B2B4A;
+          background-color: #0B1E2B;
         }
         .form-checkbox:focus {
           box-shadow: none;
@@ -368,19 +368,19 @@ export default function New() {
           background-color: #ffffff !important;
         }
         .new-hero-light .dark\\:text-white {
-          color: #0B2B4A !important;
+          color: #0B1E2B !important;
         }
         .new-hero-light .dark\\:bg-gray-700 {
           background-color: #ffffff !important;
         }
         .new-hero-light .dark\\:border-gray-400 {
-          border-color: #0B2B4A !important;
+          border-color: #0B1E2B !important;
         }
         .new-hero-light .dark\\:text-gray-200 {
-          color: #0B2B4A !important;
+          color: #0B1E2B !important;
         }
         .new-hero-light .hero-next-button {
-          background-color: #0B2B4A !important;
+          background-color: #0B1E2B !important;
           color: #ffffff !important;
         }
         .new-hero-light .hero-next-button:hover {
@@ -536,7 +536,7 @@ export default function New() {
                 </label>
                 <div className="pt-0">
                   <button
-                    className="hero-next-button w-full bg-primary hover:bg-blue-900 text-white font-bold text-3xl py-4 rounded shadow-lg transition-transform transform active:scale-95 uppercase tracking-wide"
+                    className="hero-next-button w-full bg-[#0B1E2B] hover:bg-blue-900 text-white font-bold text-3xl py-4 rounded shadow-lg transition-transform transform active:scale-95 uppercase tracking-wide"
                     type="submit"
                   >
                     Next
@@ -596,9 +596,9 @@ export default function New() {
             <RoofReviewsCarousel />
           </section>
 
-          <section className="bg-[#0B1E2B] flex-grow px-6 py-12 pb-16 text-center relative overflow-hidden">
+          <section className="bg-[#0B1E2B] flex-grow px-6 py-12  pt-[20px] pb-16 text-center relative overflow-hidden">
             <div className="flex flex-col items-center justify-center mb-10">
-              <div className="mb-2 relative w-62 max-w-full">
+              <div className="mb-[-5px] relative w-52 max-w-full">
                 <img
                   alt="EverBright Pressure Washing logo"
                   className="mx-auto h-auto w-full object-contain drop-shadow-lg"
