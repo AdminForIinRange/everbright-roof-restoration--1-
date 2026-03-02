@@ -622,7 +622,7 @@ export default function New() {
               </span>
             </div>
           </div>
-          <div className="w-[85%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-[25px] mb-4 ">
+          <div className="w-[80%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-[25px] mb-4 ">
             <p className=" pl-6 text-black pt-[20px] text-[15px] text-left  font-normal tracking-wide  max-w-[100%] border-b border-gray-200 pb-1">
               Fill out the form below to grab <br />
               this offer <span className="font-bold uppercase text-brand-dark">Today</span>
@@ -655,7 +655,7 @@ export default function New() {
                       </svg>
                     </div>
                   </div>
-                  <span className="text-primary dark:text-gray-200 font-bold text-lg group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <span className="text-primary dark:text-gray-200 font-normal text-lg group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     100-150m2 (Small)
                   </span>
                 </label>
@@ -682,7 +682,7 @@ export default function New() {
                       </svg>
                     </div>
                   </div>
-                  <span className="text-primary dark:text-gray-200 font-bold text-lg group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <span className="text-primary dark:text-gray-200 font-normal text-lg group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     150-250m2(Medium)
                   </span>
                 </label>
@@ -709,7 +709,7 @@ export default function New() {
                       </svg>
                     </div>
                   </div>
-                  <span className="text-primary dark:text-gray-200 font-bold text-lg group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <span className="text-primary dark:text-gray-200 font-normal text-lg group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     250m2+ (Big)
                   </span>
                 </label>
