@@ -97,7 +97,7 @@ const Hero: React.FC<HeroProps> = ({
               </div>
               <div>
                 <p className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">{benefit.title}</p>
-                <p className="text-xl md:text-2xl lg:text-3xl font-bold text-brand-sky">{benefit.subtitle}</p>
+                <p className="text-2xl md:text-2xl lg:text-3xl font-bold text-brand-sky">{benefit.subtitle}</p>
               </div>
             </div>
           ))}
