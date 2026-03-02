@@ -172,7 +172,7 @@ function TransformationMarqueeTile({
         quality={64}
         className="object-cover"
       />
-      <span className="transformation-marquee-label absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#003d5c] px-6 py-3 text-center text-[1.45rem] uppercase text-white">
+      <span className="transformation-marquee-label absolute bottom-4 left-1/2 w-[72%] max-w-[9.5rem] -translate-x-1/2 bg-[#003d5c] px-4 py-3 text-center text-[1.45rem] uppercase text-white">
         {item.label}
       </span>
     </article>
@@ -285,6 +285,9 @@ export default function New() {
           box-shadow: inset 0 0 0 1px rgba(6, 28, 43, 0.08);
         }
         .transformation-marquee-label {
+          display: inline-flex;
+          min-width: 8.5rem;
+          justify-content: center;
           font-family: "Anton", "Archivo Narrow", "Oswald", sans-serif;
           letter-spacing: 0.04em;
           line-height: 1;
@@ -653,7 +656,7 @@ export default function New() {
               <span className="sale-offer-white block text-[32px] sm:text-[36px]">
                 Spring Sale Roof
               </span>
-              <span className="sale-offer-white pt-[5px] block text-[34px] sm:text-[38px]">
+              <span className="sale-offer-white pt-[10px] block text-[34px] sm:text-[38px]">
                 Cleaning from{" "}
                 <span className=" text-[#38BDF8] inline-block pl-1">$899</span>
               </span>
