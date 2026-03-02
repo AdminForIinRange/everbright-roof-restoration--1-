@@ -156,7 +156,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
             </div>
           )}
 
-          <div className="space-y-4 md:space-y-5">
+          <div className="space-y-0 md:space-y-5">
             <input
               required
               maxLength={255}
@@ -211,7 +211,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
           </div>
 
           <fieldset className="border-0 border-b border-gray-300 px-4 py-2.5">
-            <legend className="mb-2 px-0 text-sm text-slate-500">What services are needed?</legend>
+            <legend className="mb-2 px-0 text-sm text-slate-500" style={{ textAlign: 'start' }}>What services are needed?</legend>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               {resolvedServiceNeededOptions.map((serviceOption) => (
                 <label
@@ -231,7 +231,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
           </fieldset>
 
           <textarea
-            className="w-full resize-none rounded-none border-0 border-b border-gray-300 bg-transparent px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-500 transition-all outline-none focus:border-brand-sky md:min-h-[120px]"
+            className="w-full resize-none rounded-none border-0 border-b border-gray-300 bg-transparent px-4 py-0 text-sm text-slate-900 placeholder:text-slate-500 transition-all outline-none focus:border-brand-sky md:min-h-[120px]"
             id="message"
             name="message"
             aria-label="How can we help?"
