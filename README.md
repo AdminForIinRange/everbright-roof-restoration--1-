@@ -24,7 +24,8 @@ APPWRITE_LEAD_NOTIFICATION_NAME="Your Name"
 APPWRITE_LEAD_NOTIFICATION_PROVIDER_ID=""
 ```
 
-Your Appwrite API key needs `databases.write`, `users.write`, `targets.write`, and `messages.write`, and your Appwrite project needs an email messaging provider configured.
+Your Appwrite API key needs `documents.write`, `users.write`, `targets.write`, and `messages.write`, and your Appwrite project needs an email messaging provider configured.
+If you created the email provider after earlier tests, set `APPWRITE_LEAD_NOTIFICATION_PROVIDER_ID` to that provider's ID so the lead notification target is refreshed against the correct sender.
 
 ## Learn More
 

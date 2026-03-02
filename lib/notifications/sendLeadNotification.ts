@@ -23,7 +23,6 @@ type LeadNotificationSettings = {
   recipientName: string;
   providerId?: string;
   userId: string;
-  targetId: string;
 };
 
 function isEmail(value: string) {
@@ -53,12 +52,15 @@ function getLeadNotificationSettings(): LeadNotificationSettings | null {
     recipientName,
     providerId: getOptionalEnvVariable("APPWRITE_LEAD_NOTIFICATION_PROVIDER_ID"),
     userId: buildStableId("lead_notify", recipientEmail),
-    targetId: buildStableId("lead_target", recipientEmail),
   };
 }
 
 function isConflictError(error: unknown) {
   return error instanceof AppwriteException && error.code === 409;
+}
+
+function isNotFoundError(error: unknown) {
+  return error instanceof AppwriteException && error.code === 404;
 }
 
 function escapeHtml(value: string) {
@@ -73,6 +75,30 @@ function escapeHtml(value: string) {
 function renderFieldValue(value: string) {
   const safeValue = value.trim() || "Not provided";
   return escapeHtml(safeValue).replaceAll("\n", "<br />");
+}
+
+function matchesNotificationTarget(
+  target: {
+    $id: string;
+    identifier: string;
+    providerType: string;
+    providerId?: string;
+  },
+  settings: LeadNotificationSettings
+) {
+  if (target.providerType !== MessagingProviderType.Email) {
+    return false;
+  }
+
+  if (target.identifier.toLowerCase() !== settings.recipientEmail.toLowerCase()) {
+    return false;
+  }
+
+  if (settings.providerId && target.providerId && target.providerId !== settings.providerId) {
+    return false;
+  }
+
+  return true;
 }
 
 function buildLeadEmailContent(lead: LeadNotificationPayload) {
@@ -116,19 +142,57 @@ async function ensureNotificationRecipient(settings: LeadNotificationSettings) {
     }
   }
 
-  try {
-    await users.createTarget({
+  const currentTargets = await users.listTargets({
+    userId: settings.userId,
+  });
+  const existingTarget = currentTargets.targets.find((target) => matchesNotificationTarget(target, settings));
+
+  if (existingTarget) {
+    await users.updateTarget({
       userId: settings.userId,
-      targetId: settings.targetId,
+      targetId: existingTarget.$id,
+      identifier: settings.recipientEmail,
+      providerId: settings.providerId,
+      name: settings.recipientName,
+    });
+
+    return existingTarget.$id;
+  }
+
+  try {
+    const createdTarget = await users.createTarget({
+      userId: settings.userId,
+      targetId: ID.unique(),
       providerType: MessagingProviderType.Email,
       identifier: settings.recipientEmail,
       providerId: settings.providerId,
       name: settings.recipientName,
     });
+
+    return createdTarget.$id;
   } catch (error) {
     if (!isConflictError(error)) {
       throw error;
     }
+
+    const refreshedTargets = await users.listTargets({
+      userId: settings.userId,
+    });
+    const refreshedTarget = refreshedTargets.targets.find((target) => matchesNotificationTarget(target, settings));
+
+    if (refreshedTarget) {
+      await users.updateTarget({
+        userId: settings.userId,
+        targetId: refreshedTarget.$id,
+        identifier: settings.recipientEmail,
+        providerId: settings.providerId,
+        name: settings.recipientName,
+      });
+
+      return refreshedTarget.$id;
+    }
+
+    throw error;
   }
 }
 
@@ -139,7 +203,7 @@ export async function sendLeadNotification(lead: LeadNotificationPayload) {
     return;
   }
 
-  await ensureNotificationRecipient(settings);
+  const targetId = await ensureNotificationRecipient(settings);
 
   const { messaging } = await createAdminClient();
 
@@ -147,7 +211,7 @@ export async function sendLeadNotification(lead: LeadNotificationPayload) {
     messageId: ID.unique(),
     subject: `New lead from ${lead.fullName}`,
     content: buildLeadEmailContent(lead),
-    targets: [settings.targetId],
+    targets: [targetId],
     html: true,
   });
 }
