@@ -7,6 +7,7 @@ import { buildPageMetadata } from "@lib/seo";
 import ForceLightMode from "./ForceLightMode";
 import RoofReviewsCarousel from "./RoofReviewsCarousel";
 import LeadForm from "@/components/LeadForm";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "New",
@@ -162,6 +163,7 @@ function getReviewInitials(name: string) {
 function RoofCleaningReviewCard({ review }: { review: RoofCleaningReview }) {
   return (
     <>
+
       <div className="bg-card-light dark:bg-card-dark mx-auto rounded-sm p-6 shadow-lg">
         <div className="mb-3 flex items-center space-x-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
@@ -310,6 +312,7 @@ function ServiceOverviewCard({
 export default function New() {
   return (
     <>
+        <Header />
       <ForceLightMode />
       <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,400&display=swap"
