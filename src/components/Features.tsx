@@ -24,7 +24,7 @@ const Features: React.FC<FeaturesProps> = ({ features, sectionClassName = 'bg-da
               </div>
               <div>
                 <h3 className="mb-2 font-display text-2xl font-bold uppercase tracking-wide text-white md:text-[1.75rem] lg:text-[2rem]">
-                  {f.title}-
+                  {f.title}
                 </h3>
                 <p className="font-body text-base leading-relaxed text-gray-300 md:text-lg">
                   {f.desc}
