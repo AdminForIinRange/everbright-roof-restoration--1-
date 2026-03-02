@@ -105,8 +105,13 @@ const LeadForm: React.FC<LeadFormProps> = ({
 
     hasRedirectedRef.current = true;
     const returnPath = pathname && pathname.startsWith('/') ? pathname : '/';
-    router.push(`/thank-you?from=${encodeURIComponent(returnPath)}`);
-  }, [isSubmitted, pathname, router]);
+    const confirmationSearchParams = new URLSearchParams({
+      from: returnPath,
+      service: serviceLabel,
+    });
+
+    router.replace(`/thank-you?${confirmationSearchParams.toString()}`);
+  }, [isSubmitted, pathname, router, serviceLabel]);
 
   const handleSubmit = () => {
     track('lead_submit_attempt', {

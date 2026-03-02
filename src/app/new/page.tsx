@@ -919,14 +919,17 @@ export default function New() {
               <h3 className="text-primary dark:text-white font-bold text-xl mb-2 text-left leading-tight">
                 What is the size of your roof?
               </h3>
-              <form className="space-y-2">
+              <form action="/thank-you" method="GET" className="space-y-2">
+                <input type="hidden" name="from" value="/new" />
+                <input type="hidden" name="service" value="roof cleaning quote" />
                 <label className="flex items-center space-x-2 cursor-pointer group">
                   <div className="relative flex items-center">
                     <input
                       className="peer h-4 w-4 cursor-pointer appearance-none border-2 border-primary bg-white transition-all checked:bg-primary hover:border-blue-600 dark:border-gray-400 dark:bg-gray-700 dark:checked:bg-primary"
                       name="roof_size"
+                      required
                       type="radio"
-                      value="small"
+                      value="100-150m2 (Small)"
                     />
                     <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 peer-checked:opacity-100">
                       <svg
@@ -953,7 +956,7 @@ export default function New() {
                       className="peer h-4 w-4 cursor-pointer appearance-none border-2 border-primary bg-white transition-all checked:bg-primary hover:border-blue-600 dark:border-gray-400 dark:bg-gray-700 dark:checked:bg-primary"
                       name="roof_size"
                       type="radio"
-                      value="medium"
+                      value="150-250m2 (Medium)"
                     />
                     <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 peer-checked:opacity-100">
                       <svg
@@ -980,7 +983,7 @@ export default function New() {
                       className="peer h-4 w-4 cursor-pointer appearance-none border-2 border-primary bg-white transition-all checked:bg-primary hover:border-blue-600 dark:border-gray-400 dark:bg-gray-700 dark:checked:bg-primary"
                       name="roof_size"
                       type="radio"
-                      value="big"
+                      value="250m2+ (Big)"
                     />
                     <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 peer-checked:opacity-100">
                       <svg
