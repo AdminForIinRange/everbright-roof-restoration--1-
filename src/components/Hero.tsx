@@ -129,7 +129,7 @@ const Hero: React.FC<HeroProps> = ({
         <a
 
           href="#form"
-          className="mt-7 mb-3 inline-flex items-center justify-center rounded-full bg-brand-sky px-8 py-4 text-base font-bold uppercase tracking-widest text-white shadow-[0_15px_40px_-10px_rgba(56,189,248,0.5)] transition-all hover:bg-sky-400 active:scale-95 md:px-10 md:text-lg lg:px-12 lg:py-5 lg:text-xl"
+          className="mt-7 mb-3  inline-flex items-center justify-center rounded-full bg-brand-sky px-8 py-4 text-base font-bold uppercase tracking-widest text-white shadow-[0_15px_40px_-10px_rgba(56,189,248,0.5)] transition-all hover:bg-sky-400 active:scale-95 md:px-10 md:text-lg lg:px-12 lg:py-5 lg:text-xl"
         >
           {ctaLabel}
         </a>
