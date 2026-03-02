@@ -74,6 +74,23 @@ const homepageDirtyExteriorComparisons = [
   },
 ];
 
+const transformationMarqueeItems = homepageDirtyExteriorComparisons.flatMap(
+  (comparison, index) => [
+    {
+      key: `${index}-before`,
+      src: comparison.before,
+      alt: comparison.beforeAlt,
+      label: "Before" as const,
+    },
+    {
+      key: `${index}-after`,
+      src: comparison.after,
+      alt: comparison.afterAlt,
+      label: "After" as const,
+    },
+  ],
+);
+
 function getReviewInitials(name: string) {
   return name
     .split(/\s+/)
@@ -83,11 +100,7 @@ function getReviewInitials(name: string) {
     .join("");
 }
 
-function RoofCleaningReviewCard({
-  review,
-}: {
-  review: RoofCleaningReview;
-}) {
+function RoofCleaningReviewCard({ review }: { review: RoofCleaningReview }) {
   return (
     <div className="bg-card-light dark:bg-card-dark mx-auto rounded-sm p-6 shadow-lg">
       <div className="mb-3 flex items-center space-x-3">
@@ -144,57 +157,24 @@ function RoofCleaningReviewCard({
   );
 }
 
-function TransformationComparisonCard({
-  comparison,
-  index,
+function TransformationMarqueeTile({
+  item,
 }: {
-  comparison: (typeof homepageDirtyExteriorComparisons)[number];
-  index: number;
+  item: (typeof transformationMarqueeItems)[number];
 }) {
   return (
-    <article className="w-full rounded-sm bg-[#0B1E2B] p-3 shadow-2xl">
-      <div className="mb-3 flex items-center justify-between gap-3">
-        <span className="font-display text-xl uppercase tracking-wide text-white">
-          Project {index + 1}
-        </span>
-        <span className="text-[11px] uppercase tracking-[0.24em] text-white/60">
-          Before / After
-        </span>
-      </div>
-
-      <div className="grid grid-cols-2 gap-2">
-        <div className="space-y-2">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-sm border border-white/10 bg-slate-900">
-            <Image
-              src={comparison.before}
-              alt={comparison.beforeAlt}
-              fill
-              sizes="(min-width: 768px) 220px, calc((100vw - 42px) / 2)"
-              quality={62}
-              className="object-cover"
-            />
-          </div>
-          <span className="block bg-white px-3 py-2 text-center font-display text-xl uppercase tracking-wide text-primary">
-            Before
-          </span>
-        </div>
-
-        <div className="space-y-2">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-sm border border-white/10 bg-slate-900">
-            <Image
-              src={comparison.after}
-              alt={comparison.afterAlt}
-              fill
-              sizes="(min-width: 768px) 220px, calc((100vw - 42px) / 2)"
-              quality={62}
-              className="object-cover"
-            />
-          </div>
-          <span className="block bg-white px-3 py-2 text-center font-display text-xl uppercase tracking-wide text-primary">
-            After
-          </span>
-        </div>
-      </div>
+    <article className="transformation-marquee-tile relative aspect-[11/16] min-w-[44vw] shrink-0 overflow-hidden bg-slate-200 sm:min-w-[180px]">
+      <Image
+        src={item.src}
+        alt={item.alt}
+        fill
+        sizes="(min-width: 768px) 180px, 44vw"
+        quality={64}
+        className="object-cover"
+      />
+      <span className="transformation-marquee-label absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#003d5c] px-6 py-3 text-center text-[1.45rem] uppercase text-white">
+        {item.label}
+      </span>
     </article>
   );
 }
@@ -281,6 +261,49 @@ export default function New() {
         .sale-offer-price {
           color: #ff3b30;
           text-shadow: 0 2px 0 rgba(120, 18, 12, 0.85), 0 8px 18px rgba(0, 0, 0, 0.25);
+        }
+        .transformation-marquee {
+          overflow: hidden;
+          background: #efefef;
+          border-top: 1px solid #d5d9df;
+          border-bottom: 1px solid #d5d9df;
+        }
+        .transformation-marquee-track {
+          display: flex;
+          width: max-content;
+          animation: transformation-marquee-scroll 24s linear infinite;
+          will-change: transform;
+        }
+        .transformation-marquee-copy {
+          display: flex;
+          gap: 4px;
+          padding-right: 4px;
+        }
+        .transformation-marquee-tile {
+          border-left: 4px solid #ffffff;
+          border-right: 4px solid #ffffff;
+          box-shadow: inset 0 0 0 1px rgba(6, 28, 43, 0.08);
+        }
+        .transformation-marquee-label {
+          font-family: "Anton", "Archivo Narrow", "Oswald", sans-serif;
+          letter-spacing: 0.04em;
+          line-height: 1;
+        }
+        .transformation-marquee:hover .transformation-marquee-track {
+          animation-play-state: paused;
+        }
+        @keyframes transformation-marquee-scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .transformation-marquee-track {
+            animation: none;
+          }
         }
         .custom-checkbox {
           appearance: none;
@@ -581,8 +604,8 @@ export default function New() {
         }
       `}</style>
 
-       <main className="new-hero-light font-body antialiased text-gray-900 bg-background-light dark:bg-background-dark min-h-screen relative">
-         <div className="fixed inset-0 z-0">
+      <main className="new-hero-light font-body antialiased text-gray-900 bg-background-light dark:bg-background-dark min-h-screen relative">
+        <div className="fixed inset-0 z-0">
           <div className="flex h-full w-full">
             <div className="relative h-full w-1/2">
               <img
@@ -599,9 +622,9 @@ export default function New() {
               />
             </div>
           </div>
-          <div className="absolute inset-0 bg-black/80 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-black/70 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/30 to-black/30"></div>
-         </div>
+        </div>
         <div className="relative z-10 flex flex-col items-center justify-start min-h-screen px-4 py-8 pt-[10px] max-w-md mx-auto w-full text-center">
           <a className="w-[250px] mb-8 group" href="tel:0411017366">
             <div className="bg-primary/90 border-4 border-[#38BDF8] py-1 px-[0] shadow-lg hover:bg-primary transition-colors duration-300">
@@ -630,16 +653,17 @@ export default function New() {
               <span className="sale-offer-white block text-[32px] sm:text-[36px]">
                 Spring Sale Roof
               </span>
-              <span className="sale-offer-white block text-[34px] sm:text-[38px]">
+              <span className="sale-offer-white pt-[5px] block text-[34px] sm:text-[38px]">
                 Cleaning from{" "}
-                <span className="sale-offer-price inline-block pl-1">$899</span>
+                <span className=" text-[#38BDF8] inline-block pl-1">$899</span>
               </span>
             </div>
           </div>
           <div className="w-[80%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-[25px] mb-4 ">
             <p className=" pl-6 text-black pt-[20px] text-[15px] text-left  font-normal tracking-wide  max-w-[100%] border-b border-gray-200 pb-1">
               Fill out the form below to grab <br />
-              this offer <span className="font-bold uppercase text-brand-dark">Today</span>
+              this offer{" "}
+              <span className="font-bold uppercase text-brand-dark">Today</span>
             </p>
             <div className="p-6 pb-[15px] pt-[10px]">
               <h3 className="text-primary dark:text-white font-bold text-xl mb-2 text-left leading-tight">
@@ -782,7 +806,7 @@ export default function New() {
                   <i className="material-icons text-lg">star</i>
                 </div>
               </div>
-             <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+              <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                 Verified 5-Stars Reviews
               </p>
             </div>
@@ -1092,7 +1116,10 @@ export default function New() {
             </h2>
           </header>
 
-          <div className="py-8 pt-[0px] text-center" data-purpose="services-overview">
+          <div
+            className="py-8 pt-[0px] text-center"
+            data-purpose="services-overview"
+          >
             <section className="mb-6 px-6">
               <h1 className="text-primary font-heading text-5xl font-bold uppercase mb-2">
                 Our Services
@@ -1264,15 +1291,15 @@ export default function New() {
         </div>
 
         <div className="new-section-6 relative z-10 w-full bg-primary min-h-screen flex flex-col items-center py-10 antialiased font-condensed">
-       <div className="flex flex-col items-center justify-center mb-10">
-              <div className="mb-[-5px] relative w-52 max-w-full">
-                <img
-                  alt="EverBright Pressure Washing logo"
-                  className="mx-auto h-auto w-full object-contain drop-shadow-lg"
-                  src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
-                />
-              </div>
+          <div className="flex flex-col items-center justify-center mb-10">
+            <div className="mb-[-5px] relative w-52 max-w-full">
+              <img
+                alt="EverBright Pressure Washing logo"
+                className="mx-auto h-auto w-full object-contain drop-shadow-lg"
+                src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
+              />
             </div>
+          </div>
 
           <div className="w-full max-w-[340px] space-y-6 px-2">
             {secondaryRoofCleaningReviews.map((review) => (
@@ -1292,14 +1319,23 @@ export default function New() {
               </h1>
             </header>
 
-            <section className="w-full space-y-5">
-              {homepageDirtyExteriorComparisons.map((comparison, index) => (
-                <TransformationComparisonCard
-                  key={`new-transformation-${index}`}
-                  comparison={comparison}
-                  index={index}
-                />
-              ))}
+            <section className="transformation-marquee -mx-4 w-[calc(100%+2rem)]">
+              <div className="transformation-marquee-track py-1">
+                {[0, 1].map((copyIndex) => (
+                  <div
+                    key={`transformation-copy-${copyIndex}`}
+                    className="transformation-marquee-copy"
+                    aria-hidden={copyIndex === 1}
+                  >
+                    {transformationMarqueeItems.map((item) => (
+                      <TransformationMarqueeTile
+                        key={`${copyIndex}-${item.key}`}
+                        item={item}
+                      />
+                    ))}
+                  </div>
+                ))}
+              </div>
             </section>
 
             <section className="w-full mt-6">
