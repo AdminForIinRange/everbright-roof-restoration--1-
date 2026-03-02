@@ -312,7 +312,7 @@ function ServiceOverviewCard({
 export default function New() {
   return (
     <>
-        <Header />
+
       <ForceLightMode />
       <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,400&display=swap"
