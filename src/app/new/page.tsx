@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { buildPageMetadata } from "@lib/seo";
 import ForceLightMode from "./ForceLightMode";
 import RoofReviewsCarousel from "./RoofReviewsCarousel";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "New",
@@ -59,37 +60,90 @@ const secondaryRoofCleaningReviews: RoofCleaningReview[] = [
   },
 ];
 
-const homepageDirtyExteriorComparisons = [
+const transformationShowcaseImages = [
   {
-    before: "/scrollerImage/1.webp",
-    after: "/scrollerImage/2.webp",
-    beforeAlt: "Exterior before cleaning result 1",
-    afterAlt: "Exterior after cleaning result 1",
+    key: "transformation-3",
+    src: "/beforeAfter/3.webp",
+    alt: "Exterior cleaning transformation result 3",
   },
   {
-    before: "/scrollerImage/5.webp",
-    after: "/scrollerImage/6.webp",
-    beforeAlt: "Exterior before cleaning result 2",
-    afterAlt: "Exterior after cleaning result 2",
+    key: "transformation-4",
+    src: "/beforeAfter/4.webp",
+    alt: "Exterior cleaning transformation result 4",
   },
-];
+  {
+    key: "transformation-5",
+    src: "/beforeAfter/5.webp",
+    alt: "Exterior cleaning transformation result 5",
+  },
+  {
+    key: "transformation-6",
+    src: "/beforeAfter/6.webp",
+    alt: "Exterior cleaning transformation result 6",
+  },
+  {
+    key: "transformation-9",
+    src: "/beforeAfter/9.webp",
+    alt: "Exterior cleaning transformation result 9",
+  },
+  {
+    key: "transformation-10",
+    src: "/beforeAfter/10.webp",
+    alt: "Exterior cleaning transformation result 10",
+  },
+] as const;
 
-const transformationMarqueeItems = homepageDirtyExteriorComparisons.flatMap(
-  (comparison, index) => [
-    {
-      key: `${index}-before`,
-      src: comparison.before,
-      alt: comparison.beforeAlt,
-      label: "Before" as const,
-    },
-    {
-      key: `${index}-after`,
-      src: comparison.after,
-      alt: comparison.afterAlt,
-      label: "After" as const,
-    },
-  ],
-);
+const newPageServiceCards = [
+  {
+    key: "roof-cleaning",
+    category: "Roof Care",
+    title: "Roof Cleaning",
+    imageSrc: "/genrealPhotos/RoofcleaingServiceCard.png",
+    imageAlt:
+      "Before and after comparison of a roof cleaning service showing dark mossy tiles versus clean red tiles",
+    summary:
+      "A safe, controlled roof clean that removes staining and helps the whole home look fresher from the street.",
+    features: [
+      "Targets mould, lichen, and built-up roof staining",
+      "Helps restore colour and improve overall street appeal",
+      "Designed for a cleaner finish without harsh, uncontrolled blasting",
+    ],
+    bestFor:
+      "Tiled roofs with patchy discolouration, moss, or heavy dark staining.",
+  },
+  {
+    key: "pressure-washing",
+    category: "Surface Care",
+    title: "Pressure Washing",
+    imageSrc: "/genrealPhotos/Pressure%20WashingServiceCardImage.webp",
+    imageAlt: "Pressure washing service cleaning outdoor hard surfaces",
+    summary:
+      "High-impact cleaning for outdoor surfaces so driveways, paths, and paved areas look cleaner, brighter, and better maintained.",
+    features: [
+      "Great for driveways, paths, patios, and exterior hard surfaces",
+      "Lifts built-up grime, dirt, and slippery surface residue",
+      "Helps refresh tired outdoor areas before sale, guests, or routine upkeep",
+    ],
+    bestFor:
+      "Concrete, paving, and outdoor zones that need a visible reset.",
+  },
+  {
+    key: "gutter-cleaning",
+    category: "Flow Protection",
+    title: "Gutter Cleaning",
+    imageSrc: "/genrealPhotos/Gutter%20CleaningServicePage.webp",
+    imageAlt: "Gutter cleaning service clearing debris from roof gutters",
+    summary:
+      "Clear, free-flowing gutters help protect your roofline and reduce the risk of overflow around the home during heavy rain.",
+    features: [
+      "Removes leaves, debris, and compacted gutter blockages",
+      "Helps reduce overflow, staining, and water-related issues",
+      "Keeps roof drainage working the way it should",
+    ],
+    bestFor:
+      "Homes with nearby trees, seasonal debris, or slow-draining gutters.",
+  },
+] as const;
 
 function getReviewInitials(name: string) {
   return name
@@ -102,6 +156,9 @@ function getReviewInitials(name: string) {
 
 function RoofCleaningReviewCard({ review }: { review: RoofCleaningReview }) {
   return (
+    <>
+
+
     <div className="bg-card-light dark:bg-card-dark mx-auto rounded-sm p-6 shadow-lg">
       <div className="mb-3 flex items-center space-x-3">
         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
@@ -154,34 +211,104 @@ function RoofCleaningReviewCard({ review }: { review: RoofCleaningReview }) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
-function TransformationMarqueeTile({
+function TransformationShowcaseTile({
   item,
 }: {
-  item: (typeof transformationMarqueeItems)[number];
+  item: (typeof transformationShowcaseImages)[number];
 }) {
   return (
-    <article className="transformation-marquee-tile relative aspect-[11/16] min-w-[44vw] shrink-0 overflow-hidden bg-slate-200 sm:min-w-[180px]">
+    <article className="transformation-showcase-card relative aspect-[3/4] min-w-[41vw] shrink-0 overflow-hidden bg-white sm:min-w-[240px]">
       <Image
         src={item.src}
         alt={item.alt}
         fill
-        sizes="(min-width: 768px) 180px, 44vw"
-        quality={64}
+        sizes="(min-width: 768px) 240px, 41vw"
+        quality={68}
         className="object-cover"
       />
-      <span className="transformation-marquee-label absolute bottom-4 left-1/2 w-[72%] max-w-[9.5rem] -translate-x-1/2 bg-[#003d5c] px-4 py-3 text-center text-[1.45rem] uppercase text-white">
-        {item.label}
-      </span>
     </article>
+  );
+}
+
+function ServiceOverviewCard({
+  service,
+  className = "",
+}: {
+  service: (typeof newPageServiceCards)[number];
+  className?: string;
+}) {
+  return (
+    <section
+      className={`service-section-padding max-w-md mx-auto text-left ${className}`.trim()}
+      data-purpose={`${service.key}-card`}
+    >
+      <article className="service-card-shell overflow-hidden">
+        <div className="relative aspect-[5/3]" data-purpose="service-comparison-image">
+          <Image
+            src={service.imageSrc}
+            alt={service.imageAlt}
+            fill
+            sizes="(min-width: 768px) 448px, calc(100vw - 48px)"
+            className="object-cover"
+          />
+        </div>
+
+        <div className="service-card-content">
+        
+
+          <h3 className="service-card-title text-primary font-heading font-bold uppercase">
+            {service.title}
+          </h3>
+
+          <p className="service-card-summary mt-4">{service.summary}</p>
+
+          <div className="service-card-divider" />
+
+          <ul className="service-card-features" data-purpose="service-features">
+            {service.features.map((feature) => (
+              <li key={feature} className="service-card-feature">
+                <span className="service-card-check" aria-hidden="true">
+                  <svg
+                    className="h-3.5 w-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 13l4 4L19 7"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2.25"
+                    />
+                  </svg>
+                </span>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          
+
+          <div className="mt-6" data-purpose="cta-container">
+            <a className="service-card-cta" href="#" role="button">
+              Get Your Quote
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
   );
 }
 
 export default function New() {
   return (
     <>
+      <Header />
       <ForceLightMode />
       <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,400&display=swap"
@@ -262,40 +389,31 @@ export default function New() {
           color: #ff3b30;
           text-shadow: 0 2px 0 rgba(120, 18, 12, 0.85), 0 8px 18px rgba(0, 0, 0, 0.25);
         }
-        .transformation-marquee {
+        .transformation-showcase-shell {
           overflow: hidden;
           background: #efefef;
-          border-top: 1px solid #d5d9df;
-          border-bottom: 1px solid #d5d9df;
+          border-top: 1px solid #d9d9d9;
+          border-bottom: 1px solid #d9d9d9;
         }
-        .transformation-marquee-track {
+        .transformation-showcase-track {
           display: flex;
           width: max-content;
-          animation: transformation-marquee-scroll 24s linear infinite;
+          animation: transformation-showcase-scroll 26s linear infinite;
           will-change: transform;
         }
-        .transformation-marquee-copy {
+        .transformation-showcase-copy {
           display: flex;
-          gap: 4px;
-          padding-right: 4px;
+          gap: 2px;
+          padding-right: 2px;
         }
-        .transformation-marquee-tile {
-          border-left: 4px solid #ffffff;
-          border-right: 4px solid #ffffff;
-          box-shadow: inset 0 0 0 1px rgba(6, 28, 43, 0.08);
+        .transformation-showcase-card {
+          border-left: 1px solid #f6f6f6;
+          border-right: 1px solid #f6f6f6;
         }
-        .transformation-marquee-label {
-          display: inline-flex;
-          min-width: 8.5rem;
-          justify-content: center;
-          font-family: "Anton", "Archivo Narrow", "Oswald", sans-serif;
-          letter-spacing: 0.04em;
-          line-height: 1;
-        }
-        .transformation-marquee:hover .transformation-marquee-track {
+        .transformation-showcase-shell:hover .transformation-showcase-track {
           animation-play-state: paused;
         }
-        @keyframes transformation-marquee-scroll {
+        @keyframes transformation-showcase-scroll {
           from {
             transform: translateX(0);
           }
@@ -304,7 +422,7 @@ export default function New() {
           }
         }
         @media (prefers-reduced-motion: reduce) {
-          .transformation-marquee-track {
+          .transformation-showcase-track {
             animation: none;
           }
         }
@@ -452,6 +570,127 @@ export default function New() {
         .new-section-5 .service-section-padding {
           padding-left: 1.5rem;
           padding-right: 1.5rem;
+        }
+        .new-section-5 .service-card-shell {
+          border: 1px solid #d9e3ec;
+          border-radius: 1.5rem;
+          background: #ffffff;
+          box-shadow: 0 18px 42px rgba(15, 46, 77, 0.08);
+        }
+        .new-section-5 .service-card-content {
+          padding: 1.4rem 1.25rem 1.35rem;
+        }
+        .new-section-5 .service-card-kicker,
+        .new-section-5 .service-card-location {
+          display: inline-flex;
+          align-items: center;
+          border-radius: 9999px;
+          padding: 0.45rem 0.8rem;
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+        }
+        .new-section-5 .service-card-kicker {
+          background: #eaf6ff;
+          color: #0f2e4d;
+        }
+        .new-section-5 .service-card-location {
+          background: #f5f9fc;
+          color: #577089;
+        }
+        .new-section-5 .service-card-title {
+          font-size: clamp(2.15rem, 6vw, 2.7rem);
+          line-height: 0.95;
+          letter-spacing: 0.01em;
+        }
+        .new-section-5 .service-card-summary {
+          color: #334e68;
+          font-size: 1rem;
+          line-height: 1.65;
+        }
+        .new-section-5 .service-card-divider {
+          margin: 1.2rem 0;
+          height: 1px;
+          width: 100%;
+          background: linear-gradient(90deg, rgba(56, 189, 248, 0.4), rgba(217, 227, 236, 0.75));
+        }
+        .new-section-5 .service-card-features {
+          display: grid;
+          gap: 0.8rem;
+          margin-bottom: 1.25rem;
+        }
+        .new-section-5 .service-card-feature {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.75rem;
+          color: #102a43;
+          font-size: 0.97rem;
+          font-weight: 600;
+          line-height: 1.5;
+        }
+        .new-section-5 .service-card-check {
+          display: inline-flex;
+          height: 1.65rem;
+          width: 1.65rem;
+          flex-shrink: 0;
+          align-items: center;
+          justify-content: center;
+          border-radius: 9999px;
+          background: #e8f7ee;
+          color: #15803d;
+          margin-top: 0.05rem;
+        }
+        .new-section-5 .service-card-meta-grid {
+          display: grid;
+          gap: 0.8rem;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @media (max-width: 420px) {
+          .new-section-5 .service-card-meta-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+        .new-section-5 .service-card-meta {
+          border: 1px solid #d9e3ec;
+          border-radius: 1rem;
+          background: #f8fbfd;
+          padding: 0.95rem 1rem;
+        }
+        .new-section-5 .service-card-meta-label {
+          display: block;
+          margin-bottom: 0.35rem;
+          color: #577089;
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+        }
+        .new-section-5 .service-card-meta-value {
+          color: #102a43;
+          font-size: 0.92rem;
+          font-weight: 600;
+          line-height: 1.45;
+        }
+        .new-section-5 .service-card-cta {
+          display: block;
+          width: 100%;
+          border: 3px solid #38BDF8;
+          border-radius: 1rem;
+          background: #38BDF8;
+          padding: 0.95rem 1rem;
+          text-align: center;
+          color: #0f2e4d;
+          font-size: 1.65rem;
+          font-weight: 700;
+          line-height: 1;
+          text-transform: uppercase;
+          transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+        .new-section-5 .service-card-cta:hover {
+          background: #dff4ff;
+          box-shadow: 0 12px 24px rgba(56, 189, 248, 0.2);
+          transform: translateY(-1px);
         }
 
         /* Section-local custom classes for the sixth pasted snippet */
@@ -1140,156 +1379,13 @@ export default function New() {
                 cleaning that keeps your home looking its best year-round.
               </p>
             </section>
-
-            <section
-              className="service-section-padding text-left max-w-md mx-auto"
-              data-purpose="roof-cleaning-card"
-            >
-              <div className="mb-6">
-                <img
-                  alt="Before and after comparison of a roof cleaning service showing dark mossy tiles versus clean red tiles"
-                  className="w-full h-auto rounded-sm shadow-sm"
-                  data-purpose="service-comparison-image"
-                  src="/genrealPhotos/RoofcleaingServiceCard.png"
-                />
-              </div>
-
-              <h3 className="text-primary font-heading text-3xl font-bold uppercase mb-4">
-                Roof Cleaning
-              </h3>
-
-              <p className="text-body-blue text-[15px] leading-snug mb-4">
-                Keep your roof clean, protected, and looking its best with our
-                professional roof cleaning service.
-              </p>
-
-              <ul
-                className="text-black font-bold text-[13px] space-y-1 mb-5"
-                data-purpose="service-features"
-              >
-                <li>• Safe removal of mould, lichen, and built-up stains</li>
-                <li>• Designed to restore and protect your roof</li>
-              </ul>
-
-              <div className="mb-6">
-                <p className="text-body-blue text-[13px] leading-tight">
-                  Servicing Adelaide and surrounding suburbs.
-                  <br />
-                  Free inspections and quotes available enquire today.
-                </p>
-              </div>
-
-              <div className="mt-4" data-purpose="cta-container">
-                <a
-                  className="block w-full bg-[#38BDF8] border-[3px] border-[#38BDF8] py-3 text-center text-primary font-heading text-3xl font-bold uppercase transition-colors hover:bg-blue-50"
-                  href="#"
-                  role="button"
-                >
-                  Get Your Quote
-                </a>
-              </div>
-            </section>
-
-            <section
-              className="service-section-padding text-left max-w-md mx-auto mt-12"
-              data-purpose="pressure-washing-card"
-            >
-              <div className="mb-6">
-                <img
-                  alt="Pressure washing service cleaning outdoor hard surfaces"
-                  className="w-full h-auto rounded-sm shadow-sm"
-                  data-purpose="service-comparison-image"
-                  src="/genrealPhotos/Pressure%20WashingServiceCardImage.webp"
-                />
-              </div>
-
-              <h3 className="text-primary font-heading text-3xl font-bold uppercase mb-4">
-                Pressure Washing
-              </h3>
-
-              <p className="text-body-blue text-[15px] leading-snug mb-4">
-                Keep your outdoor surfaces clean, protected, and looking their
-                best with our professional pressure washing service.
-              </p>
-
-              <ul
-                className="text-black font-bold text-[13px] space-y-1 mb-5"
-                data-purpose="service-features"
-              >
-                <li>
-                  • Suitable for driveways, paths, patios, and exterior hard
-                  surfaces
-                </li>
-                <li>• Designed to restore appearance and protect surfaces</li>
-              </ul>
-
-              <div className="mb-6">
-                <p className="text-body-blue text-[13px] leading-tight">
-                  Servicing Adelaide and surrounding suburbs.
-                  <br />
-                  Free inspections and quotes available enquire today.
-                </p>
-              </div>
-
-              <div className="mt-4" data-purpose="cta-container">
-                <a
-                  className="block w-full border-[3px] bg-[#38BDF8]  border-[#38BDF8]  py-3 text-center text-primary font-heading text-3xl font-bold uppercase transition-colors hover:bg-blue-50"
-                  href="#"
-                  role="button"
-                >
-                  Get Your Quote
-                </a>
-              </div>
-            </section>
-
-            <section
-              className="service-section-padding text-left max-w-md mx-auto mt-12"
-              data-purpose="gutter-cleaning-card"
-            >
-              <div className="mb-6">
-                <img
-                  alt="Gutter cleaning service clearing debris from roof gutters"
-                  className="w-full h-auto rounded-sm shadow-sm"
-                  data-purpose="service-comparison-image"
-                  src="/genrealPhotos/Gutter%20CleaningServicePage.webp"
-                />
-              </div>
-
-              <h3 className="text-primary font-heading text-3xl font-bold uppercase mb-4">
-                Gutter Cleaning
-              </h3>
-
-              <p className="text-body-blue text-[15px] leading-snug mb-4">
-                Keep your gutters clear, flowing, and protecting your home with
-                our professional gutter cleaning service.
-              </p>
-
-              <ul
-                className="text-black font-bold text-[13px] space-y-1 mb-5"
-                data-purpose="service-features"
-              >
-                <li>• Removal of leaves, debris, and built-up blockages</li>
-                <li>• Helps prevent water overflow and internal damage</li>
-              </ul>
-
-              <div className="mb-6">
-                <p className="text-body-blue text-[13px] leading-tight">
-                  Servicing Adelaide and surrounding suburbs.
-                  <br />
-                  Free inspections and quotes available enquire today.
-                </p>
-              </div>
-
-              <div className="mt-4" data-purpose="cta-container">
-                <a
-                  className="block w-full border-[3px] bg-[#38BDF8]  border-[#38BDF8]  py-3 text-center text-primary font-heading text-3xl font-bold uppercase transition-colors hover:bg-blue-50"
-                  href="#"
-                  role="button"
-                >
-                  Get Your Quote
-                </a>
-              </div>
-            </section>
+            {newPageServiceCards.map((service, index) => (
+              <ServiceOverviewCard
+                key={service.key}
+                service={service}
+                className={index === 0 ? "" : "mt-12"}
+              />
+            ))}
           </div>
         </div>
 
@@ -1314,24 +1410,25 @@ export default function New() {
           </div>
         </div>
 
-        <div className="new-section-7 relative z-10 w-full bg-background-light dark:bg-background-dark min-h-screen font-sans antialiased overflow-x-hidden">
-          <div className="w-full max-w-md mx-auto relative flex flex-col items-center justify-center py-12 px-4 space-y-8 bg-background-light dark:bg-background-dark min-h-screen">
-            <header className="w-full text-center px-2">
-              <h1 className="text-5xl md:text-6xl text-primary font-display uppercase tracking-wide leading-tight dark:text-blue-100 drop-shadow-sm">
-                Checkout these <br /> transformations!
+        <div className="new-section-7 relative z-10 w-full overflow-x-hidden bg-background-light dark:bg-background-dark font-sans antialiased">
+          <div className="w-full max-w-md mx-auto relative flex flex-col items-center px-0 py-12 space-y-8 bg-background-light dark:bg-background-dark">
+            <header className="w-full px-4">
+              <h1 className="font-['Anton'] text-[3.55rem] uppercase leading-[0.88] tracking-[0.01em] text-primary dark:text-blue-100">
+                Checkout these
+                <span className="block pt-[10px]">transformations!</span>
               </h1>
             </header>
 
-            <section className="transformation-marquee -mx-4 w-[calc(100%+2rem)]">
-              <div className="transformation-marquee-track py-1">
+            <section className="transformation-showcase-shell w-full py-3">
+              <div className="transformation-showcase-track">
                 {[0, 1].map((copyIndex) => (
                   <div
-                    key={`transformation-copy-${copyIndex}`}
-                    className="transformation-marquee-copy"
+                    key={`transformation-showcase-copy-${copyIndex}`}
+                    className="transformation-showcase-copy"
                     aria-hidden={copyIndex === 1}
                   >
-                    {transformationMarqueeItems.map((item) => (
-                      <TransformationMarqueeTile
+                    {transformationShowcaseImages.map((item) => (
+                      <TransformationShowcaseTile
                         key={`${copyIndex}-${item.key}`}
                         item={item}
                       />
@@ -1401,5 +1498,6 @@ export default function New() {
         <Footer />
       </div>
     </>
+      
   );
 }
