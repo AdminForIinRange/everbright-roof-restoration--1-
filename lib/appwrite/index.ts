@@ -1,7 +1,7 @@
 // lib/appwrite/index.ts
 "use server";
 
-import { Account, Client, Databases } from "node-appwrite";
+import { Account, Client, Databases, Messaging, Users } from "node-appwrite";
 import { appwriteConfig } from "@lib/appwrite/config";
 
 export const createAdminClient = async () => {
@@ -16,6 +16,12 @@ export const createAdminClient = async () => {
     },
     get databases() {
       return new Databases(client);
+    },
+    get messaging() {
+      return new Messaging(client);
+    },
+    get users() {
+      return new Users(client);
     },
   };
 };

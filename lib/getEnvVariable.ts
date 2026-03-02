@@ -9,3 +9,9 @@ export function getEnvVariable(name: string): string {
   }
   return value;
 }
+
+export function getOptionalEnvVariable(name: string): string | undefined {
+  noStore();
+  const value = process.env[name]?.trim();
+  return value ? value : undefined;
+}

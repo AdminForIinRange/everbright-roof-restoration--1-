@@ -5,6 +5,7 @@ import { revalidatePath } from "next/cache";
 import { ID } from "node-appwrite";
 import { createAdminClient } from "@lib/appwrite";
 import { appwriteConfig } from "@lib/appwrite/config";
+import { sendLeadNotification } from "@lib/notifications/sendLeadNotification";
 import type { Lead } from "@lib/types/lead";
 
 export type LeadState = {
@@ -50,23 +51,35 @@ export async function submitLeadAction(
       return { ok: false, error: "Message must be 255 characters or less" };
     }
 
+    const leadPayload = {
+      fullName,
+      email,
+      phone,
+      address,
+      roofType,
+      roofCondition,
+      whatTypeOfService,
+      message,
+    };
+
     const { databases } = await createAdminClient();
 
     const doc = await databases.createDocument(
       appwriteConfig.databaseId,
       appwriteConfig.leadsCollectionId,
       ID.unique(),
-      {
-        fullName,
-        email,
-        phone,
-        address,
-        roofType,
-        roofCondition,
-        whatTypeOfService,
-        message,
-      }
+      leadPayload
     );
+
+    try {
+      await sendLeadNotification({
+        ...leadPayload,
+        documentId: doc.$id,
+        submittedAt: doc.$createdAt,
+      });
+    } catch (notificationError) {
+      console.error("sendLeadNotification error:", notificationError);
+    }
 
     // so the page shows the latest confirmation if you re-render
     revalidatePath("/");

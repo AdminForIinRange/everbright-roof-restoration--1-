@@ -14,6 +14,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
+## Lead Email Notifications
+
+To send yourself an Appwrite email whenever `src/components/LeadForm.tsx` is submitted, add these environment variables:
+
+```bash
+APPWRITE_LEAD_NOTIFICATION_EMAIL="you@example.com"
+APPWRITE_LEAD_NOTIFICATION_NAME="Your Name"
+APPWRITE_LEAD_NOTIFICATION_PROVIDER_ID=""
+```
+
+Your Appwrite API key needs `databases.write`, `users.write`, `targets.write`, and `messages.write`, and your Appwrite project needs an email messaging provider configured.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
