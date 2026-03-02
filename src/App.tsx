@@ -52,7 +52,7 @@ const App: React.FC = () => {
         />
 
         <section className="bg-everbright-blue px-6 py-12 text-center md:py-16 lg:py-20">
-          <h2 className="font-display text-brand-sky text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight tracking-tight max-w-2xl md:max-w-4xl mx-auto">
+          <h2 className="font-display text-brand-sky text-3xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight tracking-tight max-w-2xl md:max-w-4xl mx-auto">
             Ready to Clean &
             <br />
             Protect Your Roof?
