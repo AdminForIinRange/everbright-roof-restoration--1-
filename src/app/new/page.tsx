@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import { buildPageMetadata } from "@lib/seo";
 import ForceLightMode from "./ForceLightMode";
 import RoofReviewsCarousel from "./RoofReviewsCarousel";
-import Header from "@/components/Header";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "New",
@@ -99,6 +98,8 @@ const newPageServiceCards = [
     category: "Roof Care",
     title: "Roof Cleaning",
     imageSrc: "/genrealPhotos/RoofcleaingServiceCard.png",
+    imageFrameClassName: "aspect-[5/3]",
+    imageClassName: "object-cover",
     imageAlt:
       "Before and after comparison of a roof cleaning service showing dark mossy tiles versus clean red tiles",
     summary:
@@ -116,6 +117,8 @@ const newPageServiceCards = [
     category: "Surface Care",
     title: "Pressure Washing",
     imageSrc: "/genrealPhotos/Pressure%20WashingServiceCardImage.webp",
+    imageFrameClassName: "aspect-[3/2]",
+    imageClassName: "object-cover object-[center_18%]",
     imageAlt: "Pressure washing service cleaning outdoor hard surfaces",
     summary:
       "High-impact cleaning for outdoor surfaces so driveways, paths, and paved areas look cleaner, brighter, and better maintained.",
@@ -132,6 +135,8 @@ const newPageServiceCards = [
     category: "Flow Protection",
     title: "Gutter Cleaning",
     imageSrc: "/genrealPhotos/Gutter%20CleaningServicePage.webp",
+    imageFrameClassName: "aspect-[5/3]",
+    imageClassName: "object-cover",
     imageAlt: "Gutter cleaning service clearing debris from roof gutters",
     summary:
       "Clear, free-flowing gutters help protect your roofline and reduce the risk of overflow around the home during heavy rain.",
@@ -247,13 +252,16 @@ function ServiceOverviewCard({
       data-purpose={`${service.key}-card`}
     >
       <article className="service-card-shell overflow-hidden">
-        <div className="relative aspect-[5/3]" data-purpose="service-comparison-image">
+        <div
+          className={`relative ${service.imageFrameClassName}`}
+          data-purpose="service-comparison-image"
+        >
           <Image
             src={service.imageSrc}
             alt={service.imageAlt}
             fill
             sizes="(min-width: 768px) 448px, calc(100vw - 48px)"
-            className="object-cover"
+            className={service.imageClassName}
           />
         </div>
 
@@ -308,7 +316,7 @@ function ServiceOverviewCard({
 export default function New() {
   return (
     <>
-      <Header />
+     
       <ForceLightMode />
       <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,400&display=swap"
