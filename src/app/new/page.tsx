@@ -268,6 +268,20 @@ export default function New() {
           font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
           letter-spacing: 0.01em;
         }
+        .sale-offer-font {
+          font-family: "Anton", "Archivo Narrow", "Oswald", sans-serif;
+          letter-spacing: 0.015em;
+          line-height: 0.88;
+        }
+        .sale-offer-white {
+          color: #f8fafc;
+          -webkit-text-stroke: 1px rgba(11, 30, 43, 0.35);
+          text-shadow: 0 2px 0 rgba(11, 30, 43, 0.85), 0 8px 18px rgba(0, 0, 0, 0.35);
+        }
+        .sale-offer-price {
+          color: #ff3b30;
+          text-shadow: 0 2px 0 rgba(120, 18, 12, 0.85), 0 8px 18px rgba(0, 0, 0, 0.25);
+        }
         .custom-checkbox {
           appearance: none;
           background-color: transparent;
@@ -611,14 +625,14 @@ export default function New() {
               </p>
             </div>
           </div>
-          <div className="mb-6 text-nowrap space-y-6 pt-4">
-            <div className="font-display font-bold text-[25px] leading-none text-shadow">
-              <span className="text-white block mb-1 uppercase">Spring Sale Roof</span>
-              <span className="text-white uppercase">
+          <div className="mb-6 space-y-6 pt-4">
+            <div className="sale-offer-font text-center uppercase">
+              <span className="sale-offer-white block text-[32px] sm:text-[36px]">
+                Spring Sale Roof
+              </span>
+              <span className="sale-offer-white block text-[34px] sm:text-[38px]">
                 Cleaning from{" "}
-                <span className="text-[#38BDF8] inline-block transform scale-110 ml-1 drop-shadow-md">
-                  $899
-                </span>{" "}
+                <span className="sale-offer-price inline-block pl-1">$899</span>
               </span>
             </div>
           </div>

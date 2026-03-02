@@ -65,7 +65,7 @@ function ReviewCard({
   review: { name: string; date: string; reviewText: string; stars: number };
 }) {
   return (
-    <div className="bg-[#0B1E2B] flex-shrink-0 w-64 rounded-xl p-4 text-left shadow-lg">
+    <div className="bg-[#003249] flex-shrink-0 w-64 rounded-xl p-4 text-left shadow-lg">
       <div className="flex items-center space-x-2 mb-2">
         <div className="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center text-xs font-bold">
           {formatInitials(review.name)}
