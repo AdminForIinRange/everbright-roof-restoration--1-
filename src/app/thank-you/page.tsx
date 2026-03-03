@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import ThankYouLeadConversionTracker from '@/components/ThankYouLeadConversionTracker';
+
 function getSafeReturnPath(fromParam: string | null) {
   if (!fromParam) {
     return '/';
@@ -65,6 +67,7 @@ export default async function ThankYouPage({ searchParams }: ThankYouPageProps) 
 
   return (
     <main className="min-h-screen bg-slate-50 px-4 py-12 md:px-6 md:py-20">
+      <ThankYouLeadConversionTracker />
       <div className="mx-auto flex w-full max-w-2xl animate-fade-in items-center justify-center">
         <section className="w-full rounded-2xl border border-slate-200 border-t-[6px] border-t-brand-sky bg-white p-8 text-center shadow-xl md:p-12">
           <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-100 md:h-24 md:w-24">

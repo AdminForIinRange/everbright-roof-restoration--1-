@@ -128,6 +128,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body className={`${poppins.variable} bg-slate-50 font-body text-slate-900 antialiased`}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17805776719"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-base" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('js', new Date());
+gtag('config', 'AW-17805776719');`}
+        </Script>
         <Script id="meta-pixel" strategy="lazyOnload">
           {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?

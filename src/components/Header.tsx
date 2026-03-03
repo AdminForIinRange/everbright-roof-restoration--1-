@@ -27,6 +27,23 @@ const Header: React.FC = () => {
     };
   }, [isMenuOpen]);
 
+  const handlePhoneClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname !== '/roof-restoration') {
+      return;
+    }
+
+    const { gtag_report_conversion: reportConversion } = window as Window & typeof globalThis & {
+      gtag_report_conversion?: (url?: string) => boolean;
+    };
+
+    if (typeof reportConversion !== 'function') {
+      return;
+    }
+
+    event.preventDefault();
+    reportConversion(event.currentTarget.getAttribute('href') ?? undefined);
+  };
+
   return (
     <>
       <header className="fixed left-0 right-0 top-0 z-[1000] h-20 border-b border-navy-dark/80 bg-navy-dark px-4 text-white md:h-24 md:px-8">
@@ -52,6 +69,7 @@ const Header: React.FC = () => {
               data-analytics-event="header_phone_icon_click"
               data-analytics-location="header"
               data-analytics-type="phone"
+              onClick={handlePhoneClick}
             >
               <span className="material-icons text-[20px]">phone</span>
             </a>
