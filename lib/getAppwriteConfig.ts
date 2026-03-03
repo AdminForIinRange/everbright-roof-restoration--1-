@@ -1,10 +1,4 @@
-// lib/getAppwriteConfig.ts
-import { unstable_noStore as noStore } from "next/cache";
-
 export function getAppwriteConfig() {
-  // Prevent static caching
-  noStore();
-
   const endpointUrl = process.env.APPWRITE_ENDPOINT;
   const projectId = process.env.APPWRITE_PROJECT;
   const databaseId = process.env.APPWRITE_DATABASE;

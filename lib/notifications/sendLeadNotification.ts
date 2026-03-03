@@ -59,10 +59,6 @@ function isConflictError(error: unknown) {
   return error instanceof AppwriteException && error.code === 409;
 }
 
-function isNotFoundError(error: unknown) {
-  return error instanceof AppwriteException && error.code === 404;
-}
-
 function escapeHtml(value: string) {
   return value
     .replaceAll("&", "&amp;")
@@ -200,6 +196,7 @@ export async function sendLeadNotification(lead: LeadNotificationPayload) {
   const settings = getLeadNotificationSettings();
 
   if (!settings) {
+    console.warn("sendLeadNotification skipped: APPWRITE_LEAD_NOTIFICATION_EMAIL is not configured.");
     return;
   }
 

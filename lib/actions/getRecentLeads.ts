@@ -3,7 +3,7 @@
 
 import { Query } from "node-appwrite";
 import { createAdminClient } from "@lib/appwrite";
-import { appwriteConfig } from "@lib/appwrite/config";
+import { getAppwriteConfig } from "@lib/appwrite/config";
 import type { Lead } from "@lib/types/lead";
 
 export type LeadsResult = {
@@ -25,6 +25,7 @@ export async function getRecentLeadsAction(
 
   try {
     const { databases } = await createAdminClient();
+    const appwriteConfig = getAppwriteConfig();
     const pageSize = 100;
     let offset = 0;
     let total = Number.POSITIVE_INFINITY;

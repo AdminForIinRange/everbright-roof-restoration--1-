@@ -2,9 +2,10 @@
 "use server";
 
 import { Account, Client, Databases, Messaging, Users } from "node-appwrite";
-import { appwriteConfig } from "@lib/appwrite/config";
+import { getAppwriteConfig } from "@lib/appwrite/config";
 
 export const createAdminClient = async () => {
+  const appwriteConfig = getAppwriteConfig();
   const client = new Client()
     .setEndpoint(appwriteConfig.endpointUrl)
     .setProject(appwriteConfig.projectId)

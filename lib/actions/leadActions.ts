@@ -4,7 +4,7 @@
 import { revalidatePath } from "next/cache";
 import { ID } from "node-appwrite";
 import { createAdminClient } from "@lib/appwrite";
-import { appwriteConfig } from "@lib/appwrite/config";
+import { getAppwriteConfig } from "@lib/appwrite/config";
 import { sendLeadNotification } from "@lib/notifications/sendLeadNotification";
 import type { Lead } from "@lib/types/lead";
 
@@ -63,6 +63,7 @@ export async function submitLeadAction(
     };
 
     const { databases } = await createAdminClient();
+    const appwriteConfig = getAppwriteConfig();
 
     const doc = await databases.createDocument(
       appwriteConfig.databaseId,
@@ -78,7 +79,11 @@ export async function submitLeadAction(
         submittedAt: doc.$createdAt,
       });
     } catch (notificationError) {
-      console.error("sendLeadNotification error:", notificationError);
+      console.error("sendLeadNotification error:", {
+        error: notificationError,
+        hasRecipientEmail: Boolean(process.env.APPWRITE_LEAD_NOTIFICATION_EMAIL),
+        providerId: process.env.APPWRITE_LEAD_NOTIFICATION_PROVIDER_ID ?? null,
+      });
     }
 
     // so the page shows the latest confirmation if you re-render
