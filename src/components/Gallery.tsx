@@ -11,6 +11,7 @@ type GalleryImage = {
 type GalleryProps = {
   altPrefix?: string;
   images?: GalleryImage[];
+  showLabelOverlay?: boolean;
   sectionClassName?: string;
   tileClassName?: string;
   imageSizes?: string;
@@ -19,6 +20,7 @@ type GalleryProps = {
 const Gallery: React.FC<GalleryProps> = ({
   altPrefix = 'Roof',
   images,
+  showLabelOverlay = false,
   sectionClassName = 'grid grid-cols-2 md:grid-cols-3 gap-0.5 bg-black border-y border-black',
   tileClassName = 'relative overflow-hidden aspect-[3/4]',
   imageSizes = '(min-width: 768px) 33vw, 50vw',
@@ -68,6 +70,19 @@ const Gallery: React.FC<GalleryProps> = ({
             quality={62}
             className={`object-cover ${img.label === 'Before' ? 'opacity-80' : 'opacity-100'}`} 
           />
+          {showLabelOverlay && (
+            <div className="pointer-events-none absolute bottom-5 left-1/2 -translate-x-1/2">
+              <span className="inline-flex items-center justify-center rounded-none border border-white/15 bg-[linear-gradient(180deg,rgba(11,21,32,0.96)_0%,rgba(6,12,18,0.96)_100%)] px-7 py-2.5 shadow-[0_18px_45px_-22px_rgba(0,0,0,0.9)] md:px-9 md:py-3">
+                <span
+                  className={`font-display text-3xl font-black leading-none tracking-tight drop-shadow-[0_2px_0_rgba(0,0,0,0.75)] md:text-4xl ${
+                    img.label === 'Before' ? 'text-white/90' : 'text-white'
+                  }`}
+                >
+                  {img.label}
+                </span>
+              </span>
+            </div>
+          )}
         </div>
       ))}
     </section>

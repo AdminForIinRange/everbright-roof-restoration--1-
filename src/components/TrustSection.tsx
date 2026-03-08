@@ -4,6 +4,7 @@ import React from 'react';
 type TrustSectionProps = {
   heading: string;
   description: string;
+  descriptionClassName?: string;
   tagline?: string;
   align?: 'center' | 'left';
   variant?: 'default' | 'titleOnly' | 'stacked';
@@ -13,6 +14,7 @@ type TrustSectionProps = {
 const TrustSection: React.FC<TrustSectionProps> = ({
   heading,
   description,
+  descriptionClassName,
   tagline,
   align = 'center',
   variant = 'default',
@@ -85,7 +87,7 @@ const TrustSection: React.FC<TrustSectionProps> = ({
             </h2>
             {tagline ? (
               <>
-                <p className="text-lg leading-relaxed text-slate-700 md:text-xl">
+                <p className={`text-lg leading-relaxed text-slate-700 md:text-xl ${descriptionClassName ?? ''}`}>
                   {description}
                 </p>
                 <p className="mb-10 mt-6 font-display text-xl font-bold uppercase tracking-wide text-dark-navy md:text-2xl lg:mb-0">
@@ -93,7 +95,7 @@ const TrustSection: React.FC<TrustSectionProps> = ({
                 </p>
               </>
             ) : (
-              <p className="mb-10 text-lg leading-relaxed text-slate-700 md:text-xl lg:mb-0">
+              <p className={`mb-10 text-lg leading-relaxed text-slate-700 md:text-xl lg:mb-0 ${descriptionClassName ?? ''}`}>
                 {description}
               </p>
             )}

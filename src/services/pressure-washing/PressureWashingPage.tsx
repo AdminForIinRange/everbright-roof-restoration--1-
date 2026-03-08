@@ -50,8 +50,9 @@ const PressureWashingPage: React.FC = () => {
       heroLeftImageAlt="Dirty driveway before pressure washing"
       heroRightImageAlt="Clean driveway after pressure washing"
       readyHeadingLine1="Ready to Refresh"
-      readyHeadingLine2="Your Exterior Surfaces?"
+      readyHeadingLine2="Your Exterior Surface?"
       galleryImages={galleryImages}
+      galleryShowLabelOverlay
       valueHeading="WE'LL BRING YOUR SURFACES BACK TO LIFE"
       valueParagraphs={[
         'Remove years of built up dirt, grime, and stains from concrete, paving, and outdoor hard surfaces.',
@@ -72,6 +73,7 @@ const PressureWashingPage: React.FC = () => {
       features={features}
       trustHeading="See How We've Refreshed Outdoor Surfaces Across Adelaide"
       trustDescription="From driveways to patios, we deliver practical pressure washing built around safe settings, strong cleaning outcomes, and dependable service standards."
+      trustDescriptionClassName="text-left"
       reviewsHeading="See What Adelaide Home Owners Are Saying"
       reviewServiceLabel="pressure washing"
       finalCtaDescription="Limited availability - refresh your outdoor surfaces with Adelaide's trusted pressure washing specialists."

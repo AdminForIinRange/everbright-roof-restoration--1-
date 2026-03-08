@@ -39,6 +39,7 @@ type ServicePageTemplateProps = {
   readyHeadingLine1: string;
   readyHeadingLine2: string;
   galleryImages: GalleryImage[];
+  galleryShowLabelOverlay?: boolean;
   valueHeading: string;
   valueParagraphs: string[];
   valueTagline: string;
@@ -56,6 +57,7 @@ type ServicePageTemplateProps = {
   features: FeatureItem[];
   trustHeading: string;
   trustDescription: string;
+  trustDescriptionClassName?: string;
   trustTagline?: string;
   trustAlign?: 'center' | 'left';
   trustVariant?: 'default' | 'titleOnly' | 'stacked';
@@ -82,6 +84,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   readyHeadingLine1,
   readyHeadingLine2,
   galleryImages,
+  galleryShowLabelOverlay = false,
   valueHeading,
   valueParagraphs,
   valueTagline,
@@ -99,6 +102,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   features,
   trustHeading,
   trustDescription,
+  trustDescriptionClassName,
   trustTagline,
   trustAlign = 'center',
   trustVariant = 'default',
@@ -136,6 +140,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
       {galleryImages.length > 0 && (
         <Gallery
           images={galleryImages}
+          showLabelOverlay={galleryShowLabelOverlay}
           sectionClassName={
             galleryImages.length === 1
               ? 'grid grid-cols-1 bg-black border-y border-black'
@@ -179,6 +184,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
       <TrustSection
         heading={trustHeading}
         description={trustDescription}
+        descriptionClassName={trustDescriptionClassName}
         tagline={trustTagline}
         align={trustAlign}
         variant={trustVariant}
