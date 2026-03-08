@@ -28,6 +28,8 @@ type ServicePageTemplateProps = {
   heroTitleLine?: string;
   heroTitleHighlight: string;
   heroBenefits: Array<{ title: string; subtitle: string }>;
+  heroBenefitTitleClassName?: string;
+  heroBenefitSubtitleClassName?: string;
   heroLeftImageSrc?: string;
   heroRightImageSrc?: string;
   heroLeftImageAlt?: string;
@@ -40,12 +42,15 @@ type ServicePageTemplateProps = {
   valueHeading: string;
   valueParagraphs: string[];
   valueTagline: string;
+  valueSectionClassName?: string;
+  valueDensity?: 'default' | 'compact';
   formServiceLabel: string;
   formTypeQuestion: string;
   formTypeOptions: string[];
   formConditionQuestion: string;
   formConditionOptions: string[];
   formMessagePlaceholder: string;
+  formSectionClassName?: string;
   reliabilityHeadingLine1: string;
   reliabilityHeadingLine2: string;
   features: FeatureItem[];
@@ -63,6 +68,8 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   heroTitleLine,
   heroTitleHighlight,
   heroBenefits,
+  heroBenefitTitleClassName,
+  heroBenefitSubtitleClassName,
   heroLeftImageSrc,
   heroRightImageSrc,
   heroLeftImageAlt,
@@ -75,12 +82,15 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   valueHeading,
   valueParagraphs,
   valueTagline,
+  valueSectionClassName = 'bg-white px-6 py-20 text-center',
+  valueDensity = 'default',
   formServiceLabel,
   formTypeQuestion,
   formTypeOptions,
   formConditionQuestion,
   formConditionOptions,
   formMessagePlaceholder,
+  formSectionClassName = 'relative z-10 mt-6 bg-[#003249] py-8 md:py-12 lg:py-14',
   reliabilityHeadingLine1,
   reliabilityHeadingLine2,
   features,
@@ -98,6 +108,8 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         titleLine={heroTitleLine}
         titleHighlight={heroTitleHighlight}
         benefits={heroBenefits}
+        benefitTitleClassName={heroBenefitTitleClassName}
+        benefitSubtitleClassName={heroBenefitSubtitleClassName}
         leftImageSrc={heroLeftImageSrc}
         rightImageSrc={heroRightImageSrc}
         leftImageAlt={heroLeftImageAlt}
@@ -125,9 +137,15 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         imageSizes={galleryImages.length === 1 ? '100vw' : '(min-width: 768px) 33vw, 50vw'}
       />
 
-      <ValueProp heading={valueHeading} paragraphs={valueParagraphs} tagline={valueTagline} sectionClassName="bg-white px-6 py-20 text-center" />
+      <ValueProp
+        heading={valueHeading}
+        paragraphs={valueParagraphs}
+        tagline={valueTagline}
+        density={valueDensity}
+        sectionClassName={valueSectionClassName}
+      />
 
-      <section id="form" className="relative z-10 mt-6 bg-[#003249] py-8 md:py-12 lg:py-14">
+      <section id="form" className={formSectionClassName}>
         <div className="mx-auto w-full max-w-2xl px-4 md:max-w-5xl lg:max-w-6xl">
           <LeadForm
             serviceLabel={formServiceLabel}

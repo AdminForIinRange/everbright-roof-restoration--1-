@@ -56,7 +56,7 @@ const secondaryRoofCleaningReviews: RoofCleaningReview[] = [
     name: "Sudip Ramdam",
     date: "9 months ago",
     reviewText:
-      "We had our roof soft-washed by Shayal from EverBright the results were honestly better than we expected. The roof had years of built-up grime, moss, and black streaks, now it looks clean and refreshed without any damage to the tiles.",
+      "We had our roof soft washed by Shayal from EverBright the results were honestly better than we expected. The roof had years of built up grime, moss, and black streaks, now it looks clean and refreshed without any damage to the tiles.",
     stars: 5,
   },
 ];
@@ -107,7 +107,7 @@ const newPageServiceCards = [
     summary:
       "A safe, controlled roof clean that removes staining and helps the whole home look fresher from the street.",
     features: [
-      "Targets mould, lichen, and built-up roof staining",
+      "Targets mould, lichen, and built up roof staining",
       "Helps restore colour and improve overall street appeal",
       "Designed for a cleaner finish without harsh, uncontrolled blasting",
     ],
@@ -126,7 +126,7 @@ const newPageServiceCards = [
       "High-impact cleaning for outdoor surfaces so driveways, paths, and paved areas look cleaner, brighter, and better maintained.",
     features: [
       "Great for driveways, paths, patios, and exterior hard surfaces",
-      "Lifts built-up grime, dirt, and slippery surface residue",
+      "Lifts built up grime, dirt, and slippery surface residue",
       "Helps refresh tired outdoor areas before sale, guests, or routine upkeep",
     ],
     bestFor: "Concrete, paving, and outdoor zones that need a visible reset.",
@@ -1047,7 +1047,7 @@ export default function New() {
                     </div>
                   </div>
                   <p className="text-white text-[15px] leading-snug font-medium opacity-95">
-                    Built-up mould and lichen slowly eat into tile surfaces
+                    Built up mould and lichen slowly eat into tile surfaces
                   </p>
                 </div>
                 <div className="flex items-start space-x-4">

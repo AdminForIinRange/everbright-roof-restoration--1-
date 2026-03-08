@@ -287,7 +287,7 @@ const processSteps = [
 
 const contactChecklist = [
   "Fully Certified & $10M Insured",
-  "Surface-safe cleaning methods",
+  "Surface safe cleaning methods",
   "Premium approved products",
   "Experienced local exterior cleaning team",
 ];
@@ -304,7 +304,7 @@ const reliabilityPoints = [
       "As a locally operated Adelaide team, we take pride in delivering professional results through experienced, highly trained technicians and clear communication from start to finish.",
   },
   {
-    title: "Surface-Safe Cleaning Methods",
+    title: "Surface Safe Cleaning Methods",
     description:
       "We use controlled, surface-specific methods designed to clean thoroughly without causing damage to tiles, concrete or exterior finishes.",
   },

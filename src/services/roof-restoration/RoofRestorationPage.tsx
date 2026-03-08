@@ -8,8 +8,8 @@ const features = [
     desc: 'Your home is protected. We carry full public liability insurance for all roof restoration services.',
   },
   {
-    title: 'Surface-Safe Methods',
-    desc: 'We use controlled, roof-safe cleaning and treatment methods to restore appearance without avoidable damage.',
+    title: 'Surface Safe Methods',
+    desc: 'We use controlled, roof safe cleaning and treatment methods to restore appearance without avoidable damage.',
   },
   {
     title: 'Longer Lasting Protection',

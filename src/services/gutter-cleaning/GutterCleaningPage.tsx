@@ -49,7 +49,7 @@ const GutterCleaningPage: React.FC = () => {
       galleryImages={galleryImages}
       valueHeading="WE'LL CLEAR YOUR GUTTERS THE RIGHT WAY"
       valueParagraphs={[
-        'Blocked gutters can lead to overflow, staining, and long-term water issues. We remove built-up debris and restore reliable flow.',
+        'Blocked gutters can lead to overflow, staining, and long term water issues. We remove built up debris and restore reliable flow.',
         'Our team works safely and efficiently with clean, professional job completion from start to finish.',
       ]}
       valueTagline="Clear Gutters. Better Protection."

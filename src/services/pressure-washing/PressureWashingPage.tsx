@@ -4,20 +4,24 @@ import ServicePageTemplate from '@/services/shared/ServicePageTemplate';
 
 const features = [
   {
-    title: 'Certified & Insured',
-    desc: 'Your property is protected by full public liability cover for all pressure washing services.',
+    title: 'Fully Insured & Professional',
+    desc: 'Your property is protected with full public liability cover, giving you peace of mind with every clean.',
   },
   {
-    title: 'Surface-Safe Pressure',
-    desc: 'We adjust pressure and nozzles by surface type for effective cleaning without unnecessary wear.',
+    title: 'Surface Safe Pressure Cleaning',
+    desc: 'We carefully adjust pressure and equipment for each surface to deliver a powerful clean without causing damage.',
   },
   {
-    title: 'Deep Grime Removal',
-    desc: 'Driveways, paths, and hard surfaces get a thorough clean that restores look and traction.',
+    title: 'Remove Years of Built Up Grime',
+    desc: 'Driveways, pathways, and outdoor hard surfaces are restored by removing stubborn dirt, algae, mould, and stains.',
   },
   {
-    title: 'Experienced & Trusted',
-    desc: 'Our local Adelaide team delivers dependable pressure washing outcomes for homes and small commercial sites.',
+    title: 'Instant Street Appeal',
+    desc: 'A professional pressure wash dramatically improves the look of your home, making surfaces brighter, cleaner, and safer.',
+  },
+  {
+    title: 'Experienced & Reliable Service',
+    desc: 'We show up on time, do the job properly, and leave your property looking noticeably better.',
   },
 ];
 
@@ -40,6 +44,7 @@ const PressureWashingPage: React.FC = () => {
         { title: 'Driveway & Paths', subtitle: 'Starting From $249' },
         { title: 'Patios & Exteriors', subtitle: 'Deep Surface Clean' },
       ]}
+      heroBenefitSubtitleClassName="text-3xl md:text-3xl lg:text-4xl"
       heroLeftImageSrc="/prussewshingImges/19.webp"
       heroRightImageSrc="/prussewshingImges/20.webp"
       heroLeftImageAlt="Dirty driveway before pressure washing"
@@ -49,28 +54,31 @@ const PressureWashingPage: React.FC = () => {
       galleryImages={galleryImages}
       valueHeading="WE'LL BRING YOUR SURFACES BACK TO LIFE"
       valueParagraphs={[
-        'Remove years of dirt, grime, and staining from concrete, paving, and outdoor hard surfaces.',
-        'Our pressure washing process is built for strong visual results while protecting surface integrity.',
+        'Remove years of built up dirt, grime, and stains from concrete, paving, and outdoor hard surfaces.',
+        'Our professional pressure washing process delivers powerful visual results while protecting the integrity of your surfaces.',
       ]}
-      valueTagline="Cleaner Surfaces. Better Street Appeal."
+      valueTagline="Cleaner Surfaces. Stronger Street Appeal."
+      valueSectionClassName="bg-white px-6 pt-20 pb-6 text-left"
+      valueDensity="compact"
       formServiceLabel="pressure washing"
       formTypeQuestion="Which area needs pressure washing?"
       formTypeOptions={['Driveway / pathways', 'Patio / deck', 'Walls / fencing', 'Not sure']}
       formConditionQuestion="How would you describe the surface condition?"
       formConditionOptions={['Light dirt', 'Moderate staining', 'Heavy build-up', 'Not sure - needs inspection']}
       formMessagePlaceholder="Tell us what areas you need cleaned..."
-      reliabilityHeadingLine1="Built for"
-      reliabilityHeadingLine2="Reliable Results"
+      formSectionClassName="relative z-10 mt-2 bg-[#003249] py-8 md:py-12 lg:py-14"
+      reliabilityHeadingLine1="Built for Real"
+      reliabilityHeadingLine2="Results"
       features={features}
       trustHeading="See How We've Refreshed Outdoor Surfaces Across Adelaide"
       trustDescription="From driveways to patios, we deliver practical pressure washing built around safe settings, strong cleaning outcomes, and dependable service standards."
-      reviewsHeading="See What Adelaide Property Owners Are Saying"
+      reviewsHeading="See What Adelaide Home Owners Are Saying"
       reviewServiceLabel="pressure washing"
       finalCtaDescription="Limited availability - refresh your outdoor surfaces with Adelaide's trusted pressure washing specialists."
       mapHeading="Trusted Pressure Washing Specialists"
       mapCheckPoints={[
         'Fully Insured & Safety Focused',
-        'Surface-Safe Pressure Methods',
+        'Surface Safe Pressure Methods',
         'Premium Commercial Equipment',
         'Highly Experienced Local Team',
       ]}

@@ -19,6 +19,8 @@ type HeroProps = {
   sectionClassName?: string;
   leftAlignBenefits?: boolean;
   singleBackgroundImage?: boolean;
+  benefitTitleClassName?: string;
+  benefitSubtitleClassName?: string;
 };
 
 const Hero: React.FC<HeroProps> = ({
@@ -33,6 +35,8 @@ const Hero: React.FC<HeroProps> = ({
   sectionClassName = 'min-h-[70vh] md:min-h-[80vh]',
   leftAlignBenefits = false,
   singleBackgroundImage = false,
+  benefitTitleClassName,
+  benefitSubtitleClassName,
 }) => {
   const benefitsClassName = leftAlignBenefits
     ? 'mb-6 max-w-sm space-y-2 text-left md:max-w-md'
@@ -96,8 +100,12 @@ const Hero: React.FC<HeroProps> = ({
                 <span className="material-icons text-white font-bold text-base md:text-lg">check</span>
               </div>
               <div>
-                <p className="text-2xl md:text-2xl lg:text-3xl font-bold leading-tight">{benefit.title}</p>
-                <p className="text-2xl md:text-2xl lg:text-3xl font-bold text-brand-sky">{benefit.subtitle}</p>
+                <p className={`text-2xl md:text-2xl lg:text-3xl font-bold leading-tight ${benefitTitleClassName ?? ''}`}>
+                  {benefit.title}
+                </p>
+                <p className={`text-2xl md:text-2xl lg:text-3xl font-bold text-brand-sky ${benefitSubtitleClassName ?? ''}`}>
+                  {benefit.subtitle}
+                </p>
               </div>
             </div>
           ))}

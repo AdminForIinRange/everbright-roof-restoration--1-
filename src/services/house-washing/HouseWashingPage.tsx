@@ -37,7 +37,7 @@ const HouseWashingPage: React.FC = () => {
       heroTitleHighlight="Services"
       heroLeftAlignBenefits
       heroBenefits={[
-        { title: 'Full Exterior Wash', subtitle: 'Surface-Safe Method' },
+        { title: 'Full Exterior Wash', subtitle: 'Surface Safe Method' },
         { title: 'Mould & Dirt Removal', subtitle: 'Refresh Street Appeal' },
       ]}
       heroLeftImageSrc="/beforeAfter/9.webp"
@@ -49,7 +49,7 @@ const HouseWashingPage: React.FC = () => {
       galleryImages={galleryImages}
       valueHeading="WE'LL REFRESH YOUR HOME'S EXTERIOR"
       valueParagraphs={[
-        'Our house washing service removes built-up dirt, organic growth, and surface grime to dramatically improve exterior appearance.',
+        'Our house washing service removes built up dirt, organic growth, and surface grime to dramatically improve exterior appearance.',
         'We tailor the cleaning method to your surface type, delivering a reliable clean while helping protect exterior finishes.',
       ]}
       valueTagline="Fresh Exterior. Strong First Impression."
@@ -70,7 +70,7 @@ const HouseWashingPage: React.FC = () => {
       mapHeading="Trusted House Washing Specialists"
       mapCheckPoints={[
         'Fully Insured & Safety Focused',
-        'Soft-Wash Surface-Safe Methods',
+        'Soft Wash Surface Safe Methods',
         'Mould Treatment Options',
         'Highly Experienced Local Team',
       ]}
