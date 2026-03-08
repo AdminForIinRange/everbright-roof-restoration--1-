@@ -2,29 +2,25 @@ import React from 'react';
 
 import ServicePageTemplate from '@/services/shared/ServicePageTemplate';
 
-const solarImage = '/solaorcleaingImages/IMG_1021.webp';
+const heroBackgroundImage = '/SolarCleaning.jpeg';
 
 const features = [
   {
-    title: 'Certified & Insured',
-    desc: 'Every solar cleaning job is fully insured and delivered with strict safety procedures.',
+    title: 'Certified & Fully Insured',
+    desc: 'Every solar cleaning service is fully insured and completed using strict safety standards.',
   },
   {
-    title: 'Panel-Safe Cleaning',
-    desc: 'Non-abrasive methods help remove film and grime without harsh residue on panel surfaces.',
+    title: 'Panel Safe Cleaning Methods',
+    desc: 'Non-abrasive cleaning safely removes dirt and film without damaging panel surfaces.',
   },
   {
-    title: 'Performance Focused',
-    desc: 'Cleaner panel surfaces support better sunlight capture and steady system output over time.',
+    title: 'Performance Focused Cleaning',
+    desc: 'Cleaner panels help maximize sunlight absorption and maintain consistent energy output.',
   },
   {
-    title: 'Experienced & Trusted',
-    desc: 'Our team has practical experience cleaning residential solar systems safely across Adelaide.',
+    title: 'Experienced & Trusted Locally',
+    desc: 'Our team has hands-on experience safely cleaning residential and commercial solar systems across Adelaide.',
   },
-];
-
-const galleryImages = [
-  { src: solarImage, label: 'After' as const, alt: 'Solar cleaning service result' },
 ];
 
 const SolarCleaningPage: React.FC = () => {
@@ -34,21 +30,22 @@ const SolarCleaningPage: React.FC = () => {
       heroTitleHighlight="Services"
       heroLeftAlignBenefits
       heroBenefits={[
-        { title: 'Panel-Safe Cleaning', subtitle: 'Pure-Water Method' },
-        { title: 'Performance Focused', subtitle: 'Protect Output' },
+        { title: 'Boost Solar Efficiency', subtitle: 'Maximize sunlight absorption.' },
+        { title: 'Panel-Safe Cleaning', subtitle: 'Safe, gentle cleaning for your panels.' },
       ]}
       heroSingleBackgroundImage
-      heroLeftImageSrc={solarImage}
+      heroLeftImageSrc={heroBackgroundImage}
       heroLeftImageAlt="Solar panels after professional cleaning"
       readyHeadingLine1="Ready to Improve"
       readyHeadingLine2="Solar Performance?"
-      galleryImages={galleryImages}
-      valueHeading="WE'LL HELP YOUR SOLAR PANELS PERFORM BETTER"
+      galleryImages={[]}
+      valueHeading="Get More From Your Solar Panels"
       valueParagraphs={[
-        'Dust, film, and bird droppings can reduce panel efficiency. Our solar cleaning service restores cleaner panel surfaces for better day-to-day performance.',
-        'We use panel-safe methods and water-fed cleaning approaches that prioritize system longevity and presentation.',
+        'Dust, grime, and bird droppings can block sunlight and reduce solar efficiency. Our professional solar panel cleaning removes buildup and restores clean surfaces so your system can perform at its best.',
+        'Using panel-safe methods and pure water cleaning, we protect your system while delivering a streak-free finish.',
       ]}
-      valueTagline="Cleaner Panels. Smarter Energy."
+      valueTagline="Clean Panels. Better Performance."
+      valueSectionClassName="bg-white px-6 py-20 text-left"
       formServiceLabel="solar cleaning"
       formTypeQuestion="What solar setup do you have?"
       formTypeOptions={['Single-storey roof', 'Double-storey roof', 'Ground-mounted panels', 'Not sure']}
@@ -58,8 +55,11 @@ const SolarCleaningPage: React.FC = () => {
       reliabilityHeadingLine1="Precision You"
       reliabilityHeadingLine2="Can Trust"
       features={features}
-      trustHeading="See How We've Helped Maintain Solar Systems Across Adelaide"
-      trustDescription="Our solar cleaning process emphasizes safety, consistent workmanship, and long-term panel care. Homeowners rely on us for dependable service and clear communication."
+      trustHeading="Solar Panel Cleaning Results Across Adelaide"
+      trustDescription="Our solar cleaning service focuses on safety, consistent workmanship, and long-term panel care. Homeowners trust us for reliable service, clear communication, and dependable results."
+      trustTagline="Customer Satisfaction Matters"
+      trustAlign="center"
+      trustVariant="stacked"
       reviewsHeading="See What Adelaide Homeowners Are Saying"
       reviewServiceLabel="solar cleaning"
       finalCtaDescription="Limited availability - protect your system with Adelaide's trusted solar cleaning specialists."

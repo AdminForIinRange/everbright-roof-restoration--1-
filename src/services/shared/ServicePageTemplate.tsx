@@ -56,6 +56,9 @@ type ServicePageTemplateProps = {
   features: FeatureItem[];
   trustHeading: string;
   trustDescription: string;
+  trustTagline?: string;
+  trustAlign?: 'center' | 'left';
+  trustVariant?: 'default' | 'titleOnly' | 'stacked';
   reviewsHeading: string;
   reviewServiceLabel: string;
   finalCtaDescription: string;
@@ -96,6 +99,9 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   features,
   trustHeading,
   trustDescription,
+  trustTagline,
+  trustAlign = 'center',
+  trustVariant = 'default',
   reviewsHeading,
   reviewServiceLabel,
   finalCtaDescription,
@@ -127,15 +133,17 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         </h2>
       </section>
 
-      <Gallery
-        images={galleryImages}
-        sectionClassName={
-          galleryImages.length === 1
-            ? 'grid grid-cols-1 bg-black border-y border-black'
-            : 'grid grid-cols-2 gap-1 bg-black border-y border-black md:grid-cols-3'
-        }
-        imageSizes={galleryImages.length === 1 ? '100vw' : '(min-width: 768px) 33vw, 50vw'}
-      />
+      {galleryImages.length > 0 && (
+        <Gallery
+          images={galleryImages}
+          sectionClassName={
+            galleryImages.length === 1
+              ? 'grid grid-cols-1 bg-black border-y border-black'
+              : 'grid grid-cols-2 gap-1 bg-black border-y border-black md:grid-cols-3'
+          }
+          imageSizes={galleryImages.length === 1 ? '100vw' : '(min-width: 768px) 33vw, 50vw'}
+        />
+      )}
 
       <ValueProp
         heading={valueHeading}
@@ -168,7 +176,13 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
 
       <Features features={features} />
 
-      <TrustSection heading={trustHeading} description={trustDescription} />
+      <TrustSection
+        heading={trustHeading}
+        description={trustDescription}
+        tagline={trustTagline}
+        align={trustAlign}
+        variant={trustVariant}
+      />
 
       <Reviews heading={reviewsHeading} reviews={buildServiceReviews(reviewServiceLabel)} />
 
