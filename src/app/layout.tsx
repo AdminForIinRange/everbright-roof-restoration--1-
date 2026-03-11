@@ -23,7 +23,7 @@ const organizationSchema = {
   url: SITE_URL,
   image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
   description:
-    'Professional exterior cleaning services in Adelaide, including roof cleaning, pressure washing, gutter cleaning, house washing, and solar cleaning.',
+    'Professional exterior cleaning services in Adelaide, including roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar cleaning.',
   areaServed: {
     '@type': 'AdministrativeArea',
     name: 'Adelaide SA',
@@ -39,7 +39,7 @@ const organizationSchema = {
     { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pressure Washing' } },
     { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Solar Cleaning' } },
     { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gutter Cleaning' } },
-    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'House Washing' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Paver & Concrete Sealing' } },
   ],
 };
 
@@ -59,14 +59,15 @@ export const metadata: Metadata = {
     template: '%s | EverBright',
   },
   description:
-    'EverBright provides professional exterior cleaning in Adelaide: roof cleaning, pressure washing, gutter cleaning, house washing, and solar panel cleaning.',
+    'EverBright provides professional exterior cleaning in Adelaide: roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar panel cleaning.',
   applicationName: SITE_NAME,
   keywords: [
     'exterior cleaning Adelaide',
     'roof cleaning Adelaide',
     'pressure washing Adelaide',
     'gutter cleaning Adelaide',
-    'house washing Adelaide',
+    'paver sealing Adelaide',
+    'concrete sealing Adelaide',
     'solar panel cleaning Adelaide',
     'roof restoration Adelaide',
     'EverBright Adelaide',
@@ -77,7 +78,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'EverBright Exterior Cleaning Adelaide',
     description:
-      'Professional exterior cleaning in Adelaide including roof cleaning, pressure washing, gutter cleaning, house washing, and solar panel cleaning.',
+      'Professional exterior cleaning in Adelaide including roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar panel cleaning.',
     url: '/',
     siteName: SITE_NAME,
     locale: 'en_AU',
@@ -93,7 +94,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'EverBright Exterior Cleaning Adelaide',
     description:
-      'Professional exterior cleaning in Adelaide including roof cleaning, pressure washing, gutter cleaning, house washing, and solar panel cleaning.',
+      'Professional exterior cleaning in Adelaide including roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar panel cleaning.',
     images: [DEFAULT_OG_IMAGE],
   },
   robots: {

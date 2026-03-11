@@ -19,7 +19,7 @@ const defaultServiceNeededOptions = [
   'Pressure Washing',
   'Solar Cleaning',
   'Gutter Cleaning',
-  'House Washing',
+  'Paver & Concrete Sealing',
 ];
 
 type LeadFormProps = {

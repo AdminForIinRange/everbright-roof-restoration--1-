@@ -99,44 +99,44 @@ const serviceReviews: Record<string, ServiceReview[]> = {
       platform: 'google',
     },
   ],
-  'house washing': [
+  'paver & concrete sealing': [
+    {
+      name: 'Al Bliss',
+      date: '3 months ago',
+      reviewText:
+        'Great result on old pavers. Clear communication, on time, and no surprises.',
+      stars: 5,
+      platform: 'google',
+    },
+    {
+      name: 'Navrose Dhaliwal',
+      date: '4 months ago',
+      reviewText:
+        "Great job on our driveway. It hasn't looked this good in years.",
+      stars: 5,
+      platform: 'google',
+    },
+    {
+      name: 'Jane M',
+      date: '4 months ago',
+      reviewText:
+        "Easy communication and an excellent finish on our driveway. Couldn't be happier.",
+      stars: 5,
+      platform: 'google',
+    },
+    {
+      name: 'Inshaaf Bhattarai',
+      date: '5 months ago',
+      reviewText:
+        'Driveway was left spotless. Great value, respectful team, and a very strong result.',
+      stars: 5,
+      platform: 'google',
+    },
     {
       name: 'Eye Dropper Academy',
       date: '3 months ago',
       reviewText:
-        'Highly recommend EverBright. Professional team that went above and beyond for our exterior clean.',
-      stars: 5,
-      platform: 'google',
-    },
-    {
-      name: 'Winnie Taban',
-      date: '5 months ago',
-      reviewText:
-        'Top tier customer service and quality work. Quick response and very professional execution.',
-      stars: 5,
-      platform: 'google',
-    },
-    {
-      name: 'RHYS and TERESA',
-      date: '3 months ago',
-      reviewText:
-        'First class service and strong cleaning result. Easy team to deal with from booking to completion.',
-      stars: 5,
-      platform: 'google',
-    },
-    {
-      name: 'Harry deakin',
-      date: '8 months ago',
-      reviewText:
-        'Exterior areas looked fresh and clean in time for our event. Very responsive and reliable.',
-      stars: 5,
-      platform: 'google',
-    },
-    {
-      name: 'The Little Loaf',
-      date: '5 months ago',
-      reviewText:
-        'Clear communication and high-quality finish. The whole process was friendly and professional.',
+        'Highly recommend EverBright. Professional team that went above and beyond and delivered a strong result.',
       stars: 5,
       platform: 'google',
     },

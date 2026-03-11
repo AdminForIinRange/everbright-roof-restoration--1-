@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Image from 'next/image';
 
 type ValuePropProps = {
   heading: string;
@@ -7,6 +8,11 @@ type ValuePropProps = {
   tagline: string;
   density?: 'default' | 'compact';
   sectionClassName?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageClassName?: string;
 };
 
 const ValueProp: React.FC<ValuePropProps> = ({
@@ -15,7 +21,13 @@ const ValueProp: React.FC<ValuePropProps> = ({
   tagline,
   density = 'default',
   sectionClassName = 'bg-white px-6 py-16 text-center md:py-20',
+  imageSrc,
+  imageAlt,
+  imageWidth = 564,
+  imageHeight = 670,
+  imageClassName = 'mb-8 h-auto w-full max-w-md rounded-2xl border border-slate-200 object-cover shadow-sm',
 }) => {
+  const hasHeading = heading.trim().length > 0;
   const headingSpacingClassName = density === 'compact' ? 'mb-5' : 'mb-8';
   const bodySpacingClassName = density === 'compact' ? 'space-y-4' : 'space-y-6';
   const taglineSpacingClassName = density === 'compact' ? 'pt-2' : 'pt-4';
@@ -23,9 +35,21 @@ const ValueProp: React.FC<ValuePropProps> = ({
   return (
     <section className={sectionClassName}>
       <div className="mx-auto max-w-4xl lg:max-w-5xl">
-        <h2 className={`${headingSpacingClassName} font-display text-3xl font-bold uppercase leading-[1.1] text-dark-navy md:text-5xl lg:text-6xl`}>
-          {heading}
-        </h2>
+        {hasHeading && (
+          <h2 className={`${headingSpacingClassName} font-display text-3xl font-bold uppercase leading-[1.1] text-dark-navy md:text-5xl lg:text-6xl`}>
+            {heading}
+          </h2>
+        )}
+        {imageSrc && imageAlt && (
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            width={imageWidth}
+            height={imageHeight}
+            sizes="(min-width: 1024px) 28rem, (min-width: 768px) 24rem, 100vw"
+            className={imageClassName}
+          />
+        )}
         <div className={`${bodySpacingClassName} font-body text-base leading-relaxed text-gray-700 md:text-lg lg:text-xl`}>
           {paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>

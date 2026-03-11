@@ -26,12 +26,12 @@ const features = [
 ];
 
 const galleryImages = [
-  { src: '/prussewshingImges/19.webp', label: 'Before' as const, alt: 'Pressure washing before result 1' },
-  { src: '/prussewshingImges/20.webp', label: 'After' as const, alt: 'Pressure washing after result 1' },
-  { src: '/prussewshingImges/21.webp', label: 'Before' as const, alt: 'Pressure washing before result 2' },
-  { src: '/prussewshingImges/22.webp', label: 'After' as const, alt: 'Pressure washing after result 2' },
-  { src: '/prussewshingImges/23.webp', label: 'Before' as const, alt: 'Pressure washing before result 3' },
-  { src: '/prussewshingImges/24.webp', label: 'After' as const, alt: 'Pressure washing after result 3' },
+  { src: '/preussewashingnewimages/4.png', label: 'Before' as const, alt: 'Pressure washing driveway before result 1' },
+  { src: '/preussewashingnewimages/5.png', label: 'After' as const, alt: 'Pressure washing driveway after result 1' },
+  { src: '/preussewashingnewimages/6.png', label: 'Before' as const, alt: 'Pressure washing patio before result 2' },
+  { src: '/preussewashingnewimages/7%20%281%29.png', label: 'After' as const, alt: 'Pressure washing patio after result 2' },
+  { src: '/preussewashingnewimages/8%20%281%29.png', label: 'Before' as const, alt: 'Pressure washing paved area before result 3' },
+  { src: '/preussewashingnewimages/9.png', label: 'After' as const, alt: 'Pressure washing paved area after result 3' },
 ];
 
 const PressureWashingPage: React.FC = () => {
@@ -52,7 +52,6 @@ const PressureWashingPage: React.FC = () => {
       readyHeadingLine1="Ready to Refresh"
       readyHeadingLine2="Your Exterior Surface?"
       galleryImages={galleryImages}
-      galleryShowLabelOverlay
       valueHeading="WE'LL BRING YOUR SURFACES BACK TO LIFE"
       valueParagraphs={[
         'Remove years of built up dirt, grime, and stains from concrete, paving, and outdoor hard surfaces.',

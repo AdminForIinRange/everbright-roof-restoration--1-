@@ -45,6 +45,11 @@ type ServicePageTemplateProps = {
   valueTagline: string;
   valueSectionClassName?: string;
   valueDensity?: 'default' | 'compact';
+  valueImageSrc?: string;
+  valueImageAlt?: string;
+  valueImageWidth?: number;
+  valueImageHeight?: number;
+  valueImageClassName?: string;
   formServiceLabel: string;
   formTypeQuestion: string;
   formTypeOptions: string[];
@@ -90,6 +95,11 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   valueTagline,
   valueSectionClassName = 'bg-white px-6 py-20 text-center',
   valueDensity = 'default',
+  valueImageSrc,
+  valueImageAlt,
+  valueImageWidth,
+  valueImageHeight,
+  valueImageClassName,
   formServiceLabel,
   formTypeQuestion,
   formTypeOptions,
@@ -156,6 +166,11 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         tagline={valueTagline}
         density={valueDensity}
         sectionClassName={valueSectionClassName}
+        imageSrc={valueImageSrc}
+        imageAlt={valueImageAlt}
+        imageWidth={valueImageWidth}
+        imageHeight={valueImageHeight}
+        imageClassName={valueImageClassName}
       />
 
       <section id="form" className={formSectionClassName}>

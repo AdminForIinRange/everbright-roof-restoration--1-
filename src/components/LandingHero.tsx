@@ -250,13 +250,17 @@ const services = [
     href: "/gutter-cleaning",
   },
   {
-    title: "House Washing",
+    title: "Paver & Concrete Sealing",
     description:
-      "Soft exterior cleaning that helps protect your walls from mould and buildup while restoring a clean finish.",
+      "Protect pavers and concrete with sealing that helps resist stains, weathering, and everyday wear.",
     detail: "",
-    points: [],
-    image: "/genrealPhotos/House%20WASHINGSERVICECARD.webp",
-    alt: "Soft washing the exterior walls of a modern house",
+    points: [
+      "Help reduce staining and surface wear",
+      "Enhance colour and overall finish",
+      "Ideal for driveways, patios and paths",
+    ],
+    image: "/scrollerImage/2.webp",
+    alt: "Clean paved outdoor surface after treatment",
     href: "/house-washing",
   },
 ];

@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
 
-import HouseWashingPageView from '@/services/house-washing/HouseWashingPage';
+import PaverConcreteSealingPageView from '@/services/paver-concrete-sealing/PaverConcreteSealingPage';
 import { buildPageMetadata } from '@lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'House Washing Adelaide',
+  title: 'Paver & Concrete Sealing Adelaide',
   description:
-    'House washing services in Adelaide that remove built up dirt, mould, and grime using safe exterior cleaning methods.',
+    'Paver and concrete sealing services in Adelaide that help protect driveways, paths, patios, and outdoor surfaces from stains, weathering, and daily wear.',
   path: '/house-washing',
-  keywords: ['house washing Adelaide', 'exterior house cleaning Adelaide', 'soft washing Adelaide'],
+  keywords: [
+    'paver sealing Adelaide',
+    'concrete sealing Adelaide',
+    'driveway sealing Adelaide',
+    'patio sealing Adelaide',
+  ],
 });
 
 export default function HouseWashingPage() {
-  return <HouseWashingPageView />;
+  return <PaverConcreteSealingPageView />;
 }
