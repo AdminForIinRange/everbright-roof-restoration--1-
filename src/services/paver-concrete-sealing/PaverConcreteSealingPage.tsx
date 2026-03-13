@@ -52,7 +52,7 @@ const PaverConcreteSealingPage: React.FC = () => {
       heroRightImageAlt="Paved outdoor area after surface treatment"
       readyHeadingLine1="Ready to Upgrade"
       readyHeadingLine2="The Look Of Your Surface?"
-      readyHeadingClassName="text-[2.35rem] md:text-[3.4rem] lg:text-[4.2rem]"
+      readyHeadingClassName="text-[1.9rem] md:text-[2.8rem] lg:text-[3.6rem]"
       galleryImages={galleryImages}
       valueHeading="PROTECT YOUR PAVERS AND CONCRETE FOR LONGER"
       valueParagraphs={[
