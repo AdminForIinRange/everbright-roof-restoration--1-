@@ -27,6 +27,7 @@ type ServicePageTemplateProps = {
   showOfferBanner?: boolean;
   heroTitleLine?: string;
   heroTitleHighlight: string;
+  heroTitleClassName?: string;
   heroBenefits: Array<{ title: string; subtitle: string }>;
   heroBenefitTitleClassName?: string;
   heroBenefitSubtitleClassName?: string;
@@ -41,6 +42,8 @@ type ServicePageTemplateProps = {
   readyHeadingClassName?: string;
   galleryImages: GalleryImage[];
   galleryShowLabelOverlay?: boolean;
+  gallerySectionClassName?: string;
+  galleryImageSizes?: string;
   valueHeading: string;
   valueParagraphs: string[];
   valueTagline: string;
@@ -81,6 +84,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   showOfferBanner = false,
   heroTitleLine,
   heroTitleHighlight,
+  heroTitleClassName,
   heroBenefits,
   heroBenefitTitleClassName,
   heroBenefitSubtitleClassName,
@@ -95,6 +99,8 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   readyHeadingClassName,
   galleryImages,
   galleryShowLabelOverlay = false,
+  gallerySectionClassName,
+  galleryImageSizes,
   valueHeading,
   valueParagraphs,
   valueTagline,
@@ -135,6 +141,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
       <Hero
         titleLine={heroTitleLine}
         titleHighlight={heroTitleHighlight}
+        titleClassName={heroTitleClassName}
         benefits={heroBenefits}
         benefitTitleClassName={heroBenefitTitleClassName}
         benefitSubtitleClassName={heroBenefitSubtitleClassName}
@@ -162,11 +169,21 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           images={galleryImages}
           showLabelOverlay={galleryShowLabelOverlay}
           sectionClassName={
-            galleryImages.length === 1
+            gallerySectionClassName ??
+            (galleryImages.length === 1
               ? 'grid grid-cols-1 bg-black border-y border-black'
-              : 'grid grid-cols-2 gap-1 bg-black border-y border-black md:grid-cols-3'
+              : galleryImages.length === 4
+                ? 'grid grid-cols-2 gap-1 bg-black border-y border-black'
+                : 'grid grid-cols-2 gap-1 bg-black border-y border-black md:grid-cols-3')
           }
-          imageSizes={galleryImages.length === 1 ? '100vw' : '(min-width: 768px) 33vw, 50vw'}
+          imageSizes={
+            galleryImageSizes ??
+            (galleryImages.length === 1
+              ? '100vw'
+              : galleryImages.length === 4
+                ? '(min-width: 768px) 50vw, 50vw'
+                : '(min-width: 768px) 33vw, 50vw')
+          }
         />
       )}
 

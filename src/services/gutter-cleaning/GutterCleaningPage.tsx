@@ -22,12 +22,10 @@ const features = [
 ];
 
 const galleryImages = [
-  { src: '/beforeAfter/5.webp', label: 'Before' as const, alt: 'Gutter cleaning before result 1' },
-  { src: '/beforeAfter/6.webp', label: 'After' as const, alt: 'Gutter cleaning after result 1' },
-  { src: '/beforeAfter/3.webp', label: 'Before' as const, alt: 'Gutter cleaning before result 2' },
-  { src: '/beforeAfter/4.webp', label: 'After' as const, alt: 'Gutter cleaning after result 2' },
-  { src: '/beforeAfter/9.webp', label: 'Before' as const, alt: 'Gutter cleaning before result 3' },
-  { src: '/beforeAfter/10.webp', label: 'After' as const, alt: 'Gutter cleaning after result 3' },
+  { src: '/bettergutterimgs/3.png', label: 'Before' as const, alt: 'Blocked gutter before cleaning with heavy plant growth' },
+  { src: '/bettergutterimgs/4.png', label: 'After' as const, alt: 'Clean gutter after debris removal and gutter cleaning' },
+  { src: '/bettergutterimgs/5.png', label: 'Before' as const, alt: 'Blocked gutter before cleaning with leaf build-up' },
+  { src: '/bettergutterimgs/6.png', label: 'After' as const, alt: 'Clean gutter after leaf and debris removal' },
 ];
 
 const GutterCleaningPage: React.FC = () => {
@@ -40,10 +38,10 @@ const GutterCleaningPage: React.FC = () => {
         { title: 'Full Gutter Clean', subtitle: 'Debris Removed' },
         { title: 'Flow Restored', subtitle: 'Downpipe Check' },
       ]}
-      heroLeftImageSrc="/beforeAfter/5.webp"
-      heroRightImageSrc="/beforeAfter/6.webp"
-      heroLeftImageAlt="Blocked gutter before cleaning"
-      heroRightImageAlt="Clean gutter after service"
+      heroLeftImageSrc="/bettergutterimgs/5.png"
+      heroRightImageSrc="/bettergutterimgs/6.png"
+      heroLeftImageAlt="Blocked gutter before cleaning with heavy growth"
+      heroRightImageAlt="Clean gutter after debris removal"
       readyHeadingLine1="Ready to Clear & Protect"
       readyHeadingLine2="Your Gutters?"
       galleryImages={galleryImages}
