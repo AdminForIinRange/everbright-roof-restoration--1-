@@ -75,7 +75,7 @@ const PaverConcreteSealingPage: React.FC = () => {
       trustDescription="From faded driveways to tired patios, we help homeowners restore colour, improve appearance and protect their pavers and concrete for longer-lasting results."
       reviewsHeading="See What Adelaide Property Owners Are Saying"
       reviewServiceLabel="paver & concrete sealing"
-      finalCtaDescription="Protect your pavers and concrete with Adelaide's trusted sealing specialists."
+      finalCtaDescription="Book your free quote for a professional sealing service with our Adelaide team."
       mapHeading="Trusted Paver & Concrete Sealing Specialists"
       mapCheckPoints={[
         'Surface Preparation Before Sealing',
