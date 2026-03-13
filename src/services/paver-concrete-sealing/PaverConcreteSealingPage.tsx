@@ -22,12 +22,12 @@ const features = [
 ];
 
 const galleryImages = [
-  { src: '/scrollerImage/1.webp', label: 'Before' as const, alt: 'Paved outdoor area before surface treatment' },
-  { src: '/scrollerImage/2.webp', label: 'After' as const, alt: 'Paved outdoor area after surface treatment' },
-  { src: '/prussewshingImges/19.webp', label: 'Before' as const, alt: 'Concrete driveway before surface treatment' },
-  { src: '/prussewshingImges/20.webp', label: 'After' as const, alt: 'Concrete driveway after surface treatment' },
-  { src: '/prussewshingImges/21.webp', label: 'Before' as const, alt: 'Concrete path before surface treatment' },
-  { src: '/prussewshingImges/22.webp', label: 'After' as const, alt: 'Concrete path after surface treatment' },
+  { src: '/betterPavingPhotos/7.png', label: 'Before' as const, alt: 'Stamped driveway before paver and concrete sealing' },
+  { src: '/betterPavingPhotos/8.png', label: 'After' as const, alt: 'Stamped driveway after paver and concrete sealing' },
+  { src: '/betterPavingPhotos/10.png', label: 'Before' as const, alt: 'Concrete carport before paver and concrete sealing' },
+  { src: '/betterPavingPhotos/9.png', label: 'After' as const, alt: 'Concrete carport after paver and concrete sealing' },
+  { src: '/betterPavingPhotos/redone.png', label: 'Before' as const, alt: 'Driveway before paver and concrete sealing' },
+  { src: '/betterPavingPhotos/1232.png', label: 'After' as const, alt: 'Driveway after paver and concrete sealing' },
 ];
 
 const PaverConcreteSealingPage: React.FC = () => {
@@ -38,20 +38,21 @@ const PaverConcreteSealingPage: React.FC = () => {
       heroLeftAlignBenefits
       heroBenefits={[
         {
-          title: 'Long Lasting Surface Protection',
-          subtitle: 'Shield against stains, fading & daily wear',
+          title: 'Resist Stains & Fading',
+          subtitle: 'Maintain a well kept, lasting surface.',
         },
         {
-          title: 'Restore a Premium Finish',
-          subtitle: 'Bring back deeper colour & a cleaner look',
+          title: 'Restore Rich Colour & Modern Look',
+          subtitle: 'Refresh dull areas with deeper, even colour.',
         },
       ]}
       heroLeftImageSrc="/scrollerImage/1.webp"
       heroRightImageSrc="/scrollerImage/2.webp"
       heroLeftImageAlt="Paved outdoor area before surface treatment"
       heroRightImageAlt="Paved outdoor area after surface treatment"
-      readyHeadingLine1="PAVER & CONCRETE"
-      readyHeadingLine2="SEALING SERVICES"
+      readyHeadingLine1="Ready to Upgrade"
+      readyHeadingLine2="The Look Of Your Surface?"
+      readyHeadingClassName="text-[2.35rem] md:text-[3.4rem] lg:text-[4.2rem]"
       galleryImages={galleryImages}
       valueHeading="PROTECT YOUR PAVERS AND CONCRETE FOR LONGER"
       valueParagraphs={[

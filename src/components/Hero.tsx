@@ -41,6 +41,7 @@ const Hero: React.FC<HeroProps> = ({
   const benefitsClassName = leftAlignBenefits
     ? 'mb-6 max-w-sm space-y-2 text-left md:max-w-md'
     : 'mx-auto mb-6 max-w-sm space-y-2 text-left md:max-w-md';
+  const benefitTextClassName = 'text-xl md:text-xl lg:text-2xl font-bold';
 
   return (
     <section className={`relative flex items-center overflow-hidden bg-brand-dark md:py-20 lg:py-24 ${sectionClassName}`}>
@@ -100,10 +101,10 @@ const Hero: React.FC<HeroProps> = ({
                 <span className="material-icons text-white font-bold text-base md:text-lg">check</span>
               </div>
               <div>
-                <p className={`text-2xl md:text-2xl lg:text-3xl font-bold leading-tight ${benefitTitleClassName ?? ''}`}>
+                <p className={`${benefitTextClassName} leading-tight ${benefitTitleClassName ?? ''}`}>
                   {benefit.title}
                 </p>
-                <p className={`text-2xl md:text-2xl lg:text-3xl font-bold text-brand-sky ${benefitSubtitleClassName ?? ''}`}>
+                <p className={`${benefitTextClassName} text-brand-sky ${benefitSubtitleClassName ?? ''}`}>
                   {benefit.subtitle}
                 </p>
               </div>

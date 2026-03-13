@@ -44,7 +44,6 @@ const PressureWashingPage: React.FC = () => {
         { title: 'Driveway & Paths', subtitle: 'Starting From $249' },
         { title: 'Patios & Exteriors', subtitle: 'Deep Surface Clean' },
       ]}
-      heroBenefitSubtitleClassName="text-3xl md:text-3xl lg:text-4xl"
       heroLeftImageSrc="/prussewshingImges/19.webp"
       heroRightImageSrc="/prussewshingImges/20.webp"
       heroLeftImageAlt="Dirty driveway before pressure washing"
