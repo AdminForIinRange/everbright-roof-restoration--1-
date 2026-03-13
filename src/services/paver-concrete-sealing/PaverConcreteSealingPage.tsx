@@ -35,7 +35,6 @@ const PaverConcreteSealingPage: React.FC = () => {
     <ServicePageTemplate
       heroTitleLine="Paver & Concrete Sealing"
       heroTitleHighlight="Services"
-      heroContentClassName="-mt-16 md:-mt-10"
       heroTitleClassName="!mt-5 !text-[2.55rem] sm:!text-[3.1rem] md:!text-[4rem] lg:!text-[4.85rem] xl:!text-[5.6rem]"
       heroBenefitTitleClassName="!text-[1.08rem] sm:!text-[1.16rem] md:!text-[1.22rem] lg:!text-[1.52rem]"
       heroBenefitSubtitleClassName="!text-[1.08rem] sm:!text-[1.16rem] md:!text-[1.22rem] lg:!text-[1.52rem]"
