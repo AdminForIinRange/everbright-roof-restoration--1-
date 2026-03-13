@@ -39,15 +39,16 @@ const PressureWashingPage: React.FC = () => {
     <ServicePageTemplate
       heroTitleLine="Pressure Cleaning"
       heroTitleHighlight="Services"
+      heroBenefitTitleClassName="!text-[1.05rem] sm:!text-[1.1rem] md:!text-[1.15rem] lg:!text-[1.4rem]"
+      heroBenefitSubtitleClassName="!text-[1.05rem] sm:!text-[1.1rem] md:!text-[1.15rem] lg:!text-[1.4rem]"
       heroLeftAlignBenefits
       heroBenefits={[
-        { title: 'Driveway & Paths', subtitle: 'Starting From $249' },
-        { title: 'Patios & Exteriors', subtitle: 'Deep Surface Clean' },
+        { title: 'Outdoor Surfaces', subtitle: 'Remove built-up grime and staining' },
+        { title: 'Walkways & Outdoor Areas', subtitle: 'Reduce slip hazards and help protect surfaces.' },
       ]}
-      heroLeftImageSrc="/prussewshingImges/19.webp"
-      heroRightImageSrc="/prussewshingImges/20.webp"
-      heroLeftImageAlt="Dirty driveway before pressure washing"
-      heroRightImageAlt="Clean driveway after pressure washing"
+      heroLeftImageSrc="/preussewashingnewimages/IMG_0647.jpeg"
+      heroLeftImageAlt="Pressure washing service background image"
+      heroSingleBackgroundImage
       readyHeadingLine1="Ready to Refresh"
       readyHeadingLine2="Your Exterior Surface?"
       galleryImages={galleryImages}

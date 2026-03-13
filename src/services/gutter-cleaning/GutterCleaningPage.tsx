@@ -15,6 +15,10 @@ const features = [
     title: 'Help Prevent Costly Water Damage',
     desc: 'Regular professional cleaning reduces the risk of gutter overflow, fascia rot, wall staining and foundation issues.',
   },
+  {
+    title: 'Reliable Local Team Across Adelaide',
+    desc: 'On-time arrivals, clear communication and a clean finish, trusted by homeowners for consistent, quality clean.',
+  },
 ];
 
 const galleryImages = [
@@ -42,8 +46,10 @@ const GutterCleaningPage: React.FC = () => {
       heroRightImageAlt="Clean gutter after debris removal"
       readyHeadingLine1="Ready to Clear & Protect"
       readyHeadingLine2="Your Gutters?"
+      readySectionClassName="!py-8 md:!py-10 lg:!py-12"
       galleryImages={galleryImages}
       valueHeading="STOP GUTTER OVERFLOW BEFORE IT DAMAGES YOUR HOME"
+      valueSectionClassName="bg-white px-6 py-12 text-center md:py-14"
       valueBodyClassName="mx-auto max-w-3xl text-left"
       valueTaglineClassName="text-center"
       valueParagraphs={[
@@ -60,11 +66,13 @@ const GutterCleaningPage: React.FC = () => {
       reliabilityHeadingLine1="Professional Gutter"
       reliabilityHeadingLine2="Cleaning Done Right"
       features={features}
-      trustHeading="See How We've Helped Protect Homes Across Adelaide"
-      trustDescription="Our gutter cleaning process focuses on safe access, complete debris removal, and dependable service quality to help protect homes in all seasons."
+      trustHeading="Protecting Adelaide Homes"
+      trustDescription="From heavy debris removal to restoring proper water flow, our professional service is designed to keep your gutters working in every season."
       reviewsHeading="See What Adelaide Homeowners Are Saying"
       reviewServiceLabel="gutter cleaning"
-      finalCtaDescription="Limited availability - protect your property with Adelaide's trusted gutter cleaning specialists."
+      finalCtaHeadingLine="BOOK YOUR GUTTER CLEAN"
+      finalCtaHeadingHighlight="TODAY"
+      finalCtaDescription="Protect your home with Adelaide's trusted gutter cleaning specialists."
       mapHeading="Trusted Gutter Cleaning Specialists"
       mapCheckPoints={[
         'Fully Insured & Safety Focused',

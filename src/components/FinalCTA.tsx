@@ -1,16 +1,23 @@
 import React from 'react';
 
 type FinalCTAProps = {
+  headingLine?: string;
+  headingHighlight?: string;
   description: string;
   sectionClassName?: string;
 };
 
-const FinalCTA: React.FC<FinalCTAProps> = ({ description, sectionClassName = 'bg-navy-dark px-6 pb-20 text-center md:pb-24' }) => {
+const FinalCTA: React.FC<FinalCTAProps> = ({
+  headingLine = 'CONTACT US',
+  headingHighlight = 'TODAY',
+  description,
+  sectionClassName = 'bg-navy-dark px-6 pb-20 text-center md:pb-24',
+}) => {
   return (
     <section className={sectionClassName}>
       <div className="mx-auto max-w-4xl border-t border-white/5 pt-10 lg:max-w-5xl">
         <h2 className="mb-6 font-display text-5xl font-black uppercase leading-[0.85] tracking-tighter text-white md:text-7xl lg:text-8xl">
-          CONTACT US <span className="text-brand-sky">TODAY</span>
+          {headingLine} <span className="text-brand-sky">{headingHighlight}</span>
         </h2>
         <p className="mx-auto max-w-2xl px-4 text-xl font-light leading-snug text-white opacity-90 md:text-2xl lg:max-w-3xl">
           {description}

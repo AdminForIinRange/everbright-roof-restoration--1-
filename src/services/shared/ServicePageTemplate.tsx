@@ -76,6 +76,8 @@ type ServicePageTemplateProps = {
   trustVariant?: 'default' | 'titleOnly' | 'stacked';
   reviewsHeading: string;
   reviewServiceLabel: string;
+  finalCtaHeadingLine?: string;
+  finalCtaHeadingHighlight?: string;
   finalCtaDescription: string;
   mapHeading: string;
   mapCheckPoints: string[];
@@ -134,6 +136,8 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   trustVariant = 'default',
   reviewsHeading,
   reviewServiceLabel,
+  finalCtaHeadingLine,
+  finalCtaHeadingHighlight,
   finalCtaDescription,
   mapHeading,
   mapCheckPoints,
@@ -239,7 +243,11 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
 
       <Reviews heading={reviewsHeading} reviews={buildServiceReviews(reviewServiceLabel)} />
 
-      <FinalCTA description={finalCtaDescription} />
+      <FinalCTA
+        headingLine={finalCtaHeadingLine}
+        headingHighlight={finalCtaHeadingHighlight}
+        description={finalCtaDescription}
+      />
 
       <MapSection heading={mapHeading} checkPoints={mapCheckPoints} />
     </PageFrame>
