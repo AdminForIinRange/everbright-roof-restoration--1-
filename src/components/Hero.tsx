@@ -17,6 +17,7 @@ type HeroProps = {
   rightImageSrc?: string;
   rightImageAlt?: string;
   sectionClassName?: string;
+  contentClassName?: string;
   leftAlignBenefits?: boolean;
   singleBackgroundImage?: boolean;
   titleClassName?: string;
@@ -34,6 +35,7 @@ const Hero: React.FC<HeroProps> = ({
   rightImageSrc = '/heroimg/8.webp',
   rightImageAlt = 'Freshly cleaned exterior surface',
   sectionClassName = 'min-h-[70vh] md:min-h-[80vh]',
+  contentClassName,
   leftAlignBenefits = false,
   singleBackgroundImage = false,
   titleClassName,
@@ -89,7 +91,9 @@ const Hero: React.FC<HeroProps> = ({
         <div className="absolute inset-0 roof-gradient-overlay"></div>
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 text-left text-white md:px-10 lg:px-12 xl:max-w-7xl">
+      <div
+        className={`relative z-10 mx-auto w-full max-w-6xl px-6 text-left text-white md:px-10 lg:px-12 xl:max-w-7xl ${contentClassName ?? ''}`}
+      >
         <h1
           className={`animate__animated animate__fadeInDown font-display mb-7 mt-10 text-5xl font-bold uppercase leading-[0.95] drop-shadow-xl sm:text-6xl md:max-w-5xl md:text-7xl lg:text-8xl xl:text-[8.75rem] ${titleClassName ?? ''}`}
         >

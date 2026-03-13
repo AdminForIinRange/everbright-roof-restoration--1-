@@ -28,6 +28,7 @@ type ServicePageTemplateProps = {
   heroTitleLine?: string;
   heroTitleHighlight: string;
   heroTitleClassName?: string;
+  heroContentClassName?: string;
   heroBenefits: Array<{ title: string; subtitle: string }>;
   heroBenefitTitleClassName?: string;
   heroBenefitSubtitleClassName?: string;
@@ -86,6 +87,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   heroTitleLine,
   heroTitleHighlight,
   heroTitleClassName,
+  heroContentClassName,
   heroBenefits,
   heroBenefitTitleClassName,
   heroBenefitSubtitleClassName,
@@ -144,6 +146,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         titleLine={heroTitleLine}
         titleHighlight={heroTitleHighlight}
         titleClassName={heroTitleClassName}
+        contentClassName={heroContentClassName}
         benefits={heroBenefits}
         benefitTitleClassName={heroBenefitTitleClassName}
         benefitSubtitleClassName={heroBenefitSubtitleClassName}
