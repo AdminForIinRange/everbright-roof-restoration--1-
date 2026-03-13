@@ -40,6 +40,7 @@ type ServicePageTemplateProps = {
   readyHeadingLine1: string;
   readyHeadingLine2: string;
   readyHeadingClassName?: string;
+  readySectionClassName?: string;
   galleryImages: GalleryImage[];
   galleryShowLabelOverlay?: boolean;
   gallerySectionClassName?: string;
@@ -97,6 +98,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   readyHeadingLine1,
   readyHeadingLine2,
   readyHeadingClassName,
+  readySectionClassName,
   galleryImages,
   galleryShowLabelOverlay = false,
   gallerySectionClassName,
@@ -154,7 +156,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         sectionClassName="min-h-[76vh] md:min-h-[90vh]"
       />
 
-      <section className="bg-everbright-blue px-6 py-14 text-center md:py-16 lg:py-20">
+      <section className={`bg-everbright-blue px-6 py-14 text-center md:py-16 lg:py-20 ${readySectionClassName ?? ''}`}>
         <h2
           className={`mx-auto max-w-2xl font-display text-3xl font-bold uppercase leading-tight tracking-tight text-white md:max-w-4xl md:text-5xl lg:text-6xl ${readyHeadingClassName ?? ''}`}
         >

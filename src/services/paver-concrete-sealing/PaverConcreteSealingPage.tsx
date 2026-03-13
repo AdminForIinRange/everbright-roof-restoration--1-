@@ -36,6 +36,8 @@ const PaverConcreteSealingPage: React.FC = () => {
       heroTitleLine="Paver & Concrete Sealing"
       heroTitleHighlight="Services"
       heroTitleClassName="!text-[2.55rem] sm:!text-[3.1rem] md:!text-[4rem] lg:!text-[4.85rem] xl:!text-[5.6rem]"
+      heroBenefitTitleClassName="!text-[1rem] sm:!text-[1.08rem] md:!text-[1.15rem] lg:!text-[1.45rem]"
+      heroBenefitSubtitleClassName="!text-[1rem] sm:!text-[1.08rem] md:!text-[1.15rem] lg:!text-[1.45rem]"
       heroLeftAlignBenefits
       heroBenefits={[
         {
@@ -52,6 +54,7 @@ const PaverConcreteSealingPage: React.FC = () => {
       heroSingleBackgroundImage
       readyHeadingLine1="Ready to Upgrade"
       readyHeadingLine2="The Look Of Your Surface?"
+      readySectionClassName="!py-8 md:!py-10 lg:!py-12"
       readyHeadingClassName="text-[1.9rem] md:text-[2.8rem] lg:text-[3.6rem]"
       galleryImages={galleryImages}
       valueHeading="PROTECT YOUR PAVERS & CONCRETE FOR LONGER"
