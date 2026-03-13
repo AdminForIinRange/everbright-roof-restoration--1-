@@ -4,28 +4,28 @@ import ServicePageTemplate from '@/services/shared/ServicePageTemplate';
 
 const features = [
   {
-    title: 'Proper Surface Preparation',
-    desc: 'We prepare pavers and concrete correctly before sealing so the finish applies evenly and lasts longer.',
+    title: 'Restore Colour & Improve Street Appeal',
+    desc: 'Bring dull, tired areas back to life with a richer tone and cleaner, more modern appearance.',
   },
   {
-    title: 'Professional Sealer Application',
-    desc: 'Suitable sealing products are applied carefully to help protect your surface from stains, moisture, and daily wear.',
+    title: 'Reliable Local Team You Can Trust',
+    desc: 'Experienced and certified technicians who arrive on time, communicate clearly and take care to leave your property tidy.',
   },
   {
-    title: 'Cleaner, Richer Finish',
-    desc: 'Sealing can enhance the look of your pavers or concrete with a cleaner and more polished appearance.',
+    title: 'Even Finish That Lasts Longer',
+    desc: 'Premium sealers combined with expert application deliver a smoother, longer lasting finish that protects against patchiness, peeling and premature wear.',
   },
   {
-    title: 'Experienced & Trusted Locally',
-    desc: 'Our team has hands-on experience restoring and protecting outdoor hard surfaces across Adelaide.',
+    title: 'Fully Insured For Your Peace Of Mind',
+    desc: 'All sealing work is covered by public liability insurance for added protection and confidence.',
   },
 ];
 
 const galleryImages = [
   { src: '/betterPavingPhotos/7.png', label: 'Before' as const, alt: 'Stamped driveway before paver and concrete sealing' },
   { src: '/betterPavingPhotos/8.png', label: 'After' as const, alt: 'Stamped driveway after paver and concrete sealing' },
-  { src: '/betterPavingPhotos/10.png', label: 'Before' as const, alt: 'Concrete carport before paver and concrete sealing' },
-  { src: '/betterPavingPhotos/9.png', label: 'After' as const, alt: 'Concrete carport after paver and concrete sealing' },
+  { src: '/betterPavingPhotos/4.png', label: 'Before' as const, alt: 'Curved pathway before paver and concrete sealing' },
+  { src: '/betterPavingPhotos/5.png', label: 'After' as const, alt: 'Curved pathway after paver and concrete sealing' },
   { src: '/betterPavingPhotos/redone.png', label: 'Before' as const, alt: 'Driveway before paver and concrete sealing' },
   { src: '/betterPavingPhotos/1232.png', label: 'After' as const, alt: 'Driveway after paver and concrete sealing' },
 ];
@@ -46,20 +46,22 @@ const PaverConcreteSealingPage: React.FC = () => {
           subtitle: 'Refresh dull areas with deeper, even colour.',
         },
       ]}
-      heroLeftImageSrc="/scrollerImage/1.webp"
-      heroRightImageSrc="/scrollerImage/2.webp"
-      heroLeftImageAlt="Paved outdoor area before surface treatment"
-      heroRightImageAlt="Paved outdoor area after surface treatment"
+      heroLeftImageSrc="/betterPavingPhotos/Blocked%20Gutters%20Clean%20Them%20Before%20Fire%20Season-8.png"
+      heroLeftImageAlt="Exterior surface restoration background image"
+      heroSingleBackgroundImage
       readyHeadingLine1="Ready to Upgrade"
       readyHeadingLine2="The Look Of Your Surface?"
       readyHeadingClassName="text-[1.9rem] md:text-[2.8rem] lg:text-[3.6rem]"
       galleryImages={galleryImages}
-      valueHeading="PROTECT YOUR PAVERS AND CONCRETE FOR LONGER"
+      valueHeading="PROTECT YOUR PAVERS & CONCRETE FOR LONGER"
+      valueHeadingClassName="text-[1.6rem] md:text-[2.7rem] lg:text-[3.5rem]"
+      valueBodyClassName="mx-auto max-w-3xl text-left"
+      valueTaglineClassName="text-center"
       valueParagraphs={[
-        'Professional sealing helps protect pavers and concrete from staining, weathering, moisture, and everyday wear while keeping outdoor surfaces looking better for longer.',
-        'We prepare the surface properly and apply suitable sealing products to enhance the finish, support easier maintenance, and leave your paved areas with a cleaner, richer look.',
+        'Over time, pavers and concrete can fade, stain and lose their clean look. Professional sealing helps guard against daily wear, enhances colour and keeps outdoor areas looking well maintained for longer.',
+        'Using the industry best sealers and careful application, you get a sharper finish, stronger protection and easier ongoing cleaning.',
       ]}
-      valueTagline="Protected Surface. Better Finish."
+      valueTagline="Restore Colour. Protect Your Surfaces."
       formServiceLabel="paver & concrete sealing"
       formTypeQuestion="What surface needs sealing?"
       formTypeOptions={['Concrete driveway', 'Pavers / patio area', 'Paths / walkways', 'Not sure']}
@@ -69,8 +71,8 @@ const PaverConcreteSealingPage: React.FC = () => {
       reliabilityHeadingLine1="PROTECTION THAT"
       reliabilityHeadingLine2="LASTS LONGER"
       features={features}
-      trustHeading="Paver & Concrete Sealing Results Across Adelaide"
-      trustDescription="From driveways and paths to patios and paved entertaining areas, we help Adelaide property owners protect hard surfaces with careful preparation, suitable sealing products, and a cleaner-looking finish."
+      trustHeading="Real Surface Transformation Results Across Adelaide"
+      trustDescription="From faded driveways to tired patios, we help homeowners restore colour, improve appearance and protect their pavers and concrete for longer-lasting results."
       reviewsHeading="See What Adelaide Property Owners Are Saying"
       reviewServiceLabel="paver & concrete sealing"
       finalCtaDescription="Protect your pavers and concrete with Adelaide's trusted sealing specialists."

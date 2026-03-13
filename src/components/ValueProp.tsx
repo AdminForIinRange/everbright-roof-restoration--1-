@@ -8,6 +8,9 @@ type ValuePropProps = {
   tagline: string;
   density?: 'default' | 'compact';
   sectionClassName?: string;
+  headingClassName?: string;
+  bodyClassName?: string;
+  taglineClassName?: string;
   imageSrc?: string;
   imageAlt?: string;
   imageWidth?: number;
@@ -21,6 +24,9 @@ const ValueProp: React.FC<ValuePropProps> = ({
   tagline,
   density = 'default',
   sectionClassName = 'bg-white px-6 py-16 text-center md:py-20',
+  headingClassName,
+  bodyClassName,
+  taglineClassName,
   imageSrc,
   imageAlt,
   imageWidth = 564,
@@ -36,7 +42,9 @@ const ValueProp: React.FC<ValuePropProps> = ({
     <section className={sectionClassName}>
       <div className="mx-auto max-w-4xl lg:max-w-5xl">
         {hasHeading && (
-          <h2 className={`${headingSpacingClassName} font-display text-3xl font-bold uppercase leading-[1.1] text-dark-navy md:text-5xl lg:text-6xl`}>
+          <h2
+            className={`${headingSpacingClassName} font-display text-3xl font-bold uppercase leading-[1.1] text-dark-navy md:text-5xl lg:text-6xl ${headingClassName ?? ''}`}
+          >
             {heading}
           </h2>
         )}
@@ -50,11 +58,15 @@ const ValueProp: React.FC<ValuePropProps> = ({
             className={imageClassName}
           />
         )}
-        <div className={`${bodySpacingClassName} font-body text-base leading-relaxed text-gray-700 md:text-lg lg:text-xl`}>
+        <div
+          className={`${bodySpacingClassName} font-body text-base leading-relaxed text-gray-700 md:text-lg lg:text-xl ${bodyClassName ?? ''}`}
+        >
           {paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
-          <p className={`${taglineSpacingClassName} text-xl font-extrabold tracking-tight text-dark-navy md:text-2xl`}>
+          <p
+            className={`${taglineSpacingClassName} text-xl font-extrabold tracking-tight text-dark-navy md:text-2xl ${taglineClassName ?? ''}`}
+          >
             {tagline}
           </p>
         </div>
