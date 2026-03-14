@@ -4,6 +4,7 @@ import Script from "next/script";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import ForceLightMode from "./ForceLightMode";
+import HeroTopBar from "./HeroTopBar";
 import RoofReviewsCarousel from "./RoofReviewsCarousel";
 import LeadForm from "@/components/LeadForm";
 
@@ -51,39 +52,6 @@ const secondaryRoofCleaningReviews: RoofCleaningReview[] = [
     stars: 5,
   },
 ];
-
-const transformationShowcaseImages = [
-  {
-    key: "transformation-3",
-    src: "/beforeAfter/3.webp",
-    alt: "Exterior cleaning transformation result 3",
-  },
-  {
-    key: "transformation-4",
-    src: "/beforeAfter/4.webp",
-    alt: "Exterior cleaning transformation result 4",
-  },
-  {
-    key: "transformation-5",
-    src: "/beforeAfter/5.webp",
-    alt: "Exterior cleaning transformation result 5",
-  },
-  {
-    key: "transformation-6",
-    src: "/beforeAfter/6.webp",
-    alt: "Exterior cleaning transformation result 6",
-  },
-  {
-    key: "transformation-9",
-    src: "/beforeAfter/9.webp",
-    alt: "Exterior cleaning transformation result 9",
-  },
-  {
-    key: "transformation-10",
-    src: "/beforeAfter/10.webp",
-    alt: "Exterior cleaning transformation result 10",
-  },
-] as const;
 
 const newPageServiceCards = [
   {
@@ -208,25 +176,6 @@ function RoofCleaningReviewCard({ review }: { review: RoofCleaningReview }) {
         </div>
       </div>
     </>
-  );
-}
-
-function TransformationShowcaseTile({
-  item,
-}: {
-  item: (typeof transformationShowcaseImages)[number];
-}) {
-  return (
-    <article className="transformation-showcase-card relative aspect-[3/4] min-w-[41vw] shrink-0 overflow-hidden bg-white sm:min-w-[240px]">
-      <Image
-        src={item.src}
-        alt={item.alt}
-        fill
-        sizes="(min-width: 768px) 240px, 41vw"
-        quality={68}
-        className="object-cover"
-      />
-    </article>
   );
 }
 
@@ -862,14 +811,8 @@ export default function New() {
           <div className="absolute inset-0 bg-black/70 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/30 to-black/30"></div>
         </div>
+        <HeroTopBar />
         <div className="relative z-10 flex flex-col items-center justify-start min-h-screen px-4 py-8 pt-[10px] max-w-md mx-auto w-full text-center">
-          <a className="w-[250px] mb-8 group" href="tel:0411017366">
-            <div className="bg-primary/90 border-4 border-[#38BDF8] py-1 px-[0] shadow-lg hover:bg-primary transition-colors duration-300">
-              <span className="text-white font-display text-1xl tracking-wid font-medium uppercase group-hover:scale-105 inline-block transition-transform">
-                Click to call: 0411 017 366
-              </span>
-            </div>
-          </a>
           <div className="space-y-2 mb-6 mt-[-00px]">
             <h2 className="text-[#38BDF8] font-medium text-xl tracking-wide text-shadow">
               Bring Your Home Back to Life!
@@ -896,15 +839,16 @@ export default function New() {
               </span>
             </div>
           </div>
-          <div className="w-[100%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-[25px] mb-4 ">
+          <div id="form" className="w-[100%] bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden mt-[25px] mb-4 ">
             <LeadForm />
           </div>
         </div>
 
         <div className="new-section-2 relative z-10">
           <section className="bg-everbright-blue px-6 py-12 text-center md:py-16 lg:py-20">
-            <h2 className="font-display text-brand-sky text-3xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight tracking-tight max-w-2xl md:max-w-4xl mx-auto">
-              See Real Roof Transformations Across Adelaide
+            <h2 className="mx-auto max-w-2xl font-['Anton'] text-[clamp(2rem,8.8vw,3.4rem)] uppercase leading-[0.98] tracking-[0.035em] text-brand-sky md:max-w-4xl [overflow-wrap:anywhere]">
+              See Real Roof
+              <span className="block">Transformations Across Adelaide</span>
             </h2>
           </section>
 
@@ -1299,34 +1243,8 @@ export default function New() {
         </div>
 
         <div className="new-section-7 relative z-10 w-full overflow-x-hidden bg-background-light dark:bg-background-dark font-sans antialiased">
-          <div className="w-full max-w-md mx-auto relative flex flex-col items-center px-0 pt-12 pb-0 space-y-8 bg-background-light dark:bg-background-dark">
-            <header className="w-full px-4">
-              <h1 className="font-['Anton'] text-[clamp(2.6rem,12vw,3.55rem)] uppercase leading-[0.9] tracking-[0.01em] text-primary dark:text-blue-100 break-words [overflow-wrap:anywhere]">
-                Checkout these
-                <span className="block pt-[10px]">transformations!</span>
-              </h1>
-            </header>
-
-            <section className="transformation-showcase-shell w-full py-3">
-              <div className="transformation-showcase-track">
-                {[0, 1].map((copyIndex) => (
-                  <div
-                    key={`transformation-showcase-copy-${copyIndex}`}
-                    className="transformation-showcase-copy"
-                    aria-hidden={copyIndex === 1}
-                  >
-                    {transformationShowcaseImages.map((item) => (
-                      <TransformationShowcaseTile
-                        key={`${copyIndex}-${item.key}`}
-                        item={item}
-                      />
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section className="w-full mt-6">
+          <div className="w-full max-w-md mx-auto relative bg-background-light dark:bg-background-dark">
+            <section className="w-full">
               <a
                 className="block w-full bg-primary hover:bg-secondary transition-colors duration-300 py-6 px-4 shadow-xl transform active:scale-95 text-center"
                 href="tel:0411017366"

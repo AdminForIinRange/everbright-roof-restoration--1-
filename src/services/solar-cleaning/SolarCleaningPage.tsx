@@ -40,17 +40,18 @@ const SolarCleaningPage: React.FC = () => {
       readyHeadingLine2="SOLAR PANELS"
       galleryImages={[]}
       valueHeading=""
-      valueImageSrc="/newsoloar/IMG_2873%20%281%29.JPG"
+      valueImageSrc="/newsoloar/solar-cleaning-feature.jpg"
       valueImageAlt="Technician cleaning solar panels on a rooftop"
       valueImageWidth={564}
       valueImageHeight={670}
       valueImageClassName="mb-8 h-auto w-full max-w-full object-cover"
+      valueBodyClassName="px-6"
       valueParagraphs={[
         'Dust, grime and bird droppings can block sunlight and reduce your system\'s efficiency. Our professional solar panel cleaning removes built-up dirt and restores a cleaner surface so your panels can perform at their best.',
         'Using professional methods and purified water cleaning, we safely clean your panels without harsh residue, helping protect your system while delivering a spotless, streak-free finish.',
       ]}
       valueTagline="SOLAR PANEL CLEANING DONE SAFELY"
-      valueSectionClassName="bg-white px-6 pt-0 pb-20 text-left"
+      valueSectionClassName="bg-white pt-0 pb-20 text-left"
       formServiceLabel="solar cleaning"
       formTypeQuestion="What solar setup do you have?"
       formTypeOptions={['Single-storey roof', 'Double-storey roof', 'Ground-mounted panels', 'Not sure']}
