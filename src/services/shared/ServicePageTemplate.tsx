@@ -79,6 +79,7 @@ type ServicePageTemplateProps = {
   reviewServiceLabel: string;
   finalCtaHeadingLine?: string;
   finalCtaHeadingHighlight?: string;
+  finalCtaHeadingClassName?: string;
   finalCtaDescription: string;
   mapHeading: string;
   mapCheckPoints: string[];
@@ -140,6 +141,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   reviewServiceLabel,
   finalCtaHeadingLine,
   finalCtaHeadingHighlight,
+  finalCtaHeadingClassName,
   finalCtaDescription,
   mapHeading,
   mapCheckPoints,
@@ -249,6 +251,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
       <FinalCTA
         headingLine={finalCtaHeadingLine}
         headingHighlight={finalCtaHeadingHighlight}
+        headingClassName={finalCtaHeadingClassName}
         description={finalCtaDescription}
       />
 

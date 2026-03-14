@@ -75,6 +75,7 @@ const SolarCleaningPage: React.FC = () => {
       reviewServiceLabel="solar cleaning"
       finalCtaHeadingLine="DON'T LET DUST REDUCE YOUR SOLAR"
       finalCtaHeadingHighlight="PERFORMANCE"
+      finalCtaHeadingClassName="!text-4xl !leading-[0.94] md:!text-6xl lg:!text-7xl"
       finalCtaDescription="Protect your panels with reliable solar cleaning from experienced Adelaide technicians."
       mapHeading="Trusted Solar Cleaning Specialists"
       mapCheckPoints={[
