@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 
-import App from '@/App';
 import { buildPageMetadata } from '@lib/seo';
+
+import NewLandingPage from '../new/NewLandingPage';
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Roof Restoration Adelaide',
@@ -37,7 +38,7 @@ export default function RoofRestorationPage() {
 }
 window.gtag_report_conversion = gtag_report_conversion;`}
       </Script>
-      <App />
+      <NewLandingPage />
     </>
   );
 }

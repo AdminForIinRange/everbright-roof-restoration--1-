@@ -28,7 +28,7 @@ export default function RoofReviewsCarousel() {
       className="drag-scroll hide-scrollbar -mx-6 overflow-x-auto overflow-y-hidden pb-4 px-0"
       loop
       autoScroll
-      autoScrollSpeed={1}
+      autoScrollSpeed={1.8}
     >
       <div className="flex flex-nowrap space-x-1 w-max">
         {reviews.map((review) => (

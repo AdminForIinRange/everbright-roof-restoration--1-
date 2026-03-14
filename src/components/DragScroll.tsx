@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 type DragScrollProps = {
   className?: string;
@@ -8,6 +8,7 @@ type DragScrollProps = {
   loop?: boolean;
   autoScroll?: boolean;
   autoScrollSpeed?: number;
+  autoScrollResumeDelay?: number;
 };
 
 const DragScroll: React.FC<DragScrollProps> = ({
@@ -16,29 +17,38 @@ const DragScroll: React.FC<DragScrollProps> = ({
   loop = false,
   autoScroll = false,
   autoScrollSpeed = 0.7,
+  autoScrollResumeDelay = 1400,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const startXRef = useRef(0);
   const scrollLeftRef = useRef(0);
   const activePointerIdRef = useRef<number | null>(null);
   const isMouseDragRef = useRef(false);
-  const isHoveringRef = useRef(false);
   const isTouchingRef = useRef(false);
   const rafRef = useRef<number | null>(null);
   const lastFrameTimeRef = useRef<number | null>(null);
   const preciseScrollLeftRef = useRef(0);
+  const autoScrollPausedUntilRef = useRef(0);
   const [isDragging, setIsDragging] = useState(false);
 
-  const getLoopWidth = () => {
+  const pauseAutoScroll = useCallback(
+    (duration = autoScrollResumeDelay) => {
+      autoScrollPausedUntilRef.current =
+        (typeof performance === 'undefined' ? Date.now() : performance.now()) + duration;
+    },
+    [autoScrollResumeDelay],
+  );
+
+  const getLoopWidth = useCallback(() => {
     const container = containerRef.current;
     const track = container?.firstElementChild as HTMLElement | null;
     if (!container || !track) {
       return 0;
     }
     return track.scrollWidth / 2;
-  };
+  }, []);
 
-  const normalizeLoopPosition = () => {
+  const normalizeLoopPosition = useCallback(() => {
     if (!loop || !containerRef.current) {
       return;
     }
@@ -56,7 +66,7 @@ const DragScroll: React.FC<DragScrollProps> = ({
     }
 
     preciseScrollLeftRef.current = container.scrollLeft;
-  };
+  }, [getLoopWidth, loop]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -86,7 +96,8 @@ const DragScroll: React.FC<DragScrollProps> = ({
         const lastTimestamp = lastFrameTimeRef.current ?? timestamp;
         const deltaMs = Math.min(timestamp - lastTimestamp, 32);
         lastFrameTimeRef.current = timestamp;
-        const shouldPause = isDragging || isHoveringRef.current || isTouchingRef.current;
+        const shouldPause =
+          isDragging || isTouchingRef.current || timestamp < autoScrollPausedUntilRef.current;
         if (!shouldPause && containerRef.current) {
           const pixelsPerSecond = autoScrollSpeed * 60;
           preciseScrollLeftRef.current += (pixelsPerSecond * deltaMs) / 1000;
@@ -108,7 +119,15 @@ const DragScroll: React.FC<DragScrollProps> = ({
       rafRef.current = null;
       lastFrameTimeRef.current = null;
     };
-  }, [autoScroll, autoScrollSpeed, isDragging, loop]);
+  }, [
+    autoScroll,
+    autoScrollSpeed,
+    getLoopWidth,
+    isDragging,
+    loop,
+    normalizeLoopPosition,
+    pauseAutoScroll,
+  ]);
 
   const handlePointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
     if (!containerRef.current) {
@@ -116,10 +135,12 @@ const DragScroll: React.FC<DragScrollProps> = ({
     }
 
     if (event.pointerType !== 'mouse') {
+      pauseAutoScroll();
       isTouchingRef.current = true;
       return;
     }
 
+    pauseAutoScroll();
     setIsDragging(true);
     event.preventDefault();
     isMouseDragRef.current = true;
@@ -135,6 +156,7 @@ const DragScroll: React.FC<DragScrollProps> = ({
       return;
     }
 
+    pauseAutoScroll();
     event.preventDefault();
     const deltaX = event.clientX - startXRef.current;
     containerRef.current.scrollLeft = scrollLeftRef.current - deltaX;
@@ -151,6 +173,7 @@ const DragScroll: React.FC<DragScrollProps> = ({
     activePointerIdRef.current = null;
     isMouseDragRef.current = false;
     isTouchingRef.current = false;
+    pauseAutoScroll();
     if (containerRef.current) {
       preciseScrollLeftRef.current = containerRef.current.scrollLeft;
     }
@@ -162,11 +185,8 @@ const DragScroll: React.FC<DragScrollProps> = ({
       ref={containerRef}
       className={`${className ?? ''}${isDragging ? ' is-dragging' : ''}`}
       onDragStart={(event) => event.preventDefault()}
-      onMouseEnter={() => {
-        isHoveringRef.current = true;
-      }}
-      onMouseLeave={() => {
-        isHoveringRef.current = false;
+      onWheel={() => {
+        pauseAutoScroll();
       }}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
