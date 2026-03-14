@@ -2,6 +2,8 @@ import React from 'react';
 
 import ServicePageTemplate from '@/services/shared/ServicePageTemplate';
 
+const heroBackgroundImage = '/040CFA29-6DAC-4F38-A17E-616811E42121.PNG';
+
 const features = [
   {
     title: 'Fully Insured. No Risk to You.',
@@ -40,10 +42,9 @@ const GutterCleaningPage: React.FC = () => {
         { title: 'Full Gutter Clean', subtitle: 'Debris Removed' },
         { title: 'Flow Restored', subtitle: 'Downpipe Check' },
       ]}
-      heroLeftImageSrc="/bettergutterimgs/28.png"
-      heroRightImageSrc="/bettergutterimgs/29.png"
-      heroLeftImageAlt="Blocked gutter before cleaning with leaf build-up"
-      heroRightImageAlt="Clean gutter after debris removal"
+      heroSingleBackgroundImage
+      heroLeftImageSrc={heroBackgroundImage}
+      heroLeftImageAlt="Professional gutter cleaning service in Adelaide"
       readyHeadingLine1="Ready to Clear & Protect"
       readyHeadingLine2="Your Gutters?"
       readySectionClassName="!py-8 md:!py-10 lg:!py-12"
