@@ -7,6 +7,7 @@ type ValuePropProps = {
   paragraphs: string[];
   tagline: string;
   density?: 'default' | 'compact';
+  headingPlacement?: 'top' | 'afterImage';
   sectionClassName?: string;
   headingClassName?: string;
   bodyClassName?: string;
@@ -23,6 +24,7 @@ const ValueProp: React.FC<ValuePropProps> = ({
   paragraphs,
   tagline,
   density = 'default',
+  headingPlacement = 'top',
   sectionClassName = 'bg-white px-6 py-16 text-center md:py-20',
   headingClassName,
   bodyClassName,
@@ -37,17 +39,18 @@ const ValueProp: React.FC<ValuePropProps> = ({
   const headingSpacingClassName = density === 'compact' ? 'mb-5' : 'mb-8';
   const bodySpacingClassName = density === 'compact' ? 'space-y-4' : 'space-y-6';
   const taglineSpacingClassName = density === 'compact' ? 'pt-2' : 'pt-4';
+  const headingMarkup = hasHeading ? (
+    <h2
+      className={`${headingSpacingClassName} font-display text-3xl font-bold uppercase leading-[1.1] text-dark-navy md:text-5xl lg:text-6xl ${headingClassName ?? ''}`}
+    >
+      {heading}
+    </h2>
+  ) : null;
 
   return (
     <section className={sectionClassName}>
       <div className="mx-auto max-w-4xl lg:max-w-5xl">
-        {hasHeading && (
-          <h2
-            className={`${headingSpacingClassName} font-display text-3xl font-bold uppercase leading-[1.1] text-dark-navy md:text-5xl lg:text-6xl ${headingClassName ?? ''}`}
-          >
-            {heading}
-          </h2>
-        )}
+        {headingPlacement === 'top' && headingMarkup}
         {imageSrc && imageAlt && (
           <Image
             src={imageSrc}
@@ -58,6 +61,7 @@ const ValueProp: React.FC<ValuePropProps> = ({
             className={imageClassName}
           />
         )}
+        {headingPlacement === 'afterImage' && headingMarkup}
         <div
           className={`${bodySpacingClassName} font-body text-base leading-relaxed text-gray-700 md:text-lg lg:text-xl ${bodyClassName ?? ''}`}
         >

@@ -38,8 +38,12 @@ const SolarCleaningPage: React.FC = () => {
       heroLeftImageAlt="Solar panels after professional cleaning"
       readyHeadingLine1="GET MORE FROM YOUR"
       readyHeadingLine2="SOLAR PANELS"
+      readyHeadingClassName="!leading-[0.96]"
+      readySectionClassName="!py-6 md:!py-7"
       galleryImages={[]}
-      valueHeading=""
+      valueHeading="Real Solar Cleaning Results Across Adelaide"
+      valueHeadingClassName="px-6 text-center"
+      valueHeadingPlacement="afterImage"
       valueImageSrc="/newsoloar/solar-cleaning-feature.jpg"
       valueImageAlt="Technician cleaning solar panels on a rooftop"
       valueImageWidth={564}
@@ -51,6 +55,7 @@ const SolarCleaningPage: React.FC = () => {
         'Using professional methods and purified water cleaning, we safely clean your panels without harsh residue, helping protect your system while delivering a spotless, streak-free finish.',
       ]}
       valueTagline="SOLAR PANEL CLEANING DONE SAFELY"
+      valueTaglineClassName="text-center"
       valueSectionClassName="bg-white pt-0 pb-20 text-left"
       formServiceLabel="solar cleaning"
       formTypeQuestion="What solar setup do you have?"
@@ -68,7 +73,9 @@ const SolarCleaningPage: React.FC = () => {
       trustVariant="stacked"
       reviewsHeading="See What Adelaide Homeowners Are Saying"
       reviewServiceLabel="solar cleaning"
-      finalCtaDescription="protect your solor pannels with Adelaide's trusted solar cleaning specialists."
+      finalCtaHeadingLine="DON'T LET DUST REDUCE YOUR SOLAR"
+      finalCtaHeadingHighlight="PERFORMANCE"
+      finalCtaDescription="Protect your panels with reliable solar cleaning from experienced Adelaide technicians."
       mapHeading="Trusted Solar Cleaning Specialists"
       mapCheckPoints={[
         'Fully Insured & Safety Focused',

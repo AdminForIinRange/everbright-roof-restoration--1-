@@ -52,6 +52,7 @@ type ServicePageTemplateProps = {
   valueHeadingClassName?: string;
   valueBodyClassName?: string;
   valueTaglineClassName?: string;
+  valueHeadingPlacement?: 'top' | 'afterImage';
   valueDensity?: 'default' | 'compact';
   valueImageSrc?: string;
   valueImageAlt?: string;
@@ -112,6 +113,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   valueHeadingClassName,
   valueBodyClassName,
   valueTaglineClassName,
+  valueHeadingPlacement = 'top',
   valueDensity = 'default',
   valueImageSrc,
   valueImageAlt,
@@ -202,6 +204,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         headingClassName={valueHeadingClassName}
         bodyClassName={valueBodyClassName}
         taglineClassName={valueTaglineClassName}
+        headingPlacement={valueHeadingPlacement}
         imageSrc={valueImageSrc}
         imageAlt={valueImageAlt}
         imageWidth={valueImageWidth}
