@@ -58,12 +58,14 @@ const GutterCleaningPage: React.FC = () => {
         'Professional service done right the first time.',
       ]}
       valueTagline="Clean Gutters. No Stress."
+      formPlacement="afterHero"
       formServiceLabel="gutter cleaning"
       formTypeQuestion="What type of property is this for?"
       formTypeOptions={['Single-storey home', 'Double-storey home', 'Townhouse / unit', 'Not sure']}
       formConditionQuestion="How blocked are the gutters?"
       formConditionOptions={['Light leaf build-up', 'Moderate blockage', 'Heavy blockage / overflow', 'Not sure - needs inspection']}
       formMessagePlaceholder="Tell us about access and any overflow areas..."
+      formSectionClassName="relative z-10 bg-[#003249] py-8 md:py-12 lg:py-14"
       reliabilityHeadingLine1="Professional Gutter"
       reliabilityHeadingLine2="Cleaning Done Right"
       features={features}

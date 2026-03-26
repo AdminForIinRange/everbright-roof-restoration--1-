@@ -60,13 +60,14 @@ const PressureWashingPage: React.FC = () => {
       valueTagline="Cleaner Surfaces. Stronger Street Appeal."
       valueSectionClassName="bg-white px-6 pt-20 pb-6 text-left"
       valueDensity="compact"
+      formPlacement="afterHero"
       formServiceLabel="pressure washing"
       formTypeQuestion="Which area needs pressure washing?"
       formTypeOptions={['Driveway / pathways', 'Patio / deck', 'Walls / fencing', 'Not sure']}
       formConditionQuestion="How would you describe the surface condition?"
       formConditionOptions={['Light dirt', 'Moderate staining', 'Heavy build-up', 'Not sure - needs inspection']}
       formMessagePlaceholder="Tell us what areas you need cleaned..."
-      formSectionClassName="relative z-10 mt-2 bg-[#003249] py-8 md:py-12 lg:py-14"
+      formSectionClassName="relative z-10 bg-[#003249] py-8 md:py-12 lg:py-14"
       reliabilityHeadingLine1="Built for Real"
       reliabilityHeadingLine2="Results"
       features={features}

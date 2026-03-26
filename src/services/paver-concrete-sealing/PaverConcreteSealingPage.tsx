@@ -66,12 +66,14 @@ const PaverConcreteSealingPage: React.FC = () => {
         'Using the industry best sealers and careful application, you get a sharper finish, stronger protection and easier ongoing cleaning.',
       ]}
       valueTagline="Restore Colour. Protect Your Surfaces."
+      formPlacement="afterHero"
       formServiceLabel="paver & concrete sealing"
       formTypeQuestion="What surface needs sealing?"
       formTypeOptions={['Concrete driveway', 'Pavers / patio area', 'Paths / walkways', 'Not sure']}
       formConditionQuestion="How would you describe the surface condition?"
       formConditionOptions={['Clean and ready to seal', 'Some fading or staining', 'Heavy weathering / patchy finish', 'Not sure - needs inspection']}
       formMessagePlaceholder="Tell us about the surface, size and access..."
+      formSectionClassName="relative z-10 bg-[#003249] py-8 md:py-12 lg:py-14"
       reliabilityHeadingLine1="PROTECTION THAT"
       reliabilityHeadingLine2="LASTS LONGER"
       features={features}

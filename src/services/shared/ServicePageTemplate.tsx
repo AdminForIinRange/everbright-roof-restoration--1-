@@ -65,6 +65,7 @@ type ServicePageTemplateProps = {
   formConditionQuestion: string;
   formConditionOptions: string[];
   formMessagePlaceholder: string;
+  formPlacement?: 'afterHero' | 'afterValue';
   formSectionClassName?: string;
   reliabilityHeadingLine1: string;
   reliabilityHeadingLine2: string;
@@ -127,6 +128,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   formConditionQuestion,
   formConditionOptions,
   formMessagePlaceholder,
+  formPlacement = 'afterValue',
   formSectionClassName = 'relative z-10 mt-6 bg-[#003249] py-8 md:py-12 lg:py-14',
   reliabilityHeadingLine1,
   reliabilityHeadingLine2,
@@ -146,6 +148,21 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   mapHeading,
   mapCheckPoints,
 }) => {
+  const formSection = (
+    <section id="form" className={formSectionClassName}>
+      <div className="mx-auto w-full max-w-2xl px-4 md:max-w-5xl lg:max-w-6xl">
+        <LeadForm
+          serviceLabel={formServiceLabel}
+          typeQuestion={formTypeQuestion}
+          typeOptions={formTypeOptions}
+          conditionQuestion={formConditionQuestion}
+          conditionOptions={formConditionOptions}
+          messagePlaceholder={formMessagePlaceholder}
+        />
+      </div>
+    </section>
+  );
+
   return (
     <PageFrame showOfferBanner={showOfferBanner}>
       <Hero
@@ -161,8 +178,11 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         rightImageAlt={heroRightImageAlt}
         leftAlignBenefits={heroLeftAlignBenefits}
         singleBackgroundImage={heroSingleBackgroundImage}
-        sectionClassName="min-h-[76vh] md:min-h-[90vh]"
+        showCta={false}
+        sectionClassName="min-h-[60vh] md:min-h-[72vh] lg:min-h-[78vh]"
       />
+
+      {formPlacement === 'afterHero' && formSection}
 
       <section className={`bg-everbright-blue px-6 py-14 text-center md:py-16 lg:py-20 ${readySectionClassName ?? ''}`}>
         <h2
@@ -214,18 +234,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         imageClassName={valueImageClassName}
       />
 
-      <section id="form" className={formSectionClassName}>
-        <div className="mx-auto w-full max-w-2xl px-4 md:max-w-5xl lg:max-w-6xl">
-          <LeadForm
-            serviceLabel={formServiceLabel}
-            typeQuestion={formTypeQuestion}
-            typeOptions={formTypeOptions}
-            conditionQuestion={formConditionQuestion}
-            conditionOptions={formConditionOptions}
-            messagePlaceholder={formMessagePlaceholder}
-          />
-        </div>
-      </section>
+      {formPlacement === 'afterValue' && formSection}
 
       <section className="border-t border-white/10 bg-banner-dark px-6 py-8 text-center md:py-10">
         <h2 className="font-display text-4xl font-bold uppercase tracking-tight text-white md:text-5xl lg:text-6xl">

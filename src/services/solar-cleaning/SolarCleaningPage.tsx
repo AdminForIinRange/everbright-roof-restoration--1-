@@ -57,12 +57,14 @@ const SolarCleaningPage: React.FC = () => {
       valueTagline="SOLAR PANEL CLEANING DONE SAFELY"
       valueTaglineClassName="text-center"
       valueSectionClassName="bg-white pt-0 pb-20 text-left"
+      formPlacement="afterHero"
       formServiceLabel="solar cleaning"
       formTypeQuestion="What solar setup do you have?"
       formTypeOptions={['Single-storey roof', 'Double-storey roof', 'Ground-mounted panels', 'Not sure']}
       formConditionQuestion="How would you describe your panel condition?"
       formConditionOptions={['Light dust', 'Bird droppings / grime', 'Heavy build-up', 'Not sure - needs inspection']}
       formMessagePlaceholder="Tell us about your solar system and access..."
+      formSectionClassName="relative z-10 bg-[#003249] py-8 md:py-12 lg:py-14"
       reliabilityHeadingLine1="SOLAR PANEL CLEANING"
       reliabilityHeadingLine2="DONE SAFELY"
       features={features}
