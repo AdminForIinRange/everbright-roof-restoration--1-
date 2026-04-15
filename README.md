@@ -24,6 +24,12 @@ APPWRITE_LEAD_NOTIFICATION_NAME="Your Name"
 APPWRITE_LEAD_NOTIFICATION_PROVIDER_ID=""
 ```
 
+Customer confirmation emails now send automatically to the submitted lead email using the same Appwrite messaging setup. If you want those confirmations to use a different email provider, you can also set:
+
+```bash
+APPWRITE_CUSTOMER_CONFIRMATION_PROVIDER_ID=""
+```
+
 Your Appwrite API key needs `documents.write`, `users.write`, `targets.write`, and `messages.write`, and your Appwrite project needs an email messaging provider configured.
 If you created the email provider after earlier tests, set `APPWRITE_LEAD_NOTIFICATION_PROVIDER_ID` to that provider's ID so the lead notification target is refreshed against the correct sender.
 

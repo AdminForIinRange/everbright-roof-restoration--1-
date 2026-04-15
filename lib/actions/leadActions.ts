@@ -5,6 +5,7 @@ import { revalidatePath } from "next/cache";
 import { ID } from "node-appwrite";
 import { createAdminClient } from "@lib/appwrite";
 import { getAppwriteConfig } from "@lib/appwrite/config";
+import { sendLeadCustomerConfirmation } from "@lib/notifications/sendLeadCustomerConfirmation";
 import { sendLeadNotification } from "@lib/notifications/sendLeadNotification";
 import type { Lead } from "@lib/types/lead";
 
@@ -83,6 +84,23 @@ export async function submitLeadAction(
         error: notificationError,
         hasRecipientEmail: Boolean(process.env.APPWRITE_LEAD_NOTIFICATION_EMAIL),
         providerId: process.env.APPWRITE_LEAD_NOTIFICATION_PROVIDER_ID ?? null,
+      });
+    }
+
+    try {
+      await sendLeadCustomerConfirmation({
+        ...leadPayload,
+        documentId: doc.$id,
+        submittedAt: doc.$createdAt,
+      });
+    } catch (customerNotificationError) {
+      console.error("sendLeadCustomerConfirmation error:", {
+        error: customerNotificationError,
+        customerEmail: email,
+        providerId:
+          process.env.APPWRITE_CUSTOMER_CONFIRMATION_PROVIDER_ID ??
+          process.env.APPWRITE_LEAD_NOTIFICATION_PROVIDER_ID ??
+          null,
       });
     }
 
