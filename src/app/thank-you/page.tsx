@@ -88,7 +88,7 @@ export default async function ThankYouPage({ searchParams }: ThankYouPageProps) 
           <h1 className="mb-3 font-display text-2xl font-bold text-slate-900 md:text-4xl">Thank You</h1>
 
           <p className="mx-auto mb-8 max-w-xl text-sm leading-relaxed text-slate-600 md:text-base">
-            We&apos;ve booked in your {serviceLabel} enquiry and one of our team will call you within 5 minutes during business hours.
+            We&apos;ve booked in your {serviceLabel} enquiry and one of our team will call you within 1 hour during business hours.
           </p>
 
           {roofSize && (

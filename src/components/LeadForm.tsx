@@ -142,7 +142,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
           ORGANISE A FREE QUOTE IN JUST 30 SECONDS!
         </h3>
           <h3 className="mb-5 text-center font-display text-sm font-light  leading-snug text-slate-900 md:mb-7 md:text-3xl">
-         Fill in the form below and one of our team will call you within 5 minutes during business hours
+         Fill in the form below and one of our team will call you within 1 hour during business hours
         </h3>
 
         <form action={formAction} onSubmit={handleSubmit} className="space-y-4 md:space-y-5">

@@ -50,6 +50,132 @@ export function renderFieldValue(value: string) {
   return escapeHtml(safeValue).replaceAll("\n", "<br />");
 }
 
+type DarkEmailDocumentParams = {
+  title: string;
+  previewText: string;
+  bodyContent: string;
+};
+
+export function buildDarkEmailDocument({
+  title,
+  previewText,
+  bodyContent,
+}: DarkEmailDocumentParams) {
+  const safeTitle = escapeHtml(title);
+  const safePreviewText = escapeHtml(previewText);
+
+  return `
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="dark" />
+        <meta name="supported-color-schemes" content="dark" />
+        <title>${safeTitle}</title>
+        <style>
+          :root {
+            color-scheme: dark;
+            supported-color-schemes: dark;
+          }
+
+          html,
+          body {
+            margin: 0 !important;
+            padding: 0 !important;
+            min-width: 100% !important;
+            width: 100% !important;
+            background-color: #081722 !important;
+            color: #e2e8f0 !important;
+          }
+
+          body,
+          table,
+          td,
+          div,
+          p,
+          a,
+          span {
+            font-family: Arial, sans-serif !important;
+          }
+
+          table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+          }
+
+          .dark-bg {
+            background-color: #081722 !important;
+          }
+
+          .dark-card {
+            background-color: #0b1e2b !important;
+          }
+
+          .dark-panel {
+            background-color: #0f172a !important;
+          }
+
+          .text-primary {
+            color: #ffffff !important;
+          }
+
+          .text-body {
+            color: #cbd5e1 !important;
+          }
+
+          .text-muted {
+            color: #94a3b8 !important;
+          }
+
+          .text-accent,
+          .text-accent a {
+            color: #38bdf8 !important;
+          }
+
+          [data-ogsc] html,
+          [data-ogsc] body,
+          [data-ogsc] .dark-bg {
+            background-color: #081722 !important;
+            color: #e2e8f0 !important;
+          }
+
+          [data-ogsc] .dark-card {
+            background-color: #0b1e2b !important;
+          }
+
+          [data-ogsc] .dark-panel {
+            background-color: #0f172a !important;
+          }
+
+          [data-ogsc] .text-primary {
+            color: #ffffff !important;
+          }
+
+          [data-ogsc] .text-body {
+            color: #cbd5e1 !important;
+          }
+
+          [data-ogsc] .text-muted {
+            color: #94a3b8 !important;
+          }
+
+          [data-ogsc] .text-accent,
+          [data-ogsc] .text-accent a {
+            color: #38bdf8 !important;
+          }
+        </style>
+      </head>
+      <body class="dark-bg" bgcolor="#081722" style="margin:0;padding:0;background-color:#081722;color:#e2e8f0;">
+        <div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">
+          ${safePreviewText}
+        </div>
+        ${bodyContent}
+      </body>
+    </html>
+  `.trim();
+}
+
 function matchesNotificationTarget(
   target: {
     $id: string;
