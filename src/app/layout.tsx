@@ -52,6 +52,8 @@ const websiteSchema = {
   inLanguage: 'en-AU',
 };
 
+const META_PIXEL_IDS = ['1429789622158579', '2078063969719564'] as const;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -119,6 +121,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
           rel="stylesheet"
         />
+        <Script id="meta-pixel-base" strategy="beforeInteractive">
+          {`!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '${META_PIXEL_IDS[0]}');
+fbq('init', '${META_PIXEL_IDS[1]}');
+fbq('track', 'PageView');`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -140,24 +155,22 @@ window.gtag = gtag;
 gtag('js', new Date());
 gtag('config', 'AW-17805776719');`}
         </Script>
-        <Script id="meta-pixel" strategy="lazyOnload">
-          {`!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1429789622158579');
-fbq('track', 'PageView');`}
-        </Script>
         <noscript>
+          {/* Vendor-required tracking beacons must remain plain img tags for noscript support. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             height="1"
             width="1"
             style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=1429789622158579&ev=PageView&noscript=1"
+            src={`https://www.facebook.com/tr?id=${META_PIXEL_IDS[0]}&ev=PageView&noscript=1`}
+            alt=""
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src={`https://www.facebook.com/tr?id=${META_PIXEL_IDS[1]}&ev=PageView&noscript=1`}
             alt=""
           />
         </noscript>
