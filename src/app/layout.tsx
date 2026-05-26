@@ -53,6 +53,7 @@ const websiteSchema = {
 };
 
 const META_PIXEL_IDS = ['1429789622158579', '2078063969719564'] as const;
+const GTM_CONTAINER_ID = 'GTM-MFTWVHKN';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -121,6 +122,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
           rel="stylesheet"
         />
+        <Script id="google-tag-manager" strategy="beforeInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_CONTAINER_ID}');`}
+        </Script>
         <Script id="meta-pixel-base" strategy="beforeInteractive">
           {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -144,6 +152,14 @@ fbq('track', 'PageView');`}
         />
       </head>
       <body className={`${poppins.variable} bg-slate-50 font-body text-slate-900 antialiased`}>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_CONTAINER_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17805776719"
           strategy="afterInteractive"
