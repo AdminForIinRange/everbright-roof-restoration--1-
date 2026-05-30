@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import GutterCleaningPageView from '@/services/gutter-cleaning/GutterCleaningPage';
-import { buildPageMetadata } from '@lib/seo';
+import { buildPageMetadata, buildServiceJsonLd } from '@lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Gutter Cleaning Adelaide',
@@ -11,6 +11,22 @@ export const metadata: Metadata = buildPageMetadata({
   keywords: ['gutter cleaning Adelaide', 'gutter clearing Adelaide', 'blocked gutters Adelaide'],
 });
 
+const serviceJsonLd = buildServiceJsonLd({
+  name: 'Gutter Cleaning Adelaide',
+  description:
+    'Professional gutter cleaning in Adelaide to clear debris, reduce overflow risk, and protect your home from water damage.',
+  path: '/gutter-cleaning',
+  serviceType: 'Gutter cleaning',
+});
+
 export default function GutterCleaningPage() {
-  return <GutterCleaningPageView />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <GutterCleaningPageView />
+    </>
+  );
 }

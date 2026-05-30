@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         {/* Logo */}
         <div className="mb-10 text-center">
           <Image
-            src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
+            src="/everbright-logo.png"
             alt="EverBright Pressure Washing logo"
             width={600}
             height={408}

@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${SITE_URL}/house-washing`,
+      url: `${SITE_URL}/paver-concrete-sealing`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 0.85,

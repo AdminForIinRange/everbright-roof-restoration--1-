@@ -6,7 +6,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { Poppins } from 'next/font/google';
 import Script from 'next/script';
 import type { ReactNode } from 'react';
-import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from '@lib/seo';
+import { DEFAULT_OG_IMAGE, SITE_LOGO_IMAGE, SITE_NAME, SITE_PHONE, SITE_URL } from '@lib/seo';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -22,6 +22,8 @@ const organizationSchema = {
   name: SITE_NAME,
   url: SITE_URL,
   image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
+  logo: `${SITE_URL}${SITE_LOGO_IMAGE}`,
+  telephone: SITE_PHONE,
   description:
     'Professional exterior cleaning services in Adelaide, including roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar cleaning.',
   areaServed: {
@@ -33,6 +35,13 @@ const organizationSchema = {
     addressLocality: 'Adelaide',
     addressRegion: 'SA',
     addressCountry: 'AU',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: SITE_PHONE,
+    contactType: 'customer service',
+    areaServed: 'AU',
+    availableLanguage: 'en-AU',
   },
   makesOffer: [
     { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Roof Cleaning' } },

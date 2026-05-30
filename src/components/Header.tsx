@@ -12,7 +12,7 @@ const serviceLinks = [
   { label: 'Pressure Washing', href: '/pressure-washing' },
   { label: 'Solar Cleaning', href: '/solar-cleaning' },
   { label: 'Gutter Cleaning', href: '/gutter-cleaning' },
-  { label: 'Paver & Concrete Sealing', href: '/house-washing' },
+  { label: 'Paver & Concrete Sealing', href: '/paver-concrete-sealing' },
 ];
 
 const Header: React.FC = () => {
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
         <div className="mx-auto flex h-full w-full items-center justify-between md:max-w-6xl xl:max-w-7xl">
           <Link href="/" className="flex flex-col items-center">
             <Image
-              src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
+              src="/everbright-logo.png"
               alt="EverBright Pressure Washing logo"
               width={600}
               height={408}
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
           <div className="mb-6 border-b border-white/10 pb-5">
             <Link href="/" className="mb-4 block w-fit" onClick={() => setIsMenuOpen(false)}>
               <Image
-                src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
+                src="/everbright-logo.png"
                 alt="EverBright Pressure Washing logo"
                 width={600}
                 height={408}

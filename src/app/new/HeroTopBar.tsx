@@ -69,7 +69,7 @@ export default function HeroTopBar() {
             aria-label="Go to homepage"
           >
             <Image
-              src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
+              src="/everbright-logo.png"
               alt="EverBright logo"
               width={88}
               height={60}
@@ -116,7 +116,7 @@ export default function HeroTopBar() {
           <div className="pb-5">
             <Link href="/" className="block w-fit" onClick={() => setIsMenuOpen(false)}>
               <Image
-                src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
+                src="/everbright-logo.png"
                 alt="EverBright logo"
                 width={92}
                 height={62}

@@ -1,6 +1,15 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
 import ThankYouLeadConversionTracker from '@/components/ThankYouLeadConversionTracker';
+import { buildPageMetadata } from '@lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Thank You',
+  description: 'Quote request confirmation for EverBright exterior cleaning enquiries.',
+  path: '/thank-you',
+  noIndex: true,
+});
 
 function getSafeReturnPath(fromParam: string | null) {
   if (!fromParam) {

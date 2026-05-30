@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 
-import { buildPageMetadata } from '@lib/seo';
+import { buildPageMetadata, buildServiceJsonLd } from '@lib/seo';
 
 import NewLandingPage from '../new/NewLandingPage';
 
@@ -13,9 +13,21 @@ export const metadata: Metadata = buildPageMetadata({
   keywords: ['roof restoration Adelaide', 'roof cleaning Adelaide', 'mould removal roof Adelaide'],
 });
 
+const serviceJsonLd = buildServiceJsonLd({
+  name: 'Roof Restoration Adelaide',
+  description:
+    'Roof restoration and roof cleaning services in Adelaide with surface safe methods, mould and lichen removal, and fast free quotes.',
+  path: '/roof-restoration',
+  serviceType: 'Roof restoration',
+});
+
 export default function RoofRestorationPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <Script id="google-ads-phone-conversion-config" strategy="afterInteractive">
         {`gtag('config', 'AW-17805776719/46LYCJTP74EcEM-uuqpC', {
   'phone_conversion_number': '0411017366'

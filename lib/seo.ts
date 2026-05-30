@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 export const SITE_URL = 'https://www.everbrightpressurewashing.com.au';
 export const SITE_NAME = 'EverBright';
 export const DEFAULT_OG_IMAGE = '/genrealPhotos/lanidngpageimg.jpeg';
+export const SITE_LOGO_IMAGE = '/everbright-logo.png';
+export const SITE_PHONE = '+61411017366';
 
 const indexableRobots: Metadata['robots'] = {
   index: true,
@@ -34,6 +36,13 @@ type BuildPageMetadataParams = {
   noIndex?: boolean;
 };
 
+type BuildServiceJsonLdParams = {
+  name: string;
+  description: string;
+  path: string;
+  serviceType?: string;
+};
+
 export function buildPageMetadata({
   title,
   description,
@@ -45,7 +54,7 @@ export function buildPageMetadata({
   const fullTitle = `${title} | ${SITE_NAME}`;
 
   return {
-    title,
+    title: canonicalPath === '/' ? fullTitle : title,
     description,
     keywords,
     alternates: {
@@ -73,4 +82,60 @@ export function buildPageMetadata({
     },
     robots: noIndex ? nonIndexableRobots : indexableRobots,
   };
+}
+
+export function normalizePath(path: string) {
+  return path.startsWith('/') ? path : `/${path}`;
+}
+
+export function buildServiceJsonLd({
+  name,
+  description,
+  path,
+  serviceType = name,
+}: BuildServiceJsonLdParams) {
+  const canonicalPath = normalizePath(path);
+  const url = `${SITE_URL}${canonicalPath}`;
+
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      '@id': `${url}#service`,
+      name,
+      description,
+      serviceType,
+      url,
+      areaServed: {
+        '@type': 'AdministrativeArea',
+        name: 'Adelaide SA',
+      },
+      provider: {
+        '@type': 'LocalBusiness',
+        '@id': `${SITE_URL}/#organization`,
+        name: SITE_NAME,
+        url: SITE_URL,
+        telephone: SITE_PHONE,
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: SITE_URL,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name,
+          item: url,
+        },
+      ],
+    },
+  ];
 }

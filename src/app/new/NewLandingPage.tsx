@@ -794,17 +794,23 @@ export default function New() {
         <div className="fixed inset-0 z-0">
           <div className="flex h-full w-full">
             <div className="relative h-full w-1/2">
-              <img
+              <Image
                 alt="Exterior cleaning in progress"
                 className="h-full w-full object-cover object-[100%_100%]"
                 src="/heroimg/7.png"
+                fill
+                priority
+                sizes="50vw"
               />
             </div>
             <div className="relative h-full w-1/2">
-              <img
+              <Image
                 alt="Freshly cleaned exterior surface"
                 className="h-full w-full object-cover object-[0%_100%]"
                 src="/heroimg/8.png"
+                fill
+                priority
+                sizes="50vw"
               />
             </div>
           </div>
@@ -857,10 +863,13 @@ export default function New() {
           <section className="bg-[#0B1E2B] flex-grow px-6 py-12  pt-[20px] pb-16 text-center relative overflow-hidden">
             <div className="flex flex-col items-center justify-center mb-10">
               <div className="mb-[-5px] relative w-52 max-w-full">
-                <img
+                <Image
                   alt="EverBright Pressure Washing logo"
                   className="mx-auto h-auto w-full object-contain drop-shadow-lg"
-                  src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
+                  src="/everbright-logo.png"
+                  width={600}
+                  height={408}
+                  sizes="13rem"
                 />
               </div>
             </div>
@@ -981,10 +990,13 @@ export default function New() {
             </section>
             <section>
               <div className="relative w-full rounded-lg overflow-hidden shadow-md">
-                <img
+                <Image
                   alt="Roof cleaning transformation result"
                   className="w-full h-auto object-cover"
                   src="/IMG_2118.PNG"
+                  width={1206}
+                  height={1392}
+                  sizes="(min-width: 768px) 430px, 100vw"
                 />
               </div>
             </section>
@@ -993,10 +1005,10 @@ export default function New() {
 
         <section className="new-section-2 relative z-10 bg-white dark:bg-gray-800 px-6 py-8 text-center border-t border-gray-200 dark:border-gray-700">
           <div className="w-full max-w-md mx-auto">
-            <h1 className="text-[25px] text-nowrap md:text-4xl font-display font-bold text-primary dark:text-white uppercase leading-tight tracking-tight mb-4">
+            <h2 className="text-[25px] text-nowrap md:text-4xl font-display font-bold text-primary dark:text-white uppercase leading-tight tracking-tight mb-4">
               Local Exterior Cleaners <br />
               You Can <span className="text-secondary">Trust</span>
-            </h1>
+            </h2>
             <div className="flex flex-col items-center justify-center mb-8">
               <div className="flex items-center space-x-2 mb-1">
                 <svg
@@ -1044,11 +1056,11 @@ export default function New() {
         <div className="new-section-4 relative z-10 w-full bg-navy-custom text-white antialiased">
           <div className="max-w-[430px] mx-auto p-8 font-body">
             <header className="mb-8" data-purpose="page-title">
-              <h1 className="text-[26px] font-heading font-bold text-strat uppercase tracking-tight">
+              <h2 className="text-[26px] font-heading font-bold text-strat uppercase tracking-tight">
                 Professional Roof Cleaning That{" "}
                 <span className="text-brand-sky">Restores Your Home</span> –
                 Without Risk
-              </h1>
+              </h2>
             </header>
 
             <section
@@ -1195,9 +1207,9 @@ export default function New() {
             data-purpose="services-overview"
           >
             <section className="mb-6 px-6">
-              <h1 className="text-primary font-heading text-5xl font-bold uppercase mb-2">
+              <h2 className="text-primary font-heading text-5xl font-bold uppercase mb-2">
                 Our Services
-              </h1>
+              </h2>
               <p className="text-[#38BDF8]  font-heading text-xl font-medium">
                 100% Satisfaction Guaranteed
               </p>
@@ -1224,10 +1236,13 @@ export default function New() {
         <div className="new-section-6 relative z-10 w-full bg-primary min-h-screen flex flex-col items-center py-10 antialiased font-condensed">
           <div className="flex flex-col items-center justify-center mb-10">
             <div className="mb-[-5px] relative w-52 max-w-full">
-              <img
+              <Image
                 alt="EverBright Pressure Washing logo"
                 className="mx-auto h-auto w-full object-contain drop-shadow-lg"
-                src="/Presure%20washing-%20Driveways,%20houses,%20patios%20and%20more-3.png"
+                src="/everbright-logo.png"
+                width={600}
+                height={408}
+                sizes="13rem"
               />
             </div>
           </div>
@@ -1264,9 +1279,9 @@ export default function New() {
               <h2 className="text-primary text-3xl font-bold tracking-tight">
                 Still not sure?
               </h2>
-              <h1 className="font-display text-white text-4xl leading-tight font-bold uppercase tracking-tighter drop-shadow-sm">
+              <h2 className="font-display text-white text-4xl leading-tight font-bold uppercase tracking-tighter drop-shadow-sm">
                 100% FREE Roof Inspections &amp; Quotes - No Obligation
-              </h1>
+              </h2>
               <p className="text-white text-lg leading-snug px-2 opacity-95">
                 Every quote is honest, detailed, and tailored to your roof, with
                 no pushy sales tactics.

@@ -261,7 +261,7 @@ const services = [
     ],
     image: "/scrollerImage/2.webp",
     alt: "Clean paved outdoor surface after treatment",
-    href: "/house-washing",
+    href: "/paver-concrete-sealing",
   },
 ];
 
