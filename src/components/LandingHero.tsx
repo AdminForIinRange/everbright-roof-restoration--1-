@@ -344,8 +344,8 @@ export default function LandingHero() {
         </div>
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow-1 flex-col justify-end px-6 pb-0 pt-8 md:px-10 md:pb-0 md:pt-12 lg:px-12 lg:pb-0 xl:max-w-7xl">
-          <div className="mb-6 ">
-            <h1 className="animate__animated animate__fadeInDown font-display text-[45px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[8.5rem] xl:text-[9rem]">
+          <div className="mb-6 lg:mb-3">
+            <h1 className="animate__animated animate__fadeInDown font-display text-[45px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[5.4rem] xl:text-[5.8rem] 2xl:text-[6.8rem]">
               Exterior Cleaning,
               <br />
               <span className="text-brand-sky">Done Properly </span>
@@ -353,17 +353,17 @@ export default function LandingHero() {
             </h1>
           </div>
 
-          <p className="mb-8 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:max-w-2xl">
+          <p className="mb-8 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:mb-4 lg:max-w-2xl lg:text-lg xl:text-xl">
             Adelaide’s trusted exterior cleaning team delivering safe, precise
             methods that restore appearance and protect your home.
           </p>
 
-          <ul className="mb-8 grid max-w-3xl grid-cols-2 gap-x-4 gap-y-3 text-left sm:gap-x-8 sm:gap-y-4">
+          <ul className="mb-8 grid max-w-3xl grid-cols-2 gap-x-4 gap-y-3 text-left sm:gap-x-8 sm:gap-y-4 lg:mb-4">
             <li className="flex items-center gap-2.5 sm:gap-3">
               <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
                 check_circle
               </span>
-              <span className="font-body text-lg leading-none text-white sm:text-2xl">
+              <span className="font-body text-lg leading-none text-white sm:text-2xl lg:text-xl xl:text-2xl">
                 Roof Cleaning
               </span>
             </li>
@@ -371,7 +371,7 @@ export default function LandingHero() {
               <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
                 check_circle
               </span>
-              <span className="font-body text-lg leading-none text-white sm:text-2xl">
+              <span className="font-body text-lg leading-none text-white sm:text-2xl lg:text-xl xl:text-2xl">
                 Solar Cleaning
               </span>
             </li>
@@ -379,7 +379,7 @@ export default function LandingHero() {
               <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
                 check_circle
               </span>
-              <span className="font-body text-lg leading-none text-white sm:text-2xl">
+              <span className="font-body text-lg leading-none text-white sm:text-2xl lg:text-xl xl:text-2xl">
                 Gutter Cleaning
               </span>
             </li>
@@ -387,7 +387,7 @@ export default function LandingHero() {
               <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
                 check_circle
               </span>
-              <span className="font-body text-lg leading-none text-white sm:text-2xl">
+              <span className="font-body text-lg leading-none text-white sm:text-2xl lg:text-xl xl:text-2xl">
                 Pressure Washing
               </span>
             </li>
@@ -426,7 +426,7 @@ export default function LandingHero() {
           </div>
           */}
 
-          <div className="mb-8 flex flex-col">
+          <div className="mb-8 flex flex-col lg:mb-4">
             <div className="flex items-center gap-3">
               <GoogleIcon />
               <span className="text-2xl font-bold text-[#FBBF24]">5.0</span>
@@ -448,28 +448,28 @@ export default function LandingHero() {
 
           <Link
             href="#form"
-            className="w-full rounded-2xl bg-brand-sky py-5 text-center font-display text-2xl  tracking-wide text-white shadow-lg transition-transform hover:bg-brand-sky/90 active:scale-[0.98] md:w-auto md:min-w-[320px] md:px-12"
+            className="w-full rounded-2xl bg-brand-sky py-5 text-center font-display text-2xl  tracking-wide text-white shadow-lg transition-transform hover:bg-brand-sky/90 active:scale-[0.98] md:w-auto md:min-w-[320px] md:px-12 lg:w-auto lg:self-start lg:py-4 lg:text-xl xl:text-2xl"
           >
             Book Your FREE Quote
           </Link>
 
-          <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 bg-everbright-blue py-5 md:py-6">
+          <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 bg-everbright-blue py-5 md:py-6 lg:mt-4 lg:py-3">
             <div className="mx-auto grid w-full max-w-6xl grid-cols-3 gap-3 px-6 sm:gap-4 md:gap-6 md:px-10 lg:px-12">
               <div className="flex min-w-0 flex-col items-start text-left">
                 <Clock3
-                  className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16"
+                  className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-12 lg:w-12 xl:h-12 xl:w-12"
                   strokeWidth={2.5}
                 />
-                <span className="font-display text-[0.9rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
+                <span className="font-display text-[0.9rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem] lg:text-[1.2rem] xl:text-[1.25rem]">
                   On Time Service
                 </span>
               </div>
               <div className="flex min-w-0 flex-col items-start text-left">
                 <UsersRound
-                  className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16"
+                  className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-12 lg:w-12 xl:h-12 xl:w-12"
                   strokeWidth={2.5}
                 />
-                <span className="font-display text-[0.8rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
+                <span className="font-display text-[0.8rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem] lg:text-[1.2rem] xl:text-[1.25rem]">
                   100% Satisfaction
                   <br />
                   Guarantee
@@ -477,10 +477,10 @@ export default function LandingHero() {
               </div>
               <div className="flex min-w-0 flex-col items-start text-left">
                 <ShieldCheck
-                  className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16"
+                  className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-12 lg:w-12 xl:h-12 xl:w-12"
                   strokeWidth={2.5}
                 />
-                <span className="font-display text-[0.8rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem]">
+                <span className="font-display text-[0.8rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem] lg:text-[1.2rem] xl:text-[1.25rem]">
                   Fully INSURED FOR All
                   <br />
                   Jobs
@@ -581,11 +581,11 @@ export default function LandingHero() {
           </h2>
         </header>
 
-        <div className="mx-auto max-w-md space-y-6 px-5 pb-24 pt-8 md:grid md:max-w-6xl md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-3 lg:gap-8 xl:gap-10">
+        <div className="mx-auto max-w-md space-y-6 px-5 pb-24 pt-8 md:grid md:max-w-6xl md:grid-cols-2 md:gap-6 md:space-y-0 lg:max-w-5xl lg:gap-8 xl:max-w-7xl xl:grid-cols-3 xl:gap-10">
           {services.map((service) => (
             <article
               key={service.title}
-              className="group relative aspect-[3.5/5] overflow-hidden rounded-[2rem] shadow-2xl md:aspect-[5/6]"
+              className="group relative aspect-[3.5/5] overflow-hidden rounded-[2rem] shadow-2xl md:aspect-[5/6] lg:h-[600px] lg:aspect-auto xl:h-[620px]"
             >
               <Image
                 src={service.image}
@@ -606,12 +606,12 @@ export default function LandingHero() {
                     : "bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.9))]"
                 }`}
               />
-              <div className="absolute inset-0 flex flex-col p-8 text-left md:p-7 lg:p-8">
-                <div className="flex flex-1 flex-col items-start justify-start md:justify-start md:pt-4">
-                  <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-[3.25rem] lg:text-6xl">
+              <div className="absolute inset-0 flex flex-col p-8 text-left md:p-7 lg:p-6 xl:p-8">
+                <div className="flex flex-1 flex-col items-start justify-start md:justify-start md:pt-4 lg:pt-2 xl:pt-4">
+                  <h3 className="mb-4 font-display text-5xl uppercase tracking-tighter text-brand-sky md:text-[3.25rem] lg:text-[3.2rem] xl:text-[3.6rem]">
                     {service.title}
                   </h3>
-                  <p className="max-w-xs text-md leading-relaxed text-white md:max-w-sm md:text-xl">
+                  <p className="max-w-xs text-md leading-relaxed text-white md:max-w-sm md:text-xl lg:text-lg xl:text-xl">
                     {service.description}
                   </p>
                   {service.detail ? (
@@ -620,11 +620,11 @@ export default function LandingHero() {
                     </p>
                   ) : null}
                   {service.points.length > 0 ? (
-                    <ul className="mt-8 space-y-2">
+                    <ul className="mt-8 space-y-2 lg:mt-5 xl:mt-8">
                       {service.points.map((point) => (
                         <li
                           key={point}
-                          className="flex items-center gap-2 text-sm leading-snug text-white md:text-base"
+                          className="flex items-center gap-2 text-sm leading-snug text-white md:text-base lg:text-sm xl:text-base"
                         >
                           <span className="material-symbols-outlined shrink-0 text-base leading-none text-brand-sky">
                             check_circle
@@ -638,13 +638,13 @@ export default function LandingHero() {
                 <div className="mt-auto grid w-full grid-cols-2 gap-3">
                   <Link
                     href={service.href}
-                    className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-brand-sky px-4 py-3 text-center text-base font-bold uppercase whitespace-nowrap text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95 md:text-lg"
+                    className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-brand-sky px-4 py-3 text-center text-base font-bold uppercase whitespace-nowrap text-white shadow-lg transition-all hover:bg-brand-sky/90 active:scale-95 md:text-lg lg:text-base xl:text-lg"
                   >
                     Learn More
                   </Link>
                   <Link
                     href="#form"
-                    className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-white px-4 py-3 text-center text-base font-bold uppercase whitespace-nowrap text-everbright-blue shadow-lg transition-all hover:bg-white/90 active:scale-95 md:text-lg"
+                    className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-white px-4 py-3 text-center text-base font-bold uppercase whitespace-nowrap text-everbright-blue shadow-lg transition-all hover:bg-white/90 active:scale-95 md:text-lg lg:text-base xl:text-lg"
                   >
                     Get My Quote
                   </Link>
@@ -757,9 +757,9 @@ export default function LandingHero() {
 
       <section
         id="services-quiz"
-        className="bg-everbright-blue px-6 py-6 md:py-10"
+        className="bg-everbright-blue px-6 py-6 md:py-10 lg:px-8 lg:py-14"
       >
-        <div className="w-full max-w-2xl">
+        <div className="w-full max-w-2xl lg:mx-auto lg:max-w-3xl">
           <LeadForm />
         </div>
       </section>
