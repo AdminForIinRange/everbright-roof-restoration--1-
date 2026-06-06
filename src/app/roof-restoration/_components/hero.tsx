@@ -1,8 +1,8 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useState } from "react";
 
-import { CheckIcon, PhoneIcon } from "./icons";
+import { PhoneIcon } from "./icons";
 import { useV0LeadAction } from "./use-v0-lead-action";
 
 const OPTIONS = [
@@ -23,7 +23,7 @@ const FIELDS = [
 type FormKey = (typeof FIELDS)[number]["key"];
 
 export function Hero() {
-  const [step, setStep] = useState<"q1" | "form" | "success">("q1");
+  const [step, setStep] = useState<"q1" | "form">("q1");
   const [q1Selected, setQ1Selected] = useState<string | null>(null);
   const [form, setForm] = useState<Record<FormKey, string>>({
     fullName: "",
@@ -32,12 +32,10 @@ export function Hero() {
     address: "",
   });
   const roofCondition = q1Selected ?? "Not sure - needs inspection";
-  const handleSuccess = useCallback(() => setStep("success"), []);
   const { error, formAction, handleSubmit, pending, sourcePath } = useV0LeadAction({
     formContext: "roof-restoration-v0-hero",
     roofCondition,
     serviceLabel: "roof restoration",
-    onSuccess: handleSuccess,
   });
 
   const handleQ1Next = () => {
@@ -186,29 +184,6 @@ export function Hero() {
               </div>
             </form>
             <p className="mt-2 text-center text-xs text-muted-foreground">No obligation. No payment required.</p>
-          </div>
-        )}
-
-        {step === "success" && (
-          <div className="w-full max-w-xs rounded-lg bg-card p-6 text-center shadow-2xl md:max-w-md">
-            <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-brand/10 text-brand">
-              <CheckIcon className="h-6 w-6" />
-            </div>
-            <h3 className="mb-2 text-lg font-bold text-card-foreground">We&apos;ll be in touch!</h3>
-            <p className="mb-4 text-sm text-muted-foreground">
-              We will be in touch during business hours to talk about your quote.
-            </p>
-            <button
-              onClick={() => {
-                setStep("q1");
-                setQ1Selected(null);
-                setForm({ fullName: "", phone: "", email: "", address: "" });
-              }}
-              className="w-full rounded-md border border-brand bg-transparent py-2.5 text-sm font-bold text-brand transition-colors hover:bg-brand/10"
-              type="button"
-            >
-              Start Another Quote
-            </button>
           </div>
         )}
 
