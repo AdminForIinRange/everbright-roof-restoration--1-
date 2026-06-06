@@ -14,6 +14,9 @@ export type LeadEmailPayload = {
   roofCondition: string;
   whatTypeOfService: string;
   message: string;
+  formSource?: string;
+  sourcePath?: string;
+  roofConcern?: string;
 };
 
 export type EmailRecipientSettings = {
@@ -48,6 +51,17 @@ export function escapeHtml(value: string) {
 export function renderFieldValue(value: string) {
   const safeValue = value.trim() || "Not provided";
   return escapeHtml(safeValue).replaceAll("\n", "<br />");
+}
+
+export function isRoofRestorationV0Lead(lead: Pick<LeadEmailPayload, "formSource" | "sourcePath">) {
+  const formSource = lead.formSource?.trim() ?? "";
+  const sourcePath = lead.sourcePath?.trim() ?? "";
+
+  return (
+    formSource.startsWith("roof-restoration-") ||
+    sourcePath === "/roof-restoration" ||
+    sourcePath === "/new-roof-restoration"
+  );
 }
 
 type DarkEmailDocumentParams = {
@@ -176,12 +190,11 @@ export function buildDarkEmailDocument({
   `.trim();
 }
 
-function matchesNotificationTarget(
+function matchesEmailTarget(
   target: {
     $id: string;
     identifier: string;
     providerType: string;
-    providerId?: string;
   },
   settings: EmailRecipientSettings
 ) {
@@ -193,11 +206,24 @@ function matchesNotificationTarget(
     return false;
   }
 
-  if (settings.providerId && target.providerId && target.providerId !== settings.providerId) {
-    return false;
-  }
-
   return true;
+}
+
+function findReusableEmailTarget(
+  targets: Array<{
+    $id: string;
+    identifier: string;
+    providerType: string;
+    providerId?: string;
+  }>,
+  settings: EmailRecipientSettings
+) {
+  const matchingEmailTargets = targets.filter((target) => matchesEmailTarget(target, settings));
+
+  return (
+    matchingEmailTargets.find((target) => !settings.providerId || target.providerId === settings.providerId) ??
+    matchingEmailTargets[0]
+  );
 }
 
 async function findUserIdByEmail(recipientEmail: string) {
@@ -237,7 +263,7 @@ export async function ensureEmailTarget(settings: EmailRecipientSettings) {
   const currentTargets = await users.listTargets({
     userId: targetUserId,
   });
-  const existingTarget = currentTargets.targets.find((target) => matchesNotificationTarget(target, settings));
+  const existingTarget = findReusableEmailTarget(currentTargets.targets, settings);
 
   if (existingTarget) {
     await users.updateTarget({
@@ -270,7 +296,7 @@ export async function ensureEmailTarget(settings: EmailRecipientSettings) {
     const refreshedTargets = await users.listTargets({
       userId: targetUserId,
     });
-    const refreshedTarget = refreshedTargets.targets.find((target) => matchesNotificationTarget(target, settings));
+    const refreshedTarget = findReusableEmailTarget(refreshedTargets.targets, settings);
 
     if (refreshedTarget) {
       await users.updateTarget({

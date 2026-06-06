@@ -9,4 +9,7 @@ export type Lead = {
   roofCondition?: string;
   whatTypeOfService?: string;
   message?: string;
+  formSource?: string;
+  sourcePath?: string;
+  roofConcern?: string;
 };

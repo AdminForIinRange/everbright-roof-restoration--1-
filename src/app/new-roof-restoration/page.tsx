@@ -1,39 +1,39 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 
+import V0RoofRestorationLanding from '../roof-restoration/_components/V0RoofRestorationLanding';
 import { buildPageMetadata, buildServiceJsonLd } from '@lib/seo';
 
-import V0RoofRestorationLanding from './_components/V0RoofRestorationLanding';
-
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Roof Restoration Adelaide',
+  title: 'New Roof Restoration Adelaide',
   description:
-    'Roof restoration and roof cleaning services in Adelaide with surface safe methods, mould and lichen removal, and fast free quotes.',
-  path: '/roof-restoration',
-  keywords: ['roof restoration Adelaide', 'roof cleaning Adelaide', 'mould removal roof Adelaide'],
+    'New roof restoration and roof cleaning landing page for Adelaide homeowners with fast free quote requests.',
+  path: '/new-roof-restoration',
+  keywords: ['roof restoration Adelaide', 'roof cleaning Adelaide', 'new roof restoration page'],
+  noIndex: true,
 });
 
 const serviceJsonLd = buildServiceJsonLd({
-  name: 'Roof Restoration Adelaide',
+  name: 'New Roof Restoration Adelaide',
   description:
-    'Roof restoration and roof cleaning services in Adelaide with surface safe methods, mould and lichen removal, and fast free quotes.',
-  path: '/roof-restoration',
+    'New roof restoration and roof cleaning landing page for Adelaide homeowners with fast free quote requests.',
+  path: '/new-roof-restoration',
   serviceType: 'Roof restoration',
 });
 
-export default function RoofRestorationPage() {
+export default function NewRoofRestorationPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <Script id="google-ads-phone-conversion-config" strategy="afterInteractive">
+      <Script id="new-roof-restoration-google-ads-phone-conversion-config" strategy="afterInteractive">
         {`gtag('config', 'AW-17805776719/46LYCJTP74EcEM-uuqpC', {
   'phone_conversion_number': '0411017366'
 });`}
       </Script>
-      <Script id="google-ads-call-conversion" strategy="afterInteractive">
+      <Script id="new-roof-restoration-google-ads-call-conversion" strategy="afterInteractive">
         {`function gtag_report_conversion(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') {

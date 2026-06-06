@@ -40,6 +40,9 @@ export async function submitLeadAction(
     const whatTypeOfService =
       sanitize(formData.get("whatTypeOfService")) || "Not specified";
     const message = sanitize(formData.get("message"));
+    const formSource = sanitize(formData.get("formSource"));
+    const sourcePath = sanitize(formData.get("sourcePath"));
+    const roofConcern = sanitize(formData.get("roofConcern")) || roofCondition;
 
     if (!fullName) return { ok: false, error: "Full name is required" };
     if (!email || !isEmail(email)) return { ok: false, error: "Valid email is required" };
@@ -51,6 +54,15 @@ export async function submitLeadAction(
     if (message.length > 255) {
       return { ok: false, error: "Message must be 255 characters or less" };
     }
+    if (formSource.length > 120) {
+      return { ok: false, error: "Form source must be 120 characters or less" };
+    }
+    if (sourcePath.length > 160) {
+      return { ok: false, error: "Source path must be 160 characters or less" };
+    }
+    if (roofConcern.length > 255) {
+      return { ok: false, error: "Roof concern must be 255 characters or less" };
+    }
 
     const leadPayload = {
       fullName,
@@ -61,6 +73,9 @@ export async function submitLeadAction(
       roofCondition,
       whatTypeOfService,
       message,
+      formSource,
+      sourcePath,
+      roofConcern,
     };
 
     const { databases } = await createAdminClient();

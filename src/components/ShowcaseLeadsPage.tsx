@@ -109,6 +109,9 @@ const ShowcaseLeadsPage: React.FC = () => {
                       <LeadField label="Email" value={valueOrDash(lead.email)} />
                       <LeadField label="Address" value={valueOrDash(lead.address)} />
                       <LeadField label="Services Needed" value={valueOrDash(lead.whatTypeOfService)} />
+                      <LeadField label="Form Source" value={valueOrDash(lead.formSource)} />
+                      <LeadField label="Source Path" value={valueOrDash(lead.sourcePath)} />
+                      <LeadField label="Roof Concern" value={valueOrDash(lead.roofConcern)} />
                       <LeadField label="Roof Type" value={valueOrDash(lead.roofType)} />
                       <LeadField label="Roof Condition" value={valueOrDash(lead.roofCondition)} />
                       <LeadField label="Message" value={valueOrDash(lead.message)} />

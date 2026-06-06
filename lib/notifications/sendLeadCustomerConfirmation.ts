@@ -9,6 +9,7 @@ import {
   buildStableId,
   ensureEmailTarget,
   escapeHtml,
+  isRoofRestorationV0Lead,
   renderFieldValue,
   type LeadEmailPayload,
 } from "@lib/notifications/leadEmailShared";
@@ -42,6 +43,17 @@ function buildCustomerEmailContent(lead: LeadEmailPayload) {
   const phone = renderFieldValue(lead.phone);
   const message = renderFieldValue(lead.message);
   const hasMessage = lead.message.trim().length > 0;
+  const isRoofRestorationLead = isRoofRestorationV0Lead(lead);
+  const roofConcern = renderFieldValue(lead.roofConcern ?? lead.roofCondition);
+  const roofConcernRow = isRoofRestorationLead
+    ? `
+                          <tr>
+                            <td class="text-primary" style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#ffffff;vertical-align:top;">Roof concern</td>
+                            <td class="text-body" style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#cbd5e1;text-align:left;">${roofConcern}</td>
+                          </tr>
+    `
+    : "";
+  const heading = isRoofRestorationLead ? "Your roof quote request is booked in." : "You're booked in.";
 
   const bodyContent = `
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="dark-bg" bgcolor="#081722" style="width:100%;background-color:#081722;margin:0;padding:24px 12px;">
@@ -57,7 +69,7 @@ function buildCustomerEmailContent(lead: LeadEmailPayload) {
             <tr>
               <td style="padding:28px;">
                 <p class="text-body" style="margin:0 0 14px;font-size:15px;line-height:1.6;color:#e2e8f0;">Hi ${customerFirstName},</p>
-                <h1 class="text-primary" style="margin:0 0 14px;font-size:34px;line-height:1.05;color:#ffffff;font-weight:800;">You're booked in.</h1>
+                <h1 class="text-primary" style="margin:0 0 14px;font-size:34px;line-height:1.05;color:#ffffff;font-weight:800;">${heading}</h1>
                 <p class="text-body" style="margin:0 0 12px;font-size:16px;line-height:1.65;color:#cbd5e1;">
                   Thanks for contacting EverBright. We&rsquo;ll give you a quick call shortly during business hours to confirm the details.
                 </p>
@@ -75,6 +87,7 @@ function buildCustomerEmailContent(lead: LeadEmailPayload) {
                             <td class="text-primary" style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#ffffff;vertical-align:top;">Service</td>
                             <td class="text-body" style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#cbd5e1;text-align:left;">${requestedServices}</td>
                           </tr>
+                          ${roofConcernRow}
                           <tr>
                             <td class="text-primary" style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#ffffff;vertical-align:top;">Address</td>
                             <td class="text-body" style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#cbd5e1;text-align:left;">${address}</td>
@@ -128,8 +141,12 @@ function buildCustomerEmailContent(lead: LeadEmailPayload) {
   `.trim();
 
   return buildDarkEmailDocument({
-    title: "Your EverBright enquiry is booked in",
-    previewText: "Your EverBright enquiry is booked in.",
+    title: isRoofRestorationLead
+      ? "Your EverBright roof quote request is booked in"
+      : "Your EverBright enquiry is booked in",
+    previewText: isRoofRestorationLead
+      ? "Your EverBright roof quote request is booked in."
+      : "Your EverBright enquiry is booked in.",
     bodyContent,
   });
 }
@@ -146,7 +163,9 @@ export async function sendLeadCustomerConfirmation(lead: LeadEmailPayload) {
 
   await messaging.createEmail({
     messageId: ID.unique(),
-    subject: `Your EverBright enquiry is booked in`,
+    subject: isRoofRestorationV0Lead(lead)
+      ? "Your EverBright roof quote request is booked in"
+      : "Your EverBright enquiry is booked in",
     content: buildCustomerEmailContent(lead),
     targets: [targetId],
     html: true,
