@@ -302,7 +302,7 @@ export function ContactUsStrip() {
     <section className="bg-background px-4 py-5 text-center">
       <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-brand">Contact us</p>
       <p className="mt-2 text-base font-bold text-[#002844] md:text-lg">
-        0411017366 | everbrightpropertycare@gmail.com
+        0411017366 | everbrightpressurewashing@gmail.com
       </p>
     </section>
   );

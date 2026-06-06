@@ -23,20 +23,6 @@ function getSafeReturnPath(fromParam: string | null) {
   return fromParam;
 }
 
-function getSafeServiceLabel(serviceParam: string | null) {
-  if (!serviceParam) {
-    return 'quote request';
-  }
-
-  const normalizedServiceLabel = serviceParam.trim().replace(/\s+/g, ' ');
-
-  if (!normalizedServiceLabel) {
-    return 'quote request';
-  }
-
-  return normalizedServiceLabel.slice(0, 80);
-}
-
 function getSafeRoofSize(roofSizeParam: string | null) {
   if (!roofSizeParam) {
     return null;
@@ -64,14 +50,10 @@ export default async function ThankYouPage({ searchParams }: ThankYouPageProps) 
   const fromParam = Array.isArray(resolvedSearchParams.from)
     ? resolvedSearchParams.from[0] ?? null
     : resolvedSearchParams.from ?? null;
-  const serviceParam = Array.isArray(resolvedSearchParams.service)
-    ? resolvedSearchParams.service[0] ?? null
-    : resolvedSearchParams.service ?? null;
   const roofSizeParam = Array.isArray(resolvedSearchParams.roof_size)
     ? resolvedSearchParams.roof_size[0] ?? null
     : resolvedSearchParams.roof_size ?? null;
   const returnPath = getSafeReturnPath(fromParam);
-  const serviceLabel = getSafeServiceLabel(serviceParam);
   const roofSize = getSafeRoofSize(roofSizeParam);
 
   return (
@@ -94,10 +76,12 @@ export default async function ThankYouPage({ searchParams }: ThankYouPageProps) 
             </svg>
           </div>
 
-          <h1 className="mb-3 font-display text-2xl font-bold text-slate-900 md:text-4xl">Thank You</h1>
+          <h1 className="mb-3 font-display text-2xl font-bold text-slate-900 md:text-4xl">
+            We&apos;ll be in touch!
+          </h1>
 
           <p className="mx-auto mb-8 max-w-xl text-sm leading-relaxed text-slate-600 md:text-base">
-            We&apos;ve booked in your {serviceLabel} enquiry and one of our team will call you within 1 hour during business hours.
+            We&apos;ve received your enquiry and one of our team will call you within 24 hours during business hours.
           </p>
 
           {roofSize && (
