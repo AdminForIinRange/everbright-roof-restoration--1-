@@ -70,6 +70,13 @@ type DarkEmailDocumentParams = {
   bodyContent: string;
 };
 
+function hardenEmailTextColors(html: string) {
+  return html.replace(
+    /(^|[;"\s])color\s*:\s*(#[0-9a-fA-F]{3,8})\s*(!important)?\s*;/g,
+    "$1color:$2 !important;-webkit-text-fill-color:$2 !important;"
+  );
+}
+
 export function buildDarkEmailDocument({
   title,
   previewText,
@@ -78,19 +85,20 @@ export function buildDarkEmailDocument({
   const safeTitle = escapeHtml(title);
   const safePreviewText = escapeHtml(previewText);
 
-  return `
+  const document = `
     <!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="utf-8" />
+        <meta name="x-apple-disable-message-reformatting" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="color-scheme" content="dark" />
-        <meta name="supported-color-schemes" content="dark" />
+        <meta name="color-scheme" content="light" />
+        <meta name="supported-color-schemes" content="light" />
         <title>${safeTitle}</title>
         <style>
           :root {
-            color-scheme: dark;
-            supported-color-schemes: dark;
+            color-scheme: light;
+            supported-color-schemes: light;
           }
 
           html,
@@ -99,8 +107,13 @@ export function buildDarkEmailDocument({
             padding: 0 !important;
             min-width: 100% !important;
             width: 100% !important;
+            height: 100% !important;
             background-color: #081722 !important;
-            color: #e2e8f0 !important;
+            background: #081722 !important;
+            background-image: linear-gradient(#081722, #081722) !important;
+            color: #dff6ff !important;
+            -webkit-text-size-adjust: 100% !important;
+            -ms-text-size-adjust: 100% !important;
           }
 
           body,
@@ -109,8 +122,25 @@ export function buildDarkEmailDocument({
           div,
           p,
           a,
-          span {
+          span,
+          strong,
+          h1,
+          h2,
+          h3 {
             font-family: Arial, sans-serif !important;
+          }
+
+          body,
+          table,
+          td,
+          div,
+          p,
+          span,
+          strong,
+          h1,
+          h2,
+          h3 {
+            color: #dff6ff !important;
           }
 
           table {
@@ -120,26 +150,45 @@ export function buildDarkEmailDocument({
 
           .dark-bg {
             background-color: #081722 !important;
+            background: #081722 !important;
+            background-image: linear-gradient(#081722, #081722) !important;
+            color: #dff6ff !important;
+          }
+
+          .email-root,
+          .email-root-cell,
+          .email-outer,
+          .email-outer-cell {
+            background-color: #081722 !important;
+            background: #081722 !important;
+            background-image: linear-gradient(#081722, #081722) !important;
+            color: #dff6ff !important;
           }
 
           .dark-card {
             background-color: #0b1e2b !important;
+            background: #0b1e2b !important;
+            background-image: linear-gradient(#0b1e2b, #0b1e2b) !important;
+            color: #dff6ff !important;
           }
 
           .dark-panel {
             background-color: #0f172a !important;
+            background: #0f172a !important;
+            background-image: linear-gradient(#0f172a, #0f172a) !important;
+            color: #dff6ff !important;
           }
 
           .text-primary {
-            color: #ffffff !important;
+            color: #dff6ff !important;
           }
 
           .text-body {
-            color: #cbd5e1 !important;
+            color: #dff6ff !important;
           }
 
           .text-muted {
-            color: #94a3b8 !important;
+            color: #dff6ff !important;
           }
 
           .text-accent,
@@ -149,29 +198,118 @@ export function buildDarkEmailDocument({
 
           [data-ogsc] html,
           [data-ogsc] body,
+          [data-ogsc] .email-root,
+          [data-ogsc] .email-root-cell,
+          [data-ogsc] .email-outer,
+          [data-ogsc] .email-outer-cell,
           [data-ogsc] .dark-bg {
             background-color: #081722 !important;
-            color: #e2e8f0 !important;
+            background: #081722 !important;
+            background-image: linear-gradient(#081722, #081722) !important;
+            color: #dff6ff !important;
           }
 
           [data-ogsc] .dark-card {
             background-color: #0b1e2b !important;
+            background: #0b1e2b !important;
+            background-image: linear-gradient(#0b1e2b, #0b1e2b) !important;
+            color: #dff6ff !important;
           }
 
           [data-ogsc] .dark-panel {
             background-color: #0f172a !important;
+            background: #0f172a !important;
+            background-image: linear-gradient(#0f172a, #0f172a) !important;
+            color: #dff6ff !important;
+          }
+
+          @media (prefers-color-scheme: light) {
+            html,
+            body,
+            .dark-bg,
+            .email-bg,
+            .email-root,
+            .email-root-cell,
+            .email-outer,
+            .email-outer-cell {
+              background-color: #081722 !important;
+              background: #081722 !important;
+              background-image: linear-gradient(#081722, #081722) !important;
+              color: #dff6ff !important;
+            }
+
+            .dark-card {
+              background-color: #0b1e2b !important;
+              background: #0b1e2b !important;
+              background-image: linear-gradient(#0b1e2b, #0b1e2b) !important;
+              color: #dff6ff !important;
+            }
+
+            .dark-panel {
+              background-color: #0f172a !important;
+              background: #0f172a !important;
+              background-image: linear-gradient(#0f172a, #0f172a) !important;
+              color: #dff6ff !important;
+            }
+          }
+
+          @media (prefers-color-scheme: dark) {
+            html,
+            body,
+            .dark-bg,
+            .email-bg,
+            .email-root,
+            .email-root-cell,
+            .email-outer,
+            .email-outer-cell {
+              background-color: #081722 !important;
+              background: #081722 !important;
+              background-image: linear-gradient(#081722, #081722) !important;
+              color: #dff6ff !important;
+            }
+
+            .dark-card {
+              background-color: #0b1e2b !important;
+              background: #0b1e2b !important;
+              background-image: linear-gradient(#0b1e2b, #0b1e2b) !important;
+              color: #dff6ff !important;
+            }
+
+            .dark-panel {
+              background-color: #0f172a !important;
+              background: #0f172a !important;
+              background-image: linear-gradient(#0f172a, #0f172a) !important;
+              color: #dff6ff !important;
+            }
+
+            .text-primary {
+              color: #dff6ff !important;
+            }
+
+            .text-body {
+              color: #dff6ff !important;
+            }
+
+            .text-muted {
+              color: #dff6ff !important;
+            }
+
+            .text-accent,
+            .text-accent a {
+              color: #38bdf8 !important;
+            }
           }
 
           [data-ogsc] .text-primary {
-            color: #ffffff !important;
+            color: #dff6ff !important;
           }
 
           [data-ogsc] .text-body {
-            color: #cbd5e1 !important;
+            color: #dff6ff !important;
           }
 
           [data-ogsc] .text-muted {
-            color: #94a3b8 !important;
+            color: #dff6ff !important;
           }
 
           [data-ogsc] .text-accent,
@@ -180,14 +318,26 @@ export function buildDarkEmailDocument({
           }
         </style>
       </head>
-      <body class="dark-bg" bgcolor="#081722" style="margin:0;padding:0;background-color:#081722;color:#e2e8f0;">
-        <div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">
-          ${safePreviewText}
+      <body class="body dark-bg" bgcolor="#081722" style="margin:0;padding:0;width:100%;min-width:100%;height:100%;min-height:100vh;background-color:#081722;background:#081722;background-image:linear-gradient(#081722,#081722);color:#dff6ff;">
+        <div class="email-bg dark-bg" style="display:block;width:100%;min-width:100%;height:100%;min-height:100vh;margin:0;padding:0;background-color:#081722;background:#081722;background-image:linear-gradient(#081722,#081722);color:#dff6ff;">
+          <center class="email-bg dark-bg" style="display:block;width:100%;min-width:100%;height:100%;min-height:100vh;margin:0;padding:0;background-color:#081722;background:#081722;background-image:linear-gradient(#081722,#081722);">
+            <table role="presentation" width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="email-root dark-bg" bgcolor="#081722" style="width:100%;min-width:100%;height:100%;min-height:100vh;background-color:#081722;background:#081722;background-image:linear-gradient(#081722,#081722);color:#dff6ff;margin:0;padding:0;border-spacing:0;border-collapse:collapse;">
+              <tr>
+                <td class="email-root-cell dark-bg" align="center" valign="top" bgcolor="#081722" style="width:100%;height:100%;min-height:100vh;background-color:#081722;background:#081722;background-image:linear-gradient(#081722,#081722);color:#dff6ff;margin:0;padding:0;">
+                  <div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">
+                    ${safePreviewText}
+                  </div>
+                  ${bodyContent}
+                </td>
+              </tr>
+            </table>
+          </center>
         </div>
-        ${bodyContent}
       </body>
     </html>
   `.trim();
+
+  return hardenEmailTextColors(document);
 }
 
 function matchesEmailTarget(
