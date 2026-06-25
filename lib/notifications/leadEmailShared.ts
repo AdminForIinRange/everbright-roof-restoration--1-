@@ -73,7 +73,7 @@ export function isPressureWashingV0Lead(
 
   return (
     formSource.startsWith("newoage-pressure-washing-") ||
-    (sourcePath === "/newoage" && service.includes("pressure washing"))
+    ((sourcePath === "/newoage" || sourcePath === "/pressure-washing") && service.includes("pressure washing"))
   );
 }
 

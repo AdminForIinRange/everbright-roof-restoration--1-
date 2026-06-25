@@ -190,7 +190,7 @@ export function Transformations() {
     <>
       <section className="pb-0">
         <div className="mb-6 bg-background px-4 py-5 text-center md:px-8 md:py-8 lg:px-16">
-          <h2 className="font-heading text-5xl font-extrabold tracking-wide text-[#002844] md:text-7xl">
+          <h2 className="font-heading text-4xl font-extrabold tracking-wide text-[#002844] sm:text-5xl md:text-7xl">
             <span className="block">See the Difference Our</span>
             <span className="block">Pressure Washing Makes</span>
           </h2>

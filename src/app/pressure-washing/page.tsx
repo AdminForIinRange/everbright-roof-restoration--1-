@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 
-import PressureWashingPageView from '@/services/pressure-washing/PressureWashingPage';
 import { buildPageMetadata, buildServiceJsonLd } from '@lib/seo';
+
+import V0PressureWashingLanding from '../newoage/_components/V0PressureWashingLanding';
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Pressure Washing Adelaide',
@@ -26,7 +27,7 @@ export default function PressureWashingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <PressureWashingPageView />
+      <V0PressureWashingLanding />
     </>
   );
 }
