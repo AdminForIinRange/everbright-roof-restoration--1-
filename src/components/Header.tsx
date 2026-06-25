@@ -10,6 +10,7 @@ const serviceLinks = [
   { label: 'Home', href: '/' },
   { label: 'Roof Cleaning', href: '/roof-restoration' },
   { label: 'Pressure Washing', href: '/pressure-washing' },
+  { label: 'New Pressure Washing', href: '/newoage' },
   { label: 'Solar Cleaning', href: '/solar-cleaning' },
   { label: 'Gutter Cleaning', href: '/gutter-cleaning' },
   { label: 'Paver & Concrete Sealing', href: '/paver-concrete-sealing' },

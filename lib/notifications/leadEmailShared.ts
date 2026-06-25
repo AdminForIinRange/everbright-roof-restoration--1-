@@ -64,6 +64,19 @@ export function isRoofRestorationV0Lead(lead: Pick<LeadEmailPayload, "formSource
   );
 }
 
+export function isPressureWashingV0Lead(
+  lead: Pick<LeadEmailPayload, "formSource" | "sourcePath" | "whatTypeOfService">
+) {
+  const formSource = lead.formSource?.trim() ?? "";
+  const sourcePath = lead.sourcePath?.trim() ?? "";
+  const service = lead.whatTypeOfService?.trim().toLowerCase() ?? "";
+
+  return (
+    formSource.startsWith("newoage-pressure-washing-") ||
+    (sourcePath === "/newoage" && service.includes("pressure washing"))
+  );
+}
+
 type DarkEmailDocumentParams = {
   title: string;
   previewText: string;

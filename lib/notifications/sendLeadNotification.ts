@@ -8,6 +8,7 @@ import {
   buildDarkEmailDocument,
   buildStableId,
   ensureEmailTarget,
+  isPressureWashingV0Lead,
   isRoofRestorationV0Lead,
   isEmail,
   renderFieldValue,
@@ -47,7 +48,9 @@ function buildLeadEmailContent(lead: LeadEmailPayload) {
   const submittedAt = renderFieldValue(lead.submittedAt ?? new Date().toISOString());
   const message = renderFieldValue(lead.message);
   const isRoofRestorationLead = isRoofRestorationV0Lead(lead);
+  const isPressureWashingLead = isPressureWashingV0Lead(lead);
   const roofConcern = renderFieldValue(lead.roofConcern ?? lead.roofCondition);
+  const pressureWashingArea = renderFieldValue(lead.roofConcern ?? lead.roofCondition);
   const formSource = renderFieldValue(lead.formSource ?? "");
   const sourcePath = renderFieldValue(lead.sourcePath ?? "");
   const serviceSpecificRows = isRoofRestorationLead
@@ -56,11 +59,21 @@ function buildLeadEmailContent(lead: LeadEmailPayload) {
                           <tr><td style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#dff6ff;vertical-align:top;">Form source</td><td style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#dff6ff;text-align:left;">${formSource}</td></tr>
                           <tr><td style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#dff6ff;vertical-align:top;">Source page</td><td style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#dff6ff;text-align:left;">${sourcePath}</td></tr>
     `
+    : isPressureWashingLead
+      ? `
+                          <tr><td style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#dff6ff;vertical-align:top;">Area to clean</td><td style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#dff6ff;text-align:left;">${pressureWashingArea}</td></tr>
+                          <tr><td style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#dff6ff;vertical-align:top;">Form source</td><td style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#dff6ff;text-align:left;">${formSource}</td></tr>
+                          <tr><td style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#dff6ff;vertical-align:top;">Source page</td><td style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#dff6ff;text-align:left;">${sourcePath}</td></tr>
+    `
     : `
                           <tr><td style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#dff6ff;vertical-align:top;">Roof type</td><td style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#dff6ff;text-align:left;">${renderFieldValue(lead.roofType)}</td></tr>
                           <tr><td style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#dff6ff;vertical-align:top;">Condition</td><td style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#dff6ff;text-align:left;">${renderFieldValue(lead.roofCondition)}</td></tr>
     `;
-  const heading = isRoofRestorationLead ? "New roof restoration enquiry" : `New enquiry from ${renderFieldValue(lead.fullName)}`;
+  const heading = isRoofRestorationLead
+    ? "New roof restoration enquiry"
+    : isPressureWashingLead
+      ? "New pressure washing enquiry"
+      : `New enquiry from ${renderFieldValue(lead.fullName)}`;
 
   const bodyContent = `
     <table role="presentation" width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="email-outer dark-bg" bgcolor="#081722" style="width:100%;min-width:100%;height:100%;min-height:100vh;background-color:#081722;background:#081722;background-image:linear-gradient(#081722,#081722);color:#dff6ff;margin:0;padding:24px 12px;">
@@ -104,9 +117,15 @@ function buildLeadEmailContent(lead: LeadEmailPayload) {
   `.trim();
 
   return buildDarkEmailDocument({
-    title: isRoofRestorationLead ? "New roof restoration lead received" : "New website lead received",
+    title: isRoofRestorationLead
+      ? "New roof restoration lead received"
+      : isPressureWashingLead
+        ? "New pressure washing lead received"
+        : "New website lead received",
     previewText: isRoofRestorationLead
       ? `New roof restoration lead from ${lead.fullName}`
+      : isPressureWashingLead
+        ? `New pressure washing lead from ${lead.fullName}`
       : `New lead from ${lead.fullName}`,
     bodyContent,
   });
@@ -128,6 +147,8 @@ export async function sendLeadNotification(lead: LeadEmailPayload) {
     messageId: ID.unique(),
     subject: isRoofRestorationV0Lead(lead)
       ? `New roof restoration lead from ${lead.fullName}`
+      : isPressureWashingV0Lead(lead)
+        ? `New pressure washing lead from ${lead.fullName}`
       : `New lead from ${lead.fullName}`,
     content: buildLeadEmailContent(lead),
     targets: [targetId],

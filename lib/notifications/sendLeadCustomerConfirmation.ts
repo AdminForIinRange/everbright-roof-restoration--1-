@@ -9,6 +9,7 @@ import {
   buildStableId,
   ensureEmailTarget,
   escapeHtml,
+  isPressureWashingV0Lead,
   isRoofRestorationV0Lead,
   renderFieldValue,
   type LeadEmailPayload,
@@ -44,7 +45,9 @@ function buildCustomerEmailContent(lead: LeadEmailPayload) {
   const message = renderFieldValue(lead.message);
   const hasMessage = lead.message.trim().length > 0;
   const isRoofRestorationLead = isRoofRestorationV0Lead(lead);
+  const isPressureWashingLead = isPressureWashingV0Lead(lead);
   const roofConcern = renderFieldValue(lead.roofConcern ?? lead.roofCondition);
+  const pressureWashingArea = renderFieldValue(lead.roofConcern ?? lead.roofCondition);
   const roofConcernRow = isRoofRestorationLead
     ? `
                           <tr>
@@ -53,7 +56,19 @@ function buildCustomerEmailContent(lead: LeadEmailPayload) {
                           </tr>
     `
     : "";
-  const heading = isRoofRestorationLead ? "Your roof quote request is booked in." : "You're booked in.";
+  const pressureWashingAreaRow = isPressureWashingLead
+    ? `
+                          <tr>
+                            <td class="text-primary" style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#dff6ff;vertical-align:top;">Area to clean</td>
+                            <td class="text-body" style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#dff6ff;text-align:left;">${pressureWashingArea}</td>
+                          </tr>
+    `
+    : "";
+  const heading = isRoofRestorationLead
+    ? "Your roof quote request is booked in."
+    : isPressureWashingLead
+      ? "Your pressure washing quote request is booked in."
+      : "You're booked in.";
 
   const bodyContent = `
     <table role="presentation" width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="email-outer dark-bg" bgcolor="#081722" style="width:100%;min-width:100%;height:100%;min-height:100vh;background-color:#081722;background:#081722;background-image:linear-gradient(#081722,#081722);color:#dff6ff;margin:0;padding:24px 12px;">
@@ -88,6 +103,7 @@ function buildCustomerEmailContent(lead: LeadEmailPayload) {
                             <td class="text-body" style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#dff6ff;text-align:left;">${requestedServices}</td>
                           </tr>
                           ${roofConcernRow}
+                          ${pressureWashingAreaRow}
                           <tr>
                             <td class="text-primary" style="width:34%;padding:10px 12px 10px 0;border-bottom:1px solid #1e293b;font-size:14px;font-weight:700;color:#dff6ff;vertical-align:top;">Address</td>
                             <td class="text-body" style="padding:10px 0;border-bottom:1px solid #1e293b;font-size:14px;color:#dff6ff;text-align:left;">${address}</td>
@@ -143,9 +159,13 @@ function buildCustomerEmailContent(lead: LeadEmailPayload) {
   return buildDarkEmailDocument({
     title: isRoofRestorationLead
       ? "Your EverBright roof quote request is booked in"
+      : isPressureWashingLead
+        ? "Your EverBright pressure washing quote request is booked in"
       : "Your EverBright enquiry is booked in",
     previewText: isRoofRestorationLead
       ? "Your EverBright roof quote request is booked in."
+      : isPressureWashingLead
+        ? "Your EverBright pressure washing quote request is booked in."
       : "Your EverBright enquiry is booked in.",
     bodyContent,
   });
@@ -165,6 +185,8 @@ export async function sendLeadCustomerConfirmation(lead: LeadEmailPayload) {
     messageId: ID.unique(),
     subject: isRoofRestorationV0Lead(lead)
       ? "Your EverBright roof quote request is booked in"
+      : isPressureWashingV0Lead(lead)
+        ? "Your EverBright pressure washing quote request is booked in"
       : "Your EverBright enquiry is booked in",
     content: buildCustomerEmailContent(lead),
     targets: [targetId],

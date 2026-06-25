@@ -41,6 +41,7 @@
   ],
   "exclude": [
     "node_modules",
-    "v0-new-roof-cleaning-project-main"
+    "v0-new-roof-cleaning-project-main",
+    "everbright-pressure-washing-main"
   ]
 }
