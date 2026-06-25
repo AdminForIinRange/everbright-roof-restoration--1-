@@ -1,4 +1,4 @@
-import { Anton, Bebas_Neue, Inter, Playfair_Display, Poppins, Roboto_Slab } from "next/font/google";
+import { Bebas_Neue, Inter, Poppins, Roboto_Slab } from "next/font/google";
 
 import { AssessmentForm } from "./assessment-form";
 import { Hero } from "./hero";
@@ -7,22 +7,8 @@ import styles from "./pressure-washing-v0.module.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: "700",
   variable: "--font-poppins",
-  display: "swap",
-});
-
-const anton = Anton({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-anton",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -50,7 +36,7 @@ export default function V0PressureWashingLanding() {
   return (
     <main
       data-newoage-page="true"
-      className={`${styles.scope} ${inter.variable} ${bebas.variable} ${robotoSlab.variable} ${playfair.variable} ${anton.variable} ${poppins.variable} min-h-screen overflow-x-hidden bg-background antialiased`}
+      className={`${styles.scope} ${inter.variable} ${bebas.variable} ${robotoSlab.variable} ${poppins.variable} min-h-screen bg-background antialiased`}
     >
       <Hero />
       <StatsStrip />

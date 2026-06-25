@@ -40,8 +40,11 @@ export function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col">
       <img
-        src="/pressure-washing-v0/images/image.png"
+        src="/pressure-washing-v0/images/image-optimized.jpg"
         alt="Before and after comparison of a pressure washing job, showing a dirty driveway transformed to a clean, like-new surface"
+        decoding="async"
+        fetchPriority="high"
+        loading="eager"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-black/82" aria-hidden="true" />
@@ -51,6 +54,8 @@ export function Hero() {
           <img
             src="/pressure-washing-v0/images/logo-white.png"
             alt="EverBright Pressure Washing logo"
+            decoding="async"
+            loading="eager"
             className="h-44 w-auto md:h-56"
           />
         </div>

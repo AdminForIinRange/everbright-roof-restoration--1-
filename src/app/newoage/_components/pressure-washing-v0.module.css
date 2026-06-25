@@ -15,18 +15,9 @@
   color: var(--v0-foreground);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-}
-
-:global(html:has([data-newoage-page="true"])),
-:global(body:has([data-newoage-page="true"])) {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-:global(html:has([data-newoage-page="true"])::-webkit-scrollbar),
-:global(body:has([data-newoage-page="true"])::-webkit-scrollbar) {
-  width: 0;
-  height: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .scope :global(.bg-background) {
