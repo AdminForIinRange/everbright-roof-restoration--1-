@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 import { CheckIcon, PhoneIcon } from "./icons";
@@ -51,13 +52,15 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-10 pt-0 text-center md:px-10 md:pb-16 md:text-left lg:px-20">
         <div className="-mb-14 -mt-8 flex items-center justify-center md:-mt-10">
-          <img
-            src="/pressure-washing-v0/images/logo-white.png"
-            alt="EverBright Pressure Washing logo"
-            decoding="async"
-            loading="eager"
-            className="h-44 w-auto md:h-56"
-          />
+          <Link href="/" aria-label="Go to homepage">
+            <img
+              src="/pressure-washing-v0/images/logo-white.png"
+              alt="EverBright Pressure Washing logo"
+              decoding="async"
+              loading="eager"
+              className="h-44 w-auto md:h-56"
+            />
+          </Link>
         </div>
 
         <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-brand md:text-xs">

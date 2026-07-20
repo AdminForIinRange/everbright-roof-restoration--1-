@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useState } from "react"
 import { CheckIcon, PhoneIcon } from "./icons"
 import { useGutterCleaningLeadAction } from "./use-gutter-cleaning-lead-action"
@@ -61,11 +62,13 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-10 pt-0 text-center md:pb-16 md:px-10 md:text-left lg:px-20">
         <div className="-mb-14 -mt-8 flex items-center justify-center md:-mt-10">
-          <img
-            src="/gutter-cleaning-v0/images/logo-white.png"
-            alt="EverBright Pressure Washing logo"
-            className="h-44 w-auto md:h-56"
-          />
+          <Link href="/" aria-label="Go to homepage">
+            <img
+              src="/gutter-cleaning-v0/images/logo-white.png"
+              alt="EverBright Pressure Washing logo"
+              className="h-44 w-auto md:h-56"
+            />
+          </Link>
         </div>
 
         <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-4xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-7xl md:leading-[1.1] md:text-center">
