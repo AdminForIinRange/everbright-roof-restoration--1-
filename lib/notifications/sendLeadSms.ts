@@ -91,11 +91,14 @@ export async function sendLeadSms(lead: LeadEmailPayload) {
 
 function buildCustomerConfirmationSmsBody(lead: LeadEmailPayload) {
   const firstName = getCustomerFirstName(lead.fullName);
+  const serviceLabel = lead.whatTypeOfService?.trim() || "enquiry";
 
-  return (
-    `Hi ${firstName}, thanks for contacting EverBright! We've received your enquiry and will call you during ` +
-    `business hours. Questions in the meantime? Call us on ${COMPANY_PHONE_DISPLAY}.`
-  );
+  return [
+    `Hi ${firstName},`,
+    `Thanks for contacting EverBright! We've received your ${serviceLabel} enquiry.`,
+    `We'll call you during business hours to arrange your free quote.`,
+    `Questions? Call us on ${COMPANY_PHONE_DISPLAY}.`,
+  ].join("\n\n");
 }
 
 export async function sendLeadCustomerSms(lead: LeadEmailPayload) {
