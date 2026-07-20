@@ -6,7 +6,6 @@ export default [
     ignores: [
       'v0-new-roof-cleaning-project-main/**',
       'everbright-pressure-washing-main/**',
-      'Gutter-Cleaning-main/**',
     ],
   },
   ...nextCoreWebVitals,
