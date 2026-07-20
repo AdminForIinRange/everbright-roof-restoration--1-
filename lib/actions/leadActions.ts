@@ -7,6 +7,7 @@ import { createAdminClient } from "@lib/appwrite";
 import { getAppwriteConfig } from "@lib/appwrite/config";
 import { sendLeadCustomerConfirmation } from "@lib/notifications/sendLeadCustomerConfirmation";
 import { sendLeadNotification } from "@lib/notifications/sendLeadNotification";
+import { sendLeadCustomerSms, sendLeadSms } from "@lib/notifications/sendLeadSms";
 import type { Lead } from "@lib/types/lead";
 
 export type LeadState = {
@@ -116,6 +117,32 @@ export async function submitLeadAction(
           process.env.APPWRITE_CUSTOMER_CONFIRMATION_PROVIDER_ID ??
           process.env.APPWRITE_LEAD_NOTIFICATION_PROVIDER_ID ??
           null,
+      });
+    }
+
+    try {
+      await sendLeadSms({
+        ...leadPayload,
+        documentId: doc.$id,
+        submittedAt: doc.$createdAt,
+      });
+    } catch (smsNotificationError) {
+      console.error("sendLeadSms error:", {
+        error: smsNotificationError,
+        hasRecipientPhone: Boolean(process.env.CLICKSEND_NOTIFICATION_PHONE),
+      });
+    }
+
+    try {
+      await sendLeadCustomerSms({
+        ...leadPayload,
+        documentId: doc.$id,
+        submittedAt: doc.$createdAt,
+      });
+    } catch (customerSmsError) {
+      console.error("sendLeadCustomerSms error:", {
+        error: customerSmsError,
+        customerPhone: phone,
       });
     }
 
