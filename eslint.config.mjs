@@ -3,7 +3,11 @@ import nextTypescript from 'eslint-config-next/typescript';
 
 export default [
   {
-    ignores: ['v0-new-roof-cleaning-project-main/**', 'everbright-pressure-washing-main/**'],
+    ignores: [
+      'v0-new-roof-cleaning-project-main/**',
+      'everbright-pressure-washing-main/**',
+      'Gutter-Cleaning-main/**',
+    ],
   },
   ...nextCoreWebVitals,
   ...nextTypescript,

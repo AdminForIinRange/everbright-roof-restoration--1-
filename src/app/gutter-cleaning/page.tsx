@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import GutterCleaningPageView from '@/services/gutter-cleaning/GutterCleaningPage';
+import { GutterCleaningLanding } from './_components/GutterCleaningLanding';
 import { buildPageMetadata, buildServiceJsonLd } from '@lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -26,7 +26,7 @@ export default function GutterCleaningPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <GutterCleaningPageView />
+      <GutterCleaningLanding />
     </>
   );
 }

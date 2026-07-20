@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
     "allowJs": true,
+    "target": "ES6",
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
@@ -22,13 +22,9 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
-      ],
-      "@lib/*": [
-        "./lib/*"
+        "./*"
       ]
     }
   },
@@ -40,9 +36,6 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "v0-new-roof-cleaning-project-main",
-    "everbright-pressure-washing-main",
-    "Gutter-Cleaning-main"
+    "node_modules"
   ]
 }

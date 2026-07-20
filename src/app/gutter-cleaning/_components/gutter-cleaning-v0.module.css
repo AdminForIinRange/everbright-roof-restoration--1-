@@ -1,0 +1,145 @@
+.scope {
+  --v0-background: oklch(1 0 0);
+  --v0-foreground: oklch(0.205 0.03 250);
+  --v0-card: oklch(1 0 0);
+  --v0-card-foreground: oklch(0.205 0.03 250);
+  --v0-brand: oklch(0.68 0.16 235);
+  --v0-brand-foreground: oklch(1 0 0);
+  --v0-secondary: oklch(0.97 0 0);
+  --v0-muted-foreground: oklch(0.556 0 0);
+  --v0-border: oklch(0.922 0 0);
+  --v0-navy: oklch(0.28 0.06 245);
+  --v0-navy-foreground: oklch(0.98 0 0);
+
+  background: var(--v0-background);
+  color: var(--v0-foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.scope :global(.bg-background) {
+  background-color: var(--v0-background);
+}
+
+.scope :global(.bg-background\/10) {
+  background-color: oklch(1 0 0 / 10%);
+}
+
+.scope :global(.hover\:bg-background\/20:hover) {
+  background-color: oklch(1 0 0 / 20%);
+}
+
+.scope :global(.text-background) {
+  color: var(--v0-background);
+}
+
+.scope :global(.text-background\/90) {
+  color: oklch(1 0 0 / 90%);
+}
+
+.scope :global(.border-background\/30) {
+  border-color: oklch(1 0 0 / 30%);
+}
+
+.scope :global(.bg-card) {
+  background-color: var(--v0-card);
+}
+
+.scope :global(.text-card-foreground) {
+  color: var(--v0-card-foreground);
+}
+
+.scope :global(.bg-secondary) {
+  background-color: var(--v0-secondary);
+}
+
+.scope :global(.hover\:bg-secondary:hover) {
+  background-color: var(--v0-secondary);
+}
+
+.scope :global(.hover\:bg-secondary\/50:hover) {
+  background-color: oklch(0.97 0 0 / 50%);
+}
+
+.scope :global(.active\:bg-secondary:active) {
+  background-color: var(--v0-secondary);
+}
+
+.scope :global(.text-foreground) {
+  color: var(--v0-foreground);
+}
+
+.scope :global(.text-muted-foreground) {
+  color: var(--v0-muted-foreground);
+}
+
+.scope :global(.border-border) {
+  border-color: var(--v0-border);
+}
+
+.scope :global(.divide-border) > :not(:last-child) {
+  border-color: var(--v0-border);
+}
+
+.scope :global(.border-brand) {
+  border-color: var(--v0-brand);
+}
+
+.scope :global(.hover\:border-brand\/50:hover) {
+  border-color: oklch(0.68 0.16 235 / 50%);
+}
+
+.scope :global(.focus\:border-brand:focus) {
+  border-color: var(--v0-brand);
+}
+
+.scope :global(.bg-brand) {
+  background-color: var(--v0-brand);
+}
+
+.scope :global(.bg-brand\/10) {
+  background-color: oklch(0.68 0.16 235 / 10%);
+}
+
+.scope :global(.hover\:bg-brand\/10:hover) {
+  background-color: oklch(0.68 0.16 235 / 10%);
+}
+
+.scope :global(.text-brand) {
+  color: var(--v0-brand);
+}
+
+.scope :global(.text-brand-foreground) {
+  color: var(--v0-brand-foreground);
+}
+
+.scope :global(.bg-navy) {
+  background-color: var(--v0-navy);
+}
+
+.scope :global(.text-navy-foreground) {
+  color: var(--v0-navy-foreground);
+}
+
+.scope :global(.font-heading) {
+  font-family: var(--font-bebas), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+}
+
+.scope :global(.font-slab) {
+  font-family: var(--font-slab), Georgia, "Times New Roman", serif;
+}
+
+.scope :global(.font-playfair) {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.scope :global(.font-anton) {
+  font-family: var(--font-anton), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+}
+
+.scope :global(.font-poppins) {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+}
