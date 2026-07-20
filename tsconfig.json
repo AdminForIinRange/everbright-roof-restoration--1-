@@ -40,8 +40,6 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "v0-new-roof-cleaning-project-main",
-    "everbright-pressure-washing-main"
+    "node_modules"
   ]
 }

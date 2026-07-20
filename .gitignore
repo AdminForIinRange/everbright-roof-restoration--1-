@@ -20,10 +20,6 @@
 .DS_Store
 *.pem
 
-# local reference projects
-/v0-new-roof-cleaning-project-main/
-/everbright-pressure-washing-main/
-
 # debug
 npm-debug.log*
 yarn-debug.log*
