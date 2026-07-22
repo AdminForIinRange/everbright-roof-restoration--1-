@@ -68,7 +68,7 @@ export function Hero() {
         </h1>
 
         <p className="mb-5 max-w-md text-pretty text-sm font-bold leading-relaxed text-background/90 md:text-center md:text-lg">
-          <span className="block">Restoring driveways, pavers, paths and patios to look like new again.</span>
+          <span className="block">Cleaning driveways, pavers, paths and patios to look like new again.</span>
         </p>
 
         {step === "q1" && (
