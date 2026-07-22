@@ -220,7 +220,7 @@ function WhatWeClean() {
         <h2 className="font-heading text-3xl font-extrabold tracking-wide text-[#002844] md:text-7xl">
           What We Clean
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-black md:text-base">
           At Everbright, we don&apos;t just clean surfaces — we bring them back to life. Our pressure washing
           covers homes right across Adelaide, tackling everything from everyday grime to stubborn stains most
           people assume are permanent.
@@ -236,7 +236,7 @@ function WhatWeClean() {
               <service.icon className="h-6 w-6" aria-hidden="true" />
             </div>
             <h3 className="mb-2 text-lg font-bold text-foreground">{service.title}</h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">{service.desc}</p>
+            <p className="text-sm leading-relaxed text-black">{service.desc}</p>
           </div>
         ))}
       </div>
