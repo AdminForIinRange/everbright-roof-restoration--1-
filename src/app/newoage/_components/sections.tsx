@@ -9,13 +9,13 @@ const IMAGE_BASE = "/pressure-washing-v0/images";
 
 export function StatsStrip() {
   const stats = [
-    { icon: <GoogleIcon className="text-brand" />, num: "38+", label: "5-star reviews" },
+    { icon: <GoogleIcon className="text-brand" />, num: "40+", label: "5-star reviews" },
     { icon: <HouseIcon className="text-brand" />, num: "200+", label: "Adelaide Homes Cleaned" },
     { icon: <HourglassIcon className="text-brand" />, num: "Fully insured", label: "Peace of mind" },
   ];
 
   return (
-    <div className="relative z-20 w-full px-0">
+    <div className="relative z-20 -mt-8 w-full px-0 md:-mt-12">
       <div className="flex w-full divide-x divide-border border-y border-border bg-card shadow-lg md:rounded-[2rem]">
         {stats.map((item) => (
           <div key={item.label} className="flex flex-1 items-center justify-center gap-1.5 px-2 py-4 md:gap-3 md:px-6 md:py-6">
@@ -268,10 +268,6 @@ export function Transformations() {
             <span className="block">See the Difference Our</span>
             <span className="block">Pressure Washing Makes</span>
           </h2>
-          <p className="mt-3 font-sans text-base font-bold uppercase text-[#002844] md:text-xl">
-            <span className="block">Pressure cleaning results from</span>
-            <span className="block">homes across Adelaide</span>
-          </p>
         </div>
         <div className="sm:grid sm:grid-cols-3 sm:gap-[4px]">
           {items.map((item) => (
