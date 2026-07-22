@@ -229,13 +229,13 @@ function WhatWeClean() {
         {services.map((service) => (
           <div
             key={service.title}
-            className="rounded-lg border border-border bg-card p-6 text-left shadow-sm transition-all hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg"
+            className="rounded-lg border border-white/10 bg-[#002844] p-6 text-left shadow-sm transition-all hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg"
           >
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand/10 text-brand">
               <service.icon className="h-6 w-6" aria-hidden="true" />
             </div>
-            <h3 className="mb-3 text-xl font-bold text-foreground">{service.title}</h3>
-            <p className="text-base leading-relaxed text-black">{service.desc}</p>
+            <h3 className="mb-3 text-xl font-bold text-white">{service.title}</h3>
+            <p className="text-base leading-relaxed text-white">{service.desc}</p>
           </div>
         ))}
       </div>
