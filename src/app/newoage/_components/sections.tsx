@@ -266,7 +266,9 @@ export function Transformations() {
         <div className="mb-6 bg-background px-4 py-5 text-center md:px-8 md:py-8 lg:px-16">
           <h2 className="font-[family-name:var(--font-poppins)] text-3xl font-bold uppercase tracking-tight text-[#002844] sm:text-4xl md:text-6xl">
             <span className="block">See the Difference Our</span>
-            <span className="block">Pressure Washing Makes</span>
+            <span className="block">
+              <span className="text-brand">Pressure Washing</span> Makes
+            </span>
           </h2>
         </div>
         <div className="sm:grid sm:grid-cols-3 sm:gap-[4px]">
