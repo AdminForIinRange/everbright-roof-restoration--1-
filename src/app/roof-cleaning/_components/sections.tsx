@@ -188,10 +188,7 @@ export function Transformations() {
     <>
       <section className="pb-0">
         <div className="mb-6 bg-background px-4 py-5 text-center md:px-8 md:py-8 lg:px-16">
-          <h2
-            className="text-balance text-4xl font-bold uppercase leading-tight tracking-wide text-[#002844] md:text-6xl"
-            style={{ fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif' }}
-          >
+          <h2 className="font-[family-name:var(--font-poppins)] text-3xl font-extrabold uppercase leading-tight tracking-tight text-[#002844] md:text-5xl">
             <span className="block">See the Difference Our</span>
             <span className="block">Roof Cleaning Makes</span>
           </h2>

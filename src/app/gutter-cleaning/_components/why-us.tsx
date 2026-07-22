@@ -8,7 +8,7 @@ export function WhyUs() {
     "Fully insured with professional equipment",
   ]
   const stats = [
-    { num: "38+", label: "Five-star reviews" },
+    { num: "40+", label: "Five-star reviews" },
     { num: "200+", label: "Adelaide Homes Cleaned" },
     { num: "6", label: "Years of experience" },
     { num: "$0", label: "Cost for your assessment" },

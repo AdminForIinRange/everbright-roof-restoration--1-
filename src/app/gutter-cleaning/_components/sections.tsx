@@ -5,7 +5,7 @@ import { GoogleIcon, HouseIcon, ShieldCheckIcon, PlusIcon, StarIcon } from "./ic
 
 export function StatsStrip() {
   const stats = [
-    { icon: <GoogleIcon className="text-brand" />, num: "38+", label: "5-star reviews" },
+    { icon: <GoogleIcon className="text-brand" />, num: "40+", label: "5-star reviews" },
     { icon: <HouseIcon className="text-brand" />, num: "200+", label: "Adelaide Homes Cleaned" },
     { icon: <ShieldCheckIcon className="text-brand" />, num: "Fully insured", label: "Peace of mind" },
   ]
