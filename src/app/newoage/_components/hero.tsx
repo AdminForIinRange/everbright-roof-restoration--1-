@@ -53,11 +53,11 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/82" aria-hidden="true" />
 
         <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-10 pt-8 text-center md:px-10 md:pb-16 md:pt-10 md:text-left lg:px-20">
-          <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-5xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-center md:text-6xl md:leading-[1.1]">
+          <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-4xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-center md:text-6xl md:leading-[1.1]">
             <span className="text-brand">Pressure Washing</span> Adelaide
           </h1>
 
-          <p className="mb-5 max-w-md text-pretty text-sm font-bold leading-relaxed text-background/90 md:text-center md:text-lg">
+          <p className="mb-5 max-w-md text-pretty text-base font-bold leading-relaxed text-background/90 md:text-center md:text-lg">
             <span className="block">Cleaning driveways, pavers, paths and patios to look like new again.</span>
           </p>
 
