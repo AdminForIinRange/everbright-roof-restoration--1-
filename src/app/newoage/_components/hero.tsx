@@ -64,14 +64,11 @@ export function Hero() {
         </div>
 
         <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-3xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-center md:text-7xl md:leading-[1.1]">
-          <span className="block">Pressure Washing Adelaide</span>
-          <span className="block">
-            Driveways Look <span className="text-brand">Brand New Again</span>
-          </span>
+          Pressure Washing Adelaide
         </h1>
 
         <p className="mb-5 max-w-md text-pretty text-sm font-bold leading-relaxed text-background/90 md:text-center md:text-lg">
-          <span className="block">Pressure Cleaning So Good, The Neighbours Will Think It&apos;s Brand New</span>
+          <span className="block">Restoring driveways, pavers, paths and patios to look like new again.</span>
         </p>
 
         {step === "q1" && (
