@@ -63,23 +63,13 @@ export function Hero() {
           </Link>
         </div>
 
-        <h1
-          aria-label="Roof Cleaning Adelaide: Erase ugly stains, not your tiles"
-          className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-2xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-5xl md:leading-[1.1]"
-        >
-          <span className="block">Roof Cleaning Adelaide</span>
-          <span className="block">Erase ugly stains,</span>
-          <span className="block text-brand">not your tiles</span>
+        <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-2xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-5xl md:leading-[1.1]">
+          Roof Cleaning Adelaide
         </h1>
 
-        <p className="mb-5 max-w-md text-pretty text-sm font-light leading-relaxed text-background/90 md:text-lg">
-          <span className="block">
-            Professional Roof Cleaning in <strong className="font-semibold">Adelaide</strong>
-          </span>
-          <span className="block">
-            <strong className="font-semibold">and Surrounding Areas</strong>
-          </span>
-        </p>
+        <h2 className="mb-5 max-w-md text-pretty text-base font-bold uppercase leading-relaxed text-background/90 md:text-xl">
+          Bring Your Roof Back To Life
+        </h2>
 
         {step === "q1" && (
           <div className="w-full max-w-xs rounded-lg bg-card p-4 text-left shadow-2xl md:max-w-md md:p-6">
