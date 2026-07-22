@@ -218,7 +218,7 @@ function WhatWeClean() {
     <section className="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-20 lg:px-16">
       <div className="mb-8 text-center md:mb-12">
         <h2 className="font-heading text-6xl font-extrabold tracking-wide text-[#002844] md:text-8xl">
-          What We Clean
+          What We <span className="text-brand">Clean</span>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-black md:text-xl">
           At Everbright, our pressure washing brings surfaces back to life — tackling everyday grime and
