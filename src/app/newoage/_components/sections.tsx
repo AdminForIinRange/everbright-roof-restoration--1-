@@ -175,55 +175,86 @@ function WhatWeClean() {
     {
       icon: Grid3x3,
       title: "Paver Cleaning",
-      desc: "Lift years of grime, mould and weeds from your pavers and restore them to like-new, without you lifting a finger.",
+      points: [
+        "Removes years of built-up grime and mould",
+        "Clears weeds from between pavers",
+        "Restores pavers to a like-new finish",
+      ],
     },
     {
       icon: Car,
       title: "Driveway Cleaning",
-      desc: "Remove tyre marks, oil, dirt and organic growth to bring your driveway back to its original colour.",
+      points: [
+        "Removes tyre marks and oil stains",
+        "Clears dirt and organic growth",
+        "Brings back your driveway's original colour",
+      ],
     },
     {
       icon: Square,
       title: "Concrete Cleaning",
-      desc: "Clean up paths, patios and driveways, instantly lifting the look — and the value — of your property.",
+      points: [
+        "Cleans paths, patios and driveways",
+        "Instantly lifts your property's street appeal",
+        "Helps protect long-term concrete value",
+      ],
     },
     {
       icon: Footprints,
       title: "Path Cleaning",
-      desc: "Brick or concrete, the paths around your home collect the worst of the mould and grime. We get them clean, fresh and safe underfoot.",
+      points: [
+        "Works on brick or concrete paths",
+        "Clears mould and built-up grime",
+        "Leaves paths clean, fresh and safe underfoot",
+      ],
     },
     {
       icon: Gem,
       title: "Natural Stone Cleaning",
-      desc: "Bluestone, sandstone and travertine each need a careful, surface-specific approach — we clean them properly, without damage.",
+      points: [
+        "Suited to bluestone, sandstone and travertine",
+        "Surface-specific, damage-free methods",
+        "Cleaned properly, the first time",
+      ],
     },
     {
       icon: Mountain,
       title: "Exposed Aggregate",
-      desc: "This porous surface is tricky to maintain and easy to damage. We know how to clean it safely and leave it looking new.",
+      points: [
+        "Safe for porous, easily-damaged surfaces",
+        "Careful, controlled cleaning methods",
+        "Leaves aggregate looking like new",
+      ],
     },
     {
       icon: Droplet,
       title: "Oil & Rust Stain Removal",
-      desc: "We won't promise miracles on every stain, but you'll get the best possible result and an honest assessment up front.",
+      points: [
+        "Honest, upfront stain assessment",
+        "Best possible result on oil and rust marks",
+        "No false promises, just real results",
+      ],
     },
     {
       icon: Leaf,
       title: "Mould & Algae Treatment",
-      desc: "Our cleaning includes an anti-fungal treatment using safe, biodegradable solutions, for a deeper clean that stays cleaner longer.",
+      points: [
+        "Anti-fungal treatment included",
+        "Safe, biodegradable solutions",
+        "Deeper clean that stays cleaner for longer",
+      ],
     },
   ];
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-20 lg:px-16">
       <div className="mb-8 text-center md:mb-12">
-        <h2 className="font-heading text-3xl font-extrabold tracking-wide text-[#002844] md:text-7xl">
+        <h2 className="font-heading text-4xl font-extrabold tracking-wide text-[#002844] md:text-8xl">
           What We Clean
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-black md:text-base">
-          At Everbright, we don&apos;t just clean surfaces — we bring them back to life. Our pressure washing
-          covers homes right across Adelaide, tackling everything from everyday grime to stubborn stains most
-          people assume are permanent.
+          At Everbright, our pressure washing brings surfaces back to life — tackling everyday grime and
+          stubborn stains across homes in Adelaide.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -235,8 +266,15 @@ function WhatWeClean() {
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand/10 text-brand">
               <service.icon className="h-6 w-6" aria-hidden="true" />
             </div>
-            <h3 className="mb-2 text-lg font-bold text-foreground">{service.title}</h3>
-            <p className="text-sm leading-relaxed text-black">{service.desc}</p>
+            <h3 className="mb-3 text-xl font-bold text-foreground">{service.title}</h3>
+            <ul className="space-y-2">
+              {service.points.map((point) => (
+                <li key={point} className="flex items-start gap-2.5 text-base leading-relaxed text-black">
+                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden="true" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
