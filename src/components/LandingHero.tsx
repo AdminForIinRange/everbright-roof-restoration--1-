@@ -205,7 +205,7 @@ const services = [
     ],
     image: "/genrealPhotos/RoofcleaingServiceCard.webp",
     alt: "Professional worker cleaning a tiled roof with a pressure washer",
-    href: "/roof-restoration",
+    href: "/roof-cleaning",
   },
   {
     title: "Pressure Washing",
@@ -356,33 +356,45 @@ export default function LandingHero() {
               <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
                 check_circle
               </span>
-              <span className="font-body text-lg leading-none text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              <Link
+                href="/roof-cleaning"
+                className="font-body text-lg leading-none text-white transition-colors hover:text-brand-sky sm:text-2xl lg:text-xl xl:text-2xl"
+              >
                 Roof Cleaning
-              </span>
+              </Link>
             </li>
             <li className="flex items-center gap-2.5 sm:gap-3">
               <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
                 check_circle
               </span>
-              <span className="font-body text-lg leading-none text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              <Link
+                href="/solar-cleaning"
+                className="font-body text-lg leading-none text-white transition-colors hover:text-brand-sky sm:text-2xl lg:text-xl xl:text-2xl"
+              >
                 Solar Cleaning
-              </span>
+              </Link>
             </li>
             <li className="flex items-center gap-2.5 sm:gap-3">
               <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
                 check_circle
               </span>
-              <span className="font-body text-lg leading-none text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              <Link
+                href="/gutter-cleaning"
+                className="font-body text-lg leading-none text-white transition-colors hover:text-brand-sky sm:text-2xl lg:text-xl xl:text-2xl"
+              >
                 Gutter Cleaning
-              </span>
+              </Link>
             </li>
             <li className="flex items-center gap-2.5 sm:gap-3">
               <span className="material-icons text-[24px] leading-none text-brand-sky sm:text-[30px]">
                 check_circle
               </span>
-              <span className="font-body text-lg leading-none text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              <Link
+                href="/pressure-washing"
+                className="font-body text-lg leading-none text-white transition-colors hover:text-brand-sky sm:text-2xl lg:text-xl xl:text-2xl"
+              >
                 Pressure Washing
-              </span>
+              </Link>
             </li>
           </ul>
 

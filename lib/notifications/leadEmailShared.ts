@@ -60,6 +60,7 @@ export function isRoofRestorationV0Lead(lead: Pick<LeadEmailPayload, "formSource
   return (
     formSource.startsWith("roof-restoration-") ||
     sourcePath === "/roof-restoration" ||
+    sourcePath === "/roof-cleaning" ||
     sourcePath === "/new-roof-restoration"
   );
 }

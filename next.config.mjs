@@ -13,6 +13,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/roof-restoration',
+        destination: '/roof-cleaning',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

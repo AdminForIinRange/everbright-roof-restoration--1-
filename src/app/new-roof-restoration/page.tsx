@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 
-import V0RoofRestorationLanding from '../roof-restoration/_components/V0RoofRestorationLanding';
+import V0RoofRestorationLanding from '../roof-cleaning/_components/V0RoofRestorationLanding';
 import { buildPageMetadata, buildServiceJsonLd } from '@lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({

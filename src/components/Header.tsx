@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 
 const serviceLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Roof Cleaning', href: '/roof-restoration' },
+  { label: 'Roof Cleaning', href: '/roof-cleaning' },
   { label: 'Pressure Washing', href: '/pressure-washing' },
   { label: 'Solar Cleaning', href: '/solar-cleaning' },
   { label: 'Gutter Cleaning', href: '/gutter-cleaning' },
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
   }, [isMenuOpen]);
 
   const handlePhoneClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    if (pathname !== '/roof-restoration') {
+    if (pathname !== '/roof-cleaning') {
       return;
     }
 

@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${SITE_URL}/roof-restoration`,
+      url: `${SITE_URL}/roof-cleaning`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
