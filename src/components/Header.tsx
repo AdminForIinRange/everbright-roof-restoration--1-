@@ -13,6 +13,7 @@ const serviceLinks = [
   { label: 'Solar Cleaning', href: '/solar-cleaning' },
   { label: 'Gutter Cleaning', href: '/gutter-cleaning' },
   { label: 'Paver & Concrete Sealing', href: '/paver-concrete-sealing' },
+  { label: 'Blog', href: '/blog' },
 ];
 
 const Header: React.FC = () => {
@@ -60,7 +61,16 @@ const Header: React.FC = () => {
           </Link>
 
           <div className="flex items-center justify-end gap-3 text-right">
-           
+            <Link
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white transition-colors hover:text-brand-sky"
+              href="/blog"
+              aria-label="Blog"
+              data-analytics-event="header_blog_icon_click"
+              data-analytics-location="header"
+              data-analytics-type="blog"
+            >
+              <span className="material-icons text-[20px]">article</span>
+            </Link>
 
             <a
               className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white transition-colors hover:text-brand-sky"

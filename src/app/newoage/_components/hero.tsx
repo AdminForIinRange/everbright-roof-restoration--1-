@@ -63,10 +63,6 @@ export function Hero() {
           </Link>
         </div>
 
-        <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-brand md:text-xs">
-          Attention Adelaide Homeowners
-        </p>
-
         <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-3xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-center md:text-7xl md:leading-[1.1]">
           <span className="block">
             Your Dirty Driveway Embarrassment Ends <span className="text-brand">Here</span>

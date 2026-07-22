@@ -1,6 +1,5 @@
 import React from 'react';
 
-import AnnouncementBar from './components/AnnouncementBar';
 import Features from './components/Features';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
@@ -38,7 +37,6 @@ const App: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <AnnouncementBar />
       <OfferBanner />
 
       <main className="flex-grow">

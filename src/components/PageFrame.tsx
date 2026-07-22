@@ -1,6 +1,5 @@
 import React from 'react';
 
-import AnnouncementBar from './AnnouncementBar';
 import Footer from './Footer';
 import Header from './Header';
 
@@ -10,12 +9,11 @@ type PageFrameProps = {
   showOfferBanner?: boolean;
 };
 
-const PageFrame: React.FC<PageFrameProps> = ({ children, showOfferBanner = true }) => {
+const PageFrame: React.FC<PageFrameProps> = ({ children }) => {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <AnnouncementBar />
- 
+
       <main className="flex-grow">{children}</main>
       <Footer />
     </div>

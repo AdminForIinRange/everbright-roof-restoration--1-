@@ -1,6 +1,6 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
-import { Clock3, ShieldCheck, UsersRound } from "lucide-react";
+import { Clock3, Mail, Phone, ShieldCheck, UsersRound } from "lucide-react";
 import DragScroll from "./DragScroll";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -287,13 +287,6 @@ const processSteps = [
       "Our team arrives on time, fully equipped, and completes the job using safe, surface-specific methods. We finish with a full clean-up and final check so your exterior looks properly restored.",
     italicNumber: false,
   },
-];
-
-const contactChecklist = [
-  "Fully Certified & $10M Insured",
-  "Surface safe cleaning methods",
-  "Premium approved products",
-  "Experienced local exterior cleaning team",
 ];
 
 const reliabilityPoints = [
@@ -766,30 +759,35 @@ export default function LandingHero() {
 
       <section className="bg-white px-6 pb-4 pt-12 md:pb-6 md:pt-14 lg:pb-8 lg:pt-16">
         <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">
-          <div className="bg-white p-8 md:max-w-[620px] md:p-10 lg:p-12">
+          <div className="rounded-3xl border border-slate-200 p-8 shadow-sm md:p-10 lg:p-12">
             <h3 className="mb-4 font-display text-5xl uppercase leading-none text-everbright-blue md:text-[3.25rem]">
-              Contact Us Today
+              Contact Us
             </h3>
             <p className="mb-8 text-base leading-snug text-slate-700 md:text-lg">
-              Limited availability - refresh and protect your home with
-              Adelaide&apos;s trusted exterior cleaning specialists.
+              Get a free quote for pressure washing, driveway, roof, gutter
+              and solar cleaning across Adelaide. Tell us what needs cleaning
+              and we&apos;ll get back to you within 24 hours.
             </p>
 
-            <div className="space-y-3">
-              <h4 className="font-display text-lg uppercase text-everbright-blue">
-                Trusted Exterior Cleaning Specialists
-              </h4>
-              <ul className="space-y-1.5">
-                {contactChecklist.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-2 text-sm font-semibold text-slate-700"
-                  >
-                    <span className="material-icons text-sm">check</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            <div className="grid gap-3 md:grid-cols-2">
+              <a
+                href="tel:0411017366"
+                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-everbright-blue hover:bg-everbright-blue/5"
+              >
+                <Phone className="h-5 w-5 shrink-0 text-everbright-blue" />
+                <span className="text-base font-semibold text-slate-900 sm:text-lg">
+                  0411 017 366
+                </span>
+              </a>
+              <a
+                href="mailto:everbrightpressurewashing@gmail.com"
+                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-everbright-blue hover:bg-everbright-blue/5"
+              >
+                <Mail className="h-5 w-5 shrink-0 text-everbright-blue" />
+                <span className="min-w-0 break-words text-sm font-semibold text-slate-900 sm:text-base">
+                  everbrightpressurewashing@gmail.com
+                </span>
+              </a>
             </div>
           </div>
         </div>

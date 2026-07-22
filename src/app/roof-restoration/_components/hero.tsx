@@ -63,10 +63,6 @@ export function Hero() {
           </Link>
         </div>
 
-        <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-brand md:text-xs">
-          Attention Adelaide Homeowners
-        </p>
-
         <h1
           aria-label="Erase ugly roof stains and make your home look cared for"
           className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-2xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-5xl md:leading-[1.1]"
