@@ -66,7 +66,7 @@ export function Hero() {
               <p className="mb-1 text-center text-base font-extrabold uppercase tracking-wide text-brand">
                 Get a fast free quote
               </p>
-              <p className="mb-3 text-center text-base font-bold leading-snug text-card-foreground md:text-lg">
+              <p className="mb-3 text-center text-lg font-extrabold leading-snug text-card-foreground md:text-xl">
                 What needs a clean?
               </p>
               <div className="flex flex-col gap-1.5">
