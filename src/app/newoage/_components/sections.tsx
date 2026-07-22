@@ -175,7 +175,7 @@ function WhatWeClean() {
     {
       icon: Grid3x3,
       title: "Paver Cleaning",
-      desc: "Lift years of grime, mould and weeds from your pavers and restore them to like-new, without you lifting a finger.",
+      desc: "Lift years of grime, mould and weeds from your pavers and restore them to like new, without you lifting a finger.",
     },
     {
       icon: Car,
@@ -185,7 +185,7 @@ function WhatWeClean() {
     {
       icon: Square,
       title: "Concrete Cleaning",
-      desc: "Clean up paths, patios and driveways, instantly lifting the look — and the value — of your property.",
+      desc: "Clean up paths, patios and driveways, instantly lifting the look and the value of your property.",
     },
     {
       icon: Footprints,
@@ -195,7 +195,7 @@ function WhatWeClean() {
     {
       icon: Gem,
       title: "Natural Stone Cleaning",
-      desc: "Bluestone, sandstone and travertine each need a careful, surface-specific approach — we clean them properly, without damage.",
+      desc: "Bluestone, sandstone and travertine each need a careful, surface specific approach, and we clean them properly, without damage.",
     },
     {
       icon: Mountain,
@@ -210,14 +210,14 @@ function WhatWeClean() {
     {
       icon: Leaf,
       title: "Mould & Algae Treatment",
-      desc: "Our cleaning includes an anti-fungal treatment using safe, biodegradable solutions, for a deeper clean that stays cleaner longer.",
+      desc: "Our cleaning includes an antifungal treatment using safe, biodegradable solutions, for a deeper clean that stays cleaner longer.",
     },
   ];
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-20 lg:px-16">
       <div className="mb-8 text-center md:mb-12">
-        <h2 className="font-heading text-4xl font-extrabold tracking-wide text-[#002844] md:text-8xl">
+        <h2 className="font-heading text-6xl font-extrabold tracking-wide text-[#002844] md:text-8xl">
           What We Clean
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-black md:text-base">

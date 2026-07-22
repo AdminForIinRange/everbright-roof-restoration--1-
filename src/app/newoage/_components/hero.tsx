@@ -63,7 +63,7 @@ export function Hero() {
           </Link>
         </div>
 
-        <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-3xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-center md:text-7xl md:leading-[1.1]">
+        <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-4xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-center md:text-8xl md:leading-[1.1]">
           <span className="text-brand">Pressure Washing</span> Adelaide
         </h1>
 
@@ -76,7 +76,7 @@ export function Hero() {
             <p className="mb-1 text-center text-base font-extrabold uppercase tracking-wide text-brand">
               Get a fast free quote
             </p>
-            <p className="mb-3 text-center text-sm font-bold leading-snug text-card-foreground">
+            <p className="mb-3 text-center text-base font-bold leading-snug text-card-foreground md:text-lg">
               What needs a clean?
             </p>
             <div className="flex flex-col gap-1.5">
