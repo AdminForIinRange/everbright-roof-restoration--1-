@@ -64,11 +64,11 @@ export function Hero() {
         </div>
 
         <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-2xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-5xl md:leading-[1.1]">
-          Roof Cleaning Adelaide
+          <span className="text-brand">Roof Cleaning</span> Adelaide
         </h1>
 
         <h2 className="mb-5 max-w-md text-pretty text-base font-bold uppercase leading-relaxed text-background/90 md:text-xl">
-          Bring Your Roof Back To Life
+          Bring Your Roof Back To Life!
         </h2>
 
         {step === "q1" && (
