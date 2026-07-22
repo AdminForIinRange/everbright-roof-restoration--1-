@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Car, Droplet, Footprints, Gem, Grid3x3, Leaf, Mountain, Square } from "lucide-react";
 
 import { GoogleIcon, HouseIcon, HourglassIcon, PlusIcon, StarIcon } from "./icons";
 
@@ -169,6 +170,80 @@ export function FAQ() {
   );
 }
 
+function WhatWeClean() {
+  const services = [
+    {
+      icon: Grid3x3,
+      title: "Paver Cleaning",
+      desc: "Lift years of grime, mould and weeds from your pavers and restore them to like-new, without you lifting a finger.",
+    },
+    {
+      icon: Car,
+      title: "Driveway Cleaning",
+      desc: "Remove tyre marks, oil, dirt and organic growth to bring your driveway back to its original colour.",
+    },
+    {
+      icon: Square,
+      title: "Concrete Cleaning",
+      desc: "Clean up paths, patios and driveways, instantly lifting the look — and the value — of your property.",
+    },
+    {
+      icon: Footprints,
+      title: "Path Cleaning",
+      desc: "Brick or concrete, the paths around your home collect the worst of the mould and grime. We get them clean, fresh and safe underfoot.",
+    },
+    {
+      icon: Gem,
+      title: "Natural Stone Cleaning",
+      desc: "Bluestone, sandstone and travertine each need a careful, surface-specific approach — we clean them properly, without damage.",
+    },
+    {
+      icon: Mountain,
+      title: "Exposed Aggregate",
+      desc: "This porous surface is tricky to maintain and easy to damage. We know how to clean it safely and leave it looking new.",
+    },
+    {
+      icon: Droplet,
+      title: "Oil & Rust Stain Removal",
+      desc: "We won't promise miracles on every stain, but you'll get the best possible result and an honest assessment up front.",
+    },
+    {
+      icon: Leaf,
+      title: "Mould & Algae Treatment",
+      desc: "Our cleaning includes an anti-fungal treatment using safe, biodegradable solutions, for a deeper clean that stays cleaner longer.",
+    },
+  ];
+
+  return (
+    <section className="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-20 lg:px-16">
+      <div className="mb-8 text-center md:mb-12">
+        <h2 className="font-heading text-3xl font-extrabold tracking-wide text-[#002844] md:text-7xl">
+          What We Clean
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+          At Everbright, we don&apos;t just clean surfaces — we bring them back to life. Our pressure washing
+          covers homes right across Adelaide, tackling everything from everyday grime to stubborn stains most
+          people assume are permanent.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {services.map((service) => (
+          <div
+            key={service.title}
+            className="rounded-lg border border-border bg-card p-6 text-left shadow-sm transition-all hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg"
+          >
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand/10 text-brand">
+              <service.icon className="h-6 w-6" aria-hidden="true" />
+            </div>
+            <h3 className="mb-2 text-lg font-bold text-foreground">{service.title}</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">{service.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function Transformations() {
   const items = [
     {
@@ -213,6 +288,8 @@ export function Transformations() {
           ))}
         </div>
       </section>
+
+      <WhatWeClean />
 
       <section className="bg-[#002844] py-12 text-white">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 sm:px-6 lg:px-8">
