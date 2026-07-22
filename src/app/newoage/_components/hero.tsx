@@ -64,7 +64,7 @@ export function Hero() {
         </div>
 
         <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-3xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-center md:text-7xl md:leading-[1.1]">
-          Pressure Washing Adelaide
+          <span className="text-brand">Pressure Washing</span> Adelaide
         </h1>
 
         <p className="mb-5 max-w-md text-pretty text-sm font-bold leading-relaxed text-background/90 md:text-center md:text-lg">
