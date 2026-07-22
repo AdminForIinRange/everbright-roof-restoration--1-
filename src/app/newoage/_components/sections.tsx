@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Car, Droplet, Footprints, Gem, Grid3x3, Leaf, Mountain, Square } from "lucide-react";
+import { BrickWall, Car, Footprints, Grid3x3, Leaf, Mountain, SprayCan, Stone } from "lucide-react";
 
 import { GoogleIcon, HouseIcon, HourglassIcon, PlusIcon, StarIcon } from "./icons";
 
@@ -183,7 +183,7 @@ function WhatWeClean() {
       desc: "Remove tyre marks, oil, dirt and organic growth to bring your driveway back to its original colour.",
     },
     {
-      icon: Square,
+      icon: BrickWall,
       title: "Concrete Cleaning",
       desc: "Clean up paths, patios and driveways, instantly lifting the look and the value of your property.",
     },
@@ -193,7 +193,7 @@ function WhatWeClean() {
       desc: "Brick or concrete, the paths around your home collect the worst of the mould and grime. We get them clean, fresh and safe underfoot.",
     },
     {
-      icon: Gem,
+      icon: Stone,
       title: "Natural Stone Cleaning",
       desc: "Bluestone, sandstone and travertine each need a careful, surface specific approach, and we clean them properly, without damage.",
     },
@@ -203,7 +203,7 @@ function WhatWeClean() {
       desc: "This porous surface is tricky to maintain and easy to damage. We know how to clean it safely and leave it looking new.",
     },
     {
-      icon: Droplet,
+      icon: SprayCan,
       title: "Oil & Rust Stain Removal",
       desc: "We won't promise miracles on every stain, but you'll get the best possible result and an honest assessment up front.",
     },
@@ -220,7 +220,7 @@ function WhatWeClean() {
         <h2 className="font-heading text-6xl font-extrabold tracking-wide text-[#002844] md:text-8xl">
           What We Clean
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-black md:text-base">
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-black md:text-xl">
           At Everbright, our pressure washing brings surfaces back to life — tackling everyday grime and
           stubborn stains across homes in Adelaide.
         </p>
