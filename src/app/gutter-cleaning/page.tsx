@@ -4,7 +4,7 @@ import { GutterCleaningLanding } from './_components/GutterCleaningLanding';
 import { buildPageMetadata, buildServiceJsonLd } from '@lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Gutter Cleaning Adelaide',
+  title: 'Gutter Cleaning Services Adelaide',
   description:
     'Professional gutter cleaning in Adelaide to clear debris, reduce overflow risk, and protect your home from water damage.',
   path: '/gutter-cleaning',

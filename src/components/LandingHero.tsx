@@ -562,15 +562,15 @@ export default function LandingHero() {
         </h2>
         <div className="mx-auto mb-10 max-w-lg space-y-6 text-base leading-relaxed text-black md:max-w-3xl md:text-lg lg:text-xl">
           <p>
-            Mould, lichen and grime don’t just affect how your home looks,over
-            time, they can weaken surfaces and shorten the life of your roof,
-            gutters and outdoor areas.
+            Mould, lichen and grime don&apos;t just make your home look old,
+            over time they eat into surfaces and shorten the life of your
+            roof, gutters, driveways and outdoor areas.
           </p>
           <p>
-            Our surface-specific exterior cleaning systems are designed to
-            remove buildup thoroughly without causing damage. No excessive
-            pressure. No shortcuts. Just controlled, professional cleaning done
-            the right way.
+            Our exterior cleaning is tailored to each surface, removing
+            built-up grime thoroughly without causing damage. No excessive
+            pressure. No shortcuts. Just controlled, professional cleaning
+            done the right way — trusted by homeowners across Adelaide.
           </p>
         </div>
         <p className="font-display text-md font-bold uppercase text-everbright-blue md:text-2xl">

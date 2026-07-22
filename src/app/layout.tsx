@@ -17,13 +17,14 @@ const poppins = Poppins({
 
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'CleaningService'],
   '@id': `${SITE_URL}/#organization`,
   name: SITE_NAME,
   url: SITE_URL,
   image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
   logo: `${SITE_URL}${SITE_LOGO_IMAGE}`,
   telephone: SITE_PHONE,
+  priceRange: '$$',
   description:
     'Professional exterior cleaning services in Adelaide, including roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar cleaning.',
   areaServed: {

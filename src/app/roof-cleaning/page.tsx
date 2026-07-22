@@ -6,7 +6,7 @@ import { buildPageMetadata, buildServiceJsonLd } from '@lib/seo';
 import V0RoofRestorationLanding from './_components/V0RoofRestorationLanding';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Roof Restoration Adelaide',
+  title: 'Roof Cleaning & Soft Washing Adelaide',
   description:
     'Roof restoration and roof cleaning services in Adelaide with surface safe methods, mould and lichen removal, and fast free quotes.',
   path: '/roof-cleaning',

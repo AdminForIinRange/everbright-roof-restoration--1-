@@ -64,12 +64,12 @@ export function Hero() {
         </div>
 
         <h1
-          aria-label="Erase ugly roof stains and make your home look cared for"
+          aria-label="Roof Cleaning Adelaide: Erase ugly stains, not your tiles"
           className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-2xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-5xl md:leading-[1.1]"
         >
-          <span className="block">Erase ugly roof stains</span>
-          <span className="block">and make your home</span>
-          <span className="block text-brand">look cared for</span>
+          <span className="block">Roof Cleaning Adelaide</span>
+          <span className="block">Erase ugly stains,</span>
+          <span className="block text-brand">not your tiles</span>
         </h1>
 
         <p className="mb-5 max-w-md text-pretty text-sm font-light leading-relaxed text-background/90 md:text-lg">

@@ -5,7 +5,7 @@ import { buildPageMetadata, buildServiceJsonLd } from '@lib/seo';
 import V0PressureWashingLanding from '../newoage/_components/V0PressureWashingLanding';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Pressure Washing Adelaide',
+  title: 'Pressure Washing & Driveway Cleaning Adelaide',
   description:
     'Professional pressure washing in Adelaide for driveways, patios, and exterior surfaces using safe, surface-specific methods.',
   path: '/pressure-washing',
