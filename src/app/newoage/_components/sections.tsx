@@ -229,7 +229,7 @@ function WhatWeClean() {
         {services.map((service) => (
           <div
             key={service.title}
-            className="rounded-lg border border-white/10 bg-[#002844] p-6 text-left shadow-sm transition-all hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg"
+            className="rounded-lg border border-white/10 bg-navy-dark p-6 text-left shadow-sm transition-all hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg"
           >
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand/10 text-brand">
               <service.icon className="h-6 w-6" aria-hidden="true" />
