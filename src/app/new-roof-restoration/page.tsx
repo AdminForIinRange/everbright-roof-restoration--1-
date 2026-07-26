@@ -9,7 +9,6 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'New roof restoration and roof cleaning landing page for Adelaide homeowners with fast free quote requests.',
   path: '/new-roof-restoration',
-  keywords: ['roof restoration Adelaide', 'roof cleaning Adelaide', 'new roof restoration page'],
   noIndex: true,
 });
 

@@ -8,12 +8,6 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Paver and concrete sealing services in Adelaide that help protect driveways, paths, patios, and outdoor surfaces from stains, weathering, and daily wear.',
   path: '/paver-concrete-sealing',
-  keywords: [
-    'paver sealing Adelaide',
-    'concrete sealing Adelaide',
-    'driveway sealing Adelaide',
-    'patio sealing Adelaide',
-  ],
 });
 
 const serviceJsonLd = buildServiceJsonLd({

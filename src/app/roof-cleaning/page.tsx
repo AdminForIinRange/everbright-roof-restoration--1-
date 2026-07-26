@@ -3,6 +3,7 @@ import Script from 'next/script';
 
 import { buildPageMetadata, buildServiceJsonLd } from '@lib/seo';
 
+import { roofCleaningFaqs } from './_components/faq-data';
 import V0RoofRestorationLanding from './_components/V0RoofRestorationLanding';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -10,7 +11,6 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Roof restoration and roof cleaning services in Adelaide with surface safe methods, mould and lichen removal, and fast free quotes.',
   path: '/roof-cleaning',
-  keywords: ['roof restoration Adelaide', 'roof cleaning Adelaide', 'mould removal roof Adelaide'],
 });
 
 const serviceJsonLd = buildServiceJsonLd({
@@ -21,12 +21,29 @@ const serviceJsonLd = buildServiceJsonLd({
   serviceType: 'Roof restoration',
 });
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: roofCleaningFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
+    },
+  })),
+};
+
 export default function RoofRestorationPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Script id="google-ads-phone-conversion-config" strategy="afterInteractive">
         {`gtag('config', 'AW-17805776719/46LYCJTP74EcEM-uuqpC', {

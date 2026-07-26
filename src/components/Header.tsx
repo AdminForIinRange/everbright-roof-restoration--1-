@@ -52,7 +52,7 @@ const Header: React.FC = () => {
           <Link href="/" className="flex flex-col items-center">
             <Image
               src="/everbright-logo.png"
-              alt="EverBright Pressure Washing logo"
+              alt="EverBright Pressure Washing"
               width={600}
               height={408}
               sizes="(min-width: 768px) 12rem, 10rem"
@@ -116,7 +116,7 @@ const Header: React.FC = () => {
             <Link href="/" className="mb-4 block w-fit" onClick={() => setIsMenuOpen(false)}>
               <Image
                 src="/everbright-logo.png"
-                alt="EverBright Pressure Washing logo"
+                alt="EverBright Pressure Washing"
                 width={600}
                 height={408}
                 sizes="9rem"

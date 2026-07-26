@@ -8,15 +8,6 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Professional exterior cleaning services in Adelaide with fast quotes for roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar panel cleaning.',
   path: '/',
-  keywords: [
-    'exterior cleaning Adelaide',
-    'roof cleaning Adelaide',
-    'pressure washing Adelaide',
-    'gutter cleaning Adelaide',
-    'paver sealing Adelaide',
-    'concrete sealing Adelaide',
-    'solar cleaning Adelaide',
-  ],
 });
 
 export default function Page() {

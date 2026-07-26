@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import { roofCleaningFaqs } from "./faq-data";
 import { GoogleIcon, HouseIcon, HourglassIcon, PlusIcon, StarIcon } from "./icons";
 
 const IMAGE_BASE = "/roof-restoration-v0/images";
@@ -92,32 +93,7 @@ export function HowItWorks() {
 }
 
 export function FAQ() {
-  const faqs = [
-    {
-      q: "Is roof cleaning safe for my roof?",
-      a: "Yes. We use a gentle, low-pressure method matched to your roof type, so your tiles or metal stay protected. It lifts away stains, moss, and grime without harsh blasting or damage.",
-    },
-    {
-      q: "Is the quote really free?",
-      a: "It is. We come out, look at your roof properly, and give you a clear fixed price with no obligation. There's no cost to get a quote and no pressure to go ahead.",
-    },
-    {
-      q: "Do I need to be home for the clean?",
-      a: "Not always. We do need access to your property and roof, but many homeowners are happy to leave us to it. Just let us know what suits you when we book.",
-    },
-    {
-      q: "How long does a roof clean take?",
-      a: "Most homes are done in a single visit, often within a few hours depending on the size and condition of your roof. We'll give you a clear time estimate with your quote.",
-    },
-    {
-      q: "Will it actually make a difference I can see?",
-      a: "Yes, and the change is usually striking. Removing years of stains and streaks instantly brightens your roof and makes your whole home look cleaner and well cared for from the street.",
-    },
-    {
-      q: "Do you cover my area?",
-      a: "We clean roofs right across Adelaide and the surrounding suburbs. Not sure if you're in our patch? Just ask when you request your quote and we'll let you know.",
-    },
-  ];
+  const faqs = roofCleaningFaqs;
   const [open, setOpen] = useState<number | null>(null);
   const columns = [faqs.slice(0, 3), faqs.slice(3)];
 
@@ -144,15 +120,17 @@ export function FAQ() {
                       onClick={() => setOpen(isOpen ? null : i)}
                       className="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left hover:bg-secondary/50 active:bg-secondary"
                       aria-expanded={isOpen}
+                      aria-controls={`roof-faq-answer-${i}`}
                     >
                       <span className="text-sm font-bold text-card-foreground md:text-base">{faq.q}</span>
                       <PlusIcon className={`shrink-0 text-brand transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`} />
                     </button>
-                    {isOpen && (
-                      <div className="px-5 pb-5 pt-0 text-sm leading-relaxed text-foreground">
-                        <p>{faq.a}</p>
-                      </div>
-                    )}
+                    <div
+                      id={`roof-faq-answer-${i}`}
+                      className={`px-5 pb-5 pt-0 text-sm leading-relaxed text-foreground ${isOpen ? "" : "hidden"}`}
+                    >
+                      <p>{faq.a}</p>
+                    </div>
                   </div>
                 );
               })}
@@ -309,9 +287,9 @@ export function SiteFooter() {
   return (
     <footer className="bg-[#002844] px-3 py-1 text-white md:px-6 md:py-2">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-0 text-center">
-        <img src={`${IMAGE_BASE}/logo-white.png`} alt="EverBright Pressure Washing logo" className="h-32 w-auto md:h-48" />
+        <img src={`${IMAGE_BASE}/logo-white.png`} alt="EverBright Pressure Washing" className="h-32 w-auto md:h-48" />
         <p className="-mt-8 text-xs leading-tight md:-mt-14">Serving Adelaide &amp; surrounding areas</p>
-        <p className="text-xs leading-tight">&copy; 2025 EverBright Pressure Washing</p>
+        <p className="text-xs leading-tight">&copy; {new Date().getFullYear()} EverBright Pressure Washing</p>
       </div>
     </footer>
   );

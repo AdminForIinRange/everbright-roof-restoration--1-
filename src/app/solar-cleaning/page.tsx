@@ -8,7 +8,6 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Solar panel cleaning services in Adelaide to remove dust, grime, and bird droppings and help maintain panel efficiency.',
   path: '/solar-cleaning',
-  keywords: ['solar panel cleaning Adelaide', 'solar cleaning Adelaide', 'solar maintenance Adelaide'],
 });
 
 const serviceJsonLd = buildServiceJsonLd({

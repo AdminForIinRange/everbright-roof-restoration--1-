@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 
 export const SITE_URL = 'https://www.everbrightpressurewashing.com.au';
-export const SITE_NAME = 'EverBright';
-export const DEFAULT_OG_IMAGE = '/genrealPhotos/lanidngpageimg.jpeg';
+export const SITE_NAME = 'EverBright Pressure Washing';
+export const DEFAULT_OG_IMAGE = '/genrealPhotos/exterior-cleaning-adelaide-hero.jpeg';
 export const SITE_LOGO_IMAGE = '/everbright-logo.png';
 export const SITE_PHONE = '+61411017366';
+export const SITE_EMAIL = 'everbrightpressurewashing@gmail.com';
 
 const indexableRobots: Metadata['robots'] = {
   index: true,
@@ -32,7 +33,6 @@ type BuildPageMetadataParams = {
   title: string;
   description: string;
   path: string;
-  keywords?: string[];
   noIndex?: boolean;
 };
 
@@ -47,7 +47,6 @@ export function buildPageMetadata({
   title,
   description,
   path,
-  keywords = [],
   noIndex = false,
 }: BuildPageMetadataParams): Metadata {
   const canonicalPath = path.startsWith('/') ? path : `/${path}`;
@@ -56,7 +55,6 @@ export function buildPageMetadata({
   return {
     title: canonicalPath === '/' ? fullTitle : title,
     description,
-    keywords,
     alternates: {
       canonical: canonicalPath,
     },

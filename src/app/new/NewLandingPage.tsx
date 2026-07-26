@@ -58,7 +58,7 @@ const newPageServiceCards = [
     key: "roof-cleaning",
     category: "Roof Care",
     title: "Roof Cleaning",
-    imageSrc: "/genrealPhotos/RoofcleaingServiceCard.png",
+    imageSrc: "/genrealPhotos/roof-cleaning-service-card.png",
     imageFrameClassName: "aspect-[5/3]",
     imageClassName: "object-cover",
     imageAlt:
@@ -77,7 +77,7 @@ const newPageServiceCards = [
     key: "pressure-washing",
     category: "Surface Care",
     title: "Pressure Washing",
-    imageSrc: "/genrealPhotos/Pressure%20WashingServiceCardImage.webp",
+    imageSrc: "/genrealPhotos/pressure-washing-service-card.webp",
     imageFrameClassName: "aspect-[3/2]",
     imageClassName: "object-cover object-[center_18%]",
     imageAlt: "Pressure washing service cleaning outdoor hard surfaces",
@@ -94,7 +94,7 @@ const newPageServiceCards = [
     key: "gutter-cleaning",
     category: "Flow Protection",
     title: "Gutter Cleaning",
-    imageSrc: "/genrealPhotos/Gutter%20CleaningServicePage.webp",
+    imageSrc: "/genrealPhotos/gutter-cleaning-service-card.webp",
     imageFrameClassName: "aspect-[5/3]",
     imageClassName: "object-cover",
     imageAlt: "Gutter cleaning service clearing debris from roof gutters",
@@ -864,7 +864,7 @@ export default function New() {
             <div className="flex flex-col items-center justify-center mb-10">
               <div className="mb-[-5px] relative w-52 max-w-full">
                 <Image
-                  alt="EverBright Pressure Washing logo"
+                  alt="EverBright Pressure Washing"
                   className="mx-auto h-auto w-full object-contain drop-shadow-lg"
                   src="/everbright-logo.png"
                   width={600}
@@ -1237,7 +1237,7 @@ export default function New() {
           <div className="flex flex-col items-center justify-center mb-10">
             <div className="mb-[-5px] relative w-52 max-w-full">
               <Image
-                alt="EverBright Pressure Washing logo"
+                alt="EverBright Pressure Washing"
                 className="mx-auto h-auto w-full object-contain drop-shadow-lg"
                 src="/everbright-logo.png"
                 width={600}

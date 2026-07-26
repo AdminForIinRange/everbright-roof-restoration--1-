@@ -49,7 +49,7 @@ const PaverConcreteSealingPage: React.FC = () => {
           subtitle: 'Refresh dull areas with deeper, even colour.',
         },
       ]}
-      heroLeftImageSrc="/betterPavingPhotos/Blocked%20Gutters%20Clean%20Them%20Before%20Fire%20Season-8.png"
+      heroLeftImageSrc="/betterPavingPhotos/paver-driveway-sealing-before-after.png"
       heroLeftImageAlt="Exterior surface restoration background image"
       heroSingleBackgroundImage
       readyHeadingLine1="Ready to Upgrade"

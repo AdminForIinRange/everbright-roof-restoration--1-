@@ -330,9 +330,9 @@ export function SiteFooter() {
   return (
     <footer className="bg-[#002844] px-3 py-1 text-white md:px-6 md:py-2">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-0 text-center">
-        <img src="/gutter-cleaning-v0/images/logo-white.png" alt="EverBright Pressure Washing logo" className="h-32 w-auto md:h-48" />
+        <img src="/gutter-cleaning-v0/images/logo-white.png" alt="EverBright Pressure Washing" className="h-32 w-auto md:h-48" />
         <p className="-mt-8 text-xs leading-tight md:-mt-14">Serving Adelaide &amp; surrounding areas</p>
-        <p className="text-xs leading-tight">© 2025 EverBright Pressure Washing</p>
+        <p className="text-xs leading-tight">© {new Date().getFullYear()} EverBright Pressure Washing</p>
       </div>
     </footer>
   )

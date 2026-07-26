@@ -57,7 +57,7 @@ export function Hero() {
           <Link href="/" aria-label="Go to homepage">
             <img
               src="/roof-restoration-v0/images/logo-white.png"
-              alt="EverBright Pressure Washing & Roof Cleaning logo"
+              alt="EverBright Pressure Washing"
               className="h-44 w-auto md:h-56"
             />
           </Link>

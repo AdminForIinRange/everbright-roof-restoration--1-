@@ -8,7 +8,6 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Professional gutter cleaning in Adelaide to clear debris, reduce overflow risk, and protect your home from water damage.',
   path: '/gutter-cleaning',
-  keywords: ['gutter cleaning Adelaide', 'gutter clearing Adelaide', 'blocked gutters Adelaide'],
 });
 
 const serviceJsonLd = buildServiceJsonLd({

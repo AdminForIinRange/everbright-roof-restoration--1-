@@ -8,7 +8,6 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Preview the previous roof restoration landing page content for Adelaide roof cleaning and restoration services.',
   path: '/new',
-  keywords: ['roof restoration Adelaide', 'roof cleaning Adelaide', 'mould removal roof Adelaide'],
   noIndex: true,
 });
 

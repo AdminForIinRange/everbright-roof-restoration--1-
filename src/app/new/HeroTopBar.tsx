@@ -70,7 +70,7 @@ export default function HeroTopBar() {
           >
             <Image
               src="/everbright-logo.png"
-              alt="EverBright logo"
+              alt="EverBright Pressure Washing"
               width={88}
               height={60}
               sizes="48px"
@@ -117,7 +117,7 @@ export default function HeroTopBar() {
             <Link href="/" className="block w-fit" onClick={() => setIsMenuOpen(false)}>
               <Image
                 src="/everbright-logo.png"
-                alt="EverBright logo"
+                alt="EverBright Pressure Washing"
                 width={92}
                 height={62}
                 sizes="92px"

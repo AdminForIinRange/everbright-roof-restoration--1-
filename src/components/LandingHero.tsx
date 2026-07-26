@@ -7,7 +7,7 @@ import Header from "./Header";
 import LeadForm from "./LeadForm";
 import Reviews from "./Reviews";
 
-const heroBackgroundImage = "/genrealPhotos/lanidngpageimg.jpeg";
+const heroBackgroundImage = "/genrealPhotos/exterior-cleaning-adelaide-hero.jpeg";
 
 function GoogleIcon() {
   return (
@@ -175,20 +175,20 @@ const comparisons = [
   {
     before: "/scrollerImage/1.webp",
     after: "/scrollerImage/2.webp",
-    beforeAlt: "Exterior before cleaning result 1",
-    afterAlt: "Exterior after cleaning result 1",
+    beforeAlt: "Mossy paved driveway before pressure washing in Adelaide",
+    afterAlt: "Clean paved driveway after pressure washing in Adelaide",
   },
   {
     before: "/scrollerImage/3.webp",
     after: "/scrollerImage/4.webp",
-    beforeAlt: "Exterior before cleaning result 2",
-    afterAlt: "Exterior after cleaning result 2",
+    beforeAlt: "Mould-stained house exterior wall before pressure washing in Adelaide",
+    afterAlt: "Clean house exterior wall after pressure washing in Adelaide",
   },
   {
     before: "/scrollerImage/5.webp",
     after: "/scrollerImage/6.webp",
-    beforeAlt: "Exterior before cleaning result 3",
-    afterAlt: "Exterior after cleaning result 3",
+    beforeAlt: "Moss and lichen covered tile roof before roof cleaning in Adelaide",
+    afterAlt: "Clean tile roof after roof cleaning in Adelaide",
   },
 ];
 
@@ -203,7 +203,7 @@ const services = [
       "Restore colour and street appeal",
       "Protect tiles from long term deterioration",
     ],
-    image: "/genrealPhotos/RoofcleaingServiceCard.webp",
+    image: "/genrealPhotos/roof-cleaning-service-card.webp",
     alt: "Professional worker cleaning a tiled roof with a pressure washer",
     href: "/roof-cleaning",
   },
@@ -217,7 +217,7 @@ const services = [
       "Improve street appeal instantly",
       "Reduce slippery surface buildup",
     ],
-    image: "/genrealPhotos/Pressure%20WashingServiceCardImage.webp",
+    image: "/genrealPhotos/pressure-washing-service-card.webp",
     alt: "Pressure washing a brick driveway",
     href: "/pressure-washing",
   },
@@ -231,7 +231,7 @@ const services = [
       "Improve solar performance",
       "Purified water systems (no harsh chemicals)",
     ],
-    image: "/genrealPhotos/Solar%20CleaningServiceCard.webp",
+    image: "/genrealPhotos/solar-cleaning-service-card.webp",
     alt: "Cleaning solar panels on a sunny day",
     href: "/solar-cleaning",
   },
@@ -245,7 +245,7 @@ const services = [
       "Clear downpipes thoroughly",
       "Prevent overflow and water damage",
     ],
-    image: "/genrealPhotos/Gutter%20CleaningServicePage.webp",
+    image: "/genrealPhotos/gutter-cleaning-service-card.webp",
     alt: "Cleaning leaves out of a roof gutter",
     href: "/gutter-cleaning",
   },
@@ -339,7 +339,7 @@ export default function LandingHero() {
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow-1 flex-col justify-end px-6 pb-0 pt-8 md:px-10 md:pb-0 md:pt-12 lg:px-12 lg:pb-0 xl:max-w-7xl">
           <div className="mb-6 lg:mb-3">
             <h1 className="animate__animated animate__fadeInDown font-display text-[45px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[5.4rem] xl:text-[5.8rem] 2xl:text-[6.8rem]">
-              Exterior Cleaning,
+              Exterior Cleaning Adelaide,
               <br />
               <span className="text-brand-sky">Done Properly </span>
               <br />
@@ -769,7 +769,7 @@ export default function LandingHero() {
         </div>
       </section>
 
-      <section className="bg-white px-6 pb-4 pt-12 md:pb-6 md:pt-14 lg:pb-8 lg:pt-16">
+      <section id="contact" className="bg-white px-6 pb-4 pt-12 md:pb-6 md:pt-14 lg:pb-8 lg:pt-16">
         <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">
           <div className="rounded-3xl border border-slate-200 p-8 shadow-sm md:p-10 lg:p-12">
             <h3 className="mb-4 font-display text-5xl uppercase leading-none text-everbright-blue md:text-[3.25rem]">

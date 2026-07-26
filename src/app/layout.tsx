@@ -6,7 +6,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { Poppins } from 'next/font/google';
 import Script from 'next/script';
 import type { ReactNode } from 'react';
-import { DEFAULT_OG_IMAGE, SITE_LOGO_IMAGE, SITE_NAME, SITE_PHONE, SITE_URL } from '@lib/seo';
+import { DEFAULT_OG_IMAGE, SITE_EMAIL, SITE_LOGO_IMAGE, SITE_NAME, SITE_PHONE, SITE_URL } from '@lib/seo';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -17,13 +17,19 @@ const poppins = Poppins({
 
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': ['LocalBusiness', 'CleaningService'],
+  '@type': ['Organization', 'LocalBusiness', 'HomeAndConstructionBusiness'],
   '@id': `${SITE_URL}/#organization`,
   name: SITE_NAME,
+  legalName: SITE_NAME,
   url: SITE_URL,
   image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
   logo: `${SITE_URL}${SITE_LOGO_IMAGE}`,
   telephone: SITE_PHONE,
+  email: SITE_EMAIL,
+  sameAs: [
+    'https://www.facebook.com/everbrightpressurewashing',
+    'https://www.instagram.com/everbrightpressurewashing',
+  ],
   priceRange: '$$',
   description:
     'Professional exterior cleaning services in Adelaide, including roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar cleaning.',
@@ -40,6 +46,7 @@ const organizationSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: SITE_PHONE,
+    email: SITE_EMAIL,
     contactType: 'customer service',
     areaServed: 'AU',
     availableLanguage: 'en-AU',
@@ -60,6 +67,9 @@ const websiteSchema = {
   name: SITE_NAME,
   url: SITE_URL,
   inLanguage: 'en-AU',
+  publisher: {
+    '@id': `${SITE_URL}/#organization`,
+  },
 };
 
 const META_PIXEL_IDS = ['1429789622158579', '2078063969719564'] as const;
@@ -69,27 +79,16 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: 'Exterior Cleaning Adelaide',
-    template: '%s | EverBright',
+    template: `%s | ${SITE_NAME}`,
   },
   description:
-    'EverBright provides professional exterior cleaning in Adelaide: roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar panel cleaning.',
+    'EverBright Pressure Washing provides professional exterior cleaning in Adelaide: roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar panel cleaning.',
   applicationName: SITE_NAME,
-  keywords: [
-    'exterior cleaning Adelaide',
-    'roof cleaning Adelaide',
-    'pressure washing Adelaide',
-    'gutter cleaning Adelaide',
-    'paver sealing Adelaide',
-    'concrete sealing Adelaide',
-    'solar panel cleaning Adelaide',
-    'roof restoration Adelaide',
-    'EverBright Adelaide',
-  ],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'EverBright Exterior Cleaning Adelaide',
+    title: 'EverBright Pressure Washing | Exterior Cleaning Adelaide',
     description:
       'Professional exterior cleaning in Adelaide including roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar panel cleaning.',
     url: '/',
@@ -105,7 +104,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'EverBright Exterior Cleaning Adelaide',
+    title: 'EverBright Pressure Washing | Exterior Cleaning Adelaide',
     description:
       'Professional exterior cleaning in Adelaide including roof cleaning, pressure washing, gutter cleaning, paver and concrete sealing, and solar panel cleaning.',
     images: [DEFAULT_OG_IMAGE],
