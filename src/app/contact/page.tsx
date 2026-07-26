@@ -45,7 +45,7 @@ export default function ContactPage() {
 
       <section className="bg-white px-6 py-16 md:py-20">
         <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">
-          <div className="mb-14 grid gap-4 md:grid-cols-2 md:gap-6">
+          <div className="mb-14 flex flex-col gap-6 md:flex-row md:gap-12">
             {contactCards.map((card) => {
               const Icon = card.icon;
 
@@ -53,16 +53,14 @@ export default function ContactPage() {
                 <a
                   key={card.label}
                   href={card.href}
-                  className="flex flex-col items-start gap-2 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-everbright-blue hover:bg-everbright-blue/5 md:gap-3 md:p-7"
+                  className="flex min-w-0 flex-col items-start gap-2 text-slate-900 transition hover:text-everbright-blue md:flex-row md:items-center md:gap-3"
                 >
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-everbright-blue/10 text-everbright-blue md:h-12 md:w-12">
-                    <Icon className="h-4 w-4 md:h-6 md:w-6" />
-                  </span>
-                  <span className="block w-full min-w-0">
-                    <span className="block text-xs font-semibold uppercase tracking-widest text-slate-500">
+                  <Icon className="h-5 w-5 shrink-0 text-everbright-blue" />
+                  <span className="min-w-0 w-full">
+                    <span className="block text-base font-bold uppercase tracking-widest text-black md:text-lg">
                       {card.label}
                     </span>
-                    <span className="mt-1 block w-full break-all text-base font-semibold text-slate-900 md:text-lg">
+                    <span className="mt-1 block w-full break-all text-base font-bold md:text-lg">
                       {card.value}
                     </span>
                   </span>
