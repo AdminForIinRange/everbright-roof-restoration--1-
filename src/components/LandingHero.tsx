@@ -329,7 +329,7 @@ export default function LandingHero() {
             quality={72}
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0.6)_50%,rgba(0,0,0,1)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0.75)_50%,rgba(0,0,0,1)_100%)]" />
         </div>
 
         <div className="relative z-[1000]">
@@ -338,7 +338,7 @@ export default function LandingHero() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow-1 flex-col justify-end px-6 pb-0 pt-8 md:px-10 md:pb-0 md:pt-12 lg:px-12 lg:pb-0 xl:max-w-7xl">
           <div className="mb-6 lg:mb-3">
-            <h1 className="animate__animated animate__fadeInDown font-display text-[40px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-5xl md:max-w-4xl md:text-7xl lg:text-[4.8rem] xl:text-[5.2rem] 2xl:text-[6.2rem]">
+            <h1 className="animate__animated animate__fadeInDown font-display text-[7vw]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-5xl md:max-w-4xl md:text-7xl lg:text-[4.8rem] xl:text-[5.2rem] 2xl:text-[6.2rem]">
               Adelaide Exterior
               <br className="sm:hidden" />
               <span className="hidden sm:inline"> </span>
