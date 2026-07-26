@@ -61,6 +61,7 @@ export function isRoofRestorationV0Lead(lead: Pick<LeadEmailPayload, "formSource
     formSource.startsWith("roof-restoration-") ||
     sourcePath === "/roof-restoration" ||
     sourcePath === "/roof-cleaning" ||
+    sourcePath === "/roof-cleaning-adelaide" ||
     sourcePath === "/new-roof-restoration"
   );
 }
@@ -74,7 +75,8 @@ export function isPressureWashingV0Lead(
 
   return (
     formSource.startsWith("newoage-pressure-washing-") ||
-    ((sourcePath === "/newoage" || sourcePath === "/pressure-washing") && service.includes("pressure washing"))
+    ((sourcePath === "/newoage" || sourcePath === "/pressure-washing" || sourcePath === "/pressure-washing-adelaide") &&
+      service.includes("pressure washing"))
   );
 }
 

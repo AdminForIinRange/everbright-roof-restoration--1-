@@ -8,11 +8,11 @@ import { usePathname } from 'next/navigation';
 
 const serviceLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Roof Cleaning', href: '/roof-cleaning' },
-  { label: 'Pressure Washing', href: '/pressure-washing' },
-  { label: 'Gutter Cleaning', href: '/gutter-cleaning' },
-  { label: 'Solar Cleaning', href: '/solar-cleaning' },
-  { label: 'Paver & Concrete Sealing', href: '/paver-concrete-sealing' },
+  { label: 'Roof Cleaning', href: '/roof-cleaning-adelaide' },
+  { label: 'Pressure Washing', href: '/pressure-washing-adelaide' },
+  { label: 'Gutter Cleaning', href: '/gutter-cleaning-adelaide' },
+  { label: 'Solar Cleaning', href: '/solar-cleaning-adelaide' },
+  { label: 'Paver & Concrete Sealing', href: '/paver-concrete-sealing-adelaide' },
   { label: 'Contact Us', href: '/contact' },
 ];
 
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
   }, [isMenuOpen]);
 
   const handlePhoneClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    if (pathname !== '/roof-cleaning') {
+    if (pathname !== '/roof-cleaning-adelaide') {
       return;
     }
 

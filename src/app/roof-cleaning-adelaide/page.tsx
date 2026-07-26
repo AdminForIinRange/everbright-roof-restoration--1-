@@ -10,14 +10,14 @@ export const metadata: Metadata = buildPageMetadata({
   title: 'Roof Cleaning & Soft Washing Adelaide',
   description:
     'Roof restoration and roof cleaning services in Adelaide with surface safe methods, mould and lichen removal, and fast free quotes.',
-  path: '/roof-cleaning',
+  path: '/roof-cleaning-adelaide',
 });
 
 const serviceJsonLd = buildServiceJsonLd({
   name: 'Roof Restoration Adelaide',
   description:
     'Roof restoration and roof cleaning services in Adelaide with surface safe methods, mould and lichen removal, and fast free quotes.',
-  path: '/roof-cleaning',
+  path: '/roof-cleaning-adelaide',
   serviceType: 'Roof restoration',
 });
 

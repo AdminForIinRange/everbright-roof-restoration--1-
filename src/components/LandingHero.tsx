@@ -205,7 +205,7 @@ const services = [
     ],
     image: "/genrealPhotos/roof-cleaning-service-card.webp",
     alt: "Professional worker cleaning a tiled roof with a pressure washer",
-    href: "/roof-cleaning",
+    href: "/roof-cleaning-adelaide",
   },
   {
     title: "Pressure Washing",
@@ -219,7 +219,7 @@ const services = [
     ],
     image: "/genrealPhotos/pressure-washing-service-card.webp",
     alt: "Pressure washing a brick driveway",
-    href: "/pressure-washing",
+    href: "/pressure-washing-adelaide",
   },
   {
     title: "Solar Panel Cleaning",
@@ -233,7 +233,7 @@ const services = [
     ],
     image: "/genrealPhotos/solar-cleaning-service-card.webp",
     alt: "Cleaning solar panels on a sunny day",
-    href: "/solar-cleaning",
+    href: "/solar-cleaning-adelaide",
   },
   {
     title: "Gutter Cleaning",
@@ -247,7 +247,7 @@ const services = [
     ],
     image: "/genrealPhotos/gutter-cleaning-service-card.webp",
     alt: "Cleaning leaves out of a roof gutter",
-    href: "/gutter-cleaning",
+    href: "/gutter-cleaning-adelaide",
   },
   {
     title: "Paver & Concrete Sealing",
@@ -261,7 +261,7 @@ const services = [
     ],
     image: "/scrollerImage/2.webp",
     alt: "Clean paved outdoor surface after treatment",
-    href: "/paver-concrete-sealing",
+    href: "/paver-concrete-sealing-adelaide",
   },
 ];
 
@@ -338,7 +338,7 @@ export default function LandingHero() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow-1 flex-col justify-end px-6 pb-0 pt-8 md:px-10 md:pb-0 md:pt-12 lg:px-12 lg:pb-0 xl:max-w-7xl">
           <div className="mb-6 lg:mb-3">
-            <h1 className="animate__animated animate__fadeInDown font-display text-[9vw]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-5xl md:max-w-4xl md:text-7xl lg:text-[4.8rem] xl:text-[5.2rem] 2xl:text-[6.2rem]">
+            <h1 className="animate__animated animate__fadeInDown font-display text-[9.6vw]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-5xl md:max-w-4xl md:text-7xl lg:text-[4.8rem] xl:text-[5.2rem] 2xl:text-[6.2rem]">
               Exterior Cleaning,
               <br />
               <span className="text-brand-sky">Done Properly</span>
@@ -357,7 +357,7 @@ export default function LandingHero() {
                 check_circle
               </span>
               <Link
-                href="/roof-cleaning"
+                href="/roof-cleaning-adelaide"
                 className="font-body text-lg leading-none text-white transition-colors hover:text-brand-sky sm:text-2xl lg:text-xl xl:text-2xl"
               >
                 Roof Cleaning
@@ -368,7 +368,7 @@ export default function LandingHero() {
                 check_circle
               </span>
               <Link
-                href="/solar-cleaning"
+                href="/solar-cleaning-adelaide"
                 className="font-body text-lg leading-none text-white transition-colors hover:text-brand-sky sm:text-2xl lg:text-xl xl:text-2xl"
               >
                 Solar Cleaning
@@ -379,7 +379,7 @@ export default function LandingHero() {
                 check_circle
               </span>
               <Link
-                href="/gutter-cleaning"
+                href="/gutter-cleaning-adelaide"
                 className="font-body text-lg leading-none text-white transition-colors hover:text-brand-sky sm:text-2xl lg:text-xl xl:text-2xl"
               >
                 Gutter Cleaning
@@ -390,7 +390,7 @@ export default function LandingHero() {
                 check_circle
               </span>
               <Link
-                href="/pressure-washing"
+                href="/pressure-washing-adelaide"
                 className="font-body text-lg leading-none text-white transition-colors hover:text-brand-sky sm:text-2xl lg:text-xl xl:text-2xl"
               >
                 Pressure Washing

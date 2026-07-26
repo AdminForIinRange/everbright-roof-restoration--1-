@@ -17,7 +17,32 @@ const nextConfig = {
     return [
       {
         source: '/roof-restoration',
-        destination: '/roof-cleaning',
+        destination: '/roof-cleaning-adelaide',
+        permanent: true,
+      },
+      {
+        source: '/roof-cleaning',
+        destination: '/roof-cleaning-adelaide',
+        permanent: true,
+      },
+      {
+        source: '/pressure-washing',
+        destination: '/pressure-washing-adelaide',
+        permanent: true,
+      },
+      {
+        source: '/gutter-cleaning',
+        destination: '/gutter-cleaning-adelaide',
+        permanent: true,
+      },
+      {
+        source: '/solar-cleaning',
+        destination: '/solar-cleaning-adelaide',
+        permanent: true,
+      },
+      {
+        source: '/paver-concrete-sealing',
+        destination: '/paver-concrete-sealing-adelaide',
         permanent: true,
       },
     ];

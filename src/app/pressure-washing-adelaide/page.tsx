@@ -8,14 +8,14 @@ export const metadata: Metadata = buildPageMetadata({
   title: 'Pressure Washing & Driveway Cleaning Adelaide',
   description:
     'Professional pressure washing in Adelaide for driveways, patios, and exterior surfaces using safe, surface-specific methods.',
-  path: '/pressure-washing',
+  path: '/pressure-washing-adelaide',
 });
 
 const serviceJsonLd = buildServiceJsonLd({
   name: 'Pressure Washing Adelaide',
   description:
     'Professional pressure washing in Adelaide for driveways, patios, and exterior surfaces using safe, surface-specific methods.',
-  path: '/pressure-washing',
+  path: '/pressure-washing-adelaide',
   serviceType: 'Pressure washing',
 });
 

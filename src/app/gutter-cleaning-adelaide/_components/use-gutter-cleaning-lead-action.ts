@@ -32,7 +32,7 @@ export function useGutterCleaningLeadAction({
       onSuccess?.();
       if (!hasRedirectedRef.current) {
         hasRedirectedRef.current = true;
-        router.replace(`/thank-you?${new URLSearchParams({ from: pathname ?? "/gutter-cleaning", service: "gutter cleaning" }).toString()}`);
+        router.replace(`/thank-you?${new URLSearchParams({ from: pathname ?? "/gutter-cleaning-adelaide", service: "gutter cleaning" }).toString()}`);
       }
     } else if (state.error && state.error !== previous.error) {
       track("lead_submit_error", { formContext, serviceLabel: "gutter cleaning" });
@@ -46,5 +46,5 @@ export function useGutterCleaningLeadAction({
     hasRedirectedRef.current = false;
   };
 
-  return { error: state.error, formAction, handleSubmit, pending, sourcePath: pathname ?? "/gutter-cleaning" };
+  return { error: state.error, formAction, handleSubmit, pending, sourcePath: pathname ?? "/gutter-cleaning-adelaide" };
 }
