@@ -37,7 +37,7 @@ export default function ContactPage() {
         <h1 className="mx-auto max-w-3xl font-display text-5xl uppercase leading-[1.1] tracking-[-0.02em] text-white md:text-7xl">
           Contact Us
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
+        <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white md:text-lg">
           Fill in the form, call us, or send an email — we&apos;ll get back to you within 24
           hours during business hours.
         </p>
@@ -53,16 +53,16 @@ export default function ContactPage() {
                 <a
                   key={card.label}
                   href={card.href}
-                  className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-everbright-blue hover:bg-everbright-blue/5 md:flex-col md:items-start md:gap-3 md:p-7"
+                  className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-everbright-blue hover:bg-everbright-blue/5 md:flex-col md:items-start md:gap-3 md:p-7"
                 >
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-everbright-blue/10 text-everbright-blue">
-                    <Icon className="h-6 w-6" />
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-everbright-blue/10 text-everbright-blue md:h-12 md:w-12">
+                    <Icon className="h-5 w-5 md:h-6 md:w-6" />
                   </span>
-                  <span>
+                  <span className="min-w-0">
                     <span className="block text-xs font-semibold uppercase tracking-widest text-slate-500">
                       {card.label}
                     </span>
-                    <span className="mt-1 block break-words text-base font-semibold text-slate-900 md:text-lg">
+                    <span className="mt-1 block break-words text-sm font-semibold text-slate-900 md:text-lg">
                       {card.value}
                     </span>
                   </span>
