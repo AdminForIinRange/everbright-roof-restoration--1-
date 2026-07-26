@@ -338,8 +338,8 @@ export default function LandingHero() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow-1 flex-col justify-end px-6 pb-0 pt-8 md:px-10 md:pb-0 md:pt-12 lg:px-12 lg:pb-0 xl:max-w-7xl">
           <div className="mb-6 lg:mb-3">
-            <h1 className="animate__animated animate__fadeInDown font-display text-[45px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:max-w-4xl md:text-8xl lg:text-[5.4rem] xl:text-[5.8rem] 2xl:text-[6.8rem]">
-              Exterior Cleaning Adelaide,
+            <h1 className="animate__animated animate__fadeInDown font-display text-[40px]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-5xl md:max-w-4xl md:text-7xl lg:text-[4.8rem] xl:text-[5.2rem] 2xl:text-[6.2rem]">
+              Adelaide Exterior Cleaning,
               <br />
               <span className="text-brand-sky">Done Properly </span>
               <br />
@@ -764,18 +764,18 @@ export default function LandingHero() {
         id="services-quiz"
         className="bg-everbright-blue px-6 py-6 md:py-10 lg:px-8 lg:py-14"
       >
-        <div className="w-full max-w-2xl lg:mx-auto lg:max-w-3xl">
+        <div className="mx-auto w-full max-w-2xl lg:max-w-3xl">
           <LeadForm />
         </div>
       </section>
 
       <section id="contact" className="bg-white px-6 pb-4 pt-12 md:pb-6 md:pt-14 lg:pb-8 lg:pt-16">
         <div className="mx-auto w-full max-w-[430px] md:max-w-6xl xl:max-w-7xl">
-          <div className="rounded-3xl border border-slate-200 p-8 shadow-sm md:p-10 lg:p-12">
-            <h3 className="mb-4 font-display text-5xl uppercase leading-none text-everbright-blue md:text-[3.25rem]">
+          <div className="rounded-3xl border border-slate-200 p-5 shadow-sm md:p-10 lg:p-12">
+            <h3 className="mb-3 font-display text-3xl uppercase leading-none text-everbright-blue md:mb-4 md:text-[3.25rem]">
               Contact Us
             </h3>
-            <p className="mb-8 text-base leading-snug text-slate-700 md:text-lg">
+            <p className="mb-6 text-sm leading-snug text-slate-700 md:mb-8 md:text-lg">
               Get a free quote for pressure washing, driveway, roof, gutter
               and solar cleaning across Adelaide. Tell us what needs cleaning
               and we&apos;ll get back to you within 24 hours.
@@ -784,19 +784,19 @@ export default function LandingHero() {
             <div className="grid gap-3 md:grid-cols-2">
               <a
                 href="tel:0411017366"
-                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-everbright-blue hover:bg-everbright-blue/5"
+                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-3 transition hover:border-everbright-blue hover:bg-everbright-blue/5 md:p-4"
               >
                 <Phone className="h-5 w-5 shrink-0 text-everbright-blue" />
-                <span className="text-base font-semibold text-slate-900 sm:text-lg">
+                <span className="text-sm font-semibold text-slate-900 sm:text-lg">
                   0411 017 366
                 </span>
               </a>
               <a
                 href="mailto:everbrightpressurewashing@gmail.com"
-                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-everbright-blue hover:bg-everbright-blue/5"
+                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-3 transition hover:border-everbright-blue hover:bg-everbright-blue/5 md:p-4"
               >
                 <Mail className="h-5 w-5 shrink-0 text-everbright-blue" />
-                <span className="min-w-0 break-words text-sm font-semibold text-slate-900 sm:text-base">
+                <span className="min-w-0 break-words text-xs font-semibold text-slate-900 sm:text-base">
                   everbrightpressurewashing@gmail.com
                 </span>
               </a>

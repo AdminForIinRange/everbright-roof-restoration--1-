@@ -3,12 +3,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 h1,
