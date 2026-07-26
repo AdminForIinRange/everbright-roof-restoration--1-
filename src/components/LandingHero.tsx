@@ -338,7 +338,7 @@ export default function LandingHero() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow-1 flex-col justify-end px-6 pb-0 pt-8 md:px-10 md:pb-0 md:pt-12 lg:px-12 lg:pb-0 xl:max-w-7xl">
           <div className="mb-6 lg:mb-3">
-            <h1 className="animate__animated animate__fadeInDown font-display text-[9.6vw]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-5xl md:max-w-4xl md:text-7xl lg:text-[4.8rem] xl:text-[5.2rem] 2xl:text-[6.2rem]">
+            <h1 className="animate__animated animate__fadeInDown font-display text-[9vw]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-5xl md:max-w-4xl md:text-7xl lg:text-[4.8rem] xl:text-[5.2rem] 2xl:text-[6.2rem]">
               Exterior Cleaning,
               <br />
               <span className="text-brand-sky">Done Properly</span>
@@ -465,7 +465,7 @@ export default function LandingHero() {
                   className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-12 lg:w-12 xl:h-12 xl:w-12"
                   strokeWidth={2.5}
                 />
-                <span className="font-display text-[0.9rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem] lg:text-[1.2rem] xl:text-[1.25rem]">
+                <span className="font-display text-[1rem] leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem] lg:text-[1.2rem] xl:text-[1.25rem]">
                   On Time Service
                 </span>
               </div>
@@ -474,7 +474,7 @@ export default function LandingHero() {
                   className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-12 lg:w-12 xl:h-12 xl:w-12"
                   strokeWidth={2.5}
                 />
-                <span className="font-display text-[0.8rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem] lg:text-[1.2rem] xl:text-[1.25rem]">
+                <span className="font-display text-[0.9rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem] lg:text-[1.2rem] xl:text-[1.25rem]">
                   100% Satisfaction
                   <br />
                   Guarantee
@@ -485,7 +485,7 @@ export default function LandingHero() {
                   className="mb-2 h-8 w-8 text-brand-sky sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-12 lg:w-12 xl:h-12 xl:w-12"
                   strokeWidth={2.5}
                 />
-                <span className="font-display text-[0.8rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem] lg:text-[1.2rem] xl:text-[1.25rem]">
+                <span className="font-display text-[0.9rem]  leading-[0.95] text-white sm:text-[1.2rem] md:text-[1.6rem] lg:text-[1.2rem] xl:text-[1.25rem]">
                   Fully INSURED FOR All
                   <br />
                   Jobs
