@@ -346,7 +346,7 @@ export default function LandingHero() {
             </h1>
           </div>
 
-          <p className="mb-8 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:mb-4 lg:max-w-2xl lg:text-lg xl:text-xl">
+          <p className="mb-12 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:mb-4 lg:max-w-2xl lg:text-lg xl:text-xl">
             Adelaide’s trusted exterior cleaning team. We safely restore your
             home’s appearance and protect it for longer.
           </p>
