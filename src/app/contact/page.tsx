@@ -53,16 +53,16 @@ export default function ContactPage() {
                 <a
                   key={card.label}
                   href={card.href}
-                  className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-everbright-blue hover:bg-everbright-blue/5 md:flex-col md:items-start md:gap-3 md:p-7"
+                  className="flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 p-3 transition hover:border-everbright-blue hover:bg-everbright-blue/5 md:flex-col md:items-start md:gap-3 md:p-7"
                 >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-everbright-blue/10 text-everbright-blue md:h-12 md:w-12">
-                    <Icon className="h-5 w-5 md:h-6 md:w-6" />
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-everbright-blue/10 text-everbright-blue md:h-12 md:w-12">
+                    <Icon className="h-4 w-4 md:h-6 md:w-6" />
                   </span>
                   <span className="min-w-0">
                     <span className="block text-xs font-semibold uppercase tracking-widest text-slate-500">
                       {card.label}
                     </span>
-                    <span className="mt-1 block break-words text-sm font-semibold text-slate-900 md:text-lg">
+                    <span className="mt-1 block break-words text-base font-semibold text-slate-900 md:text-lg">
                       {card.value}
                     </span>
                   </span>
