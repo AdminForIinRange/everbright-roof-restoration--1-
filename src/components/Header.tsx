@@ -13,6 +13,7 @@ const serviceLinks = [
   { label: 'Gutter Cleaning', href: '/gutter-cleaning' },
   { label: 'Solar Cleaning', href: '/solar-cleaning' },
   { label: 'Paver & Concrete Sealing', href: '/paver-concrete-sealing' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 const Header: React.FC = () => {

@@ -339,10 +339,7 @@ export default function LandingHero() {
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow-1 flex-col justify-end px-6 pb-0 pt-8 md:px-10 md:pb-0 md:pt-12 lg:px-12 lg:pb-0 xl:max-w-7xl">
           <div className="mb-6 lg:mb-3">
             <h1 className="animate__animated animate__fadeInDown font-display text-[7.6vw]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-5xl md:max-w-4xl md:text-7xl lg:text-[4.8rem] xl:text-[5.2rem] 2xl:text-[6.2rem]">
-              Adelaide Exterior
-              <br className="sm:hidden" />
-              <span className="hidden sm:inline"> </span>
-              Cleaning,
+              Exterior Cleaning,
               <br />
               <span className="text-brand-sky">Done Properly</span>
               <br />
@@ -350,8 +347,8 @@ export default function LandingHero() {
           </div>
 
           <p className="mb-8 max-w-sm text-lg leading-snug text-white/90 md:max-w-xl md:text-xl lg:mb-4 lg:max-w-2xl lg:text-lg xl:text-xl">
-            Adelaide’s trusted exterior cleaning team delivering safe, precise
-            methods that restore appearance and protect your home.
+            Adelaide’s trusted exterior cleaning team. We safely restore your
+            home’s appearance and protect it for longer.
           </p>
 
           <ul className="mb-8 grid max-w-3xl grid-cols-2 gap-x-4 gap-y-3 text-left sm:gap-x-8 sm:gap-y-4 lg:mb-4">

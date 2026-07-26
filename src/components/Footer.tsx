@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-wrap justify-center gap-8 mb-10 text-xs md:text-sm font-bold uppercase tracking-widest">
           <Link className="hover:text-brand-sky transition-colors" href="/privacy-policy">Privacy Policy</Link>
           <Link className="hover:text-brand-sky transition-colors" href="/terms">Terms of Service</Link>
-          <Link className="hover:text-brand-sky transition-colors" href="/#contact">Contact Us</Link>
+          <Link className="hover:text-brand-sky transition-colors" href="/contact">Contact Us</Link>
           <Link className="hover:text-brand-sky transition-colors" href="/#services">Services</Link>
           <Link className="hover:text-brand-sky transition-colors" href="/blog">Blog</Link>
         </div>

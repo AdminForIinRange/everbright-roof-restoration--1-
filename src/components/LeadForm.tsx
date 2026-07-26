@@ -141,9 +141,6 @@ const LeadForm: React.FC<LeadFormProps> = ({
         <h3 className="mb-5 text-center font-display text-xl font-bold leading-snug text-slate-900 md:mb-7 md:text-3xl">
           ORGANISE A FREE QUOTE IN JUST 30 SECONDS!
         </h3>
-          <h3 className="mb-5 text-center font-display text-sm font-light  leading-snug text-slate-900 md:mb-7 md:text-3xl">
-         Fill in the form below and one of our team will call you within 1 hour during business hours
-        </h3>
 
         <form action={formAction} onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
           <input type="hidden" name="roofType" value={formData.roofType} />
@@ -250,11 +247,6 @@ const LeadForm: React.FC<LeadFormProps> = ({
             {pending ? 'Submitting...' : 'Submit'}
             <span className="material-icons ml-2 text-base">arrow_forward</span>
           </button>
-
-          <div className="flex items-center justify-center space-x-2 pt-2 text-[10px] italic text-gray-500 md:text-xs">
-            <span className="material-icons text-xs">lock</span>
-            <p>Your details are secured. Never submit passwords.</p>
-          </div>
         </form>
       </div>
     </div>
