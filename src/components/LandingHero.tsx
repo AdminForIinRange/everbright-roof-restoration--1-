@@ -338,7 +338,7 @@ export default function LandingHero() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-grow-1 flex-col justify-end px-6 pb-0 pt-8 md:px-10 md:pb-0 md:pt-12 lg:px-12 lg:pb-0 xl:max-w-7xl">
           <div className="mb-6 lg:mb-3">
-            <h1 className="animate__animated animate__fadeInDown font-display text-[7vw]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-5xl md:max-w-4xl md:text-7xl lg:text-[4.8rem] xl:text-[5.2rem] 2xl:text-[6.2rem]">
+            <h1 className="animate__animated animate__fadeInDown font-display text-[7.6vw]  font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-5xl md:max-w-4xl md:text-7xl lg:text-[4.8rem] xl:text-[5.2rem] 2xl:text-[6.2rem]">
               Adelaide Exterior
               <br className="sm:hidden" />
               <span className="hidden sm:inline"> </span>
