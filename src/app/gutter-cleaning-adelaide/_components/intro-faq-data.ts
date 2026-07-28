@@ -1,7 +1,7 @@
 export const introFaqs = [
   {
-    q: "How much does gutter cleaning cost in Adelaide?",
-    a: "Gutter cleaning starts at $300 for a standard single-storey home. The exact price depends on the size of your home, whether it's single or double-storey, and how much buildup there is, so we'll always give you a clear, upfront quote before we start. No surprises.",
+    q: "Do you provide before-and-after photos?",
+    a: "Yes. We take before-and-after photos of every gutter clean and share them with you, so you can see exactly what was cleared and confirm the job's been done properly.",
   },
   {
     q: "How often should I get my gutters cleaned?",

@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import { CheckIcon, PhoneIcon } from "./icons";
 import { usePressureWashingLeadAction } from "./use-pressure-washing-lead-action";
 
-const OPTIONS = ["Driveway", "Paths & walkways", "Patio / paving", "Whole lot"];
+const OPTIONS = ["Driveway", "Paths & walkways", "Patio / paving", "All around the house"];
 
 const FIELDS = [
   { label: "Full name", key: "fullName", type: "text", placeholder: "Jane Smith" },

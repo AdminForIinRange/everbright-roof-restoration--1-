@@ -250,8 +250,8 @@ export function Transformations() {
   return (
     <>
       <section className="pb-0">
-        <div className="bg-background px-4 pb-3 pt-5 text-center md:px-8 md:pb-4 md:pt-6 lg:px-16">
-          <h2 className="font-[family-name:var(--font-poppins)] text-4xl font-extrabold tracking-tight text-[#002844] md:text-6xl">
+        <div className="bg-background px-4 pb-6 pt-5 text-center md:px-8 md:pb-8 md:pt-6 lg:px-16">
+          <h2 className="font-[family-name:var(--font-poppins)] text-3xl font-extrabold tracking-tight text-[#002844] md:text-6xl">
             <span className="block">See the Difference Our</span>
             <span className="block">
               <span className="text-brand">Gutter Cleaning</span> Makes
