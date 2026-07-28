@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 
-import { roofCleaningFaqs } from "./faq-data";
+import { solarCleaningFaqs } from "./faq-data";
 import { GoogleIcon, HouseIcon, HourglassIcon, PlusIcon, StarIcon } from "./icons";
 
 const IMAGE_BASE = "/roof-restoration-v0/images";
 
 export function StatsStrip() {
   const stats = [
-    { icon: <GoogleIcon className="text-brand" />, num: "38+", label: "5-star reviews" },
-    { icon: <HouseIcon className="text-brand" />, num: "100+", label: "Adelaide roofs cleaned" },
+    { icon: <GoogleIcon className="text-brand" />, num: "40+", label: "5-star reviews" },
+    { icon: <HouseIcon className="text-brand" />, num: "200+", label: "Adelaide Homes Cleaned" },
     { icon: <HourglassIcon className="text-brand" />, num: "Fully insured", label: "Peace of mind" },
   ];
 
@@ -41,26 +41,19 @@ export function Intro() {
   return (
     <section className="mx-auto max-w-3xl px-4 py-10 text-center md:px-8 md:py-14">
       <h2 className="mb-8 font-[family-name:var(--font-poppins)] text-4xl font-extrabold tracking-tight md:text-6xl">
-        <span className="text-brand">Roof Cleaning</span>{" "}
+        <span className="text-brand">Solar Panel Cleaning</span>{" "}
         <span className="text-[#002844]">Services in Adelaide</span>
       </h2>
       <div className="space-y-4 text-left text-base leading-relaxed text-black md:text-lg">
         <p>
-          Cleaning your roof isn&apos;t a job most homeowners want to tackle themselves, and for
-          good reason. It usually means working at height, and getting the pressure or method
-          wrong can damage tiles or affect your warranty.
+          Dust, grime and bird droppings build up on solar panels over time, and most homeowners
+          don&apos;t notice until their output has quietly dropped. That buildup blocks sunlight
+          and drags down how much power your system generates, which adds up over a full year.
         </p>
         <p>
-          Left too long, moss, lichen and black streaks eat into the surface and shorten the life
-          of your roof, while trapped moisture can lead to more serious damage over time.
-        </p>
-        <p>
-          We use a gentle, low-pressure soft-wash method matched to your roof type, lifting away
-          stains and buildup without damaging tiles or metal sheeting.
-        </p>
-        <p>
-          It&apos;s one of the quickest ways to lift your home&apos;s street appeal, restoring
-          the colour of your roof and protecting it for longer across Adelaide.
+          We clean panels safely with purified water, lifting off the dirt without harsh
+          chemicals or any risk to the panels themselves. It&apos;s one of the easiest ways to
+          keep your system running at its best, with a clean, streak free finish.
         </p>
       </div>
     </section>
@@ -76,13 +69,13 @@ export function HowItWorks() {
     },
     {
       num: "2",
-      title: "We Assess Your Roof",
-      desc: "We visit your home in Adelaide or surrounds and check your roof in person, completely free.",
+      title: "We Call You With a Quote",
+      desc: "We'll call you same day to give you a quote over the phone. For larger solar systems we'll come in person to assess. Completely free.",
     },
     {
       num: "3",
       title: "Get a Clear, Fixed Price",
-      desc: "You receive a straightforward quote with no surprises. We only get started once you're happy.",
+      desc: "You receive a same-day quote with no surprises. We only get started once you're happy.",
     },
   ];
   const scrollToForm = () => document.getElementById("assessment")?.scrollIntoView({ behavior: "smooth" });
@@ -92,7 +85,7 @@ export function HowItWorks() {
       <div className="mb-8 text-center md:mb-12">
         <p className="mb-2 text-base font-extrabold uppercase tracking-[0.25em] text-brand md:text-lg">How it works</p>
         <h2 className="font-heading text-3xl font-extrabold tracking-wide text-[#0f2a4a] md:text-7xl">
-          Three simple steps to a clean roof
+          Three simple steps to clean panels
         </h2>
       </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
@@ -108,14 +101,14 @@ export function HowItWorks() {
       </div>
       <div className="mt-12 flex flex-col items-center gap-5 rounded-lg bg-[#0f2a4a] px-6 py-10 text-center md:items-start md:px-10 md:text-left">
         <p className="text-balance text-2xl font-extrabold text-background md:text-3xl">
-          Ready To Get Rid Of Ugly Roof Stains For Good?
+          Ready For Cleaner, More Efficient Panels?
         </p>
         <a
           href="#assessment"
           onClick={scrollToForm}
           className="rounded-md bg-brand px-8 py-3 text-base font-bold text-brand-foreground transition-opacity hover:opacity-90"
         >
-          Get My Free Roof Quote
+          Get My Free Solar Cleaning Quote
         </a>
       </div>
     </section>
@@ -123,7 +116,7 @@ export function HowItWorks() {
 }
 
 export function FAQ() {
-  const faqs = roofCleaningFaqs;
+  const faqs = solarCleaningFaqs;
   const [open, setOpen] = useState<number | null>(null);
   const columns = [faqs.slice(0, 3), faqs.slice(3)];
 
@@ -133,7 +126,7 @@ export function FAQ() {
         <div className="mb-6 text-center md:mb-10">
           <h2 className="text-balance font-heading text-4xl tracking-wide text-brand md:text-8xl">FAQ</h2>
           <p className="mx-auto mt-3 max-w-xl text-pretty text-sm leading-relaxed text-foreground md:text-base">
-            Thinking about a fresh, clean roof? Here are quick answers to what Adelaide homeowners ask us most.
+            Thinking about getting your solar panels cleaned? Here are quick answers to what Adelaide homeowners ask us most.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:items-start md:gap-4">
@@ -150,13 +143,13 @@ export function FAQ() {
                       onClick={() => setOpen(isOpen ? null : i)}
                       className="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left hover:bg-secondary/50 active:bg-secondary"
                       aria-expanded={isOpen}
-                      aria-controls={`roof-faq-answer-${i}`}
+                      aria-controls={`solar-faq-answer-${i}`}
                     >
                       <span className="text-sm font-bold text-card-foreground md:text-base">{faq.q}</span>
                       <PlusIcon className={`shrink-0 text-brand transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`} />
                     </button>
                     <div
-                      id={`roof-faq-answer-${i}`}
+                      id={`solar-faq-answer-${i}`}
                       className={`px-5 pb-5 pt-0 text-sm leading-relaxed text-foreground ${isOpen ? "" : "hidden"}`}
                     >
                       <p>{faq.a}</p>
@@ -175,19 +168,12 @@ export function FAQ() {
 export function Transformations() {
   const items = [
     {
-      src: `${IMAGE_BASE}/ba-1.png`,
-      alt: "Before and after roof cleaning of a red tile roof, transformed from heavy moss and lichen to vibrant clean tiles",
-      aspect: "1414/850",
+      src: "/solaorcleaingImages/solar-panels-clean-rooftop-adelaide.jpg",
+      alt: "Clean solar panels on a residential rooftop in Adelaide",
     },
     {
-      src: `${IMAGE_BASE}/starting-at-899-15.png`,
-      alt: "Before and after roof cleaning of a suburban Adelaide tile roof with solar panels, before on the left and after on the right",
-      aspect: "1414/918",
-    },
-    {
-      src: `${IMAGE_BASE}/ba-3.png`,
-      alt: "Before and after roof cleaning showing tiles caked in moss and debris restored to clean orange tiles",
-      aspect: "1414/918",
+      src: "/solaorcleaingImages/solar-panels-clean-install-adelaide.jpg",
+      alt: "Clean solar panel installation on an Adelaide home",
     },
   ];
   const scrollToForm = () => document.getElementById("assessment")?.scrollIntoView({ behavior: "smooth" });
@@ -195,24 +181,23 @@ export function Transformations() {
   return (
     <>
       <section className="pb-0">
-        <div className="mb-6 bg-background px-4 py-5 text-center md:px-8 md:py-8 lg:px-16">
-          <h2 className="font-[family-name:var(--font-poppins)] text-3xl font-extrabold uppercase leading-tight tracking-tight text-[#002844] md:text-5xl">
+        <div className="bg-background px-4 pb-6 pt-5 text-center md:px-8 md:pb-8 md:pt-6 lg:px-16">
+          <h2 className="font-[family-name:var(--font-poppins)] text-3xl font-bold uppercase tracking-tight text-[#002844] sm:text-4xl md:text-6xl">
             <span className="block">See the Difference Our</span>
-            <span className="block">Roof Cleaning Makes</span>
+            <span className="block">
+              <span className="text-brand">Solar Cleaning</span> Makes
+            </span>
           </h2>
-          <p className="mt-3 font-sans text-sm font-bold uppercase text-[#002844] md:text-base">
-            <span className="block">Roof cleaning results from</span>
-            <span className="block">homes across Adelaide</span>
-          </p>
         </div>
-        <div className="grid grid-cols-1 gap-0 sm:grid-cols-3">
-          {items.map((item, index) => (
-            <div key={item.src} className={`overflow-hidden md:h-[320px]${index === 0 ? " border-b-[12px] border-white sm:border-b-0" : ""}`}>
+        <div className="sm:grid sm:grid-cols-2 sm:gap-[4px]">
+          {items.map((item) => (
+            <div key={item.src} style={{ fontSize: 0, lineHeight: 0, aspectRatio: "4 / 3", overflow: "hidden" }}>
               <img
                 src={item.src}
                 alt={item.alt}
-                style={{ aspectRatio: item.aspect }}
-                className="block h-full w-full object-cover object-top"
+                decoding="async"
+                loading="lazy"
+                style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", margin: 0, padding: 0 }}
               />
             </div>
           ))}
@@ -222,15 +207,15 @@ export function Transformations() {
       <section className="bg-[#002844] py-12 text-white">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-2xl font-extrabold text-white md:text-3xl">Ready for a cleaner roof</p>
-            <p className="mt-1 text-2xl font-extrabold text-white md:text-3xl">and a better looking home?</p>
+            <p className="text-2xl font-extrabold text-white md:text-3xl">Ready for cleaner panels</p>
+            <p className="mt-1 text-2xl font-extrabold text-white md:text-3xl">and better performance?</p>
           </div>
           <a
             href="#assessment"
             onClick={scrollToForm}
             className="mt-6 rounded-lg bg-brand px-10 py-4 text-xl font-extrabold text-brand-foreground shadow-lg transition-transform hover:scale-[1.02]"
           >
-            Get My Free Roof Quote
+            Get My Free Solar Cleaning Quote
           </a>
           <p className="mt-3 text-sm text-[#d7e5ff]">No obligation. We reply within 24 hours.</p>
         </div>
@@ -242,24 +227,24 @@ export function Transformations() {
 export function Reviews() {
   const reviews = [
     {
-      name: "Sarah M.",
-      location: "Burnside, SA",
-      text: "EverBright did an incredible job on our tile roof. Years of moss and lichen completely gone - it looks brand new. Professional, on time and great value. Highly recommend!",
+      name: "abbas habib",
+      location: "Adelaide, SA",
+      text: "Great quote and excellent solar panel cleaning. Fast, professional, and visible performance improvement.",
     },
     {
-      name: "David T.",
-      location: "Glenelg, SA",
-      text: "Fantastic service from start to finish. The team was friendly, gave me a clear fixed quote with no surprises, and the result was outstanding. Our roof has never looked better.",
+      name: "J D",
+      location: "Adelaide, SA",
+      text: "Solar panels had not been cleaned in over two years. Big difference immediately after service.",
     },
     {
-      name: "Emma R.",
-      location: "Norwood, SA",
-      text: "Could not be happier with the roof clean. They were thorough, tidy and respectful of our property. The before and after photos honestly speak for themselves. Five stars!",
+      name: "Janice Croser",
+      location: "Adelaide, SA",
+      text: "Had solar panels and gutters cleaned. Polite service and very good result overall.",
     },
     {
-      name: "Michael C.",
-      location: "Prospect, SA",
-      text: "Booked EverBright after seeing their work on a neighbour's roof. They turned up on time, worked safely and transformed our roof completely. Excellent communication throughout.",
+      name: "Winnie Taban",
+      location: "Adelaide, SA",
+      text: "Quick responses, high-quality work, and very professional service from start to finish.",
     },
   ];
 
@@ -276,7 +261,9 @@ export function Reviews() {
             </div>
           </div>
           <h2 className="font-heading text-4xl tracking-wide text-foreground md:text-5xl">What Our Customers Say</h2>
-          <p className="mt-2 text-base font-medium text-muted-foreground md:text-lg">Reviews from Adelaide homeowners</p>
+          <p className="mt-2 text-base font-medium text-muted-foreground md:text-lg">
+            Solar cleaning reviews from Adelaide homeowners
+          </p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
           {reviews.map((r) => (
@@ -304,11 +291,34 @@ export function Reviews() {
 
 export function ContactUsStrip() {
   return (
-    <section className="bg-background px-4 py-5 text-center">
-      <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-brand">Contact us</p>
-      <p className="mt-2 text-base font-bold text-[#002844] md:text-lg">
-        0411017366 | everbrightpressurewashing@gmail.com
-      </p>
+    <section className="bg-background px-4 py-8 text-center">
+      <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-brand">Contact Us</p>
+      <h3 className="mt-2 text-2xl font-extrabold text-[#002844] md:text-3xl">Get In Touch</h3>
+      <div className="mt-4 flex flex-col items-center gap-3 md:flex-row md:justify-center md:gap-8">
+        <a
+          href="tel:0411017366"
+          className="flex items-center gap-2 text-base font-bold text-[#002844] transition-colors hover:text-brand md:text-lg"
+        >
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand/10 text-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 0 1 2-2h3.28a1 1 0 0 1 .948.684l1.498 4.493a1 1 0 0 1-.502 1.21l-2.257 1.13a11.042 11.042 0 0 0 5.516 5.516l1.13-2.257a1 1 0 0 1 1.21-.502l4.493 1.498a1 1 0 0 1 .684.949V19a2 2 0 0 1-2 2h-1C9.716 21 3 14.284 3 8V5z" />
+            </svg>
+          </span>
+          0411 017 366
+        </a>
+        <div className="hidden h-5 w-px bg-border md:block" />
+        <a
+          href="mailto:everbrightpressurewashing@gmail.com"
+          className="flex items-center gap-2 text-base font-bold text-[#002844] transition-colors hover:text-brand md:text-lg"
+        >
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand/10 text-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z" />
+            </svg>
+          </span>
+          everbrightpressurewashing@gmail.com
+        </a>
+      </div>
     </section>
   );
 }
@@ -317,7 +327,13 @@ export function SiteFooter() {
   return (
     <footer className="bg-[#002844] px-3 py-1 text-white md:px-6 md:py-2">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-0 text-center">
-        <img src={`${IMAGE_BASE}/logo-white.png`} alt="EverBright Pressure Washing" className="h-32 w-auto md:h-48" />
+        <img
+          src={`${IMAGE_BASE}/logo-white.png`}
+          alt="EverBright Pressure Washing"
+          decoding="async"
+          loading="lazy"
+          className="h-32 w-auto md:h-48"
+        />
         <p className="-mt-8 text-xs leading-tight md:-mt-14">Serving Adelaide &amp; surrounding areas</p>
         <p className="text-xs leading-tight">&copy; {new Date().getFullYear()} EverBright Pressure Washing</p>
       </div>

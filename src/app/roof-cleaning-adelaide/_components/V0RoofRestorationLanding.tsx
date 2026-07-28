@@ -2,7 +2,7 @@ import { Anton, Bebas_Neue, Inter, Playfair_Display, Poppins, Roboto_Slab } from
 
 import { AssessmentForm } from "./assessment-form";
 import { Hero } from "./hero";
-import { ContactUsStrip, FAQ, HowItWorks, IntroPending, Reviews, SiteFooter, StatsStrip, Transformations } from "./sections";
+import { ContactUsStrip, FAQ, HowItWorks, Intro, Reviews, SiteFooter, StatsStrip, Transformations } from "./sections";
 import styles from "./roof-restoration-v0.module.css";
 
 const poppins = Poppins({
@@ -53,7 +53,7 @@ export default function V0RoofRestorationLanding() {
     >
       <Hero />
       <StatsStrip />
-      <IntroPending />
+      <Intro />
       <Transformations />
       <Reviews />
       <HowItWorks />

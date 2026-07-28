@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 
+import Header from "@/components/Header";
 import { CheckIcon, PhoneIcon } from "./icons";
 import { useV0LeadAction } from "./use-v0-lead-action";
 
@@ -44,7 +44,9 @@ export function Hero() {
   };
 
   return (
-    <section className="relative flex min-h-screen flex-col">
+    <>
+      <Header />
+      <section className="relative flex flex-col">
       <img
         src="/roof-restoration-v0/images/roof-hero-real.jpg"
         alt="Before and after comparison of a roof cleaning, showing dirty moss-covered tiles transformed to clean restored terracotta tiles"
@@ -52,24 +54,14 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-black/85" aria-hidden="true" />
 
-      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-10 pt-0 text-center md:px-10 md:pb-16 md:text-left lg:px-20">
-        <div className="-mb-14 -mt-8 flex items-center justify-center md:-mt-10">
-          <Link href="/" aria-label="Go to homepage">
-            <img
-              src="/roof-restoration-v0/images/logo-white.png"
-              alt="EverBright Pressure Washing"
-              className="h-44 w-auto md:h-56"
-            />
-          </Link>
-        </div>
-
+      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-10 pt-8 text-center md:px-10 md:pb-16 md:pt-10 md:text-left lg:px-20">
         <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-2xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-5xl md:leading-[1.1]">
           <span className="text-brand">Roof Cleaning</span> Adelaide
         </h1>
 
-        <h2 className="mb-5 max-w-md text-pretty text-base font-bold uppercase leading-relaxed text-background/90 md:text-xl">
-          Bring Your Roof Back To Life!
-        </h2>
+        <p className="mb-5 max-w-md text-pretty text-base font-bold leading-relaxed text-background/90 md:text-xl md:text-center">
+          Bring your roof back to life
+        </p>
 
         {step === "q1" && (
           <div className="w-full max-w-xs rounded-lg bg-card p-4 text-left shadow-2xl md:max-w-md md:p-6">
@@ -193,6 +185,7 @@ export function Hero() {
           </span>
         </a>
       </div>
-    </section>
+      </section>
+    </>
   );
 }
