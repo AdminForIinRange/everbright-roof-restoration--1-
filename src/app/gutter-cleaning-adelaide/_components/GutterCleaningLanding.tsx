@@ -2,7 +2,7 @@ import { Bebas_Neue, Inter, Poppins, Roboto_Slab } from "next/font/google";
 
 import { AssessmentForm } from "./assessment-form";
 import { Hero } from "./hero";
-import { ContactUsStrip, FAQ, HowItWorks, Reviews, SiteFooter, StatsStrip, Transformations } from "./sections";
+import { ContactUsStrip, FAQ, HowItWorks, Intro, IntroFAQ, Reviews, SiteFooter, StatsStrip, Transformations } from "./sections";
 import styles from "./gutter-cleaning-v0.module.css";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "700", variable: "--font-poppins", display: "swap" });
@@ -15,6 +15,8 @@ export function GutterCleaningLanding() {
     <main className={`${styles.scope} ${inter.variable} ${bebas.variable} ${robotoSlab.variable} ${poppins.variable} min-h-screen bg-background antialiased`}>
       <Hero />
       <StatsStrip />
+      <Intro />
+      <IntroFAQ />
       <Transformations />
       <Reviews />
       <HowItWorks />

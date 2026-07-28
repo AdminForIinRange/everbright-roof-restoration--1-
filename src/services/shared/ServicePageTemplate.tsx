@@ -25,6 +25,8 @@ type GalleryImage = {
 
 type ServicePageTemplateProps = {
   showOfferBanner?: boolean;
+  introPending?: boolean;
+  faqPending?: boolean;
   heroTitleLine?: string;
   heroTitleHighlight: string;
   heroTitleClassName?: string;
@@ -88,6 +90,8 @@ type ServicePageTemplateProps = {
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   showOfferBanner = false,
+  introPending = false,
+  faqPending = false,
   heroTitleLine,
   heroTitleHighlight,
   heroTitleClassName,
@@ -182,6 +186,14 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         sectionClassName="min-h-[60vh] md:min-h-[72vh] lg:min-h-[78vh]"
       />
 
+      {introPending && (
+        <section className="mx-auto max-w-3xl px-6 py-10 text-center md:py-14">
+          <p className="text-base leading-relaxed text-slate-700 md:text-lg">
+            [INTRO PARAGRAPH - PENDING]
+          </p>
+        </section>
+      )}
+
       {formPlacement === 'afterHero' && formSection}
 
       <section className={`bg-everbright-blue px-6 py-14 text-center md:py-16 lg:py-20 ${readySectionClassName ?? ''}`}>
@@ -254,6 +266,17 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         align={trustAlign}
         variant={trustVariant}
       />
+
+      {faqPending && (
+        <section className="bg-slate-50 px-6 py-14 text-center md:py-20">
+          <h2 className="mb-6 font-display text-3xl font-bold uppercase tracking-tight text-dark-navy md:text-5xl">
+            FAQ
+          </h2>
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-700 md:text-lg">
+            [FAQ - PENDING]
+          </p>
+        </section>
+      )}
 
       <Reviews heading={reviewsHeading} reviews={buildServiceReviews(reviewServiceLabel)} />
 

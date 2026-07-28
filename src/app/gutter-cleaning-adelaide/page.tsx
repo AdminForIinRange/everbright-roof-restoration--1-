@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { GutterCleaningLanding } from './_components/GutterCleaningLanding';
+import { introFaqs } from './_components/intro-faq-data';
 import { buildPageMetadata, buildServiceJsonLd } from '@lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -18,12 +19,29 @@ const serviceJsonLd = buildServiceJsonLd({
   serviceType: 'Gutter cleaning',
 });
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: introFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
+    },
+  })),
+};
+
 export default function GutterCleaningPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <GutterCleaningLanding />
     </>

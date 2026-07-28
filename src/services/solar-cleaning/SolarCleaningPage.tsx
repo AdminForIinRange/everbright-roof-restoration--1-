@@ -26,6 +26,8 @@ const features = [
 const SolarCleaningPage: React.FC = () => {
   return (
     <ServicePageTemplate
+      introPending
+      faqPending
       heroTitleLine="Solar Cleaning"
       heroTitleHighlight="Services"
       heroLeftAlignBenefits

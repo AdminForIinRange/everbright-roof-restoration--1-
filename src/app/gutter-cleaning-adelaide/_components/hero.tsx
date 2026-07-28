@@ -1,7 +1,7 @@
 "use client"
 
-import Link from "next/link"
 import { useState } from "react"
+import Header from "@/components/Header"
 import { CheckIcon, PhoneIcon } from "./icons"
 import { useGutterCleaningLeadAction } from "./use-gutter-cleaning-lead-action"
 
@@ -52,7 +52,9 @@ export function Hero() {
     }`
 
   return (
-    <section className="relative flex min-h-[100dvh] flex-col">
+    <>
+      <Header />
+      <section className="relative flex flex-col">
       <img
         src="/gutter-cleaning-v0/images/hero-bg.png"
         alt="Gutter cleaning technician on a ladder cleaning gutters"
@@ -60,23 +62,13 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-black/82" aria-hidden="true" />
 
-      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-10 pt-0 text-center md:pb-16 md:px-10 md:text-left lg:px-20">
-        <div className="-mb-14 -mt-8 flex items-center justify-center md:-mt-10">
-          <Link href="/" aria-label="Go to homepage">
-            <img
-              src="/gutter-cleaning-v0/images/logo-white.png"
-              alt="EverBright Pressure Washing"
-              className="h-44 w-auto md:h-56"
-            />
-          </Link>
-        </div>
-
+      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-10 pt-8 text-center md:pb-16 md:pt-10 md:px-10 md:text-left lg:px-20">
         <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-4xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-7xl md:leading-[1.1] md:text-center">
           <span className="block">Gutter Cleaning <span className="text-brand">Adelaide</span></span>
         </h1>
 
         <p className="mb-5 max-w-md text-pretty text-base font-bold leading-relaxed text-background/90 md:text-xl md:text-center">
-          <span className="block">Avoid the ladder. Stop water damage before it starts</span>
+          <span className="block">Leave the ladder to us. Keep your gutters clear and your home protected</span>
         </p>
 
         {/* Step 1 — How many storeys? */}
@@ -230,6 +222,7 @@ export function Hero() {
           </span>
         </a>
       </div>
-    </section>
+      </section>
+    </>
   )
 }

@@ -69,7 +69,9 @@ const Header: React.FC = () => {
               data-analytics-location="header"
               data-analytics-type="blog"
             >
-              <span className="material-icons text-[20px]">article</span>
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 14H7v-2h10v2zm0-4H7v-2h10v2zm-3-5H7V6h7v2z" />
+              </svg>
             </Link>
 
             <a
@@ -81,7 +83,9 @@ const Header: React.FC = () => {
               data-analytics-type="phone"
               onClick={handlePhoneClick}
             >
-              <span className="material-icons text-[20px]">phone</span>
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg>
             </a>
 
             <button
@@ -90,7 +94,9 @@ const Header: React.FC = () => {
               className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white transition-colors hover:text-brand-sky"
               aria-label="Open menu"
             >
-              <span className="material-icons text-[22px]">menu</span>
+              <svg className="h-[22px] w-[22px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+              </svg>
             </button>
           </div>
         </div>
@@ -133,7 +139,9 @@ const Header: React.FC = () => {
               className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/25 transition-colors hover:border-brand-sky hover:text-brand-sky"
               aria-label="Close menu"
             >
-              <span className="material-icons text-[20px]">close</span>
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              </svg>
             </button>
           </div>
 

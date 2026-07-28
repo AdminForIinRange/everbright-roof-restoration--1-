@@ -33,6 +33,8 @@ const galleryImages = [
 const PaverConcreteSealingPage: React.FC = () => {
   return (
     <ServicePageTemplate
+      introPending
+      faqPending
       heroTitleLine="Paver & Concrete Sealing"
       heroTitleHighlight="Services"
       heroTitleClassName="!mt-5 !text-[2.55rem] sm:!text-[3.1rem] md:!text-[4rem] lg:!text-[4.85rem] xl:!text-[5.6rem]"

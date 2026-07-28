@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { GoogleIcon, HouseIcon, ShieldCheckIcon, PlusIcon, StarIcon } from "./icons"
+import { introFaqs } from "./intro-faq-data"
 
 export function StatsStrip() {
   const stats = [
@@ -11,7 +12,7 @@ export function StatsStrip() {
   ]
 
   return (
-    <div className="relative z-20 w-full px-0">
+    <div className="relative z-20 mt-2 w-full px-0">
       <div className="flex w-full divide-x divide-border border-y border-border bg-card shadow-lg md:rounded-[2rem]">
         {stats.map((item) => (
           <div key={item.label} className="flex flex-1 items-center justify-center gap-1.5 px-2 py-4 md:gap-3 md:px-6 md:py-6">
@@ -19,18 +20,85 @@ export function StatsStrip() {
             <div>
               <div
                 className={`font-[family-name:var(--font-slab)] font-extrabold leading-none text-black ${
-                  item.num === "Fully insured" ? "text-base md:text-3xl" : "text-xl md:text-4xl"
+                  item.num === "Fully insured" ? "text-lg md:text-3xl" : "text-2xl md:text-4xl"
                 }`}
               >
                 {item.num}
               </div>
-              <div className="mt-0.5 text-[10px] font-medium text-black md:mt-1 md:text-base">{item.label}</div>
+              <div className="mt-0.5 text-xs font-medium text-black md:mt-1 md:text-base">{item.label}</div>
             </div>
           </div>
         ))}
       </div>
     </div>
   )
+}
+
+export function Intro() {
+  return (
+    <section className="mx-auto max-w-3xl px-4 py-10 text-center md:px-8 md:py-14">
+      <h2 className="mb-4 font-[family-name:var(--font-poppins)] text-4xl font-extrabold tracking-tight text-[#002844] md:text-6xl">
+        Professional Gutter Cleaning in Adelaide
+      </h2>
+      <div className="space-y-4 text-left text-base leading-relaxed text-black md:text-lg">
+        <p>
+          Keeping your gutters clean is one of the simplest ways to look after your home, but
+          it&apos;s a job most people would rather not do themselves, especially the ladder work on
+          a two-storey house.
+        </p>
+        <p>
+          Over time leaves and debris build up, and gutters that haven&apos;t been cleared in a
+          while stop draining properly, which can lead to overflow, leaks and water damage.
+        </p>
+        <p>
+          Most Adelaide homeowners book us simply because it&apos;s been a while and they&apos;d
+          rather leave it to someone who does it safely every day.
+        </p>
+        <p>
+          We clear all the debris, flush out the downpipes, hose everything down and check the
+          water&apos;s flowing freely. It&apos;s easy maintenance that keeps your home protected.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+export function IntroFAQ() {
+  const [open, setOpen] = useState<number | null>(null);
+
+  return (
+    <section className="mx-auto max-w-3xl px-4 pb-10 md:px-8 md:pb-14">
+      <div className="flex flex-col gap-3">
+        {introFaqs.map((faq, i) => {
+          const isOpen = open === i;
+
+          return (
+            <div
+              key={faq.q}
+              className="overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-colors"
+            >
+              <button
+                type="button"
+                onClick={() => setOpen(isOpen ? null : i)}
+                className="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left hover:bg-secondary/50 active:bg-secondary"
+                aria-expanded={isOpen}
+                aria-controls={`gutter-intro-faq-answer-${i}`}
+              >
+                <span className="text-sm font-bold text-black md:text-base">{faq.q}</span>
+                <PlusIcon className={`shrink-0 text-brand transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`} />
+              </button>
+              <div
+                id={`gutter-intro-faq-answer-${i}`}
+                className={`px-5 pb-5 pt-0 text-sm leading-relaxed text-black ${isOpen ? "" : "hidden"}`}
+              >
+                <p>{faq.a}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
 }
 
 export function HowItWorks() {
@@ -108,7 +176,7 @@ export function FAQ() {
     },
     {
       q: "How do I know if my gutters need cleaning?",
-      a: "If water is overflowing during rain, plants are growing in your gutters, or it's been more than 12 months since your last clean — it's time. Blocked gutters can cause serious water damage if left.",
+      a: "If water is overflowing during rain, plants are growing in your gutters, or it's been more than 12 months since your last clean, it's time. Blocked gutters can cause serious water damage if left.",
     },
     {
       q: "Do you cover my area?",

@@ -37,6 +37,16 @@ export function StatsStrip() {
   );
 }
 
+export function IntroPending() {
+  return (
+    <section className="mx-auto max-w-3xl px-4 py-10 text-center md:px-8 md:py-14">
+      <p className="text-base leading-relaxed text-foreground md:text-lg">
+        [INTRO PARAGRAPH - PENDING]
+      </p>
+    </section>
+  );
+}
+
 export function HowItWorks() {
   const steps = [
     {
