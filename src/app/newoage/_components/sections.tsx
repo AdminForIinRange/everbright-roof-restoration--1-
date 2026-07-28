@@ -47,26 +47,15 @@ export function Intro() {
       </h2>
       <div className="mt-8 space-y-4 text-left text-base leading-relaxed text-black md:text-lg">
         <p>
-          Over time, driveways, paths, patios and paved areas collect dirt, grime, moss and
-          stains that build up so gradually you stop noticing, until they&apos;re cleaned and you
-          see the difference.
+          Driveways, paths and patios collect dirt, grime and moss so gradually you stop
+          noticing, until they&apos;re cleaned and you see the difference. Pressure washing lifts
+          years of buildup and makes a home look instantly fresher and better cared for, which is
+          why a lot of homeowners book us before selling.
         </p>
         <p>
-          Pressure washing lifts years of buildup and instantly makes a home look fresher,
-          brighter and better cared for.
-        </p>
-        <p>
-          It&apos;s one of the quickest ways to lift your home&apos;s appearance, and a lot of
-          homeowners book us before selling, when a clean driveway and entrance make a real first
-          impression.
-        </p>
-        <p>
-          It&apos;s not just about looks either. Clearing away moss and slippery buildup makes
-          paths and paved areas safer underfoot.
-        </p>
-        <p>
-          We clean pavers, driveways, paths, patios and house walls, leaving every surface
-          looking its best.
+          It also clears slippery moss to make paved areas safer underfoot. We clean pavers,
+          driveways, paths, patios and house walls across Adelaide, leaving every surface looking
+          its best.
         </p>
       </div>
     </section>

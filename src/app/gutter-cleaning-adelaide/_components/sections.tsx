@@ -37,26 +37,19 @@ export function StatsStrip() {
 export function Intro() {
   return (
     <section className="mx-auto max-w-3xl px-4 py-10 text-center md:px-8 md:py-14">
-      <h2 className="mb-8 font-[family-name:var(--font-poppins)] text-4xl font-extrabold tracking-tight text-[#002844] md:text-6xl">
-        <span className="text-brand">Gutter Cleaning</span> in Adelaide
+      <h2 className="mb-8 font-[family-name:var(--font-poppins)] text-4xl font-extrabold tracking-tight md:text-6xl">
+        <span className="text-brand">Gutter Cleaning</span>{" "}
+        <span className="text-[#002844]">Services in Adelaide</span>
       </h2>
       <div className="space-y-4 text-left text-base leading-relaxed text-black md:text-lg">
         <p>
-          Keeping your gutters clean is one of the simplest ways to look after your home, but
-          it&apos;s a job most people would rather not do themselves, especially the ladder work on
-          a two-storey house.
+          Cleaning your gutters is simple maintenance, but it&apos;s a job most people would
+          rather not do themselves, especially the ladder work on a two-storey home. Left too
+          long, blocked gutters stop draining and can lead to overflow, leaks and water damage.
         </p>
         <p>
-          Over time leaves and debris build up, and gutters that haven&apos;t been cleared in a
-          while stop draining properly, which can lead to overflow, leaks and water damage.
-        </p>
-        <p>
-          Most Adelaide homeowners book us simply because it&apos;s been a while and they&apos;d
-          rather leave it to someone who does it safely every day.
-        </p>
-        <p>
-          We clear all the debris, flush out the downpipes, hose everything down and check the
-          water&apos;s flowing freely. It&apos;s easy maintenance that keeps your home protected.
+          We clear all the debris, flush the downpipes, hose everything down and check it&apos;s
+          flowing freely. Easy gutter cleaning that keeps your Adelaide home protected.
         </p>
       </div>
     </section>
@@ -259,7 +252,10 @@ export function Transformations() {
       <section className="pb-0">
         <div className="bg-background px-4 pb-3 pt-5 text-center md:px-8 md:pb-4 md:pt-6 lg:px-16">
           <h2 className="font-[family-name:var(--font-poppins)] text-4xl font-extrabold tracking-tight text-[#002844] md:text-6xl">
-            Gutters Cleaned Across Adelaide
+            <span className="block">See the Difference Our</span>
+            <span className="block">
+              <span className="text-brand">Gutter Cleaning</span> Makes
+            </span>
           </h2>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 0, overflow: "hidden" }} className="md:[grid-template-columns:1fr_1fr_1fr]">
