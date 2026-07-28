@@ -37,8 +37,8 @@ export function StatsStrip() {
 export function Intro() {
   return (
     <section className="mx-auto max-w-3xl px-4 py-10 text-center md:px-8 md:py-14">
-      <h2 className="mb-4 font-[family-name:var(--font-poppins)] text-4xl font-extrabold tracking-tight text-[#002844] md:text-6xl">
-        Professional Gutter Cleaning in Adelaide
+      <h2 className="mb-8 font-[family-name:var(--font-poppins)] text-4xl font-extrabold tracking-tight text-[#002844] md:text-6xl">
+        <span className="text-brand">Gutter Cleaning</span> in Adelaide
       </h2>
       <div className="space-y-4 text-left text-base leading-relaxed text-black md:text-lg">
         <p>
@@ -84,7 +84,7 @@ export function IntroFAQ() {
                 aria-expanded={isOpen}
                 aria-controls={`gutter-intro-faq-answer-${i}`}
               >
-                <span className="text-sm font-bold text-black md:text-base">{faq.q}</span>
+                <span className="text-base font-bold text-black md:text-lg">{faq.q}</span>
                 <PlusIcon className={`shrink-0 text-brand transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`} />
               </button>
               <div

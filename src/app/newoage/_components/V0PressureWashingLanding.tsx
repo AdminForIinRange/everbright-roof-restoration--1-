@@ -2,7 +2,7 @@ import { Bebas_Neue, Inter, Poppins, Roboto_Slab } from "next/font/google";
 
 import { AssessmentForm } from "./assessment-form";
 import { Hero } from "./hero";
-import { ContactUsStrip, FAQ, HowItWorks, IntroPending, Reviews, SiteFooter, StatsStrip, Transformations } from "./sections";
+import { ContactUsStrip, FAQ, HowItWorks, Intro, IntroFAQ, Reviews, SiteFooter, StatsStrip, Transformations } from "./sections";
 import styles from "./pressure-washing-v0.module.css";
 
 const poppins = Poppins({
@@ -40,7 +40,8 @@ export default function V0PressureWashingLanding() {
     >
       <Hero />
       <StatsStrip />
-      <IntroPending />
+      <Intro />
+      <IntroFAQ />
       <Transformations />
       <Reviews />
       <HowItWorks />

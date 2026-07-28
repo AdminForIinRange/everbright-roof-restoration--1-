@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import { PhoneIcon } from "./icons";
+import { CheckIcon, PhoneIcon } from "./icons";
 import { useV0LeadAction } from "./use-v0-lead-action";
 
 const OPTIONS = [
@@ -84,13 +84,20 @@ export function Hero() {
                 <button
                   key={opt}
                   onClick={() => setQ1Selected(opt)}
-                  className={`w-full rounded-md border px-3 py-2 text-left text-sm transition-all ${
+                  className={`flex w-full items-center gap-2.5 rounded-md border px-3 py-2 text-left text-sm transition-all ${
                     q1Selected === opt
                       ? "border-brand bg-brand font-semibold text-brand-foreground"
                       : "border-border bg-card text-card-foreground hover:border-brand/50 hover:bg-secondary"
                   }`}
                   type="button"
                 >
+                  <span
+                    className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border-2 ${
+                      q1Selected === opt ? "border-brand-foreground bg-brand-foreground" : "border-current"
+                    }`}
+                  >
+                    {q1Selected === opt && <CheckIcon className="h-2.5 w-2.5 text-brand" />}
+                  </span>
                   {opt}
                 </button>
               ))}

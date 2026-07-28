@@ -41,7 +41,7 @@ export function Hero() {
   return (
     <>
       <Header />
-      <section className="relative flex min-h-screen flex-col">
+      <section className="relative flex flex-col">
         <img
           src="/pressure-washing-v0/images/image-optimized.jpg"
           alt="Before and after comparison of a pressure washing job, showing a dirty driveway transformed to a clean, like-new surface"
@@ -58,7 +58,7 @@ export function Hero() {
           </h1>
 
           <p className="mb-5 max-w-md text-pretty text-base font-bold leading-relaxed text-background/90 md:text-center md:text-lg">
-            <span className="block">Cleaning driveways, pavers, paths and patios to look like new again.</span>
+            <span className="block">Bring your driveway, pavers and patios back to life</span>
           </p>
 
           {step === "q1" && (
@@ -74,13 +74,20 @@ export function Hero() {
                   <button
                     key={opt}
                     onClick={() => setQ1Selected(opt)}
-                    className={`w-full rounded-md border px-3 py-2 text-left text-sm transition-all ${
+                    className={`flex w-full items-center gap-2.5 rounded-md border px-3 py-2 text-left text-sm transition-all ${
                       q1Selected === opt
                         ? "border-brand bg-brand font-semibold text-brand-foreground"
                         : "border-border bg-card text-card-foreground hover:border-brand/50 hover:bg-secondary"
                     }`}
                     type="button"
                   >
+                    <span
+                      className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border-2 ${
+                        q1Selected === opt ? "border-brand-foreground bg-brand-foreground" : "border-current"
+                      }`}
+                    >
+                      {q1Selected === opt && <CheckIcon className="h-2.5 w-2.5 text-brand" />}
+                    </span>
                     {opt}
                   </button>
                 ))}

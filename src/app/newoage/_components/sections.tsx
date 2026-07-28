@@ -4,6 +4,7 @@ import { useState } from "react";
 import { BrickWall, Car, Footprints, Grid3x3, Leaf, Mountain, SprayCan, Stone } from "lucide-react";
 
 import { GoogleIcon, HouseIcon, HourglassIcon, PlusIcon, StarIcon } from "./icons";
+import { introFaqs } from "./intro-faq-data";
 
 const IMAGE_BASE = "/pressure-washing-v0/images";
 
@@ -15,7 +16,7 @@ export function StatsStrip() {
   ];
 
   return (
-    <div className="relative z-20 -mt-8 w-full px-0 md:-mt-12">
+    <div className="relative z-20 mt-2 w-full px-0">
       <div className="flex w-full divide-x divide-border border-y border-border bg-card shadow-lg md:rounded-[2rem]">
         {stats.map((item) => (
           <div key={item.label} className="flex flex-1 items-center justify-center gap-1.5 px-2 py-4 md:gap-3 md:px-6 md:py-6">
@@ -23,12 +24,12 @@ export function StatsStrip() {
             <div>
               <div
                 className={`font-[family-name:var(--font-slab)] font-extrabold leading-none text-black ${
-                  item.num === "Fully insured" ? "text-base md:text-3xl" : "text-xl md:text-4xl"
+                  item.num === "Fully insured" ? "text-lg md:text-3xl" : "text-2xl md:text-4xl"
                 }`}
               >
                 {item.num}
               </div>
-              <div className="mt-0.5 text-[10px] font-medium text-black md:mt-1 md:text-base">{item.label}</div>
+              <div className="mt-0.5 text-xs font-medium text-black md:mt-1 md:text-base">{item.label}</div>
             </div>
           </div>
         ))}
@@ -37,12 +38,75 @@ export function StatsStrip() {
   );
 }
 
-export function IntroPending() {
+export function Intro() {
   return (
     <section className="mx-auto max-w-3xl px-4 py-10 text-center md:px-8 md:py-14">
-      <p className="text-base leading-relaxed text-foreground md:text-lg">
-        [INTRO PARAGRAPH - PENDING]
-      </p>
+      <h2 className="mb-4 font-[family-name:var(--font-poppins)] text-4xl font-extrabold tracking-tight md:text-6xl">
+        <span className="text-brand">Pressure Washing</span>{" "}
+        <span className="text-[#002844]">Services in Adelaide</span>
+      </h2>
+      <div className="mt-8 space-y-4 text-left text-base leading-relaxed text-black md:text-lg">
+        <p>
+          Over time, driveways, paths, patios and paved areas collect dirt, grime, moss and
+          stains that build up so gradually you stop noticing, until they&apos;re cleaned and you
+          see the difference.
+        </p>
+        <p>
+          Pressure washing lifts years of buildup and instantly makes a home look fresher,
+          brighter and better cared for.
+        </p>
+        <p>
+          It&apos;s one of the quickest ways to lift your home&apos;s appearance, and a lot of
+          homeowners book us before selling, when a clean driveway and entrance make a real first
+          impression.
+        </p>
+        <p>
+          It&apos;s not just about looks either. Clearing away moss and slippery buildup makes
+          paths and paved areas safer underfoot.
+        </p>
+        <p>
+          We clean pavers, driveways, paths, patios and house walls, leaving every surface
+          looking its best.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+export function IntroFAQ() {
+  const [open, setOpen] = useState<number | null>(null);
+
+  return (
+    <section className="mx-auto max-w-3xl px-4 pb-10 md:px-8 md:pb-14">
+      <div className="flex flex-col gap-3">
+        {introFaqs.map((faq, i) => {
+          const isOpen = open === i;
+
+          return (
+            <div
+              key={faq.q}
+              className="overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-colors"
+            >
+              <button
+                type="button"
+                onClick={() => setOpen(isOpen ? null : i)}
+                className="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left hover:bg-secondary/50 active:bg-secondary"
+                aria-expanded={isOpen}
+                aria-controls={`pressure-intro-faq-answer-${i}`}
+              >
+                <span className="text-base font-bold text-black md:text-lg">{faq.q}</span>
+                <PlusIcon className={`shrink-0 text-brand transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`} />
+              </button>
+              <div
+                id={`pressure-intro-faq-answer-${i}`}
+                className={`px-5 pb-5 pt-0 text-sm leading-relaxed text-black ${isOpen ? "" : "hidden"}`}
+              >
+                <p>{faq.a}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }

@@ -45,10 +45,15 @@ export function Hero() {
   })
 
   const optionClass = (selected: boolean) =>
-    `w-full rounded-md border px-3 py-2 text-left text-sm transition-all ${
+    `flex w-full items-center gap-2.5 rounded-md border px-3 py-2 text-left text-sm transition-all ${
       selected
         ? "border-brand bg-brand font-semibold text-brand-foreground"
         : "border-border bg-card text-card-foreground hover:border-brand/50 hover:bg-secondary"
+    }`
+
+  const optionBoxClass = (selected: boolean) =>
+    `flex h-4 w-4 shrink-0 items-center justify-center rounded border-2 ${
+      selected ? "border-brand-foreground bg-brand-foreground" : "border-current"
     }`
 
   return (
@@ -60,7 +65,7 @@ export function Hero() {
         alt="Gutter cleaning technician on a ladder cleaning gutters"
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-black/82" aria-hidden="true" />
+      <div className="absolute inset-0 bg-black/88" aria-hidden="true" />
 
       <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-10 pt-8 text-center md:pb-16 md:pt-10 md:px-10 md:text-left lg:px-20">
         <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-4xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-7xl md:leading-[1.1] md:text-center">
@@ -83,6 +88,9 @@ export function Hero() {
             <div className="flex flex-col gap-1.5">
               {Q2_OPTIONS.map((opt) => (
                 <button key={opt} onClick={() => setQ2Selected(opt)} className={optionClass(q2Selected === opt)}>
+                  <span className={optionBoxClass(q2Selected === opt)}>
+                    {q2Selected === opt && <CheckIcon className="h-2.5 w-2.5 text-brand" />}
+                  </span>
                   {opt}
                 </button>
               ))}
@@ -115,6 +123,9 @@ export function Hero() {
             <div className="flex flex-col gap-1.5">
               {Q3_OPTIONS.map((opt) => (
                 <button key={opt} onClick={() => setQ3Selected(opt)} className={optionClass(q3Selected === opt)}>
+                  <span className={optionBoxClass(q3Selected === opt)}>
+                    {q3Selected === opt && <CheckIcon className="h-2.5 w-2.5 text-brand" />}
+                  </span>
                   {opt}
                 </button>
               ))}
